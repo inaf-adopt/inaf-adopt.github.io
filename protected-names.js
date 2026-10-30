@@ -35,5 +35,21 @@ window.ADOPT_PROTECTED_NAMES = [
   "New Technology Telescope",
   "La Silla",
   "Padova",
-  "Vicolo Osservatorio"
+  "Vicolo Osservatorio",
+  "EKARUS",
+  "Mezzocielo",
+  "MATTO",
+  "PLATO",
+  "VSTPol",
+  "Space Debris",
+  "TRACE-AO",
+  "OSCAR",
+  "TDT",
+  "MICADO Science",
+  "Einstein Telescope",
+  "HAYDIN",
+  "LBCmos",
+  "WaterFall",
+  "CHEOPS",
+  "PLATO 2.0"
 ];

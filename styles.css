@@ -267,3 +267,20 @@ h1, h2, h3 { overflow-wrap: anywhere; }
   padding: 6px 9px;
   opacity: 1;
 }
+
+/* Project directory and archive — compact, responsive and accessible. */
+.project-collection{margin-bottom:clamp(42px,7vw,84px)}
+.project-collection-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin:0 0 24px}
+.project-collection-heading h2{font-size:clamp(2rem,4vw,3rem);line-height:1.13;margin:10px 0 0;color:var(--ink)}
+.collection-total,.directory-count{font-size:1rem;color:#355364;font-weight:650}
+.directory-count{margin:0 0 28px}
+.archive-intro{font-size:1.0625rem;line-height:1.65;color:#355364;max-width:720px;margin:0 0 24px}
+.past-projects-collection{border-top:2px solid #c7d7d8;padding-top:clamp(28px,5vw,48px);scroll-margin-top:120px}
+.project-card-pending .project-art{height:145px}
+.project-card-pending .project-info{padding:22px 24px 26px}
+.project-card-pending .project-card-title h3{font-size:clamp(1.35rem,2.1vw,1.7rem)}
+.project-card-pending .project-info p{font-size:1rem;line-height:1.6;color:#355364}
+.project-card-pending .project-meta{font-size:.875rem;letter-spacing:.025em}
+.project-profile-note{font-size:1rem;line-height:1.65;color:#234857;background:#e4f1f0;border-left:4px solid #24626a;border-radius:6px;padding:14px 18px;max-width:680px;margin-top:18px}
+.project-collection[hidden],.project-collection[hidden] *{display:none!important}
+@media(max-width:700px){.project-card-pending .project-art{height:132px}.filter-row{gap:10px}.filter-btn{min-height:44px;font-size:1rem}.project-collection-heading{align-items:flex-start}}

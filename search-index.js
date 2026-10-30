@@ -68,14 +68,21 @@ window.ADOPT_SEARCH_INDEX = [
     "section": "Technology in motion.",
     "url": "projects.html",
     "type": "Site page",
-    "text": "OUR WORK / PROJECT DIRECTORY Technology in motion. A selection of observatory instruments, adaptive-optics systems and wavefront-sensing concepts connected to our research themes."
+    "text": "OUR WORK / PROJECT DIRECTORY Technology in motion. Explore our research and technology projects, alongside an archive of past programmes. Project profiles are updated as details are verified."
   },
   {
     "title": "Projects",
     "section": "Projects",
     "url": "projects.html",
     "type": "Site page",
-    "text": "All projects Adaptive optics Wavefront sensing Instrumentation Imaging"
+    "text": "All projects Adaptive optics Wavefront sensing Instrumentation Imaging More projects Past projects OUR WORK Projects 19 projects ARCHIVE / PREVIOUS WORK Past Projects 4 projects Earlier research and technology programmes. Individual project profiles are being prepared."
+  },
+  {
+    "title": "Projects",
+    "section": "Past Projects",
+    "url": "projects.html",
+    "type": "Site page",
+    "text": "ARCHIVE / PREVIOUS WORK Past Projects 4 projects Earlier research and technology programmes. Individual project profiles are being prepared."
   },
   {
     "title": "Projects",

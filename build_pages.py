@@ -66,8 +66,28 @@ page('index.html','Research, adaptive optics & instrumentation','ADOPT explores 
 <section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow"><span class="small-line"></span>DISCOVER MORE</div><h2>People. Papers.<br/>Perspectives<span class="title-period">.</span></h2></div><p>Our work spans theory, engineering and hands-on experimentation. Explore the connections behind the instruments.</p></div><div class="path-cards"><a class="path-card" href="people.html"><span class="number">01 / TEAM</span><h3>The people</h3><span>↗</span></a><a class="path-card" href="publications.html"><span class="number">02 / RESEARCH OUTPUT</span><h3>The publications</h3><span>↗</span></a><a class="path-card" href="contact.html"><span class="number">03 / COLLABORATE</span><h3>Connect with us</h3><span>↗</span></a></div></div></section>
 <section class="cta-band"><div class="container cta-inner"><div><div class="eyebrow"><span class="small-line"></span>WORK WITH US</div><h2>Better instruments.<br/>Bigger questions.</h2></div><a href="contact.html" class="btn btn-dark">Start a conversation <span aria-hidden="true">↗</span></a></div></section>''')
 page('projects.html','Projects','Explore selected instruments and technology programmes connected to adaptive optics and astronomical instrumentation', '''
-<section class="container inner-hero"><div class="eyebrow"><span class="small-line"></span>OUR WORK / PROJECT DIRECTORY</div><h1>Technology in<br/><span class="serif-swish" style="color:#267f86">motion.</span></h1><p class="page-lede">A selection of observatory instruments, adaptive-optics systems and wavefront-sensing concepts connected to our research themes.</p></section>
-<section class="container projects-page"><div class="filter-row" role="group" aria-label="Filter projects by field"><button class="filter-btn active" data-filter="All" aria-pressed="true">All projects</button><button class="filter-btn" data-filter="Adaptive optics" aria-pressed="false">Adaptive optics</button><button class="filter-btn" data-filter="Wavefront sensing" aria-pressed="false">Wavefront sensing</button><button class="filter-btn" data-filter="Instrumentation" aria-pressed="false">Instrumentation</button><button class="filter-btn" data-filter="High-contrast imaging" aria-pressed="false">Imaging</button></div><div class="project-grid" data-project-grid></div></section>
+<section class="container inner-hero"><div class="eyebrow"><span class="small-line"></span>OUR WORK / PROJECT DIRECTORY</div><h1>Technology in<br/><span class="serif-swish" style="color:#267f86">motion.</span></h1><p class="page-lede">Explore our research and technology projects, alongside an archive of past programmes. Project profiles are updated as details are verified.</p></section>
+<section class="container projects-page" aria-label="Project directory">
+  <div class="filter-row" role="group" aria-label="Filter projects by field">
+    <button class="filter-btn active" data-filter="All" aria-pressed="true">All projects</button>
+    <button class="filter-btn" data-filter="Adaptive optics" aria-pressed="false">Adaptive optics</button>
+    <button class="filter-btn" data-filter="Wavefront sensing" aria-pressed="false">Wavefront sensing</button>
+    <button class="filter-btn" data-filter="Instrumentation" aria-pressed="false">Instrumentation</button>
+    <button class="filter-btn" data-filter="High-contrast imaging" aria-pressed="false">Imaging</button>
+    <button class="filter-btn" data-filter="More projects" aria-pressed="false">More projects</button>
+    <button class="filter-btn" data-filter="Past" aria-pressed="false">Past projects</button>
+  </div>
+  <p class="directory-count" data-project-count aria-live="polite"></p>
+  <section class="project-collection" data-current-projects-section aria-labelledby="current-projects-title">
+    <div class="project-collection-heading"><div><div class="eyebrow">OUR WORK</div><h2 id="current-projects-title">Projects</h2></div><span class="collection-total" data-current-total>19 projects</span></div>
+    <div class="project-grid" data-project-grid></div>
+  </section>
+  <section class="project-collection past-projects-collection" id="past-projects" data-past-projects-section aria-labelledby="past-projects-title">
+    <div class="project-collection-heading"><div><div class="eyebrow">ARCHIVE / PREVIOUS WORK</div><h2 id="past-projects-title">Past Projects</h2></div><span class="collection-total" data-past-total>4 projects</span></div>
+    <p class="archive-intro">Earlier research and technology programmes. Individual project profiles are being prepared.</p>
+    <div class="project-grid" data-past-project-grid></div>
+  </section>
+</section>
 <section class="cta-band"><div class="container cta-inner"><div><div class="eyebrow">OUR RESEARCH</div><h2>Explore the ideas behind<br/>the instruments.</h2></div><a href="research.html" class="btn btn-dark">Research themes ↗</a></div></section>''')
 page('project.html','Project details','Read about an adaptive optics or astronomical instrumentation project connected to ADOPT research themes', '<div data-project-detail></div>')
 page('research.html','Research','Learn about adaptive optics, wavefront sensing, instrument calibration and AIV at INAF Padova', '''

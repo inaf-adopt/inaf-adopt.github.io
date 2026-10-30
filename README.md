@@ -96,3 +96,6 @@ and alternatives to colour-only status indicators. It respects reduced-motion,
 forced-colour and increased-contrast user preferences. The mobile navigation can
 be closed with Escape. This is WCAG AA-oriented design, not a formal WCAG audit;
 real-device and assistive-technology checks are recommended before institutional launch.
+## Project directory
+
+The Projects page lists 19 research and technology projects in the main directory and four separately grouped Past Projects: LINC-NIRVANA, WaterFall, CHEOPS and PLATO 2.0. Each project is linked to a dedicated detail view and included in client-side search. New profiles marked `pending: true` in `site-data.js` are deliberately placeholders pending team review of technical descriptions, group contributions and external references. Keep names in `protected-names.json` / `protected-names.js` untranslated.

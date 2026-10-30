@@ -89,12 +89,55 @@
     }
   });
   const proj=window.ADOPT_PROJECTS||[];
-  function projectCard(p,i){return `<a class="project-card reveal" style="--stagger:${(i%6)*75}ms" href="project.html?id=${encodeURIComponent(p.id)}"><div class="project-art art-${p.accent}"><span class="art-orbit art-orbit-one"></span><span class="art-orbit art-orbit-two"></span><span class="art-core">${p.icon}</span><span class="art-mini">${String(i+1).padStart(2,'0')} / ADOPT</span></div><div class="project-info"><span class="project-meta">${p.overline}</span><div class="project-card-title"><h3>${p.name}</h3><span class="circle-arrow" aria-hidden="true">↗</span></div><p>${p.blurb}</p></div></a>`}
-  const featured=document.querySelector('[data-featured-projects]');if(featured){featured.innerHTML=proj.slice(0,3).map(projectCard).join('');protectProperNames(featured);}
+  const currentProjects=proj.filter(p=>p.status!=='past');
+  const pastProjects=proj.filter(p=>p.status==='past');
+  function projectCard(p,i){
+    const pending=!!p.pending;
+    return `<a class="project-card reveal${pending?' project-card-pending':''}" style="--stagger:${(i%6)*75}ms" href="project.html?id=${encodeURIComponent(p.id)}"><div class="project-art art-${p.accent}"><span class="art-orbit art-orbit-one"></span><span class="art-orbit art-orbit-two"></span><span class="art-core">${p.icon}</span><span class="art-mini">${p.status==='past'?'PAST PROJECT':'ADOPT / PROJECT'}</span></div><div class="project-info"><span class="project-meta">${p.overline}</span><div class="project-card-title"><h3>${p.name}</h3><span class="circle-arrow" aria-hidden="true">↗</span></div><p>${p.blurb}</p></div></a>`;
+  }
+  const featured=document.querySelector('[data-featured-projects]');
+  if(featured){featured.innerHTML=currentProjects.filter(p=>!p.pending).slice(0,3).map(projectCard).join('');protectProperNames(featured);}
   const grid=document.querySelector('[data-project-grid]');
-  if(grid){function render(filter){const entries=proj.filter(p=>filter==='All'||p.category===filter);grid.innerHTML=entries.map(projectCard).join('');protectProperNames(grid);observeReveals()};document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(el=>{el.classList.remove('active');el.setAttribute('aria-pressed','false')});b.classList.add('active');b.setAttribute('aria-pressed','true');render(b.dataset.filter)}));render('All')}
+  const pastGrid=document.querySelector('[data-past-project-grid]');
+  if(grid&&pastGrid){
+    const curSection=document.querySelector('[data-current-projects-section]');
+    const pastSection=document.querySelector('[data-past-projects-section]');
+    const count=document.querySelector('[data-project-count]');
+    function render(filter){
+      const showCurrent=filter!=='Past';
+      const showPast=filter==='All'||filter==='Past';
+      const entries=showCurrent?currentProjects.filter(p=>filter==='All'||p.category===filter):[];
+      grid.innerHTML=entries.map(projectCard).join('');
+      pastGrid.innerHTML=showPast?pastProjects.map(projectCard).join(''):'';
+      curSection.hidden=!showCurrent;
+      pastSection.hidden=!showPast;
+      document.querySelector('[data-current-total]').textContent=entries.length+' projects';
+      const n=entries.length+(showPast?pastProjects.length:0);
+      count.textContent=`Showing ${n} ${n===1?'project':'projects'}${showPast&&showCurrent?' · '+currentProjects.length+' main directory · '+pastProjects.length+' past':''}`;
+      protectProperNames(grid);protectProperNames(pastGrid);observeReveals();
+    }
+    document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{
+      document.querySelectorAll('[data-filter]').forEach(el=>{el.classList.remove('active');el.setAttribute('aria-pressed','false')});
+      b.classList.add('active');b.setAttribute('aria-pressed','true');render(b.dataset.filter);
+    }));
+    render('All');
+  }
   const detail=document.querySelector('[data-project-detail]');
-  if(detail){const id=new URLSearchParams(location.search).get('id');const p=proj.find(x=>x.id===id);if(!p){detail.innerHTML='<section class="container inner-hero"><p class="eyebrow">Project not found</p><h1>No project found.</h1><a class="btn btn-dark" href="projects.html">All projects ↗</a></section>';}else{document.title=p.name+' — ADOPT | INAF Padova';detail.innerHTML=`<section class="container inner-hero detail-hero"><a class="back-link" href="projects.html">← All projects</a><div class="eyebrow"><span class="small-line"></span> ${p.overline}</div><h1>${p.name}<span class="title-period">.</span></h1><p class="page-lede">${p.blurb}</p></section><section class="container detail-grid"><div class="detail-visual art-${p.accent}"><span class="detail-ring ring-a"></span><span class="detail-ring ring-b"></span><span class="detail-symbol">${p.icon}</span><span class="detail-label">ADOPT / INSTRUMENT &amp; TECHNOLOGY</span></div><div class="detail-copy"><div class="detail-overline">01 / OVERVIEW</div><h2>Behind the technology</h2><p>${p.description}</p><div class="detail-overline margin-top">02 / RESEARCH INTERESTS</div><h2>Where our expertise connects</h2><p>${p.contribution}</p><div class="fact-block"><span>Facility / context</span><strong>${p.telescope}</strong></div><a href="${p.source}" target="_blank" rel="noopener noreferrer" class="text-link">Visit project reference <span aria-hidden="true">↗</span></a></div></section><section class="container detail-bottom"><div><span class="eyebrow">EXPLORE MORE</span><h2>Connected by curiosity.</h2></div><a class="btn btn-dark" href="projects.html">View all projects <span aria-hidden="true">↗</span></a></section>`}protectProperNames(detail)}
+  if(detail){
+    const id=new URLSearchParams(location.search).get('id');
+    const p=proj.find(x=>x.id===id);
+    if(!p){
+      detail.innerHTML='<section class="container inner-hero"><p class="eyebrow">Project not found</p><h1>No project found.</h1><a class="btn btn-dark" href="projects.html">All projects ↗</a></section>';
+    }else{
+      document.title=p.name+' — ADOPT | INAF Padova';
+      const back=p.status==='past'?'projects.html#past-projects':'projects.html';
+      const note=p.pending?'<p class="project-profile-note">Project information is being prepared. This listing does not yet describe technical details or team contributions.</p>':'';
+      const facility=p.telescope?`<div class="fact-block"><span>Facility / context</span><strong>${p.telescope}</strong></div>`:'';
+      const source=p.source?`<a href="${p.source}" target="_blank" rel="noopener noreferrer" class="text-link">Visit project reference <span aria-hidden="true">↗</span></a>`:'';
+      detail.innerHTML=`<section class="container inner-hero detail-hero"><a class="back-link" href="${back}">← ${p.status==='past'?'Past Projects':'All projects'}</a><div class="eyebrow"><span class="small-line"></span> ${p.overline}</div><h1>${p.name}<span class="title-period">.</span></h1><p class="page-lede">${p.blurb}</p>${note}</section><section class="container detail-grid"><div class="detail-visual art-${p.accent}"><span class="detail-ring ring-a"></span><span class="detail-ring ring-b"></span><span class="detail-symbol">${p.icon}</span><span class="detail-label">${p.status==='past'?'ADOPT / PAST PROJECT':'ADOPT / RESEARCH PROJECT'}</span></div><div class="detail-copy"><div class="detail-overline">01 / OVERVIEW</div><h2>${p.pending?'Project overview':'Behind the technology'}</h2><p>${p.description}</p><div class="detail-overline margin-top">02 / RESEARCH INTERESTS</div><h2>Where our expertise connects</h2><p>${p.contribution}</p>${facility}${source}</div></section><section class="container detail-bottom"><div><span class="eyebrow">EXPLORE MORE</span><h2>Connected by curiosity.</h2></div><a class="btn btn-dark" href="projects.html">View all projects <span aria-hidden="true">↗</span></a></section>`;
+    }
+    protectProperNames(detail);
+  }
   function observeReveals(){const elements=document.querySelectorAll('.reveal:not(.visible)');if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){elements.forEach(e=>e.classList.add('visible'));return}if(!('IntersectionObserver' in window)){elements.forEach(e=>e.classList.add('visible'));return}const obs=new IntersectionObserver((items,o)=>{items.forEach(item=>{if(item.isIntersecting){item.target.classList.add('visible');o.unobserve(item.target)}})},{threshold:.07});elements.forEach(e=>obs.observe(e))}
   observeReveals();
   const aoSlider=document.getElementById('ao-range');if(aoSlider){const before=document.getElementById('ao-before');const score=document.getElementById('ao-score');aoSlider.addEventListener('input',()=>{const v=Number(aoSlider.value);before.style.clipPath=`inset(0 ${v}% 0 0)`;score.textContent=v>=75?'Adaptive correction dominant':v<=25?'Atmospheric blur dominant':'Compare the correction';});aoSlider.dispatchEvent(new Event('input'))}
@@ -117,7 +160,7 @@
     const suggestions=searchPage.querySelector('[data-search-suggestions]');
     const normalize=text=>(text||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
     const escapeHtml=text=>String(text).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:'Project',text:[p.blurb,p.description,p.contribution,p.telescope,p.category].join(' ')}))];
+    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,p.contribution,p.telescope,p.category,p.status==='past'?'Past Projects':''].join(' ')}))];
     // Avoid regex on user strings; render snippets safely into text with explicit <mark> nodes.
     const markText=(text,terms)=>{
       const src=String(text),low=normalize(src);const matches=[];

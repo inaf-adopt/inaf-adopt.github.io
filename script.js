@@ -126,15 +126,61 @@
   if(detail){
     const id=new URLSearchParams(location.search).get('id');
     const p=proj.find(x=>x.id===id);
+    const escapeText=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    const referenceLink=(label,url)=>{
+      try{
+        const parsed=new URL(url);
+        if(!['https:','http:'].includes(parsed.protocol))return '';
+        return `<li><a href="${escapeText(parsed.href)}" target="_blank" rel="noopener noreferrer">${escapeText(label)} <span aria-hidden="true">↗</span></a></li>`;
+      }catch{return ''}
+    };
     if(!p){
       detail.innerHTML='<section class="container inner-hero"><p class="eyebrow">Project not found</p><h1>No project found.</h1><a class="btn btn-dark" href="projects.html">All projects ↗</a></section>';
     }else{
       document.title=p.name+' — ADOPT | INAF Padova';
       const back=p.status==='past'?'projects.html#past-projects':'projects.html';
-      const note=p.pending?'<p class="project-profile-note">Project information is being prepared. This listing does not yet describe technical details or team contributions.</p>':'';
-      const facility=p.telescope?`<div class="fact-block"><span>Facility / context</span><strong>${p.telescope}</strong></div>`:'';
-      const source=p.source?`<a href="${p.source}" target="_blank" rel="noopener noreferrer" class="text-link">Visit project reference <span aria-hidden="true">↗</span></a>`:'';
-      detail.innerHTML=`<section class="container inner-hero detail-hero"><a class="back-link" href="${back}">← ${p.status==='past'?'Past Projects':'All projects'}</a><div class="eyebrow"><span class="small-line"></span> ${p.overline}</div><h1>${p.name}<span class="title-period">.</span></h1><p class="page-lede">${p.blurb}</p>${note}</section><section class="container detail-grid"><div class="detail-visual art-${p.accent}"><span class="detail-ring ring-a"></span><span class="detail-ring ring-b"></span><span class="detail-symbol">${p.icon}</span><span class="detail-label">${p.status==='past'?'ADOPT / PAST PROJECT':'ADOPT / RESEARCH PROJECT'}</span></div><div class="detail-copy"><div class="detail-overline">01 / OVERVIEW</div><h2>${p.pending?'Project overview':'Behind the technology'}</h2><p>${p.description}</p><div class="detail-overline margin-top">02 / RESEARCH INTERESTS</div><h2>Where our expertise connects</h2><p>${p.contribution}</p>${facility}${source}</div></section><section class="container detail-bottom"><div><span class="eyebrow">EXPLORE MORE</span><h2>Connected by curiosity.</h2></div><a class="btn btn-dark" href="projects.html">View all projects <span aria-hidden="true">↗</span></a></section>`;
+      const note=p.pending
+        ?'<p class="project-profile-note" role="note">This project’s public identity and technical baseline still need verification. The name is retained as supplied by the research group.</p>'
+        :p.partial
+          ?'<p class="project-profile-note" role="note">Some links or project details are provisional. Any unconfirmed association is identified below.</p>'
+          :'';
+      const facility=p.telescope?`<div class="fact-block"><span>Facility / context</span><strong>${escapeText(p.telescope)}</strong></div>`:'';
+      const science=Array.isArray(p.science)&&p.science.length
+        ?`<ul class="project-science-list">${p.science.map(x=>`<li>${escapeText(x)}</li>`).join('')}</ul>`
+        :'<p>The project science goals are being reviewed.</p>';
+      const specs=Array.isArray(p.specs)&&p.specs.length
+        ?`<dl class="project-specs">${p.specs.map(([name,value])=>`<div><dt>${escapeText(name)}</dt><dd>${escapeText(value)}</dd></div>`).join('')}</dl>`
+        :'<p>Verified technical specifications are not currently available for this listing.</p>';
+      const references=(p.refs||[]).map(([name,url])=>referenceLink(name,url)).filter(Boolean);
+      if(!references.length && p.source) references.push(referenceLink('Project reference',p.source));
+      const links=references.length?`<ul class="project-source-list">${references.join('')}</ul>`:'<p>No official project webpage has been confirmed for this entry yet.</p>';
+      detail.innerHTML=`
+        <section class="container inner-hero detail-hero">
+          <a class="back-link" href="${back}">← ${p.status==='past'?'Past Projects':'All projects'}</a>
+          <div class="eyebrow"><span class="small-line"></span> ${escapeText(p.overline)}</div>
+          <h1>${escapeText(p.name)}<span class="title-period">.</span></h1>
+          <p class="page-lede">${escapeText(p.blurb)}</p>${note}
+        </section>
+        <section class="container detail-grid" aria-label="Project background">
+          <div class="detail-visual art-${escapeText(p.accent)}"><span class="detail-ring ring-a"></span><span class="detail-ring ring-b"></span><span class="detail-symbol">${escapeText(p.icon)}</span><span class="detail-label">${p.status==='past'?'ADOPT / PAST PROJECT':'ADOPT / RESEARCH PROJECT'}</span></div>
+          <div class="detail-copy">
+            <div class="detail-overline">01 / OVERVIEW</div><h2>About the project</h2><p>${escapeText(p.description)}</p>
+            <div class="detail-overline margin-top">02 / SCIENCE</div><h2>Scientific questions and applications</h2>${science}
+            ${facility}
+          </div>
+        </section>
+        <section class="container project-knowledge" aria-label="Technical details and references">
+          <div class="project-knowledge-main">
+            <div class="detail-overline">03 / TECHNOLOGY</div><h2>Technical concept and specifications</h2>
+            <p>${escapeText(p.technical||'A verified public technical description is not yet available.')}</p>${specs}
+          </div>
+          <aside class="project-knowledge-aside" aria-label="Project context and sources">
+            <div class="detail-overline">04 / ADOPT CONTEXT</div><h2>Group research interests</h2><p>${escapeText(p.contribution)}</p>
+            <div class="detail-overline margin-top">05 / REFERENCE LINKS</div><h2>Learn more</h2>${links}
+            <p class="project-source-note">References describe the wider project. Specific ADOPT roles and final instrument specifications may require research-group review.</p>
+          </aside>
+        </section>
+        <section class="container detail-bottom"><div><span class="eyebrow">EXPLORE MORE</span><h2>Connected by curiosity.</h2></div><a class="btn btn-dark" href="projects.html">View all projects <span aria-hidden="true">↗</span></a></section>`;
     }
     protectProperNames(detail);
   }
@@ -160,7 +206,7 @@
     const suggestions=searchPage.querySelector('[data-search-suggestions]');
     const normalize=text=>(text||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
     const escapeHtml=text=>String(text).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,p.contribution,p.telescope,p.category,p.status==='past'?'Past Projects':''].join(' ')}))];
+    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,(p.science||[]).join(' '),p.technical,(p.specs||[]).flat().join(' '),p.contribution,p.telescope,p.category,(p.refs||[]).map(x=>x[0]).join(' '),p.status==='past'?'Past Projects':''].join(' ')}))];
     // Avoid regex on user strings; render snippets safely into text with explicit <mark> nodes.
     const markText=(text,terms)=>{
       const src=String(text),low=normalize(src);const matches=[];

@@ -1,4 +1,4 @@
-/* Generated from protected-names.json by build_pages.py. */
+/* Generated from protected-names.json. */
 window.ADOPT_PROTECTED_NAMES = [
   "ADOPT",
   "SOXS",
@@ -51,5 +51,12 @@ window.ADOPT_PROTECTED_NAMES = [
   "LBCmos",
   "WaterFall",
   "CHEOPS",
-  "PLATO 2.0"
+  "PLATO 2.0",
+  "HAYDN",
+  "PAPYRUS",
+  "DAO4MATTO",
+  "ASTRASud",
+  "STILES",
+  "OmegaCAM",
+  "Fizeau"
 ];

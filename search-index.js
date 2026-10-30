@@ -75,14 +75,14 @@ window.ADOPT_SEARCH_INDEX = [
     "section": "Projects",
     "url": "projects.html",
     "type": "Site page",
-    "text": "All projects Adaptive optics Wavefront sensing Instrumentation Imaging More projects Past projects OUR WORK Projects 19 projects ARCHIVE / PREVIOUS WORK Past Projects 4 projects Earlier research and technology programmes. Individual project profiles are being prepared."
+    "text": "All projects Adaptive optics Wavefront sensing Instrumentation Imaging More projects Past projects OUR WORK Projects 19 projects ARCHIVE / PREVIOUS WORK Past Projects 4 projects Earlier research and technology programmes, with background, scientific motivations, technical context and reference links where available."
   },
   {
     "title": "Projects",
     "section": "Past Projects",
     "url": "projects.html",
     "type": "Site page",
-    "text": "ARCHIVE / PREVIOUS WORK Past Projects 4 projects Earlier research and technology programmes. Individual project profiles are being prepared."
+    "text": "ARCHIVE / PREVIOUS WORK Past Projects 4 projects Earlier research and technology programmes, with background, scientific motivations, technical context and reference links where available."
   },
   {
     "title": "Projects",

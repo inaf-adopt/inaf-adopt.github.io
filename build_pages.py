@@ -47,6 +47,10 @@ def protect_names_in_markup(markup):
     return str(dom)
 
 def page(filename, title, description, main):
+    # Preserve hand-maintained, enriched pages in the checked-in website.
+    # The legacy templates below predate the project bibliography and People directory.
+    if filename in {'projects.html', 'project.html', 'people.html', 'search.html', 'credits.html'} and (root / filename).exists():
+        return
     main = protect_names_in_markup(main)
     out=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#10253b"/>

@@ -44,3 +44,9 @@ Each project detail page now has selected scientific literature, loaded from `pr
 A separate **Science with the instrument** section appears only for projects with confirmed peer-reviewed astrophysical publications that analyse data actually collected by that named instrument. The list is curated in `instrument-science-papers.js`; do not populate it with commissioning, AIV, simulations or science-case papers. The section is hidden entirely for projects not represented in the data object, including commissioned instruments whose observational science papers have not yet been verified.
 
 As of 31 October 2026, the first verified science-paper sections are SHARK-NIR and CHEOPS. Studies combining multiple instruments are labelled so that nondetections and combined-method discoveries are described accurately. See `INSTRUMENT_SCIENCE_PUBLICATIONS.md` for detailed references and inclusion criteria.
+
+## Research-group people directory
+
+The People page lists 27 group members supplied by the research group in `people-data.js`. Each card gives a short source-linked research summary and project links, with a search filter and responsive photo/initials portrait. Source checks and photographic attribution are documented in `PEOPLE_SOURCES.md`. Names are protected from automatic translation via `protected-names.json`. Specific titles and group membership should be reviewed by the relevant people.
+
+**Build note:** `build_pages.py` intentionally preserves the enriched Projects, Project Details, People, Search, and Credits pages when they already exist, rather than replacing them with older generator templates. These pages can be edited directly.

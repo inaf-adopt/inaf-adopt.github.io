@@ -154,12 +154,48 @@
       const references=(p.refs||[]).map(([name,url])=>referenceLink(name,url)).filter(Boolean);
       if(!references.length && p.source) references.push(referenceLink('Project reference',p.source));
       const links=references.length?`<ul class="project-source-list">${references.join('')}</ul>`:'<p>No official project webpage has been confirmed for this entry yet.</p>';
+      // Curated per-project bibliography, with separate research papers and contextual materials.
+      // Missing entries remain visibly unverified instead of being filled with unrelated matches.
+      const bibliography=(window.ADOPT_PROJECT_PAPERS||{})[p.id]||{recent:[],foundational:[]};
+      const safePaperLink=(paper)=>{
+        try{
+          const u=new URL(paper.url);
+          return ['https:','http:'].includes(u.protocol)?escapeText(u.href):'';
+        }catch{return ''}
+      };
+      const paperItem=(item)=>{
+        const href=safePaperLink(item);
+        const title=escapeText(item.title);
+        const label=href?`<a class="paper-title" href="${href}" target="_blank" rel="noopener noreferrer">${title} <span aria-hidden="true">↗</span></a>`:`<strong class="paper-title">${title}</strong>`;
+        const metadata=`${escapeText(item.authors)} · <time datetime="${escapeText(item.year)}">${escapeText(item.year)}</time>`;
+        const type=escapeText(item.type||'Research paper');
+        const note=item.note?`<p class="paper-context">${escapeText(item.note)}</p>`:'';
+        const doi=item.doi?`<span class="paper-doi">DOI: ${escapeText(item.doi)}</span>`:'';
+        return `<li class="project-paper"><div class="paper-meta"><span class="paper-kind">${type}</span>${doi}</div>${label}<div class="paper-byline">${metadata}</div>${note}</li>`;
+      };
+      const papersSection=(key,heading,emptyMessage)=>{
+        const items=Array.isArray(bibliography[key])?bibliography[key]:[];
+        return `<div class="paper-column"><h3>${heading} <span class="paper-count">${items.length}</span></h3>${items.length?`<ol class="paper-list">${items.map(paperItem).join('')}</ol>`:`<p class="paper-empty">${emptyMessage}</p>`}</div>`;
+      };
+      const extras=(bibliography.resources||[]);
+      const extraSection=extras.length?`<div class="paper-resources"><h3>Related conference materials</h3><ul class="paper-list paper-list-extra">${extras.map(paperItem).join('')}</ul></div>`:'';
+      const bibNote=bibliography.note?`<p class="paper-verification-note" role="note">${escapeText(bibliography.note)}</p>`:'';
+      const publications=`<section class="container project-publications" aria-label="Selected project publications" id="project-publications">
+        <div class="detail-overline">06 / SCIENTIFIC LITERATURE</div><h2>Selected publications.</h2>
+        <p class="project-publications-intro">Up to three recent research papers and two defining or foundational papers, selected for relevance and linked to their publisher or research archive. The bibliography was checked in October 2026 and is not an automatically updated feed.</p>
+        <div class="paper-columns">
+          ${papersSection('recent','Recent papers','No recent project-specific research papers could be confirmed from public sources.')}
+          ${papersSection('foundational','Defining papers','No defining papers have been verified for this listing yet.')}
+        </div>${extraSection}${bibNote}
+        <p class="project-source-note">Conference papers and preprints are identified by type. Related instruments or predecessor studies are marked explicitly; references are not automatically attributed to ADOPT authors.</p>
+      </section>`;
+
       detail.innerHTML=`
         <section class="container inner-hero detail-hero">
           <a class="back-link" href="${back}">← ${p.status==='past'?'Past Projects':'All projects'}</a>
           <div class="eyebrow"><span class="small-line"></span> ${escapeText(p.overline)}</div>
           <h1>${escapeText(p.name)}<span class="title-period">.</span></h1>
-          <p class="page-lede">${escapeText(p.blurb)}</p>${note}
+          <p class="page-lede">${escapeText(p.blurb)}</p>${note}<a class="project-papers-jump" href="#project-publications">See selected project publications <span aria-hidden="true">↓</span></a>
         </section>
         <section class="container detail-grid" aria-label="Project background">
           <div class="detail-visual art-${escapeText(p.accent)}"><span class="detail-ring ring-a"></span><span class="detail-ring ring-b"></span><span class="detail-symbol">${escapeText(p.icon)}</span><span class="detail-label">${p.status==='past'?'ADOPT / PAST PROJECT':'ADOPT / RESEARCH PROJECT'}</span></div>
@@ -180,6 +216,7 @@
             <p class="project-source-note">References describe the wider project. Specific ADOPT roles and final instrument specifications may require research-group review.</p>
           </aside>
         </section>
+        ${publications}
         <section class="container detail-bottom"><div><span class="eyebrow">EXPLORE MORE</span><h2>Connected by curiosity.</h2></div><a class="btn btn-dark" href="projects.html">View all projects <span aria-hidden="true">↗</span></a></section>`;
     }
     protectProperNames(detail);

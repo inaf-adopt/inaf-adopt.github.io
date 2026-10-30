@@ -33,3 +33,7 @@ The main directory contains 19 projects and the Past Projects archive contains 4
 GitHub Pages deploys the `main` branch from `/ (root)` to https://inaf-adopt.github.io/. No framework build is necessary.
 
 The new organization repository does not add a license while institutional rights are reviewed. The precursor personal repository published material with a CC0 dedication; absence of a new license does not revoke previously granted rights. Project names, external webpages, official logos, photographs and institutional material may carry their own usage requirements. Original illustrative SVGs are in `assets/`.
+
+## Selected publications on project pages
+
+Each project detail page now has selected scientific literature, loaded from `project-papers.js`: up to three recent research papers and two defining papers, with separately labelled conference posters, presentations and abstracts where applicable. Bibliographies are curated snapshots (30 October 2026), not automated exhaustive or always-current feeds. Incomplete/ambiguous projects explicitly show unavailable bibliography notices. To update publications, edit the entry keyed by project ID in `project-papers.js`; new URLs must be trusted HTTPS publisher, DOI or research archive links.

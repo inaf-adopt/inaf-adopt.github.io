@@ -37,3 +37,10 @@ The new organization repository does not add a license while institutional right
 ## Selected publications on project pages
 
 Each project detail page now has selected scientific literature, loaded from `project-papers.js`: up to three recent research papers and two defining papers, with separately labelled conference posters, presentations and abstracts where applicable. Bibliographies are curated snapshots (30 October 2026), not automated exhaustive or always-current feeds. Incomplete/ambiguous projects explicitly show unavailable bibliography notices. To update publications, edit the entry keyed by project ID in `project-papers.js`; new URLs must be trusted HTTPS publisher, DOI or research archive links.
+
+
+## Observational science papers from commissioned instruments
+
+A separate **Science with the instrument** section appears only for projects with confirmed peer-reviewed astrophysical publications that analyse data actually collected by that named instrument. The list is curated in `instrument-science-papers.js`; do not populate it with commissioning, AIV, simulations or science-case papers. The section is hidden entirely for projects not represented in the data object, including commissioned instruments whose observational science papers have not yet been verified.
+
+As of 31 October 2026, the first verified science-paper sections are SHARK-NIR and CHEOPS. Studies combining multiple instruments are labelled so that nondetections and combined-method discoveries are described accurately. See `INSTRUMENT_SCIENCE_PUBLICATIONS.md` for detailed references and inclusion criteria.

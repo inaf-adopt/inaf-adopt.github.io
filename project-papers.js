@@ -12,13 +12,13 @@ window.ADOPT_PROJECT_PAPERS = {
         "doi": "10.1117/1.JATIS.11.2.025005"
       },
       {
-        "title": "Deep imaging of three accelerating stars using SHARK-NIR and LMIRCam at LBT",
-        "authors": "Mesa et al.",
+        "title": "SHARK-NIR commissioning and early science runs",
+        "authors": "Barbato et al.",
         "year": 2024,
-        "type": "Journal paper",
-        "url": "https://doi.org/10.1093/mnras/stae2706",
-        "doi": "10.1093/mnras/stae2706",
-        "note": "Published online 2024; appears in January 2025 issue."
+        "type": "Conference paper",
+        "url": "https://doi.org/10.1117/12.3020068",
+        "doi": "10.1117/12.3020068",
+        "note": "Commissioning and early-science validation; peer-reviewed astrophysical data papers are presented separately below."
       },
       {
         "title": "SHARK-NIR: from design to installation, ready to dive into first light",

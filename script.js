@@ -171,7 +171,8 @@
         const type=escapeText(item.type||'Research paper');
         const note=item.note?`<p class="paper-context">${escapeText(item.note)}</p>`:'';
         const doi=item.doi?`<span class="paper-doi">DOI: ${escapeText(item.doi)}</span>`:'';
-        return `<li class="project-paper"><div class="paper-meta"><span class="paper-kind">${type}</span>${doi}</div>${label}<div class="paper-byline">${metadata}</div>${note}</li>`;
+        const journal=item.journal?`<div class="paper-journal">${escapeText(item.journal)}</div>`:'';
+        return `<li class="project-paper"><div class="paper-meta"><span class="paper-kind">${type}</span>${doi}</div>${label}<div class="paper-byline">${metadata}</div>${journal}${note}</li>`;
       };
       const papersSection=(key,heading,emptyMessage)=>{
         const items=Array.isArray(bibliography[key])?bibliography[key]:[];
@@ -180,6 +181,19 @@
       const extras=(bibliography.resources||[]);
       const extraSection=extras.length?`<div class="paper-resources"><h3>Related conference materials</h3><ul class="paper-list paper-list-extra">${extras.map(paperItem).join('')}</ul></div>`:'';
       const bibNote=bibliography.note?`<p class="paper-verification-note" role="note">${escapeText(bibliography.note)}</p>`:'';
+      // Observational science is distinct from the instrument-design and commissioning bibliography.
+      // Do not display this section unless at least one verified, directly instrument-based paper exists.
+      const scienceResults=(window.ADOPT_INSTRUMENT_SCIENCE_PAPERS||{})[p.id];
+      const observationalPapers=Array.isArray(scienceResults?.papers)?scienceResults.papers.filter(item=>item.title&&item.url&&safePaperLink(item)):[];
+      const scienceResultsSection=observationalPapers.length
+        ?`<section class="container instrument-science-publications" id="instrument-science-papers" aria-label="Published science using the ${escapeText(p.name)} instrument">
+          <div class="detail-overline">07 / OBSERVATIONAL SCIENCE</div>
+          <h2>Science with the instrument.</h2>
+          <p class="project-publications-intro">${escapeText(scienceResults.intro)}</p>
+          <ol class="paper-list science-results-list">${observationalPapers.map(paperItem).join('')}</ol>
+          <p class="project-source-note">Selected refereed science studies, not an exhaustive or automatically updated bibliography. Papers based on multiple observatories identify the role of this instrument; inclusion does not imply authorship by ADOPT.</p>
+        </section>`:'';
+      const scienceResultsJump=observationalPapers.length?'<a class="project-papers-jump" href="#instrument-science-papers">Science results from the instrument <span aria-hidden="true">↓</span></a>':'';
       const publications=`<section class="container project-publications" aria-label="Selected project publications" id="project-publications">
         <div class="detail-overline">06 / SCIENTIFIC LITERATURE</div><h2>Selected publications.</h2>
         <p class="project-publications-intro">Up to three recent research papers and two defining or foundational papers, selected for relevance and linked to their publisher or research archive. The bibliography was checked in October 2026 and is not an automatically updated feed.</p>
@@ -195,7 +209,7 @@
           <a class="back-link" href="${back}">← ${p.status==='past'?'Past Projects':'All projects'}</a>
           <div class="eyebrow"><span class="small-line"></span> ${escapeText(p.overline)}</div>
           <h1>${escapeText(p.name)}<span class="title-period">.</span></h1>
-          <p class="page-lede">${escapeText(p.blurb)}</p>${note}<a class="project-papers-jump" href="#project-publications">See selected project publications <span aria-hidden="true">↓</span></a>
+          <p class="page-lede">${escapeText(p.blurb)}</p>${note}<div class="project-jump-links"><a class="project-papers-jump" href="#project-publications">See selected project publications <span aria-hidden="true">↓</span></a>${scienceResultsJump}</div>
         </section>
         <section class="container detail-grid" aria-label="Project background">
           <div class="detail-visual art-${escapeText(p.accent)}"><span class="detail-ring ring-a"></span><span class="detail-ring ring-b"></span><span class="detail-symbol">${escapeText(p.icon)}</span><span class="detail-label">${p.status==='past'?'ADOPT / PAST PROJECT':'ADOPT / RESEARCH PROJECT'}</span></div>
@@ -217,6 +231,7 @@
           </aside>
         </section>
         ${publications}
+        ${scienceResultsSection}
         <section class="container detail-bottom"><div><span class="eyebrow">EXPLORE MORE</span><h2>Connected by curiosity.</h2></div><a class="btn btn-dark" href="projects.html">View all projects <span aria-hidden="true">↗</span></a></section>`;
     }
     protectProperNames(detail);
@@ -243,7 +258,13 @@
     const suggestions=searchPage.querySelector('[data-search-suggestions]');
     const normalize=text=>(text||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
     const escapeHtml=text=>String(text).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,(p.science||[]).join(' '),p.technical,(p.specs||[]).flat().join(' '),p.contribution,p.telescope,p.category,(p.refs||[]).map(x=>x[0]).join(' '),p.status==='past'?'Past Projects':''].join(' ')}))];
+    const scienceRecords=Object.entries(window.ADOPT_INSTRUMENT_SCIENCE_PAPERS||{}).flatMap(([id,entry])=>
+      (entry.papers||[]).filter(p=>p.title&&p.url).map(p=>({
+        title:p.title,section:'Science with '+entry.instrument,
+        url:'project.html?id='+encodeURIComponent(id)+'#instrument-science-papers',type:'Observational science paper',
+        text:[p.authors,p.year,p.journal,p.note,entry.instrument].join(' ')
+      })));
+    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,(p.science||[]).join(' '),p.technical,(p.specs||[]).flat().join(' '),p.contribution,p.telescope,p.category,(p.refs||[]).map(x=>x[0]).join(' '),p.status==='past'?'Past Projects':''].join(' ')})),...scienceRecords];
     // Avoid regex on user strings; render snippets safely into text with explicit <mark> nodes.
     const markText=(text,terms)=>{
       const src=String(text),low=normalize(src);const matches=[];

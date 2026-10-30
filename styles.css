@@ -45,3 +45,225 @@
 .search-suggestions[hidden]{display:none}
 @media(max-width:900px){.identity{min-width:0}.nav-tools>.search-nav-link{display:none}.language-nav .gtranslate_wrapper{max-width:105px;min-width:70px}.nav-right{gap:8px}}
 @media(max-width:440px){.nav-shell{gap:8px}.identity-type strong{font-size:21px}.identity-type small{letter-spacing:.1em}.brand-icon{height:36px;width:36px}.language-nav .gtranslate_wrapper{max-width:92px;min-width:66px}.language-nav .gt_selector,.language-nav select{width:92px;font-size:11px}.language-nav .language-icon{width:15px;height:15px}.language-nav{gap:4px}.menu-toggle{width:31px;padding:5px}}
+
+/* ========================================================================
+   Accessibility & responsive design — October 2026
+   WCAG AA-oriented: readable minimum type, strong text contrast, visible
+   keyboard focus, non-colour interaction cues and generous touch targets.
+   ======================================================================== */
+:root {
+  --muted: #405968;                 /* readable on the pale page background */
+  --teal-deep: #175b67;             /* dark teal links/labels on light surfaces */
+}
+html { font-size: 100%; scroll-padding-top: 7rem; }
+body { font-size: 1rem; line-height: 1.65; }
+p { color: var(--muted); line-height: 1.7; }
+h1, h2, h3 { text-wrap: balance; }
+:where(p, li, a, button, label, dd) { overflow-wrap: break-word; }
+:where(button, input, select) { font-size: 1rem; }
+
+/* Strong visible focus, including links and JS-generated interactive cards. */
+:where(a, button, input, select, [tabindex]):focus-visible {
+  outline: 3px solid #d07923;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+.hero :where(a, button):focus-visible,
+.feature-section :where(a, button):focus-visible,
+.site-footer :where(a, button):focus-visible,
+.science-box :where(a, button, input):focus-visible {
+  outline-color: #ffd37c;
+  box-shadow: 0 0 0 2px #10253b;
+}
+.skip-link:focus, .skip-link:focus-visible {
+  position: fixed !important;
+  top: 12px;
+  left: 12px !important;
+  z-index: 9999;
+  display: inline-block;
+  padding: 12px 18px;
+  color: #ffffff;
+  background: #10253b;
+  font-weight: 750;
+  border-radius: 8px;
+}
+.desktop-nav a:hover, .desktop-nav a:focus-visible,
+.footer-links a:hover, .footer-links a:focus-visible,
+.footer-bottom a:hover, .footer-bottom a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+/* Body text >=16px, metadata >=14px. The visitor can still zoom the page. */
+.eyebrow, .small-label, .small-label, .rail-inner > span,
+.project-meta, .project-art .art-mini, .research-card .r-num,
+.path-card .number, .detail-label, .detail-overline,
+.comparison-label, .people-graphic .tag, .pub-card small,
+.contact-card dt, .contact-art .location, .footer-links h4,
+.search-result .search-result-kicker, .hero-photo-credit,
+.photo-caption, .identity-type small { font-size: .875rem; }
+.eyebrow { letter-spacing: .09em; }
+.small-label, .project-meta, .detail-label, .detail-overline,
+.contact-card dt { letter-spacing: .06em; }
+.identity-type small { letter-spacing: .05em; color: #36515f; }
+.desktop-nav a, .nav-contact, .btn, .filter-btn, .text-link,
+.detail-hero .back-link, .search-nav-link,
+.site-search-form button, .mobile-tools .search-nav-link { font-size: 1rem; }
+.desktop-nav a { color: #36515f; }
+.nav-contact { min-height: 44px; display: inline-flex; align-items: center; }
+.menu-toggle, .search-nav-link { min-width: 44px; min-height: 44px; }
+.menu-toggle { height: 44px; width: 44px; padding: 10px; }
+.menu-toggle span { margin: 5px 0; }
+.btn { min-height: 48px; white-space: normal; text-align: center; }
+.filter-btn { min-height: 44px; padding: 10px 18px; color: #284c5e; }
+.filter-btn:not(.active):hover { text-decoration: underline; }
+.text-link { min-height: 44px; align-items: center; }
+
+.hero-lede, .section-header p, .split-intro p, .research-card p,
+.project-info p, .feature-copy p, .page-lede,
+.detail-copy p, .wide-info p, .method-list li,
+.people-copy p, .note-box, .pub-card p, .credit-item p,
+.search-result p, .search-empty p, .search-note,
+.search-suggestions, .search-status, .site-search-form input {
+  font-size: 1rem;
+}
+.hero-lede { font-size: 1.125rem; }
+.section-header p, .project-info p, .research-card p { line-height: 1.7; }
+.method-list li span, .fact-block, .comparison-control label,
+.comparison-control .hint, .compare-status,
+.hero-floating strong, .hero-floating small,
+.footer-links a, .footer-bottom, .search-result h2 { font-size: 1rem; }
+.comparison-control .hint { color: #b9d0db; }
+.hero-floating small { color: #36515f; }
+.footer-top p { color: #c0d1db; }
+.footer-links h4, .footer-bottom { color: #b6cbd6; }
+.research-card .r-num, .path-card .number { color: #405968; }
+.detail-overline { color: #185f6c; }
+.method-list li span { color: #185f6c; }
+.pub-card small { color: #3c5967; }
+.contact-card dt { color: #405968; }
+.project-meta { color: #365d6a; }
+.search-result p { color: #405968; }
+.search-suggestions a { min-height: 44px; display: inline-flex; align-items: center; }
+.site-search-form button { min-height: 46px; }
+.search-result .search-result-kicker { letter-spacing: .07em; }
+
+.language-nav .gt_selector, .language-nav select {
+  font-size: 1rem;
+  min-width: 112px;
+  width: 132px;
+  min-height: 44px;
+  height: 44px;
+  padding-inline: 10px;
+  color: #10253b;
+  border-color: #839ca7;
+}
+.language-nav .gtranslate-fallback, .language-nav .gt_float_switcher { font-size: 1rem; }
+.language-nav .gtranslate_wrapper { max-width: 164px; }
+.language-nav .gtranslate-fallback { text-decoration: underline; text-underline-offset: 3px; }
+.mobile-nav a { min-height: 48px; font-size: 1rem; }
+.mobile-tools .search-nav-link { width: auto; min-height: 44px; }
+.rail-projs a { font-size: 1rem; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.rail-projs a:hover, .rail-projs a:focus-visible { text-decoration: underline; }
+
+/* Decorative colours never carry meaning alone: project/category names,
+   filter labels, selected button fill + pressed state, and before/after labels
+   stay visible without distinguishing hues. */
+.filter-btn.active { box-shadow: inset 0 0 0 1px #ffffff55; }
+.project-card:focus-visible, .research-card:focus-visible,
+.path-card:focus-visible, .pub-card:focus-visible {
+  outline: 3px solid #d07923;
+  outline-offset: 4px;
+}
+
+/* Larger tap targets and a menu that can replace the crowded tablet nav. */
+@media (max-width: 1180px) {
+  .desktop-nav, .nav-contact { display: none; }
+  .menu-toggle { display: block; }
+  .nav-shell { gap: 12px; }
+}
+@media (max-width: 900px) {
+  .mobile-tools .search-nav-link { font-size: 1rem; }
+  .nav-tools > .language-nav { display: flex; }
+  .language-nav .gtranslate_wrapper { max-width: 160px; min-width: 112px; }
+  .language-nav .gt_selector, .language-nav select { width: 132px; font-size: 1rem; }
+}
+@media (max-width: 650px) {
+  /* Two rows avoid squeezing the logo, translation and menu at 320–390px. */
+  .container { width: calc(100% - 36px); }
+  .nav-shell {
+    height: auto;
+    min-height: 76px;
+    padding-block: 12px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    row-gap: 8px;
+  }
+  .identity { grid-column: 1; grid-row: 1; min-width: 0; }
+  .nav-right { display: contents; }
+  .nav-tools {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+  }
+  .nav-tools > .search-nav-link { display: inline-flex; order: 2; }
+  .nav-tools > .language-nav { order: 1; min-width: 0; }
+  .menu-toggle { grid-column: 2; grid-row: 1; justify-self: end; }
+  .hero { min-height: 0; }
+  .hero-grid { min-height: 720px; }
+  .hero-copy { padding: 65px 0 290px; }
+  .hero h1 { font-size: clamp(3.05rem, 10.5vw, 4.6rem); }
+  .hero-lede { font-size: 1.0625rem; }
+  .hero-actions .btn { font-size: 1rem; min-height: 48px; }
+  .hero-visual { inset: 315px -38px 0 0; }
+  .inner-hero h1 { font-size: clamp(2.85rem, 9.5vw, 4.1rem); }
+  .inner-hero { padding-top: 60px; }
+  .feature-copy h2 { font-size: clamp(2.1rem, 8vw, 2.75rem); }
+  .cta-inner h2 { font-size: clamp(2rem, 8vw, 3rem); }
+  .footer-links { flex-wrap: wrap; gap: 36px; }
+  .science-box { padding: 24px 18px; }
+  .science-box h2 { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+  .site-search-form { gap: 8px; padding-left: 12px; }
+  .site-search-form input { font-size: 1rem; }
+  .site-search-form button { font-size: 1rem; }
+  .search-result h2 { font-size: 1.25rem; }
+}
+@media (max-width: 380px) {
+  .hero h1 { font-size: 3rem; }
+  .identity-type strong { font-size: 1.35rem; }
+  .identity-type small { font-size: .875rem; }
+  .hero-actions { align-items: stretch; }
+  .hero-actions .btn { width: 100%; }
+  .mini-index { flex-wrap: wrap; gap: 12px; }
+  .site-search-form { flex-wrap: wrap; }
+  .site-search-form input { min-width: 120px; }
+  .site-search-form button { width: 100%; }
+}
+@media (prefers-contrast: more) {
+  :root { --muted: #203b4e; --teal-deep: #104e57; }
+  .project-card, .research-card, .pub-card, .role-card { border-color: #577582; }
+  :where(a,button,input,select):focus-visible { outline-width: 4px; }
+}
+@media (forced-colors: active) {
+  .filter-btn.active { border: 2px solid Highlight; }
+  .project-card, .research-card, .path-card { border: 1px solid CanvasText; }
+  :where(a,button,input,select):focus-visible { outline: 3px solid Highlight; }
+}
+
+/* Final low-vision and narrow-screen safeguards. */
+h1, h2, h3 { overflow-wrap: anywhere; }
+.mini-index { font-size: .875rem; }
+.compare-status { font-size: 1rem !important; }
+.art-mini { color: #ffffff; }
+.project-art .art-mini {
+  color: #ffffff;
+  background: rgba(11, 27, 46, .92);
+  border-radius: 5px;
+  padding: 6px 9px;
+  opacity: 1;
+}

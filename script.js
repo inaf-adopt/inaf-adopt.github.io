@@ -101,18 +101,20 @@
       'SHARK-NIR':'shark','MAVIS':'mavis','MORFEO':'morfeo','EKARUS':'ekarus','Mezzocielo':'mezzocielo',
       'MATTO':'matto','NIRVANA-VIS':'nirvana','PLATO':'plato','VSTPol':'vstpol','INGOT':'ingot','SOXS':'soxs',
       'Space Debris':'space-debris','TRACE-AO':'trace-ao','OSCAR':'oscar','TDT':'tdt','MICADO Science':'micado-science',
-      'Einstein Telescope':'einstein-telescope','HAYDIN':'haydin','LBCmos':'lbcmos'
+      'Einstein Telescope':'einstein-telescope','HAYDIN':'haydin','LBCmos':'lbcmos','LINC-NIRVANA':'linc-nirvana'
     };
     function personCard(p){
       const safeName=clean(p.name),letters=clean(initials(p.name));
-      const photo=p.photo?`<img class="team-photo" src="${clean(p.photo)}" alt="" loading="lazy" decoding="async" onerror="this.hidden=true;this.parentElement.classList.add('photo-unavailable')"/>`:'';
-      const chips=(p.projects||[]).slice(0,3).map(name=>{const id=projectNameToId[name];return id?`<a class="team-chip notranslate" translate="no" href="project.html?id=${encodeURIComponent(id)}">${clean(name)}</a>`:`<span class="team-chip notranslate" translate="no">${clean(name)}</span>`}).join('');
-      const refs=(p.links||[]).slice(0,2).filter(x=>/^https:\/\//i.test(x.url)).map(x=>`<a class="team-reference" href="${clean(x.url)}" target="_blank" rel="noopener noreferrer">${clean(x.label)}<span aria-hidden="true"> ↗</span></a>`).join('');
-      return `<article class="team-card" id="${clean(p.id)}"><div class="team-portrait${p.photo?' has-photo':' photo-unavailable'}"><span class="team-initials" aria-hidden="true">${letters}</span>${photo}</div><div class="team-card-content"><div class="team-field">${clean(p.tag)}</div><h3 class="notranslate" translate="no">${safeName}</h3><p class="team-role">${clean(p.role)}</p><p class="team-bio">${clean(p.bio)}</p>${chips?`<div class="team-projects" aria-label="Associated research projects">${chips}</div>`:''}${refs?`<div class="team-references">${refs}</div>`:''}</div></article>`;
+      const photo=p.photo?`<img class="team-photo" src="${clean(p.photo)}" alt="Portrait of ${safeName}" loading="lazy" decoding="async"${p.photoPosition?` style="object-position:${clean(p.photoPosition)}"`:''} onerror="this.hidden=true;this.parentElement.classList.add('photo-unavailable')"/>`:'';
+      const chips=(p.projects||[]).slice(0,5).map(name=>{const id=projectNameToId[name];return id?`<a class="team-chip notranslate" translate="no" href="project.html?id=${encodeURIComponent(id)}">${clean(name)}</a>`:`<span class="team-chip notranslate" translate="no">${clean(name)}</span>`}).join('');
+      const refs=(p.links||[]).slice(0,4).filter(x=>/^https:\/\//i.test(x.url)).map(x=>`<a class="team-reference" href="${clean(x.url)}" target="_blank" rel="noopener noreferrer">${clean(x.label)}<span aria-hidden="true"> ↗</span></a>`).join('');
+      const more=p.longBio?`<details class="team-more"><summary>Read full profile</summary><p>${clean(p.longBio)}</p></details>`:'';
+      const credit=p.photoCredit?`<span class="team-photo-credit">Photo: ${p.photoCredit.startsWith('https://')?'MAVIS consortium':'provided by member'}</span>`:'';
+      return `<article class="team-card" id="${clean(p.id)}"><div class="team-portrait${p.photo?' has-photo':' photo-unavailable'}"><span class="team-initials" aria-hidden="true">${letters}</span>${photo}${credit}</div><div class="team-card-content"><div class="team-field">${clean(p.tag)}</div><h3 class="notranslate" translate="no">${safeName}</h3><p class="team-role">${clean(p.role)}</p><p class="team-bio">${clean(p.bio)}</p>${more}${chips?`<div class="team-projects" aria-label="Associated research projects">${chips}</div>`:''}${refs?`<div class="team-references">${refs}</div>`:''}</div></article>`;
     }
     function renderPeople(){
       const q=(peopleSearch?.value||'').trim().toLocaleLowerCase();
-      const matches=people.filter(p=>[p.name,p.role,p.bio,p.tag,...(p.projects||[])].join(' ').toLocaleLowerCase().includes(q));
+      const matches=people.filter(p=>[p.name,p.role,p.bio,p.longBio||'',p.tag,...(p.projects||[])].join(' ').toLocaleLowerCase().includes(q));
       peopleGrid.innerHTML=matches.map(personCard).join('');
       peopleCount.textContent=matches.length+' of '+people.length+' group members';
       peopleEmpty.hidden=matches.length>0;
@@ -298,7 +300,7 @@
         url:'project.html?id='+encodeURIComponent(id)+'#instrument-science-papers',type:'Observational science paper',
         text:[p.authors,p.year,p.journal,p.note,entry.instrument].join(' ')
       })));
-    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,(p.science||[]).join(' '),p.technical,(p.specs||[]).flat().join(' '),p.contribution,p.telescope,p.category,(p.refs||[]).map(x=>x[0]).join(' '),p.status==='past'?'Past Projects':''].join(' ')})),...scienceRecords,...people.map(p=>({title:p.name,section:'People · '+p.tag,url:'people.html#'+p.id,type:'Group member',text:[p.role,p.bio,p.tag,...(p.projects||[])].join(' ')}))];
+    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,(p.science||[]).join(' '),p.technical,(p.specs||[]).flat().join(' '),p.contribution,p.telescope,p.category,(p.refs||[]).map(x=>x[0]).join(' '),p.status==='past'?'Past Projects':''].join(' ')})),...scienceRecords,...people.map(p=>({title:p.name,section:'People · '+p.tag,url:'people.html#'+p.id,type:'Group member',text:[p.role,p.bio,p.longBio||'',p.tag,...(p.projects||[])].join(' ')}))];
     // Avoid regex on user strings; render snippets safely into text with explicit <mark> nodes.
     const markText=(text,terms)=>{
       const src=String(text),low=normalize(src);const matches=[];

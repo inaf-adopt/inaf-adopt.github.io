@@ -50,3 +50,7 @@ As of 31 October 2026, the first verified science-paper sections are SHARK-NIR a
 The People page lists 27 group members supplied by the research group in `people-data.js`. Each card gives a short source-linked research summary and project links, with a search filter and responsive photo/initials portrait. Source checks and photographic attribution are documented in `PEOPLE_SOURCES.md`. Names are protected from automatic translation via `protected-names.json`. Specific titles and group membership should be reviewed by the relevant people.
 
 **Build note:** `build_pages.py` intentionally preserves the enriched Projects, Project Details, People, Search, and Credits pages when they already exist, rather than replacing them with older generator templates. These pages can be edited directly.
+
+## People profiles — 31 October 2026 update
+
+The People page provides 27 short biographies and expandable, source-based longer profiles, with links to research, instruments and institutional sources. The portrait of Kalyan Kumar Radhakrishnan Santhakumari was supplied by the member and stored locally at `assets/people/kalyan-radhakrishnan.jpg` to avoid third-party image dependencies. Other publicly labelled consortium portraits remain external with attribution and initials fallback. This does not grant new rights to third-party images. Membership, roles and text are subject to member review.

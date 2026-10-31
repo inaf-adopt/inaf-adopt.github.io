@@ -401,3 +401,21 @@ a.team-chip:hover{text-decoration:underline;background:#d4e9e7}
 @media(max-width:1080px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.team-portrait{height:220px}}
 @media(max-width:680px){.team-directory{padding-bottom:80px}.team-directory-intro{align-items:flex-start;flex-direction:column;gap:22px}.team-count{flex-direction:row;align-items:center;gap:14px}.team-count strong{font-size:3.25rem}.team-count span{margin:0}.team-toolbar{padding:18px}.team-search-wrap input{font-size:1rem}.team-grid{grid-template-columns:1fr;gap:16px}.team-portrait{height:235px}.team-card-content{padding:23px}.team-bio{font-size:1rem}}
 @media(forced-colors:active){.team-card,.team-toolbar,.team-chip{border:1px solid CanvasText}.team-search-wrap:focus-within{outline:3px solid Highlight}}
+
+/* Version 10: expanded, source-based team biographies and accountable portrait credits. */
+.team-more{margin:-3px 0 20px;padding:12px 14px 15px;border:1px solid #d4e5e2;border-radius:12px;background:#f3f8f6;color:#284d60}
+.team-more summary{cursor:pointer;font-size:1rem;font-weight:750;color:#155872;text-decoration:underline;text-underline-offset:3px;line-height:1.55}
+.team-more summary:hover{color:#08384c}
+.team-more summary:focus-visible{outline:3px solid #155872;outline-offset:4px;border-radius:3px}
+.team-more[open] summary{margin-bottom:10px}
+.team-more p{font-size:1rem;line-height:1.7;margin:0;max-width:70ch}
+.team-photo-credit{position:absolute;bottom:7px;right:8px;z-index:2;background:#071f30db;color:#fff;font-size:.75rem;font-weight:700;padding:4px 8px;border-radius:6px;max-width:95%;line-height:1.35}
+.team-portrait.photo-unavailable .team-photo-credit{display:none}
+.team-card:nth-child(5n+2) .team-portrait{background:radial-gradient(circle at 66% 30%,#3b687f,#17253d 82%)}
+.team-card:nth-child(5n+3) .team-portrait{background:radial-gradient(circle at 67% 26%,#516d72,#1b3545 79%)}
+.team-card:nth-child(5n+4) .team-portrait{background:radial-gradient(circle at 70% 33%,#6a6178,#2b3149 82%)}
+.team-card:nth-child(5n+5) .team-portrait{background:radial-gradient(circle at 67% 30%,#507a6b,#153b40 83%)}
+.team-initials{position:relative;z-index:0;text-shadow:0 2px 14px #0005}
+.team-card .team-portrait:has(.team-photo:not([hidden])) .team-initials{opacity:0}
+@media (max-width:680px){.team-photo-credit{font-size:.76rem}.team-more{padding:12px 14px}.team-more summary,.team-more p{font-size:1rem}}
+@media(forced-colors:active){.team-more{border:1px solid CanvasText}.team-photo-credit{border:1px solid CanvasText}}

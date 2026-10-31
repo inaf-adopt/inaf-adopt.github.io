@@ -4,7 +4,7 @@ This file documents the public research references used to describe the 27 names
 
 ## Photographs
 
-Fourteen individual portrait URLs are linked from the official [MAVIS consortium team directory](https://mavis-ao.org/consortium/), which associates the images with names. The files are **not copied into this repository**, are credited to the source, and gracefully fall back to initials if unavailable. The group should confirm photo reuse permission and preferred portraits before formal launch.
+Thirteen individual portraits remain linked from the official [MAVIS consortium team directory](https://mavis-ao.org/consortium/), which associates the images with names. These thirteen files are **not copied into this repository**, are credited to the source, and gracefully fall back to initials if unavailable. The Kalyan portrait is a member-supplied image stored locally at `assets/people/kalyan-radhakrishnan.jpg`. The group should confirm photo reuse permission and preferred portraits before formal launch.
 
 ## Directory entries
 
@@ -148,7 +148,11 @@ Fourteen individual portrait URLs are linked from the official [MAVIS consortium
 - Linked projects: SOXS, MAVIS, MORFEO
 - Source: [ORCID profile](https://orcid.org/0000-0003-2674-1504)
 - Source: [LINC-NIRVANA commissioning](https://openaccess.inaf.it/entities/publication/ef41a731-9633-4e75-bc09-697ca42be240)
-- Portrait: [MAVIS consortium](https://mavis-ao.org/consortium/); remote image link.
+- Portrait: photo supplied directly by the member on 31 October 2026; stored locally in `assets/people/kalyan-radhakrishnan.jpg`.
+
+- Source: [INAF/SOXS AIV and professional profile](https://www.aries.res.in/node/2255) (professional biography, AIV manager and Deputy SE).
+- Source: [MPIA / Heidelberg IMPRS alumni 2017](https://www.imprs-hd.mpg.de/142337/2017) (PhD and LINC-NIRVANA).
+- Source: [IAU member profile](https://iauarchive.eso.org/administration/membership/individual/20113/) (AO and instrumentation).
 
 ### Demetrio Magrin
 - Display label: Senior technologist · INAF Padova
@@ -220,3 +224,19 @@ Fourteen individual portrait URLs are linked from the official [MAVIS consortium
 - Source: [Accademia dei Lincei biography](https://www.lincei.it/it/socio/ragazzoni-roberto)
 - Source: [INAF profile article](https://www.media.inaf.it/2024/04/05/roberto-ragazzoni-presidente-inaf/)
 - Portrait: [MAVIS consortium](https://mavis-ao.org/consortium/); remote image link.
+
+
+## Biographical review — 31 October 2026
+
+The expanded `longBio` fields in `people-data.js` use conservative paraphrases of the named sources above. They are research-profile descriptions, not independently certified job titles or institutional appointments. Additional checks:
+
+- [Alessandro Ballone — DAO4MATTO real-time AO control](https://indico.ict.inaf.it/event/2870/contributions/20135/).
+- [Giovanni Boato — University of Padova MSc thesis on MezzoCielo optical performance](https://thesis.unipd.it/handle/20.500.12608/101157).
+- [Matteo Simioni — INAF research profile](https://openaccess.inaf.it/entities/person/81c61001-227a-47a1-93a5-c190757549d9) (research-fellow status).
+- [Oleksandra Rebrysh — MAVIS AO module optical design](https://indico.ict.inaf.it/event/3479/attachments/11332/24569/ADONI_Abstract_Booklet%20final%20version.pdf).
+- [Simone Di Filippo — Ingot wavefront sensor laboratory tests](https://arxiv.org/abs/2209.12921).
+- [Remon VanGaalen — NIRVANA-VIS NCPA characterisation, AO4ELT8 programme](https://ao4elt8.pucv.cl/wp-content/uploads/2025/10/AO4ELT8-Final-Program.pdf).
+- [Roberto Ragazzoni — current INAF Presidency](https://presidenza.inaf.it/).
+- [Carmelo Arcidiacono — 2026 MORFEO PSF paper](https://doi.org/10.1016/j.newast.2026.102559).
+
+**Photo policy:** A headshot is displayed only when matched by a captioned institutional source or supplied by the person; missing portraits display a designed initials avatar. The user-provided photo is not a licence for unrelated images.

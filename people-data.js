@@ -26,7 +26,8 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "https://mavis-ao.org/assets/mugshots/carmelo_arcidiacono.jpg",
     "photoCredit": "https://mavis-ao.org/consortium/",
-    "longBio": "Carmelo works on multi-conjugate adaptive optics and the prediction and reconstruction of the point-spread function in corrected astronomical images. His research connects numerical modelling with the MORFEO system for the Extremely Large Telescope, including methods that help astronomers interpret images after atmospheric correction. He is also associated with Padova's adaptive-optics laboratory efforts."
+    "longBio": "Carmelo works on multi-conjugate adaptive optics and the prediction and reconstruction of the point-spread function in corrected astronomical images. His research connects numerical modelling with the MORFEO system for the Extremely Large Telescope, including methods that help astronomers interpret images after atmospheric correction. He is also associated with Padova's adaptive-optics laboratory efforts.",
+    "orcid": "0000-0003-0142-8108"
   },
   {
     "id": "mamoon-asghar",
@@ -69,15 +70,12 @@ window.ADOPT_PEOPLE = [
       {
         "label": "DAO4MATTO presentation",
         "url": "https://indico.ict.inaf.it/event/2870/contributions/20135/"
-      },
-      {
-        "label": "ORCID",
-        "url": "https://orcid.org/0000-0003-4893-2993"
       }
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Alessandro develops the MATTO multi-conjugate adaptive-optics laboratory at INAF Padova. His work includes the DAO4MATTO real-time control architecture, combining laboratory hardware, wavefront sensing and deformable-mirror control. The facility is designed to test several MCAO configurations and compare new control approaches before they are adopted by astronomical observatories."
+    "longBio": "Alessandro develops the MATTO multi-conjugate adaptive-optics laboratory at INAF Padova. His work includes the DAO4MATTO real-time control architecture, combining laboratory hardware, wavefront sensing and deformable-mirror control. The facility is designed to test several MCAO configurations and compare new control approaches before they are adopted by astronomical observatories.",
+    "orcid": "0000-0003-4893-2993"
   },
   {
     "id": "federico-battaini",
@@ -101,7 +99,8 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Federico contributes to optical-instrument assembly, integration and verification, including SOXS at the New Technology Telescope. He has co-authored work on integrating and verifying the SOXS Common Path and participates in the wider MATTO laboratory collaboration. His research connects practical optomechanical testing with the commissioning of astronomical instruments."
+    "longBio": "Federico contributes to optical-instrument assembly, integration and verification, including SOXS at the New Technology Telescope. He has co-authored work on integrating and verifying the SOXS Common Path and participates in the wider MATTO laboratory collaboration. His research connects practical optomechanical testing with the commissioning of astronomical instruments.",
+    "orcid": "0000-0002-6146-0364"
   },
   {
     "id": "maria-bergomi",
@@ -250,7 +249,8 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "https://mavis-ao.org/assets/mugshots/simonetta_chinellato.jpg",
     "photoCredit": "https://mavis-ao.org/consortium/",
-    "longBio": "Simonetta works on technical and programme aspects of complex astronomical instrumentation at INAF Padova. Her published project associations include PLATO telescope development, SHARK-NIR and adaptive-optics initiatives. Her experience brings together instrument-development processes and coordination across participating teams."
+    "longBio": "Simonetta works on technical and programme aspects of complex astronomical instrumentation at INAF Padova. Her published project associations include PLATO telescope development, SHARK-NIR and adaptive-optics initiatives. Her experience brings together instrument-development processes and coordination across participating teams.",
+    "orcid": "0000-0003-2249-8703"
   },
   {
     "id": "luca-cortese",
@@ -336,17 +336,14 @@ window.ADOPT_PEOPLE = [
     ],
     "links": [
       {
-        "label": "ORCID profile",
-        "url": "https://orcid.org/0000-0002-5144-3608"
-      },
-      {
         "label": "MezzoCielo paper",
         "url": "https://openaccess.inaf.it/entities/publication/52a47474-243b-4b38-b8ca-4c97716c275c"
       }
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Silvio contributes to optical and optomechanical studies of the MezzoCielo wide-field telescope concept. The public literature discusses the performance of its unconventional spherical and refractive optical arrangement."
+    "longBio": "Silvio contributes to optical and optomechanical studies of the MezzoCielo wide-field telescope concept. The public literature discusses the performance of its unconventional spherical and refractive optical arrangement.",
+    "orcid": "0000-0002-5144-3608"
   },
   {
     "id": "jacopo-farinato",
@@ -443,10 +440,6 @@ window.ADOPT_PEOPLE = [
     ],
     "links": [
       {
-        "label": "ORCID",
-        "url": "https://orcid.org/0000-0003-2674-1504"
-      },
-      {
         "label": "SOXS AIV and career profile",
         "url": "https://www.aries.res.in/node/2255"
       },
@@ -462,7 +455,8 @@ window.ADOPT_PEOPLE = [
     "photo": "assets/people/kalyan-radhakrishnan.jpg",
     "photoCredit": "Photo supplied by the member (2026)",
     "longBio": "Kalyan is a technologist at the INAF Astronomical Observatory of Padova, specialising in adaptive optics, systems engineering and the assembly, integration and verification of ground-based astronomical instruments. He completed his PhD in Astronomy and Astrophysics at Heidelberg University in 2017, working at the Max Planck Institute for Astronomy on the LINC-NIRVANA multi-conjugate adaptive-optics system for the Large Binocular Telescope. He leads AIV activities and serves as Deputy System Engineer for SOXS, including its integration, installation and commissioning at ESO's La Silla Observatory. His work also spans MAVIS adaptive-optics calibration, MORFEO instrument integration planning, NIRVANA-VIS system engineering, and laboratory development of the Ingot wavefront sensor. His experience bridges optical alignment, system verification, observatory commissioning and science-enabling instrumentation.",
-    "photoPosition": "center 35%"
+    "photoPosition": "center 35%",
+    "orcid": "0000-0003-2674-1504"
   },
   {
     "id": "demetrio-magrin",
@@ -531,7 +525,8 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Lorenzo contributes to the MATTO multi-conjugate adaptive-optics laboratory programme at INAF Padova. Public workshop material lists him among the collaborators in the facility's design and early implementation. His listed interests are tied to optical test-bench integration and the development of systems used to experiment with multiple wavefront-sensing and correction configurations."
+    "longBio": "Lorenzo contributes to the MATTO multi-conjugate adaptive-optics laboratory programme at INAF Padova. Public workshop material lists him among the collaborators in the facility's design and early implementation. His listed interests are tied to optical test-bench integration and the development of systems used to experiment with multiple wavefront-sensing and correction configurations.",
+    "orcid": "0009-0000-8587-0651"
   },
   {
     "id": "oleksandra-rebrysh",
@@ -583,7 +578,8 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Matteo is a research fellow associated with INAF Padova. His research includes adaptive-optics point-spread-function reconstruction and methods for interpreting images corrected by complex AO systems. He also works on optical observation and analysis of artificial objects in Earth orbit."
+    "longBio": "Matteo is a research fellow associated with INAF Padova. His research includes adaptive-optics point-spread-function reconstruction and methods for interpreting images corrected by complex AO systems. He also works on optical observation and analysis of artificial objects in Earth orbit.",
+    "orcid": "0000-0002-8830-1259"
   },
   {
     "id": "remon-vangaalen",
@@ -636,7 +632,8 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "https://mavis-ao.org/assets/mugshots/daniele_vassallo.jpg",
     "photoCredit": "https://mavis-ao.org/consortium/",
-    "longBio": "Daniele works on wavefront sensing, adaptive optics and associated real-time instrument-control technologies. He contributes to the MATTO multi-conjugate adaptive-optics facility and its control architecture. His research also includes AO performance and experimental investigations for high-resolution astronomical observations."
+    "longBio": "Daniele works on wavefront sensing, adaptive optics and associated real-time instrument-control technologies. He contributes to the MATTO multi-conjugate adaptive-optics facility and its control architecture. His research also includes AO performance and experimental investigations for high-resolution astronomical observations.",
+    "orcid": "0000-0002-3286-6349"
   },
   {
     "id": "valentina-viotto",

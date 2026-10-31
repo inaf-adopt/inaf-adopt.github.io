@@ -108,9 +108,10 @@
       const photo=p.photo?`<img class="team-photo" src="${clean(p.photo)}" alt="Portrait of ${safeName}" loading="lazy" decoding="async"${p.photoPosition?` style="object-position:${clean(p.photoPosition)}"`:''} onerror="this.hidden=true;this.parentElement.classList.add('photo-unavailable')"/>`:'';
       const chips=(p.projects||[]).slice(0,5).map(name=>{const id=projectNameToId[name];return id?`<a class="team-chip notranslate" translate="no" href="project.html?id=${encodeURIComponent(id)}">${clean(name)}</a>`:`<span class="team-chip notranslate" translate="no">${clean(name)}</span>`}).join('');
       const refs=(p.links||[]).slice(0,4).filter(x=>/^https:\/\//i.test(x.url)).map(x=>`<a class="team-reference" href="${clean(x.url)}" target="_blank" rel="noopener noreferrer">${clean(x.label)}<span aria-hidden="true"> ↗</span></a>`).join('');
+      const orcidCard=p.orcid?`<a class="team-reference team-orcid-link" href="https://orcid.org/${clean(p.orcid)}" target="_blank" rel="noopener noreferrer" aria-label="ORCID profile for ${safeName}">ORCID iD <span aria-hidden="true">↗</span></a>`:'';
       const more=`<a class="team-profile-link" href="${encodeURIComponent(p.id)}.html">View profile <span aria-hidden="true">→</span></a>`;
       const credit=p.photoCredit?`<span class="team-photo-credit">Photo: ${p.photoCredit.startsWith('https://')?'MAVIS consortium':'provided by member'}</span>`:'';
-      return `<article class="team-card" id="${clean(p.id)}"><div class="team-portrait${p.photo?' has-photo':' photo-unavailable'}"><span class="team-initials" aria-hidden="true">${letters}</span>${photo}${credit}</div><div class="team-card-content"><div class="team-field">${clean(p.tag)}</div><h3 class="notranslate" translate="no"><a href="${encodeURIComponent(p.id)}.html">${safeName}</a></h3><p class="team-role">${clean(p.role)}</p><p class="team-bio">${clean(p.bio)}</p>${more}${chips?`<div class="team-projects" aria-label="Associated research projects">${chips}</div>`:''}</div></article>`;
+      return `<article class="team-card" id="${clean(p.id)}"><div class="team-portrait${p.photo?' has-photo':' photo-unavailable'}"><span class="team-initials" aria-hidden="true">${letters}</span>${photo}${credit}</div><div class="team-card-content"><div class="team-field">${clean(p.tag)}</div><h3 class="notranslate" translate="no"><a href="${encodeURIComponent(p.id)}.html">${safeName}</a></h3><p class="team-role">${clean(p.role)}</p><p class="team-bio">${clean(p.bio)}</p>${more}${orcidCard}${chips?`<div class="team-projects" aria-label="Associated research projects">${chips}</div>`:''}</div></article>`;
     }
     function renderPeople(){
       const q=(peopleSearch?.value||'').trim().toLocaleLowerCase();
@@ -285,6 +286,7 @@
     if(!catalogueMap.has(key))catalogueMap.set(key,{...paper,projects:[],kinds:[]});
     const record=catalogueMap.get(key);
     record.authorship=(window.ADOPT_PUBLICATION_AUTHORSHIP||{})[key];
+    record.memberIds=[...new Set([...(record.memberIds||[]),...(record.authorship?.members||[]).map(m=>m.memberId)])];
     if(!record.projects.some(x=>x.id===project.id))record.projects.push(project);
     if(!record.kinds.includes(kind))record.kinds.push(kind);
   }
@@ -293,30 +295,50 @@
     [...(entry.recent||[]),...(entry.foundational||[])].forEach(paper=>addPublication(paper,project,'instrument'));
     ((window.ADOPT_INSTRUMENT_SCIENCE_PAPERS||{})[project.id]?.papers||[]).forEach(paper=>addPublication(paper,project,'science'));
   });
+  // Member bylines: separate from first/second-author selection, with source-checked coauthorship.
+  (window.ADOPT_MEMBER_PUBLICATIONS||[]).forEach(paper=>{
+    if(!paper.title||!/^https:\/\//i.test(paper.url||''))return;
+    const key=(paper.doi||paper.url).toLowerCase().replace(/^https:\/\/doi.org\//,'');
+    if(!catalogueMap.has(key))catalogueMap.set(key,{...paper,projects:[],kinds:[],memberIds:[]});
+    const item=catalogueMap.get(key);
+    if(paper.authors)item.authors=paper.authors;
+    if(paper.journal&&!item.journal)item.journal=paper.journal;
+    item.memberIds=[...new Set([...(item.memberIds||[]),...(paper.members||[])])];
+    if(paper.project){
+      const project=proj.find(p=>p.id===paper.project);
+      if(project&&!item.projects.some(p=>p.id===project.id))item.projects.push(project);
+    }
+    const topic=paper.project?'instrument':'research';
+    if(!item.kinds.includes(topic))item.kinds.push(topic);
+  });
   const catalogue=[...catalogueMap.values()].sort((a,b)=>Number(b.year)-Number(a.year)||a.title.localeCompare(b.title));
   const publicationList=document.querySelector('[data-publication-list]');
   if(publicationList){
-    const search=document.getElementById('publication-search'),filter=document.getElementById('publication-project'),kind=document.getElementById('publication-kind');
+    const search=document.getElementById('publication-search'),filter=document.getElementById('publication-project'),kind=document.getElementById('publication-kind'),memberFilter=document.getElementById('publication-member');
     proj.filter(p=>catalogue.some(item=>item.projects.some(x=>x.id===p.id))).sort((a,b)=>a.name.localeCompare(b.name)).forEach(p=>{const option=document.createElement('option');option.value=p.id;option.textContent=p.name;filter.append(option)});
+    people.slice().sort((a,b)=>a.name.localeCompare(b.name)).forEach(p=>{const option=document.createElement('option');option.value=p.id;option.textContent=p.name;memberFilter.append(option)});
     const views=[...document.querySelectorAll('[name="publication-view"]')];
     const params=new URLSearchParams(location.search);search.value=params.get('q')||'';
-    views.find(v=>v.value===(params.get('scope')==='all'?'all':'group')).checked=true;
+    views.find(v=>v.value===(['member','all'].includes(params.get('scope'))?params.get('scope'):'group')).checked=true;
+    if([...memberFilter.options].some(o=>o.value===params.get('member')))memberFilter.value=params.get('member');
     if([...filter.options].some(o=>o.value===params.get('project')))filter.value=params.get('project');
     if(['all','instrument','science'].includes(params.get('kind')))kind.value=params.get('kind');
     function renderPublications(){
       const terms=search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
       const scope=views.find(v=>v.checked).value;
-      const pool=scope==='all'?catalogue:catalogue.filter(item=>item.authorship?.members.length);
-      const matches=pool.filter(item=>(filter.value==='all'||item.projects.some(p=>p.id===filter.value))&&(kind.value==='all'||item.kinds.includes(kind.value))&&terms.every(term=>[item.title,item.authors,...(item.authorship?.firstTwo||[]),item.year,item.doi,...item.projects.map(p=>p.name)].join(' ').toLowerCase().includes(term)));
-      publicationList.innerHTML=matches.map(item=>`<li class="project-paper"><div class="paper-meta"><span class="paper-kind">${escapeHtml(item.type||'Research paper')}</span><span>${item.kinds.includes('science')?'Observational science':'Instrument research'}</span></div><h2><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)} <span aria-hidden="true">↗</span></a></h2><p class="paper-byline">${escapeHtml(item.authorship?item.authorship.firstTwo.join(', ')+', et al.':item.authors)} · ${escapeHtml(item.year)}${item.journal?' · '+escapeHtml(item.journal):''}</p>${item.authorship?`<p class="paper-group-authors">${item.authorship.members.map(m=>`<a href="${encodeURIComponent(m.memberId)}.html">${escapeHtml(m.name)}</a> · ${m.position===1?'first':'second'} author`).join('; ')}</p>`:''}${item.note?`<p class="paper-context">${escapeHtml(item.note)}</p>`:''}<div class="paper-projects">${item.projects.map(p=>`<a href="project.html?id=${encodeURIComponent(p.id)}">${escapeHtml(p.name)}</a>`).join(' ')}${item.doi?`<span class="paper-doi">DOI: ${escapeHtml(item.doi)}</span>`:''}</div></li>`).join('');
-      document.querySelector('[data-publication-count]').textContent=`${matches.length} of ${pool.length} ${scope==='all'?'publications in the project bibliography':'selected group publications'} · newest first`;
+      const pool=scope==='all'?catalogue:scope==='member'?catalogue.filter(item=>item.memberIds?.length):catalogue.filter(item=>item.authorship?.members.length);
+      memberFilter.disabled=scope==='group';
+      const matches=pool.filter(item=>(memberFilter.disabled||memberFilter.value==='all'||(item.memberIds||[]).includes(memberFilter.value))&&(filter.value==='all'||item.projects.some(p=>p.id===filter.value))&&(kind.value==='all'||item.kinds.includes(kind.value))&&terms.every(term=>[item.title,item.authors,...(item.authorship?.firstTwo||[]),...(item.memberIds||[]).map(id=>people.find(p=>p.id===id)?.name||''),item.year,item.doi,...item.projects.map(p=>p.name)].join(' ').toLowerCase().includes(term)));
+      publicationList.innerHTML=matches.map(item=>`<li class="project-paper"><div class="paper-meta"><span class="paper-kind">${escapeHtml(item.type||'Research paper')}</span><span>${item.kinds.includes('science')?'Observational science':item.kinds.includes('research')&&!item.kinds.includes('instrument')?'Research paper':'Instrument research'}</span></div><h2><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)} <span aria-hidden="true">↗</span></a></h2><p class="paper-byline">${escapeHtml(item.authorship?item.authorship.firstTwo.join(', ')+', et al.':item.authors)} · ${escapeHtml(item.year)}${item.journal?' · '+escapeHtml(item.journal):''}</p>${item.authorship?`<p class="paper-group-authors">${item.authorship.members.map(m=>`<a href="${encodeURIComponent(m.memberId)}.html">${escapeHtml(m.name)}</a> · ${m.position===1?'first':'second'} author`).join('; ')}</p>`:''}${item.memberIds?.length?`<p class="paper-group-authors">ADOPT coauthors: ${item.memberIds.map(id=>{const person=people.find(x=>x.id===id);return person?`<a href="${encodeURIComponent(id)}.html">${escapeHtml(person.name)}</a>`:''}).filter(Boolean).join(', ')}</p>`:''}${item.note?`<p class="paper-context">${escapeHtml(item.note)}</p>`:''}<div class="paper-projects">${item.projects.map(p=>`<a href="project.html?id=${encodeURIComponent(p.id)}">${escapeHtml(p.name)}</a>`).join(' ')}${item.doi?`<span class="paper-doi">DOI: ${escapeHtml(item.doi)}</span>`:''}</div></li>`).join('');
+      document.querySelector('[data-publication-count]').textContent=`${matches.length} of ${pool.length} ${scope==='all'?'publications across projects and team':scope==='member'?'source-checked member publications':'selected first/second-author publications'} · newest first`;
       document.querySelector('[data-publication-empty]').hidden=matches.length>0;
-      const url=new URL(location.href);[['q',search.value.trim()],['project',filter.value],['kind',kind.value]].forEach(([key,value])=>value&&value!=='all'?url.searchParams.set(key,value):url.searchParams.delete(key));if(scope==='all')url.searchParams.set('scope','all');else url.searchParams.delete('scope');
+      const url=new URL(location.href);[['q',search.value.trim()],['project',filter.value],['kind',kind.value]].forEach(([key,value])=>value&&value!=='all'?url.searchParams.set(key,value):url.searchParams.delete(key));if(scope!=='group')url.searchParams.set('scope',scope);else url.searchParams.delete('scope');
+      if(!memberFilter.disabled&&memberFilter.value!=='all')url.searchParams.set('member',memberFilter.value);else url.searchParams.delete('member');
       history.replaceState(null,'',url.pathname+url.search);
       protectProperNames(publicationList);
     }
     views.forEach(view=>view.addEventListener('change',renderPublications));
-    search.addEventListener('input',renderPublications);filter.addEventListener('change',renderPublications);kind.addEventListener('change',renderPublications);renderPublications();
+    search.addEventListener('input',renderPublications);filter.addEventListener('change',renderPublications);kind.addEventListener('change',renderPublications);memberFilter.addEventListener('change',renderPublications);renderPublications();
   }
 
   function observeReveals(){const elements=document.querySelectorAll('.reveal:not(.visible)');if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){elements.forEach(e=>e.classList.add('visible'));return}if(!('IntersectionObserver' in window)){elements.forEach(e=>e.classList.add('visible'));return}const obs=new IntersectionObserver((items,o)=>{items.forEach(item=>{if(item.isIntersecting){item.target.classList.add('visible');o.unobserve(item.target)}})},{threshold:.07});elements.forEach(e=>obs.observe(e))}

@@ -35,3 +35,7 @@ Kalyan Radhakrishnan's portrait was supplied by the member. Other existing portr
 ### Individual member pages
 
 Every entry in `people-data.js` has a standalone `<member-id>.html` webpage. Edit that member's existing biography, projects, portrait and links in `people-data.js`, then run `node scripts/build-people.cjs` and commit the generated HTML and sitemap. The generator uses verified first/second-author metadata for selected publications; project associations alone are never treated as proof of authorship. No personal contact details are inferred. Keep member IDs stable so shared profile URLs continue to work.
+
+## ORCID and member publications (October 2026)
+
+Verified ORCID identifiers are stored in `people-data.js` as `orcid` values and displayed on individual profiles and in the directory. Missing identifiers are not guessed. Curated coauthored papers are in `member-publications.js` with supporting sources in `MEMBER_PUBLICATIONS_SOURCES.md`. The Publications page retains the group first/second-author highlight and adds a separate Member publications view, filterable by researcher. Entries are not automatically synchronized with ORCID. Run `node scripts/build-people.cjs` after updating either data source to regenerate individual pages (review new output before committing).

@@ -31,3 +31,7 @@ English is the source language. Italian and other languages remain explicitly la
 The SOXS photograph in `assets/photos/soxs.jpg` is from https://www.eso.org/public/images/ann25011b/, credit **P. Schipani/INAF**, distributed under CC BY 4.0 according to ESO's image policy. It is displayed in its original proportions with a visible credit and licence link.
 
 Kalyan Radhakrishnan's portrait was supplied by the member. Other existing portraits remain external links to the MAVIS consortium with attribution and initials fallback. Original source notes retain the photo-review history. This update does not grant new rights to third-party material or imply institutional endorsement of the graphic mark. The repository's previous licensing history is unchanged.
+
+### Individual member pages
+
+Every entry in `people-data.js` has a standalone `<member-id>.html` webpage. Edit that member's existing biography, projects, portrait and links in `people-data.js`, then run `node scripts/build-people.cjs` and commit the generated HTML and sitemap. The generator uses verified first/second-author metadata for selected publications; project associations alone are never treated as proof of authorship. No personal contact details are inferred. Keep member IDs stable so shared profile URLs continue to work.

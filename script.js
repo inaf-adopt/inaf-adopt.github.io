@@ -110,8 +110,8 @@
       const refs=(p.links||[]).slice(0,4).filter(x=>/^https:\/\//i.test(x.url)).map(x=>`<a class="team-reference" href="${clean(x.url)}" target="_blank" rel="noopener noreferrer">${clean(x.label)}<span aria-hidden="true"> ↗</span></a>`).join('');
       const orcidCard=p.orcid?`<a class="team-reference team-orcid-link" href="https://orcid.org/${clean(p.orcid)}" target="_blank" rel="noopener noreferrer" aria-label="ORCID profile for ${safeName}">ORCID iD <span aria-hidden="true">↗</span></a>`:'';
       const more=`<a class="team-profile-link" href="${encodeURIComponent(p.id)}.html">View profile <span aria-hidden="true">→</span></a>`;
-      const credit=p.photoCredit?`<span class="team-photo-credit">Photo: ${p.photoCredit.startsWith('https://')?'MAVIS consortium':'provided by member'}</span>`:'';
-      return `<article class="team-card" id="${clean(p.id)}"><div class="team-portrait${p.photo?' has-photo':' photo-unavailable'}"><span class="team-initials" aria-hidden="true">${letters}</span>${photo}${credit}</div><div class="team-card-content"><div class="team-field">${clean(p.tag)}</div><h3 class="notranslate" translate="no"><a href="${encodeURIComponent(p.id)}.html">${safeName}</a></h3><p class="team-role">${clean(p.role)}</p><p class="team-bio">${clean(p.bio)}</p>${more}${orcidCard}${chips?`<div class="team-projects" aria-label="Associated research projects">${chips}</div>`:''}</div></article>`;
+      
+      return `<article class="team-card" id="${clean(p.id)}"><div class="team-portrait${p.photo?' has-photo':' photo-unavailable'}"><span class="team-initials" aria-hidden="true">${letters}</span>${photo}</div><div class="team-card-content"><div class="team-field">${clean(p.tag)}</div><h3 class="notranslate" translate="no"><a href="${encodeURIComponent(p.id)}.html">${safeName}</a></h3><p class="team-role">${clean(p.role)}</p><p class="team-bio">${clean(p.bio)}</p>${more}${orcidCard}${chips?`<div class="team-projects" aria-label="Associated research projects">${chips}</div>`:''}</div></article>`;
     }
     function renderPeople(){
       const q=(peopleSearch?.value||'').trim().toLocaleLowerCase();

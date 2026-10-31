@@ -9,7 +9,7 @@ for(const p of window.ADOPT_PEOPLE){
  const url=`https://inaf-adopt.github.io/${p.id}.html`;
  const projects=(p.projects||[]).map(name=>window.ADOPT_PROJECTS.find(x=>x.name.toLowerCase()===name.toLowerCase())).filter(Boolean);
  const links=(p.links||[]).filter(x=>/^https:\/\//.test(x.url));
- const photo=p.photo?`<figure class="profile-portrait"><img src="${esc(p.photo)}" alt="${esc(p.name)}" ${p.photoPosition?`style="object-position:${esc(p.photoPosition)}"`:''} width="280" height="320"><figcaption>${p.photoCredit?.startsWith('https://')?`Photo: ${external(p.photoCredit,'MAVIS consortium')}`:esc(p.photoCredit||'')}</figcaption></figure>`:'';
+ const photo=p.photo?`<figure class="profile-portrait"><img src="${esc(p.photo)}" alt="${esc(p.name)}" ${p.photoPosition?`style="object-position:${esc(p.photoPosition)}"`:''} width="280" height="320"></figure>`:'';
  const orcidBlock=p.orcid?`<p class="profile-orcid"><a href="https://orcid.org/${esc(p.orcid)}" target="_blank" rel="noopener noreferrer"><span class="orcid-icon" aria-hidden="true">iD</span> ORCID <span class="orcid-id">${esc(p.orcid)}</span> ↗</a></p>`:'';
  const schema={'@context':'https://schema.org','@type':'ProfilePage',url,name:p.name+' — ADOPT',mainEntity:{'@type':'Person',name:p.name,url,description:p.bio}};
  if(p.orcid)schema.mainEntity.sameAs=['https://orcid.org/'+p.orcid];

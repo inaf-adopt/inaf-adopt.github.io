@@ -39,3 +39,7 @@ Every entry in `people-data.js` has a standalone `<member-id>.html` webpage. Edi
 ## ORCID and member publications (October 2026)
 
 Verified ORCID identifiers are stored in `people-data.js` as `orcid` values and displayed on individual profiles and in the directory. Missing identifiers are not guessed. Curated coauthored papers are in `member-publications.js` with supporting sources in `MEMBER_PUBLICATIONS_SOURCES.md`. The Publications page retains the group first/second-author highlight and adds a separate Member publications view, filterable by researcher. Entries are not automatically synchronized with ORCID. Run `node scripts/build-people.cjs` after updating either data source to regenerate individual pages (review new output before committing).
+
+## People-page photo labels
+
+Individual member pages and the People directory intentionally do not display a credit label directly on each portrait. Rights and original photo sources remain recorded on the Credits and sources page and in `people-data.js` / `PEOPLE_SOURCES.md`. Preserve that attribution and any applicable licence obligations when modifying photographs.

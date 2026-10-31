@@ -43,3 +43,7 @@ Verified ORCID identifiers are stored in `people-data.js` as `orcid` values and 
 ## People-page photo labels
 
 Individual member pages and the People directory intentionally do not display a credit label directly on each portrait. Rights and original photo sources remain recorded on the Credits and sources page and in `people-data.js` / `PEOPLE_SOURCES.md`. Preserve that attribution and any applicable licence obligations when modifying photographs.
+
+## Opportunities page
+
+`opportunities.html` describes possible Master's theses, PhD research, internships, research visits and formal employment routes. `script.js` links it from desktop/mobile navigation and the footer; `index.html` provides a prominent homepage entry. The text is a guide to pathways and research areas, **not an advertisement for active or funded openings**. Do not add specific positions or deadlines without an authoritative announcement and owner approval. Institutional details and link checks are documented in `OPPORTUNITIES_SOURCES.md`. Rebuild `search-index.js` when editing the page.

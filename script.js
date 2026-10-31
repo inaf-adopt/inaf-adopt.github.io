@@ -284,6 +284,7 @@
     const key=(paper.doi||paper.url).toLowerCase().replace(/^https:\/\/doi.org\//,'');
     if(!catalogueMap.has(key))catalogueMap.set(key,{...paper,projects:[],kinds:[]});
     const record=catalogueMap.get(key);
+    record.authorship=(window.ADOPT_PUBLICATION_AUTHORSHIP||{})[key];
     if(!record.projects.some(x=>x.id===project.id))record.projects.push(project);
     if(!record.kinds.includes(kind))record.kinds.push(kind);
   }
@@ -297,18 +298,24 @@
   if(publicationList){
     const search=document.getElementById('publication-search'),filter=document.getElementById('publication-project'),kind=document.getElementById('publication-kind');
     proj.filter(p=>catalogue.some(item=>item.projects.some(x=>x.id===p.id))).sort((a,b)=>a.name.localeCompare(b.name)).forEach(p=>{const option=document.createElement('option');option.value=p.id;option.textContent=p.name;filter.append(option)});
+    const views=[...document.querySelectorAll('[name="publication-view"]')];
     const params=new URLSearchParams(location.search);search.value=params.get('q')||'';
+    views.find(v=>v.value===(params.get('scope')==='all'?'all':'group')).checked=true;
     if([...filter.options].some(o=>o.value===params.get('project')))filter.value=params.get('project');
     if(['all','instrument','science'].includes(params.get('kind')))kind.value=params.get('kind');
     function renderPublications(){
       const terms=search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
-      const matches=catalogue.filter(item=>(filter.value==='all'||item.projects.some(p=>p.id===filter.value))&&(kind.value==='all'||item.kinds.includes(kind.value))&&terms.every(term=>[item.title,item.authors,item.year,item.doi,...item.projects.map(p=>p.name)].join(' ').toLowerCase().includes(term)));
-      publicationList.innerHTML=matches.map(item=>`<li class="project-paper"><div class="paper-meta"><span class="paper-kind">${escapeHtml(item.type||'Research paper')}</span><span>${item.kinds.includes('science')?'Observational science':'Instrument research'}</span></div><h2><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)} <span aria-hidden="true">↗</span></a></h2><p class="paper-byline">${escapeHtml(item.authors)} · ${escapeHtml(item.year)}${item.journal?' · '+escapeHtml(item.journal):''}</p>${item.note?`<p class="paper-context">${escapeHtml(item.note)}</p>`:''}<div class="paper-projects">${item.projects.map(p=>`<a href="project.html?id=${encodeURIComponent(p.id)}">${escapeHtml(p.name)}</a>`).join(' ')}${item.doi?`<span class="paper-doi">DOI: ${escapeHtml(item.doi)}</span>`:''}</div></li>`).join('');
-      document.querySelector('[data-publication-count]').textContent=`${matches.length} of ${catalogue.length} selected publications · newest first`;
+      const scope=views.find(v=>v.checked).value;
+      const pool=scope==='all'?catalogue:catalogue.filter(item=>item.authorship?.members.length);
+      const matches=pool.filter(item=>(filter.value==='all'||item.projects.some(p=>p.id===filter.value))&&(kind.value==='all'||item.kinds.includes(kind.value))&&terms.every(term=>[item.title,item.authors,...(item.authorship?.firstTwo||[]),item.year,item.doi,...item.projects.map(p=>p.name)].join(' ').toLowerCase().includes(term)));
+      publicationList.innerHTML=matches.map(item=>`<li class="project-paper"><div class="paper-meta"><span class="paper-kind">${escapeHtml(item.type||'Research paper')}</span><span>${item.kinds.includes('science')?'Observational science':'Instrument research'}</span></div><h2><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)} <span aria-hidden="true">↗</span></a></h2><p class="paper-byline">${escapeHtml(item.authorship?item.authorship.firstTwo.join(', ')+', et al.':item.authors)} · ${escapeHtml(item.year)}${item.journal?' · '+escapeHtml(item.journal):''}</p>${item.authorship?`<p class="paper-group-authors">${item.authorship.members.map(m=>`<a href="people.html#${encodeURIComponent(m.memberId)}">${escapeHtml(m.name)}</a> · ${m.position===1?'first':'second'} author`).join('; ')}</p>`:''}${item.note?`<p class="paper-context">${escapeHtml(item.note)}</p>`:''}<div class="paper-projects">${item.projects.map(p=>`<a href="project.html?id=${encodeURIComponent(p.id)}">${escapeHtml(p.name)}</a>`).join(' ')}${item.doi?`<span class="paper-doi">DOI: ${escapeHtml(item.doi)}</span>`:''}</div></li>`).join('');
+      document.querySelector('[data-publication-count]').textContent=`${matches.length} of ${pool.length} ${scope==='all'?'publications in the project bibliography':'selected group publications'} · newest first`;
       document.querySelector('[data-publication-empty]').hidden=matches.length>0;
-      const url=new URL(location.href);[['q',search.value.trim()],['project',filter.value],['kind',kind.value]].forEach(([key,value])=>value&&value!=='all'?url.searchParams.set(key,value):url.searchParams.delete(key));history.replaceState(null,'',url.pathname+url.search);
+      const url=new URL(location.href);[['q',search.value.trim()],['project',filter.value],['kind',kind.value]].forEach(([key,value])=>value&&value!=='all'?url.searchParams.set(key,value):url.searchParams.delete(key));if(scope==='all')url.searchParams.set('scope','all');else url.searchParams.delete('scope');
+      history.replaceState(null,'',url.pathname+url.search);
       protectProperNames(publicationList);
     }
+    views.forEach(view=>view.addEventListener('change',renderPublications));
     search.addEventListener('input',renderPublications);filter.addEventListener('change',renderPublications);kind.addEventListener('change',renderPublications);renderPublications();
   }
 
@@ -340,7 +347,7 @@
         url:'project.html?id='+encodeURIComponent(id)+'#instrument-science-papers',type:'Observational science paper',
         text:[p.authors,p.year,p.journal,p.note,entry.instrument].join(' ')
       })));
-    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,(p.science||[]).join(' '),p.technical,(p.specs||[]).flat().join(' '),p.contribution,p.telescope,p.category,(p.refs||[]).map(x=>x[0]).join(' '),p.status==='past'?'Past Projects':''].join(' ')})),...catalogue.map(p=>({title:p.title,section:p.projects.map(x=>x.name).join(', '),url:'publications.html?q='+encodeURIComponent(p.doi||p.title),type:'Publication',text:[p.authors,p.year,p.doi,p.note].join(' ')})),...scienceRecords,...people.map(p=>({title:p.name,section:'People · '+p.tag,url:'people.html#'+p.id,type:'Group member',text:[p.role,p.bio,p.longBio||'',p.tag,...(p.projects||[])].join(' ')}))];
+    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,(p.science||[]).join(' '),p.technical,(p.specs||[]).flat().join(' '),p.contribution,p.telescope,p.category,(p.refs||[]).map(x=>x[0]).join(' '),p.status==='past'?'Past Projects':''].join(' ')})),...catalogue.map(p=>({title:p.title,section:p.projects.map(x=>x.name).join(', '),url:'publications.html?scope=all&q='+encodeURIComponent(p.doi||p.title),type:'Publication',text:[p.authors,p.year,p.doi,p.note].join(' ')})),...scienceRecords,...people.map(p=>({title:p.name,section:'People · '+p.tag,url:'people.html#'+p.id,type:'Group member',text:[p.role,p.bio,p.longBio||'',p.tag,...(p.projects||[])].join(' ')}))];
     // Avoid regex on user strings; render snippets safely into text with explicit <mark> nodes.
     const markText=(text,terms)=>{
       const src=String(text),low=normalize(src);const matches=[];

@@ -377,7 +377,7 @@ window.ADOPT_PROJECT_PAPERS = {
     "recent": [
       {
         "title": "New developments on the Ingot WFS laboratory testing",
-        "authors": "Machado et al.",
+        "authors": "Gomes Machado et al.",
         "year": 2024,
         "type": "Conference paper",
         "url": "https://doi.org/10.1117/12.3019332",
@@ -393,7 +393,7 @@ window.ADOPT_PROJECT_PAPERS = {
       },
       {
         "title": "The Ingot Wavefront Sensor: Updates from the laboratory test bench",
-        "authors": "Machado et al.",
+        "authors": "Di Filippo et al.",
         "year": 2023,
         "type": "Conference paper",
         "url": "https://ao4elt7.sciencesconf.org/455082/document"
@@ -728,5 +728,386 @@ window.ADOPT_PROJECT_PAPERS = {
       }
     ],
     "note": "PLATO 2.0 refers to an earlier mission design phase. Current PLATO papers are listed on the separate PLATO project page, rather than mislabelled as new PLATO 2.0 research."
+  }
+};
+// Verified author order for the Publications selection. See PUBLICATION_SELECTION.md.
+window.ADOPT_PUBLICATION_AUTHORSHIP = {
+  "10.1117/12.3020068": {
+    "firstTwo": [
+      "Domenico Barbato",
+      "Jacopo Farinato"
+    ],
+    "source": "https://api.crossref.org/works/10.1117%2F12.3020068",
+    "members": [
+      {
+        "memberId": "jacopo-farinato",
+        "name": "Jacopo Farinato",
+        "position": 2
+      }
+    ]
+  },
+  "10.1117/12.2313659": {
+    "firstTwo": [
+      "Maria Bergomi",
+      "Jacopo Farinato"
+    ],
+    "source": "https://api.crossref.org/works/10.1117%2F12.2313659",
+    "members": [
+      {
+        "memberId": "maria-bergomi",
+        "name": "Maria Bergomi",
+        "position": 1
+      },
+      {
+        "memberId": "jacopo-farinato",
+        "name": "Jacopo Farinato",
+        "position": 2
+      }
+    ]
+  },
+  "10.1016/j.newast.2026.102559": {
+    "firstTwo": [
+      "Carmelo Arcidiacono",
+      "Elisa Portaluri"
+    ],
+    "source": "https://api.crossref.org/works/10.1016%2Fj.newast.2026.102559",
+    "members": [
+      {
+        "memberId": "carmelo-arcidiacono",
+        "name": "Carmelo Arcidiacono",
+        "position": 1
+      }
+    ]
+  },
+  "10.1117/1.jatis.10.4.044008": {
+    "firstTwo": [
+      "Silvio Di Rosa",
+      "Roberto Ragazzoni"
+    ],
+    "source": "https://api.crossref.org/works/10.1117%2F1.JATIS.10.4.044008",
+    "members": [
+      {
+        "memberId": "silvio-di-rosa",
+        "name": "Silvio Di Rosa",
+        "position": 1
+      },
+      {
+        "memberId": "roberto-ragazzoni",
+        "name": "Roberto Ragazzoni",
+        "position": 2
+      }
+    ]
+  },
+  "10.1117/12.3019730": {
+    "firstTwo": [
+      "Roberto Ragazzoni",
+      "Silvio Di Rosa"
+    ],
+    "source": "https://api.crossref.org/works/10.1117%2F12.3019730",
+    "members": [
+      {
+        "memberId": "roberto-ragazzoni",
+        "name": "Roberto Ragazzoni",
+        "position": 1
+      },
+      {
+        "memberId": "silvio-di-rosa",
+        "name": "Silvio Di Rosa",
+        "position": 2
+      }
+    ]
+  },
+  "10.1117/12.3020439": {
+    "firstTwo": [
+      "Simone Di Filippo",
+      "Davide Greggio"
+    ],
+    "source": "https://api.crossref.org/works/10.1117%2F12.3020439",
+    "members": [
+      {
+        "memberId": "simone-di-filippo",
+        "name": "Simone Di Filippo",
+        "position": 1
+      },
+      {
+        "memberId": "davide-greggio",
+        "name": "Davide Greggio",
+        "position": 2
+      }
+    ]
+  },
+  "10.1117/12.2313368": {
+    "firstTwo": [
+      "Thomas M. Herbst",
+      "Maria Bergomi"
+    ],
+    "source": "https://api.crossref.org/works/10.1117%2F12.2313368",
+    "members": [
+      {
+        "memberId": "maria-bergomi",
+        "name": "Maria Bergomi",
+        "position": 2
+      }
+    ]
+  },
+  "10.1117/12.2232707": {
+    "firstTwo": [
+      "T. M. Herbst",
+      "R. Ragazzoni"
+    ],
+    "source": "https://api.crossref.org/works/10.1117%2F12.2232707",
+    "members": [
+      {
+        "memberId": "roberto-ragazzoni",
+        "name": "Roberto Ragazzoni",
+        "position": 2
+      }
+    ]
+  },
+  "10.1117/12.3019332": {
+    "firstTwo": [
+      "Tania Sofia Gomes Machado",
+      "Simone Di Filippo"
+    ],
+    "source": "https://api.crossref.org/works/10.1117%2F12.3019332",
+    "members": [
+      {
+        "memberId": "tania-sofia-gomes-machado",
+        "name": "Tania Sofia Gomes Machado",
+        "position": 1
+      },
+      {
+        "memberId": "simone-di-filippo",
+        "name": "Simone Di Filippo",
+        "position": 2
+      }
+    ]
+  },
+  "10.1117/12.2561075": {
+    "firstTwo": [
+      "Kalyan Kumar Radhakrishnan Santhakumari",
+      "Davide Greggio"
+    ],
+    "source": "https://api.crossref.org/works/10.1117%2F12.2561075",
+    "members": [
+      {
+        "memberId": "kalyan-kumar-radhakrishnan-santhakumari",
+        "name": "Kalyan Kumar Radhakrishnan Santhakumari",
+        "position": 1
+      },
+      {
+        "memberId": "davide-greggio",
+        "name": "Davide Greggio",
+        "position": 2
+      }
+    ]
+  },
+  "10.1093/mnras/stag1714": {
+    "firstTwo": [
+      "Matteo Simioni",
+      "Carmelo Arcidiacono"
+    ],
+    "source": "https://api.crossref.org/works/10.1093%2Fmnras%2Fstag1714",
+    "members": [
+      {
+        "memberId": "matteo-simioni",
+        "name": "Matteo Simioni",
+        "position": 1
+      },
+      {
+        "memberId": "carmelo-arcidiacono",
+        "name": "Carmelo Arcidiacono",
+        "position": 2
+      }
+    ]
+  },
+  "10.1117/12.2629388": {
+    "firstTwo": [
+      "Maria Bergomi",
+      "Luca Marafatto"
+    ],
+    "source": "https://openaccess.inaf.it/bitstreams/0b98fafd-d315-4da5-8d77-64e61c9275c9/download",
+    "members": [
+      {
+        "memberId": "maria-bergomi",
+        "name": "Maria Bergomi",
+        "position": 1
+      },
+      {
+        "memberId": "luca-marafatto",
+        "name": "Luca Marafatto",
+        "position": 2
+      }
+    ]
+  },
+  "10.1117/12.2561409": {
+    "firstTwo": [
+      "Gabriele Umbriaco",
+      "Elena Carolo"
+    ],
+    "source": "https://cris.unibo.it/handle/11585/958598",
+    "members": [
+      {
+        "memberId": "elena-carolo",
+        "name": "Elena Carolo",
+        "position": 2
+      }
+    ]
+  },
+  "10.1117/12.2560524": {
+    "firstTwo": [
+      "Roberto Ragazzoni",
+      "Marco Dima"
+    ],
+    "source": "https://orcid.org/0000-0002-5144-3608",
+    "members": [
+      {
+        "memberId": "roberto-ragazzoni",
+        "name": "Roberto Ragazzoni",
+        "position": 1
+      },
+      {
+        "memberId": "marco-dima",
+        "name": "Marco Dima",
+        "position": 2
+      }
+    ]
+  },
+  "10.13009/ao4elt7-2023-067": {
+    "firstTwo": [
+      "Maria Bergomi",
+      "Carmelo Arcidiacono"
+    ],
+    "source": "https://cris.unibo.it/handle/11585/958649",
+    "members": [
+      {
+        "memberId": "maria-bergomi",
+        "name": "Maria Bergomi",
+        "position": 1
+      },
+      {
+        "memberId": "carmelo-arcidiacono",
+        "name": "Carmelo Arcidiacono",
+        "position": 2
+      }
+    ]
+  },
+  "10.1051/0004-6361/202449697": {
+    "firstTwo": [
+      "Roberto Ragazzoni",
+      "Elisa Portaluri"
+    ],
+    "source": "https://cris.unibo.it/handle/11585/981177",
+    "members": [
+      {
+        "memberId": "roberto-ragazzoni",
+        "name": "Roberto Ragazzoni",
+        "position": 1
+      }
+    ]
+  },
+  "10.1117/12.2232596": {
+    "firstTwo": [
+      "Thomas Herbst",
+      "Carmelo Arcidiacono"
+    ],
+    "source": "https://openaccess.inaf.it/entities/publication/694c562e-90be-44bb-ade9-14c464059696",
+    "members": [
+      {
+        "memberId": "carmelo-arcidiacono",
+        "name": "Carmelo Arcidiacono",
+        "position": 2
+      }
+    ]
+  },
+  "https://arxiv.org/abs/2609.11594": {
+    "firstTwo": [
+      "Matteo Simioni",
+      "Luca Cortese"
+    ],
+    "source": "https://arxiv.org/abs/2609.11594",
+    "members": [
+      {
+        "memberId": "matteo-simioni",
+        "name": "Matteo Simioni",
+        "position": 1
+      },
+      {
+        "memberId": "luca-cortese",
+        "name": "Luca Cortese",
+        "position": 2
+      }
+    ]
+  },
+  "https://arxiv.org/abs/1808.03685": {
+    "firstTwo": [
+      "Roberto Ragazzoni",
+      "Elisa Portaluri"
+    ],
+    "source": "https://arxiv.org/abs/1808.03685",
+    "members": [
+      {
+        "memberId": "roberto-ragazzoni",
+        "name": "Roberto Ragazzoni",
+        "position": 1
+      }
+    ]
+  },
+  "https://ao4elt7.sciencesconf.org/455082/document": {
+    "firstTwo": [
+      "Simone Di Filippo",
+      "Davide Greggio"
+    ],
+    "source": "https://ao4elt7.sciencesconf.org/455082/document",
+    "members": [
+      {
+        "memberId": "simone-di-filippo",
+        "name": "Simone Di Filippo",
+        "position": 1
+      },
+      {
+        "memberId": "davide-greggio",
+        "name": "Davide Greggio",
+        "position": 2
+      }
+    ]
+  },
+  "https://ui.adsabs.harvard.edu/abs/2026spie14147e..4rd/abstract": {
+    "firstTwo": [
+      "Silvio Di Rosa",
+      "Demetrio Magrin"
+    ],
+    "source": "https://www.oact.inaf.it/pubblicazioni-scientifiche/",
+    "members": [
+      {
+        "memberId": "silvio-di-rosa",
+        "name": "Silvio Di Rosa",
+        "position": 1
+      },
+      {
+        "memberId": "demetrio-magrin",
+        "name": "Demetrio Magrin",
+        "position": 2
+      }
+    ]
+  },
+  "https://ui.adsabs.harvard.edu/abs/2026spie14147e..0db/abstract": {
+    "firstTwo": [
+      "Giovanni Boato",
+      "Davide Greggio"
+    ],
+    "source": "https://www.oact.inaf.it/pubblicazioni-scientifiche/",
+    "members": [
+      {
+        "memberId": "giovanni-boato",
+        "name": "Giovanni Boato",
+        "position": 1
+      },
+      {
+        "memberId": "davide-greggio",
+        "name": "Davide Greggio",
+        "position": 2
+      }
+    ]
   }
 };

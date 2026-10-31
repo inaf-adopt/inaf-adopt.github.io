@@ -1,6 +1,6 @@
 (function(){
   // Source content is English. Machine translation is optional and provided by GTranslate.
-  window.gtranslateSettings={default_language:'en',native_language_names:true,languages:["af","sq","am","ar","hy","az","eu","be","bn","bs","bg","ca","ceb","ny","zh-CN","zh-TW","co","hr","cs","da","nl","en","eo","et","tl","fi","fr","fy","gl","ka","de","el","gu","ht","ha","haw","iw","hi","hmn","hu","is","ig","id","ga","it","ja","jw","kn","kk","km","ko","ku","ky","lo","la","lv","lt","lb","mk","mg","ms","ml","mt","mi","mr","mn","my","ne","no","ps","fa","pl","pt","pa","ro","ru","sm","gd","sr","st","sn","sd","si","sk","sl","so","es","su","sw","sv","tg","ta","te","th","tr","uk","ur","uz","vi","cy","xh","yi","yo","zu"],wrapper_selector:'.gtranslate_wrapper',select_language_label:'Language',horizontal_position:'inline'};
+  window.gtranslateSettings={default_language:'en',native_language_names:true,languages:["en","it","af","sq","am","ar","hy","az","eu","be","bn","bs","bg","ca","ceb","ny","zh-CN","zh-TW","co","hr","cs","da","nl","eo","et","tl","fi","fr","fy","gl","ka","de","el","gu","ht","ha","haw","iw","hi","hmn","hu","is","ig","id","ga","ja","jw","kn","kk","km","ko","ku","ky","lo","la","lv","lt","lb","mk","mg","ms","ml","mt","mi","mr","mn","my","ne","no","ps","fa","pl","pt","pa","ro","ru","sm","gd","sr","st","sn","sd","si","sk","sl","so","es","su","sw","sv","tg","ta","te","th","tr","uk","ur","uz","vi","cy","xh","yi","yo","zu"],wrapper_selector:'.gtranslate_wrapper',select_language_label:'Translate (automatic)',horizontal_position:'inline'};
   // GTranslate honors .notranslate. Wrap proper names in inline spans, leaving
   // the surrounding sentence available for automatic translation.
   // Team member names can also be listed in ADOPT_PEOPLE or tagged data-person-name.
@@ -57,9 +57,9 @@
   const route=(name)=>path===name ? ' aria-current="page"' : '';
   const navLinks=[['index.html','Home'],['research.html','Research'],['projects.html','Projects'],['people.html','People'],['publications.html','Publications'],['contact.html','Contact']];
   const header=document.querySelector('[data-header]');
-  if(header) header.innerHTML=`<div class="nav-shell container"><a class="identity" href="index.html" aria-label="Home"><span class="brand-icon"><img src="assets/adopt-mark.svg" alt="" /></span><span class="identity-type"><strong class="notranslate" translate="no">ADOPT<span class="brand-period">.</span></strong><small>INAF · PADOVA</small></span></a><nav class="desktop-nav" aria-label="Main navigation">${navLinks.map(([url,label])=>`<a href="${url}"${route(url)}>${label}</a>`).join('')}</nav><div class="nav-right"><div class="nav-tools"><a class="search-nav-link" href="search.html" aria-label="Search this website" title="Search this website"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><div class="language-nav" role="group" aria-label="Website language"><svg class="language-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3.5 12h17M12 3c-5 5-5 13 0 18m0-18c5 5 5 13 0 18" stroke="currentColor" stroke-width="1.3" fill="none"/></svg><div class="gtranslate_wrapper notranslate" translate="no"></div><a class="gtranslate-fallback" href="https://translate.google.com/?op=websites" target="_blank" rel="noopener noreferrer" title="Translate this website using Google Translate">Translate ↗</a></div></div><a class="nav-contact" href="contact.html">Get in touch <span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div></div><nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation" hidden>${navLinks.map(([url,label])=>`<a href="${url}"${route(url)}>${label} <span aria-hidden="true">↗</span></a>`).join('')}<div class="mobile-tools"><a class="search-nav-link" href="search.html" aria-label="Search this website"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a></div></nav>`;
+  if(header) header.innerHTML=`<div class="nav-shell container"><a class="identity" href="index.html" aria-label="Home"><span class="brand-icon"><img src="assets/adopt-mark.svg" alt="" /></span><span class="identity-type"><strong class="notranslate" translate="no">ADOPT<span class="brand-period">.</span></strong><small>INAF · PADOVA</small></span></a><nav class="desktop-nav" aria-label="Main navigation">${navLinks.map(([url,label])=>`<a href="${url}"${route(url)}>${label}</a>`).join('')}</nav><div class="nav-right"><div class="nav-tools"><a class="search-nav-link" href="search.html" aria-label="Search this website" title="Search this website"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><div class="language-nav" role="group" aria-label="Automatic translation"><span class="translation-label">Auto-translate</span><svg class="language-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3.5 12h17M12 3c-5 5-5 13 0 18m0-18c5 5 5 13 0 18" stroke="currentColor" stroke-width="1.3" fill="none"/></svg><div class="gtranslate_wrapper notranslate" translate="no"></div><a class="gtranslate-fallback" href="https://translate.google.com/?op=websites" target="_blank" rel="noopener noreferrer" title="Translate this website using Google Translate">Translate ↗</a></div></div><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div></div><nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation" hidden>${navLinks.map(([url,label])=>`<a href="${url}"${route(url)}>${label} <span aria-hidden="true">↗</span></a>`).join('')}<div class="mobile-tools"><a class="search-nav-link" href="search.html" aria-label="Search this website"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a></div></nav>`;
   const footer=document.querySelector('[data-footer]');
-  if(footer)footer.innerHTML=`<div class="container"><div class="footer-top"><div><div class="footer-brand"><img src="assets/adopt-mark.svg" alt=""/><span class="notranslate" translate="no">ADOPT<span class="brand-period">.</span></span></div><p>Wavefronts. Instruments.<br/>New perspectives.</p></div><div class="footer-links"><div><h4>Explore</h4><a href="research.html">Research</a><a href="projects.html">Projects</a><a href="people.html">People</a></div><div><h4>Resources</h4><a href="search.html">Search</a><a href="publications.html">Publications</a><a href="contact.html">Contact</a><a href="https://www.oapd.inaf.it/" target="_blank" rel="noopener noreferrer">INAF OAPd ↗</a></div></div></div><div class="footer-bottom"><span>ADOPT · Research group website concept · INAF Osservatorio Astronomico di Padova</span><span>Made for discovery · <a href="credits.html">Image credits &amp; notices</a></span></div></div>`;
+  if(footer)footer.innerHTML=`<div class="container"><div class="footer-top"><div><div class="footer-brand"><img src="assets/adopt-mark.svg" alt=""/><span class="notranslate" translate="no">ADOPT<span class="brand-period">.</span></span></div><p>Adaptive optics and astronomical instrumentation.<br/>INAF · Osservatorio Astronomico di Padova</p></div><div class="footer-links"><div><h4>Explore</h4><a href="research.html">Research</a><a href="projects.html">Projects</a><a href="people.html">People</a></div><div><h4>Resources</h4><a href="search.html">Search</a><a href="publications.html">Publications</a><a href="contact.html">Contact</a><a href="https://www.oapd.inaf.it/" target="_blank" rel="noopener noreferrer">INAF OAPd ↗</a></div></div></div><div class="footer-bottom"><span>ADOPT · INAF Osservatorio Astronomico di Padova</span><span><a href="credits.html">Credits &amp; sources</a></span></div></div>`;
   protectProperNames(document.body);
   // Third-party translators insert their <select> asynchronously. Provide an
   // accessible name for screen-reader users whenever the control appears.
@@ -67,8 +67,8 @@
   if(translateContainer){
     const labelTranslationControl=()=>{
       translateContainer.querySelectorAll('select').forEach(select=>{
-        select.setAttribute('aria-label','Choose website language');
-        select.setAttribute('title','Choose website language');
+        select.setAttribute('aria-label','Choose language — automatic translation');
+        select.setAttribute('title','Choose language — automatic translation');
       });
     };
     labelTranslationControl();
@@ -108,9 +108,9 @@
       const photo=p.photo?`<img class="team-photo" src="${clean(p.photo)}" alt="Portrait of ${safeName}" loading="lazy" decoding="async"${p.photoPosition?` style="object-position:${clean(p.photoPosition)}"`:''} onerror="this.hidden=true;this.parentElement.classList.add('photo-unavailable')"/>`:'';
       const chips=(p.projects||[]).slice(0,5).map(name=>{const id=projectNameToId[name];return id?`<a class="team-chip notranslate" translate="no" href="project.html?id=${encodeURIComponent(id)}">${clean(name)}</a>`:`<span class="team-chip notranslate" translate="no">${clean(name)}</span>`}).join('');
       const refs=(p.links||[]).slice(0,4).filter(x=>/^https:\/\//i.test(x.url)).map(x=>`<a class="team-reference" href="${clean(x.url)}" target="_blank" rel="noopener noreferrer">${clean(x.label)}<span aria-hidden="true"> ↗</span></a>`).join('');
-      const more=p.longBio?`<details class="team-more"><summary>Read full profile</summary><p>${clean(p.longBio)}</p></details>`:'';
+      const more=`<details class="team-more"><summary>Profile and links</summary>${p.longBio?`<p>${clean(p.longBio)}</p>`:''}${refs?`<div class="team-references">${refs}</div>`:''}</details>`;
       const credit=p.photoCredit?`<span class="team-photo-credit">Photo: ${p.photoCredit.startsWith('https://')?'MAVIS consortium':'provided by member'}</span>`:'';
-      return `<article class="team-card" id="${clean(p.id)}"><div class="team-portrait${p.photo?' has-photo':' photo-unavailable'}"><span class="team-initials" aria-hidden="true">${letters}</span>${photo}${credit}</div><div class="team-card-content"><div class="team-field">${clean(p.tag)}</div><h3 class="notranslate" translate="no">${safeName}</h3><p class="team-role">${clean(p.role)}</p><p class="team-bio">${clean(p.bio)}</p>${more}${chips?`<div class="team-projects" aria-label="Associated research projects">${chips}</div>`:''}${refs?`<div class="team-references">${refs}</div>`:''}</div></article>`;
+      return `<article class="team-card" id="${clean(p.id)}"><div class="team-portrait${p.photo?' has-photo':' photo-unavailable'}"><span class="team-initials" aria-hidden="true">${letters}</span>${photo}${credit}</div><div class="team-card-content"><div class="team-field">${clean(p.tag)}</div><h3 class="notranslate" translate="no">${safeName}</h3><p class="team-role">${clean(p.role)}</p><p class="team-bio">${clean(p.bio)}</p>${more}${chips?`<div class="team-projects" aria-label="Associated research projects">${chips}</div>`:''}</div></article>`;
     }
     function renderPeople(){
       const q=(peopleSearch?.value||'').trim().toLocaleLowerCase();
@@ -129,10 +129,10 @@
   const pastProjects=proj.filter(p=>p.status==='past');
   function projectCard(p,i){
     const pending=!!p.pending;
-    return `<a class="project-card reveal${pending?' project-card-pending':''}" style="--stagger:${(i%6)*75}ms" href="project.html?id=${encodeURIComponent(p.id)}"><div class="project-art art-${p.accent}"><span class="art-orbit art-orbit-one"></span><span class="art-orbit art-orbit-two"></span><span class="art-core">${p.icon}</span><span class="art-mini">${p.status==='past'?'PAST PROJECT':'ADOPT / PROJECT'}</span></div><div class="project-info"><span class="project-meta">${p.overline}</span><div class="project-card-title"><h3>${p.name}</h3><span class="circle-arrow" aria-hidden="true">↗</span></div><p>${p.blurb}</p></div></a>`;
+    return `<a class="project-card reveal${pending?' project-card-pending':''}" style="--stagger:${(i%6)*75}ms" href="project.html?id=${encodeURIComponent(p.id)}"><div class="project-art art-${p.accent}"><span class="art-orbit art-orbit-one"></span><span class="art-orbit art-orbit-two"></span><span class="art-core">${p.icon}</span><span class="art-mini">${p.status==='past'?'PREVIOUS INVOLVEMENT':'RESEARCH PROJECT'}</span></div><div class="project-info"><span class="project-meta">${p.overline}</span><div class="project-card-title"><h3>${p.name}</h3><span class="circle-arrow" aria-hidden="true">↗</span></div><p>${p.blurb}</p></div></a>`;
   }
   const featured=document.querySelector('[data-featured-projects]');
-  if(featured){featured.innerHTML=currentProjects.filter(p=>!p.pending).slice(0,3).map(projectCard).join('');protectProperNames(featured);}
+  if(featured){featured.innerHTML=['mavis','morfeo','soxs'].map(id=>currentProjects.find(p=>p.id===id)).filter(Boolean).map(projectCard).join('');protectProperNames(featured);}
   const grid=document.querySelector('[data-project-grid]');
   const pastGrid=document.querySelector('[data-past-project-grid]');
   if(grid&&pastGrid){
@@ -149,7 +149,7 @@
       pastSection.hidden=!showPast;
       document.querySelector('[data-current-total]').textContent=entries.length+' projects';
       const n=entries.length+(showPast?pastProjects.length:0);
-      count.textContent=`Showing ${n} ${n===1?'project':'projects'}${showPast&&showCurrent?' · '+currentProjects.length+' main directory · '+pastProjects.length+' past':''}`;
+      count.textContent=`Showing ${n} ${n===1?'project':'projects'}${showPast&&showCurrent?' · '+currentProjects.length+' main directory · '+pastProjects.length+' previous involvement':''}`;
       protectProperNames(grid);protectProperNames(pastGrid);observeReveals();
     }
     document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{
@@ -180,13 +180,15 @@
         :p.partial
           ?'<p class="project-profile-note" role="note">Some links or project details are provisional. Any unconfirmed association is identified below.</p>'
           :'';
-      const facility=p.telescope?`<div class="fact-block"><span>Facility / context</span><strong>${escapeText(p.telescope)}</strong></div>`:'';
+      const facility=p.telescope?`<div class="fact-block"><span>Facility / context</span><strong>${escapeText(p.telescope)}</strong></div><div class="fact-block"><span>Project context</span><strong>${escapeText(p.phase)}</strong></div><p class="source-caption">Content reviewed ${escapeText(p.reviewed)}. Project context describes the referenced work; schedules may change.</p>`:'';
       const science=Array.isArray(p.science)&&p.science.length
         ?`<ul class="project-science-list">${p.science.map(x=>`<li>${escapeText(x)}</li>`).join('')}</ul>`
         :'<p>The project science goals are being reviewed.</p>';
       const specs=Array.isArray(p.specs)&&p.specs.length
         ?`<dl class="project-specs">${p.specs.map(([name,value])=>`<div><dt>${escapeText(name)}</dt><dd>${escapeText(value)}</dd></div>`).join('')}</dl>`
-        :'<p>Verified technical specifications are not currently available for this listing.</p>';
+        :'';
+      const associatedPeople=people.filter(person=>(person.projects||[]).some(name=>name.toLowerCase()===p.name.toLowerCase()));
+      const teamLinks=associatedPeople.length?`<div class="project-team"><h3>People connected with this work</h3><ul>${associatedPeople.map(person=>`<li><a href="people.html#${encodeURIComponent(person.id)}">${escapeText(person.name)}</a></li>`).join('')}</ul></div>`:'';
       const references=(p.refs||[]).map(([name,url])=>referenceLink(name,url)).filter(Boolean);
       if(!references.length && p.source) references.push(referenceLink('Project reference',p.source));
       const links=references.length?`<ul class="project-source-list">${references.join('')}</ul>`:'<p>No official project webpage has been confirmed for this entry yet.</p>';
@@ -212,6 +214,7 @@
       };
       const papersSection=(key,heading,emptyMessage)=>{
         const items=Array.isArray(bibliography[key])?bibliography[key]:[];
+        if(!items.length)return '';
         return `<div class="paper-column"><h3>${heading} <span class="paper-count">${items.length}</span></h3>${items.length?`<ol class="paper-list">${items.map(paperItem).join('')}</ol>`:`<p class="paper-empty">${emptyMessage}</p>`}</div>`;
       };
       const extras=(bibliography.resources||[]);
@@ -223,55 +226,92 @@
       const observationalPapers=Array.isArray(scienceResults?.papers)?scienceResults.papers.filter(item=>item.title&&item.url&&safePaperLink(item)):[];
       const scienceResultsSection=observationalPapers.length
         ?`<section class="container instrument-science-publications" id="instrument-science-papers" aria-label="Published science using the ${escapeText(p.name)} instrument">
-          <div class="detail-overline">07 / OBSERVATIONAL SCIENCE</div>
-          <h2>Science with the instrument.</h2>
+
+          <h2>Science with the instrument</h2>
           <p class="project-publications-intro">${escapeText(scienceResults.intro)}</p>
           <ol class="paper-list science-results-list">${observationalPapers.map(paperItem).join('')}</ol>
           <p class="project-source-note">Selected refereed science studies, not an exhaustive or automatically updated bibliography. Papers based on multiple observatories identify the role of this instrument; inclusion does not imply authorship by ADOPT.</p>
         </section>`:'';
       const scienceResultsJump=observationalPapers.length?'<a class="project-papers-jump" href="#instrument-science-papers">Science results from the instrument <span aria-hidden="true">↓</span></a>':'';
-      const publications=`<section class="container project-publications" aria-label="Selected project publications" id="project-publications">
-        <div class="detail-overline">06 / SCIENTIFIC LITERATURE</div><h2>Selected publications.</h2>
+      const hasBibliography=[...(bibliography.recent||[]),...(bibliography.foundational||[]),...extras].length>0;
+      const publications=hasBibliography?`<section class="container project-publications" aria-label="Selected project publications" id="project-publications">
+        <h2>Selected publications</h2>
         <p class="project-publications-intro">Up to three recent research papers and two defining or foundational papers, selected for relevance and linked to their publisher or research archive. The bibliography was checked in October 2026 and is not an automatically updated feed.</p>
         <div class="paper-columns">
           ${papersSection('recent','Recent papers','No recent project-specific research papers could be confirmed from public sources.')}
           ${papersSection('foundational','Defining papers','No defining papers have been verified for this listing yet.')}
         </div>${extraSection}${bibNote}
         <p class="project-source-note">Conference papers and preprints are identified by type. Related instruments or predecessor studies are marked explicitly; references are not automatically attributed to ADOPT authors.</p>
-      </section>`;
+      </section>`:'';
 
       detail.innerHTML=`
         <section class="container inner-hero detail-hero">
-          <a class="back-link" href="${back}">← ${p.status==='past'?'Past Projects':'All projects'}</a>
+          <a class="back-link" href="${back}">← ${p.status==='past'?'Previous involvement':'All projects'}</a>
           <div class="eyebrow"><span class="small-line"></span> ${escapeText(p.overline)}</div>
-          <h1>${escapeText(p.name)}<span class="title-period">.</span></h1>
-          <p class="page-lede">${escapeText(p.blurb)}</p>${note}<div class="project-jump-links"><a class="project-papers-jump" href="#project-publications">See selected project publications <span aria-hidden="true">↓</span></a>${scienceResultsJump}</div>
+          <h1>${escapeText(p.name)}</h1>
+          <p class="page-lede">${escapeText(p.blurb)}</p>${note}<div class="project-jump-links">${hasBibliography?'<a class="project-papers-jump" href="#project-publications">Selected publications ↓</a>':''}${scienceResultsJump}</div>
         </section>
         <section class="container detail-grid" aria-label="Project background">
-          <div class="detail-visual art-${escapeText(p.accent)}"><span class="detail-ring ring-a"></span><span class="detail-ring ring-b"></span><span class="detail-symbol">${escapeText(p.icon)}</span><span class="detail-label">${p.status==='past'?'ADOPT / PAST PROJECT':'ADOPT / RESEARCH PROJECT'}</span></div>
+          ${p.id==='soxs'?`<figure class="detail-photo"><img src="assets/photos/soxs.jpg" alt="SOXS on the New Technology Telescope at La Silla" width="1280" height="964"><figcaption>Credit: <a href="https://www.eso.org/public/images/ann25011b/">P. Schipani/INAF</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></figcaption></figure>`:`<div class="detail-visual art-${escapeText(p.accent)}"><span class="detail-ring ring-a"></span><span class="detail-ring ring-b"></span><span class="detail-symbol">${escapeText(p.icon)}</span><span class="detail-label">${p.status==='past'?'PREVIOUS INVOLVEMENT':'RESEARCH PROJECT'}</span></div>`}
           <div class="detail-copy">
-            <div class="detail-overline">01 / OVERVIEW</div><h2>About the project</h2><p>${escapeText(p.description)}</p>
-            <div class="detail-overline margin-top">02 / SCIENCE</div><h2>Scientific questions and applications</h2>${science}
+            <h2>About the project</h2><p>${escapeText(p.description)}</p>
+            <h2>Scientific purpose</h2>${science}
             ${facility}
           </div>
         </section>
         <section class="container project-knowledge" aria-label="Technical details and references">
           <div class="project-knowledge-main">
-            <div class="detail-overline">03 / TECHNOLOGY</div><h2>Technical concept and specifications</h2>
+            <h2>Technical details</h2>
             <p>${escapeText(p.technical||'A verified public technical description is not yet available.')}</p>${specs}
           </div>
           <aside class="project-knowledge-aside" aria-label="Project context and sources">
-            <div class="detail-overline">04 / ADOPT CONTEXT</div><h2>Group research interests</h2><p>${escapeText(p.contribution)}</p>
-            <div class="detail-overline margin-top">05 / REFERENCE LINKS</div><h2>Learn more</h2>${links}
-            <p class="project-source-note">References describe the wider project. Specific ADOPT roles and final instrument specifications may require research-group review.</p>
+            <h2>${escapeText(p.contributionHeading||"Our contribution")}</h2><p>${escapeText(p.contribution)}</p>${teamLinks}
+            <h2>Learn more</h2>${links}
+            <p class="project-source-note">Instrument specifications refer to the cited designs. Official project websites provide further information about the collaboration.</p>
           </aside>
         </section>
         ${publications}
         ${scienceResultsSection}
-        <section class="container detail-bottom"><div><span class="eyebrow">EXPLORE MORE</span><h2>Connected by curiosity.</h2></div><a class="btn btn-dark" href="projects.html">View all projects <span aria-hidden="true">↗</span></a></section>`;
+        <section class="container detail-bottom"><div><span class="eyebrow">EXPLORE MORE</span><h2>Explore other projects</h2></div><a class="btn btn-dark" href="projects.html">View all projects <span aria-hidden="true">↗</span></a></section>`;
     }
     protectProperNames(detail);
   }
+
+  const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const catalogueMap=new Map();
+  function addPublication(paper,project,kind){
+    if(!paper.title||!/^https:\/\//i.test(paper.url||''))return;
+    const key=(paper.doi||paper.url).toLowerCase().replace(/^https:\/\/doi.org\//,'');
+    if(!catalogueMap.has(key))catalogueMap.set(key,{...paper,projects:[],kinds:[]});
+    const record=catalogueMap.get(key);
+    if(!record.projects.some(x=>x.id===project.id))record.projects.push(project);
+    if(!record.kinds.includes(kind))record.kinds.push(kind);
+  }
+  proj.forEach(project=>{
+    const entry=(window.ADOPT_PROJECT_PAPERS||{})[project.id]||{};
+    [...(entry.recent||[]),...(entry.foundational||[])].forEach(paper=>addPublication(paper,project,'instrument'));
+    ((window.ADOPT_INSTRUMENT_SCIENCE_PAPERS||{})[project.id]?.papers||[]).forEach(paper=>addPublication(paper,project,'science'));
+  });
+  const catalogue=[...catalogueMap.values()].sort((a,b)=>Number(b.year)-Number(a.year)||a.title.localeCompare(b.title));
+  const publicationList=document.querySelector('[data-publication-list]');
+  if(publicationList){
+    const search=document.getElementById('publication-search'),filter=document.getElementById('publication-project'),kind=document.getElementById('publication-kind');
+    proj.filter(p=>catalogue.some(item=>item.projects.some(x=>x.id===p.id))).sort((a,b)=>a.name.localeCompare(b.name)).forEach(p=>{const option=document.createElement('option');option.value=p.id;option.textContent=p.name;filter.append(option)});
+    const params=new URLSearchParams(location.search);search.value=params.get('q')||'';
+    if([...filter.options].some(o=>o.value===params.get('project')))filter.value=params.get('project');
+    if(['all','instrument','science'].includes(params.get('kind')))kind.value=params.get('kind');
+    function renderPublications(){
+      const terms=search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const matches=catalogue.filter(item=>(filter.value==='all'||item.projects.some(p=>p.id===filter.value))&&(kind.value==='all'||item.kinds.includes(kind.value))&&terms.every(term=>[item.title,item.authors,item.year,item.doi,...item.projects.map(p=>p.name)].join(' ').toLowerCase().includes(term)));
+      publicationList.innerHTML=matches.map(item=>`<li class="project-paper"><div class="paper-meta"><span class="paper-kind">${escapeHtml(item.type||'Research paper')}</span><span>${item.kinds.includes('science')?'Observational science':'Instrument research'}</span></div><h2><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)} <span aria-hidden="true">↗</span></a></h2><p class="paper-byline">${escapeHtml(item.authors)} · ${escapeHtml(item.year)}${item.journal?' · '+escapeHtml(item.journal):''}</p>${item.note?`<p class="paper-context">${escapeHtml(item.note)}</p>`:''}<div class="paper-projects">${item.projects.map(p=>`<a href="project.html?id=${encodeURIComponent(p.id)}">${escapeHtml(p.name)}</a>`).join(' ')}${item.doi?`<span class="paper-doi">DOI: ${escapeHtml(item.doi)}</span>`:''}</div></li>`).join('');
+      document.querySelector('[data-publication-count]').textContent=`${matches.length} of ${catalogue.length} selected publications · newest first`;
+      document.querySelector('[data-publication-empty]').hidden=matches.length>0;
+      const url=new URL(location.href);[['q',search.value.trim()],['project',filter.value],['kind',kind.value]].forEach(([key,value])=>value&&value!=='all'?url.searchParams.set(key,value):url.searchParams.delete(key));history.replaceState(null,'',url.pathname+url.search);
+      protectProperNames(publicationList);
+    }
+    search.addEventListener('input',renderPublications);filter.addEventListener('change',renderPublications);kind.addEventListener('change',renderPublications);renderPublications();
+  }
+
   function observeReveals(){const elements=document.querySelectorAll('.reveal:not(.visible)');if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){elements.forEach(e=>e.classList.add('visible'));return}if(!('IntersectionObserver' in window)){elements.forEach(e=>e.classList.add('visible'));return}const obs=new IntersectionObserver((items,o)=>{items.forEach(item=>{if(item.isIntersecting){item.target.classList.add('visible');o.unobserve(item.target)}})},{threshold:.07});elements.forEach(e=>obs.observe(e))}
   observeReveals();
   const aoSlider=document.getElementById('ao-range');if(aoSlider){const before=document.getElementById('ao-before');const score=document.getElementById('ao-score');aoSlider.addEventListener('input',()=>{const v=Number(aoSlider.value);before.style.clipPath=`inset(0 ${v}% 0 0)`;score.textContent=v>=75?'Adaptive correction dominant':v<=25?'Atmospheric blur dominant':'Compare the correction';});aoSlider.dispatchEvent(new Event('input'))}
@@ -300,7 +340,7 @@
         url:'project.html?id='+encodeURIComponent(id)+'#instrument-science-papers',type:'Observational science paper',
         text:[p.authors,p.year,p.journal,p.note,entry.instrument].join(' ')
       })));
-    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,(p.science||[]).join(' '),p.technical,(p.specs||[]).flat().join(' '),p.contribution,p.telescope,p.category,(p.refs||[]).map(x=>x[0]).join(' '),p.status==='past'?'Past Projects':''].join(' ')})),...scienceRecords,...people.map(p=>({title:p.name,section:'People · '+p.tag,url:'people.html#'+p.id,type:'Group member',text:[p.role,p.bio,p.longBio||'',p.tag,...(p.projects||[])].join(' ')}))];
+    const allRecords=[...(window.ADOPT_SEARCH_INDEX||[]),...proj.map(p=>({title:p.name,section:p.overline,url:'project.html?id='+encodeURIComponent(p.id),type:p.status==='past'?'Past project':'Project',text:[p.blurb,p.description,(p.science||[]).join(' '),p.technical,(p.specs||[]).flat().join(' '),p.contribution,p.telescope,p.category,(p.refs||[]).map(x=>x[0]).join(' '),p.status==='past'?'Past Projects':''].join(' ')})),...catalogue.map(p=>({title:p.title,section:p.projects.map(x=>x.name).join(', '),url:'publications.html?q='+encodeURIComponent(p.doi||p.title),type:'Publication',text:[p.authors,p.year,p.doi,p.note].join(' ')})),...scienceRecords,...people.map(p=>({title:p.name,section:'People · '+p.tag,url:'people.html#'+p.id,type:'Group member',text:[p.role,p.bio,p.longBio||'',p.tag,...(p.projects||[])].join(' ')}))];
     // Avoid regex on user strings; render snippets safely into text with explicit <mark> nodes.
     const markText=(text,terms)=>{
       const src=String(text),low=normalize(src);const matches=[];

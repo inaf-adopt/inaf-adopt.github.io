@@ -473,7 +473,7 @@ window.ADOPT_PROJECT_PAPERS = {
         "year": 2026,
         "type": "Conference abstract",
         "url": "https://www.scienzeplanetarie.it/files/download/Congresso-2026/CNSP2026_ABSTRACTS_BOOK-.pdf",
-        "note": "Relevant optical tracking work; ADOPT association to be reviewed."
+        "note": "Related optical tracking research at Asiago."
       },
       {
         "title": "On the “Space debris and long-term sustainability” ASI–INAF agreement",
@@ -481,7 +481,7 @@ window.ADOPT_PROJECT_PAPERS = {
         "year": 2024,
         "type": "Conference presentation",
         "url": "https://www.iafastro.org/events/iac/iac-2024/",
-        "note": "General ASI–INAF programme; exact contribution needs verification."
+        "note": "Background on the wider ASI–INAF programme."
       }
     ]
   },

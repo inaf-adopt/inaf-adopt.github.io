@@ -1,0 +1,122 @@
+[
+  {
+    "id": "trace-ao",
+    "name": "TRACE-AO",
+    "category": "Adaptive optics",
+    "telescope": "",
+    "accent": "teal",
+    "icon": "◎",
+    "overline": "Research project · Public profile under review",
+    "blurb": "A project listed by the ADOPT group; publicly verifiable scope is still being identified.",
+    "description": "TRACE-AO is included in the ADOPT research directory. No unambiguous public source for this specific project name was located, so its purpose and science cases are not being inferred from similarly named projects.",
+    "science": [
+      "Science applications require confirmation from the TRACE-AO project team."
+    ],
+    "technical": "Technical concept, telescope/facility, performance figures and responsible institutions are awaiting verified project documentation.",
+    "specs": [],
+    "contribution": "A short approved abstract, project URL or publication would allow this entry to be completed.",
+    "refs": [],
+    "pending": true,
+    "status": "current",
+    "source": ""
+  },
+  {
+    "id": "oscar",
+    "name": "OSCAR",
+    "category": "More projects",
+    "telescope": "",
+    "accent": "blue",
+    "icon": "◇",
+    "overline": "Research project · Public profile under review",
+    "blurb": "Project listed by the group; a unique astronomical source has not yet been verified.",
+    "description": "OSCAR is listed as part of the ADOPT project directory. The acronym is used by unrelated initiatives, and available results did not establish which OSCAR belongs here.",
+    "science": [
+      "Science objectives will be added after the specific project is confirmed."
+    ],
+    "technical": "Instrument configuration and specifications have not been verified for this OSCAR project.",
+    "specs": [],
+    "contribution": "An official reference or short technical note from the project team is needed.",
+    "refs": [],
+    "pending": true,
+    "status": "current",
+    "source": ""
+  },
+  {
+    "id": "tdt",
+    "name": "TDT",
+    "category": "More projects",
+    "telescope": "Candidate: Time Domain Telescope concept",
+    "accent": "sand",
+    "icon": "◉",
+    "overline": "Time-domain astronomy · Identity to confirm",
+    "blurb": "A possible match is the Time Domain Telescope concept for rapid optical spectroscopy.",
+    "description": "A publicly documented project called the Time Domain Telescope (TDT) proposes a coordinated array of robotic telescopes dedicated to rapid, repeated observations. It is a plausible match for this directory entry, but the ADOPT team should confirm that it is the intended TDT before treating this identification as definitive.",
+    "science": [
+      "If this is the Time Domain Telescope: fast transient follow-up, accretion variability, compact-object binaries and short-timescale spectroscopy."
+    ],
+    "technical": "The published concept describes multiple 1–2 m class robotic unit telescopes feeding fibre-coupled spectrographs, with time-resolved photon-counting detection as a major technology goal. These are conceptual specifications for the candidate project, not verified ADOPT commitments.",
+    "specs": [
+      [
+        "Possible expansion",
+        "Time Domain Telescope (unconfirmed)"
+      ],
+      [
+        "Conceptual unit size",
+        "Approximately 1–2 m"
+      ],
+      [
+        "Observing concept",
+        "Coordinated robotic array; high-cadence spectroscopy"
+      ]
+    ],
+    "contribution": "Please confirm whether the ADOPT TDT entry refers to this international concept.",
+    "refs": [
+      [
+        "Potential match: Time Domain Telescope",
+        "https://www.astro.dur.ac.uk/~simo/TDTelescope/"
+      ]
+    ],
+    "partial": true,
+    "status": "current",
+    "source": "https://www.astro.dur.ac.uk/~simo/TDTelescope/",
+    "pending": false
+  },
+  {
+    "id": "haydin",
+    "name": "HAYDIN",
+    "category": "More projects",
+    "telescope": "Possible match: proposed HAYDN space mission",
+    "accent": "green",
+    "icon": "⊙",
+    "overline": "Project name · Verification needed",
+    "blurb": "Possible link to an asteroseismology mission concept called HAYDN; spelling needs confirmation.",
+    "description": "The public scientific literature describes HAYDN (High-precision AsteroseismologY of DeNse stellar fields), a proposed space-photometry mission, including researchers from Padova. The ADOPT directory currently lists HAYDIN; whether these names refer to the same effort has not been confirmed.",
+    "science": [
+      "If HAYDN is intended: precise measurements of stellar oscillations in dense clusters.",
+      "Studying metal-poor stellar evolution and the Milky Way bulge.",
+      "Deriving stellar ages and tracing Galactic formation history."
+    ],
+    "technical": "The published HAYDN concept argues for long-duration, high-cadence photometry of dense stellar fields. No approved mission hardware baseline or ADOPT-specific optical contribution has been confirmed for the entry labelled HAYDIN.",
+    "specs": [
+      [
+        "Possible published name",
+        "HAYDN — identity unconfirmed"
+      ],
+      [
+        "Observational method",
+        "High-precision space photometry (concept)"
+      ]
+    ],
+    "contribution": "Before treating this as verified, the group should confirm whether the intended project name is HAYDN or HAYDIN.",
+    "refs": [
+      [
+        "Potential match: HAYDN scientific paper",
+        "https://doi.org/10.1007/s10686-021-09711-1"
+      ]
+    ],
+    "partial": true,
+    "status": "current",
+    "source": "https://doi.org/10.1007/s10686-021-09711-1",
+    "pending": false
+  }
+]

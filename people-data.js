@@ -1,4 +1,4 @@
-/* ADOPT research-group directory. Concise summaries plus expanded source-based biographies; member review remains welcome. */
+// Team directory; source references retained in PEOPLE_SOURCES.md.
 window.ADOPT_PEOPLE = [
   {
     "id": "carmelo-arcidiacono",
@@ -33,7 +33,7 @@ window.ADOPT_PEOPLE = [
     "name": "Mamoon Asghar",
     "role": "Doctoral researcher · University of Padova",
     "tag": "Optics & instrumentation",
-    "bio": "Doctoral work in adaptive-optics systems and components; a 2026 research presentation discusses EKARUS.",
+    "bio": "Doctoral research in adaptive-optics systems and components, including the EKARUS experimental platform.",
     "projects": [
       "EKARUS"
     ],
@@ -49,7 +49,7 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Mamoon is associated with doctoral-level research in astronomical optics and adaptive-optics instrumentation. Public workshop materials connect his research to the EKARUS programme. Further details of specific hardware responsibilities and milestones are awaiting a member-approved biography."
+    "longBio": "Mamoon undertakes doctoral research in astronomical optics and adaptive-optics instrumentation, including work on EKARUS."
   },
   {
     "id": "alessandro-ballone",
@@ -176,7 +176,7 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Mohamed works on optical design studies for innovative wide-field astronomical telescopes, including the MezzoCielo demonstration concept. His University of Padova academic record also includes an earlier study of the optical configuration for the proposed HAYDN space mission. The status of specific current work packages is left open for confirmation by the project team."
+    "longBio": "Mohamed works on optical design studies for innovative wide-field astronomical telescopes, including the MezzoCielo demonstration concept. His University of Padova academic record also includes an earlier study of the optical configuration for the proposed HAYDN space mission."
   },
   {
     "id": "elena-carolo",
@@ -201,7 +201,7 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "https://mavis-ao.org/assets/mugshots/elena_carolo.jpg",
     "photoCredit": "https://mavis-ao.org/consortium/",
-    "longBio": "Elena contributes to the engineering and development of optical instruments at INAF Padova. Public project and collaboration records connect her work with SHARK-NIR, MAVIS, MORFEO and related laboratory integration activities. Such efforts require optical and mechanical integration, verification and coordination between scientific and technical teams."
+    "longBio": "Elena contributes to the engineering and development of optical instruments at INAF Padova. Her work includes SHARK-NIR, MAVIS, MORFEO and related laboratory integration activities. Such efforts require optical and mechanical integration, verification and coordination between scientific and technical teams."
   },
   {
     "id": "paolo-cerpelloni",
@@ -225,7 +225,7 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "https://mavis-ao.org/assets/mugshots/paolo_cerpelloni.png",
     "photoCredit": "https://mavis-ao.org/consortium/",
-    "longBio": "Paolo participates in adaptive-optics instrumentation and testing activities at INAF Padova. Public MAVIS consortium and MATTO collaboration records link his work to laboratory validation and large-telescope AO systems. A more specific account of his current responsibilities will be added when confirmed by the group."
+    "longBio": "Paolo participates in adaptive-optics instrumentation and testing activities at INAF Padova. His work includes laboratory validation and large-telescope AO systems."
   },
   {
     "id": "simonetta-chinellato",
@@ -269,7 +269,7 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Luca participates in studies of space-object surveillance and characterisation. Public 2026 work considers how optical polarimetry can help identify or describe the properties of geostationary satellites and other objects in orbit. His role illustrates the application of astronomical measurement techniques beyond traditional celestial science targets."
+    "longBio": "Luca participates in studies of space-object surveillance and characterisation. His research considers how optical polarimetry can help identify or describe the properties of geostationary satellites and other objects in orbit. His role illustrates the application of astronomical measurement techniques beyond traditional celestial science targets."
   },
   {
     "id": "marco-dima",
@@ -294,7 +294,7 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Marco contributes to astronomical instrumentation and adaptive-optics research at INAF Padova. Co-authored projects include laser-guide-star wavefront sensing, the MATTO test bench and SOXS optomechanical integration. Public Padova programmes also link his work to optical space surveillance and instrument performance studies."
+    "longBio": "Marco contributes to astronomical instrumentation and adaptive-optics research at INAF Padova. Co-authored projects include laser-guide-star wavefront sensing, the MATTO test bench and SOXS optomechanical integration. He also works on optical space surveillance and instrument performance studies."
   },
   {
     "id": "simone-di-filippo",
@@ -346,7 +346,7 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Silvio contributes to optical and optomechanical studies of the MezzoCielo wide-field telescope concept. The public literature discusses the performance of its unconventional spherical and refractive optical arrangement. Specific current responsibilities and hardware deliverables will be confirmed before a more detailed biography is published."
+    "longBio": "Silvio contributes to optical and optomechanical studies of the MezzoCielo wide-field telescope concept. The public literature discusses the performance of its unconventional spherical and refractive optical arrangement."
   },
   {
     "id": "jacopo-farinato",
@@ -399,7 +399,7 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Tania works on astronomical instrumentation and wavefront-sensing research associated with INAF Padova. Public presentations include SHARK-NIR science and the Ingot wavefront sensor, and she contributes to technical communication about instrument development. More detailed project roles will be added after member review."
+    "longBio": "Tania works on astronomical instrumentation and wavefront-sensing research associated with INAF Padova. Public presentations include SHARK-NIR science and the Ingot wavefront sensor, and she contributes to technical communication about instrument development."
   },
   {
     "id": "davide-greggio",
@@ -583,7 +583,7 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "",
     "photoCredit": "",
-    "longBio": "Matteo is a research fellow associated with INAF Padova. His research includes adaptive-optics point-spread-function reconstruction and methods for interpreting images corrected by complex AO systems. Public Padova research programmes also connect him with optical observation and analysis of artificial objects in Earth orbit."
+    "longBio": "Matteo is a research fellow associated with INAF Padova. His research includes adaptive-optics point-spread-function reconstruction and methods for interpreting images corrected by complex AO systems. He also works on optical observation and analysis of artificial objects in Earth orbit."
   },
   {
     "id": "remon-vangaalen",
@@ -636,7 +636,7 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "https://mavis-ao.org/assets/mugshots/daniele_vassallo.jpg",
     "photoCredit": "https://mavis-ao.org/consortium/",
-    "longBio": "Daniele works on wavefront sensing, adaptive optics and associated real-time instrument-control technologies. Public INAF collaborations connect him with the MATTO multi-conjugate adaptive-optics facility and its control architecture. His research also includes AO performance and experimental investigations for high-resolution astronomical observations."
+    "longBio": "Daniele works on wavefront sensing, adaptive optics and associated real-time instrument-control technologies. He contributes to the MATTO multi-conjugate adaptive-optics facility and its control architecture. His research also includes AO performance and experimental investigations for high-resolution astronomical observations."
   },
   {
     "id": "valentina-viotto",
@@ -668,7 +668,7 @@ window.ADOPT_PEOPLE = [
     "name": "Roberto Ragazzoni",
     "role": "Professor · University of Padova | President of INAF",
     "tag": "Adaptive optics",
-    "bio": "Professor and INAF president, known for the pyramid wavefront sensor and pioneering adaptive-optics instrumentation.",
+    "bio": "Developed the pyramid wavefront sensor and works on adaptive optics and astronomical instrumentation.",
     "projects": [
       "MORFEO",
       "Mezzocielo",
@@ -690,6 +690,6 @@ window.ADOPT_PEOPLE = [
     ],
     "photo": "https://mavis-ao.org/assets/mugshots/roberto_ragazzoni.jpg",
     "photoCredit": "https://mavis-ao.org/consortium/",
-    "longBio": "Roberto is a professor of astronomy at the University of Padova and president of the Italian National Institute for Astrophysics (INAF). Internationally known for the pyramid wavefront sensor, he has played a central role in advancing high-resolution astronomical imaging and adaptive optics. He contributes to the scientific and technological vision of projects including MORFEO, MezzoCielo and future telescope instrumentation."
+    "longBio": "Roberto’s research includes the pyramid wavefront sensor, adaptive optics and optical concepts for astronomical instruments, including MORFEO, MezzoCielo and PLATO."
   }
 ];

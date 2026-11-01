@@ -481,10 +481,6 @@ window.ADOPT_PEOPLE = [
         "url": "https://spie.org/profile/Kalyan"
       },
       {
-        "label": "SOXS AIV and career profile",
-        "url": "https://www.aries.res.in/node/2255"
-      },
-      {
         "label": "PhD research (MPIA/Heidelberg)",
         "url": "https://www.imprs-hd.mpg.de/142337/2017"
       }

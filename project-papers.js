@@ -1,5 +1,4 @@
-// Selected publications, reviewed against public records on 2026-10-30.
-// Recent lists are curated, not an automatically updated bibliographic feed.
+// Selected, dated project references. Resource entries are distinguished from reviewed instrument research.
 window.ADOPT_PROJECT_PAPERS = {
   "shark": {
     "recent": [
@@ -218,10 +217,29 @@ window.ADOPT_PROJECT_PAPERS = {
         "url": "https://doi.org/10.1117/12.2560524",
         "doi": "10.1117/12.2560524"
       }
+    ],
+    "resources": [
+      {
+        "title": "Optical design and development of a multichannel corrector for the 80cm Mezzocielo wide-field demonstrator",
+        "authors": "Bournane et al.",
+        "year": 2026,
+        "type": "Conference paper",
+        "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602283376911075",
+        "note": "Author-verified conference proceedings; a complementary optical-design reference."
+      }
     ]
   },
   "matto": {
     "recent": [
+      {
+        "title": "Design and early implementation of the MCAO MATTO bench",
+        "authors": "Ballone",
+        "year": 2026,
+        "type": "Proceedings contribution",
+        "url": "https://doi.org/10.36116/VIDEOMEM_4.2026.27",
+        "doi": "10.36116/VIDEOMEM_4.2026.27",
+        "note": "Proceedings contribution from the ADONI workshop; not a final instrument results paper."
+      },
       {
         "title": "MATTO: updates from the MAD multi-conjugate adaptive techniques test optics design",
         "authors": "Di Filippo et al.",
@@ -464,7 +482,17 @@ window.ADOPT_PROJECT_PAPERS = {
     ]
   },
   "space-debris": {
-    "recent": [],
+    "recent": [
+      {
+        "title": "Polarimetric Signatures for GEO Satellite Characterization: Experimental Campaign and Modeling",
+        "authors": "Crescenzio et al.",
+        "year": 2026,
+        "type": "Conference paper",
+        "url": "https://doi.org/10.64861/QQHJ3465",
+        "doi": "10.64861/QQHJ3465",
+        "note": "Author-confirmed observational polarimetry work involving INAF Padova."
+      }
+    ],
     "foundational": [],
     "resources": [
       {
@@ -730,7 +758,7 @@ window.ADOPT_PROJECT_PAPERS = {
     "note": "PLATO 2.0 refers to an earlier mission design phase. Current PLATO papers are listed on the separate PLATO project page, rather than mislabelled as new PLATO 2.0 research."
   }
 };
-// Verified author order for the Publications selection. See PUBLICATION_SELECTION.md.
+
 window.ADOPT_PUBLICATION_AUTHORSHIP = {
   "10.1117/12.3020068": {
     "firstTwo": [
@@ -1096,7 +1124,6 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
       "Giovanni Boato",
       "Davide Greggio"
     ],
-    "source": "https://www.oact.inaf.it/pubblicazioni-scientifiche/",
     "members": [
       {
         "memberId": "giovanni-boato",
@@ -1108,7 +1135,8 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
         "name": "Davide Greggio",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://www.oact.inaf.it/pubblicazioni-scientifiche/"
   },
   "10.1117/12.3016306": {
     "firstTwo": [
@@ -1284,5 +1312,24 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
       }
     ],
     "source": "https://orcid.org/0000-0002-0666-3847"
+  },
+  "https://jglobal.jst.go.jp/en/detail?jglobal_id=202602283376911075": {
+    "firstTwo": [
+      "Mohamed Yahia Bournane",
+      "Davide Greggio"
+    ],
+    "members": [
+      {
+        "memberId": "mohamed-bournane",
+        "name": "Mohamed Yahia Bournane",
+        "position": 1
+      },
+      {
+        "memberId": "davide-greggio",
+        "name": "Davide Greggio",
+        "position": 2
+      }
+    ],
+    "source": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602283376911075"
   }
 };

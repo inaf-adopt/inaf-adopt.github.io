@@ -455,15 +455,17 @@ window.ADOPT_PEOPLE = [
     "name": "Kalyan Kumar Radhakrishnan Santhakumari",
     "role": "Technologist · INAF Padova | SOXS AIV Lead & Deputy System Engineer",
     "tag": "Adaptive optics · Systems engineering",
-    "bio": "Adaptive-optics and astronomical-instrument engineer; leads SOXS AIV and serves as Deputy System Engineer, with contributions to MAVIS, MORFEO, LINC-NIRVANA and INGOT.",
+    "bio": "Adaptive-optics and astronomical-instrument researcher and engineer at INAF Padova. SOXS AIV Lead and Deputy System Engineer, contributing to MAVIS adaptive-optics calibration, MORFEO integration planning and advanced wavefront-sensing systems.",
     "projects": [
-      "SOXS",
+      "SHARK-NIR",
       "MAVIS",
       "MORFEO",
+      "Mezzocielo",
+      "MATTO",
       "NIRVANA-VIS",
       "INGOT",
-      "LINC-NIRVANA",
-      "SHARK-NIR"
+      "SOXS",
+      "LINC-NIRVANA"
     ],
     "links": [
       {

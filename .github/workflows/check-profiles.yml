@@ -14,3 +14,9 @@ jobs:
           persist-credentials: false
       - name: Validate profile data
         run: node scripts/validate-members.cjs --self-test
+      - name: Check project pages and curated bibliography
+        run: |
+          node scripts/check-site.cjs --allow-profile-drift
+          node scripts/build-project-pages.cjs --check
+          node --check script.js
+          node --check profile-live.js

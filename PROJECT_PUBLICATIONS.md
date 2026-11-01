@@ -59,6 +59,10 @@ These references describe the projects or related technology. They do not establ
 
 ## mezzocielo
 
+**Additional verified proceedings**
+
+- Bournane et al. (2026), [Optical design and development of a multichannel corrector for the 80cm Mezzocielo wide-field demonstrator](https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602283376911075) — Conference paper, verified author list; no DOI supplied by this source.
+
 **Recent papers**
 
 - Di Rosa et al. (2026), [MezzoCielo: from the 40cm prototype toward a 1m class monocentric all-sky telescope](https://ui.adsabs.harvard.edu/abs/2026SPIE14147E..4RD/abstract) — Conference paper. *SPIE 141474R; linked via ADS bibliographic record.*
@@ -73,6 +77,8 @@ These references describe the projects or related technology. They do not establ
 ## matto
 
 **Recent papers**
+
+- Ballone (2026), [Design and early implementation of the MCAO MATTO bench](https://doi.org/10.36116/VIDEOMEM_4.2026.27) — ADONI proceedings contribution. *Not a fully validated on-sky result.*
 
 - Di Filippo et al. (2024), [MATTO: updates from the MAD multi-conjugate adaptive techniques test optics design](https://doi.org/10.1117/12.3020439) — Conference paper.
 
@@ -148,6 +154,10 @@ These references describe the projects or related technology. They do not establ
 - Schipani et al. (2022), [Progress on the SOXS transients chaser for the ESO-NTT](https://doi.org/10.1117/12.2628329) — Conference paper.
 
 ## space-debris
+
+**Recent papers**
+
+- Crescenzio et al. (2026), [Polarimetric Signatures for GEO Satellite Characterization: Experimental Campaign and Modeling](https://doi.org/10.64861/QQHJ3465) — Conference paper. *Public author listing includes Luca Cortese, Carmelo Arcidiacono and Matteo Simioni.*
 
 **Supplementary conference materials**
 

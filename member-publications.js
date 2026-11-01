@@ -1,4 +1,4 @@
-// Source-checked author lists. ORCID-only record associations are stored separately.
+// Curated bylines and member associations; sources documented in MEMBER_PUBLICATIONS_SOURCES.md.
 window.ADOPT_MEMBER_PUBLICATIONS = [
   {
     "title": "MAVIS: the impact of the mid-spatial frequency figure errors of optics on the astrometric error",
@@ -218,7 +218,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.3020068",
     "url": "https://doi.org/10.1117/12.3020068",
     "title": "SHARK-NIR commissioning and early science runs",
-    "year": 0,
+    "year": 2024,
     "type": "Research paper",
     "members": [
       "jacopo-farinato",
@@ -245,7 +245,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.2313659",
     "url": "https://doi.org/10.1117/12.2313659",
     "title": "SHARK-NIR: the coronagraphic camera for LBT in the AIV phase at INAF-Padova",
-    "year": 0,
+    "year": 2018,
     "type": "Research paper",
     "members": [
       "maria-bergomi",
@@ -266,8 +266,8 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
   {
     "doi": "10.1051/0004-6361/202452653",
     "url": "https://doi.org/10.1051/0004-6361/202452653",
-    "title": "The HOSTS survey: Suspected variable dust emission and constraints on companions around <i>θ</i> Boo",
-    "year": 0,
+    "title": "The HOSTS survey: Suspected variable dust emission and constraints on companions around θ Boo",
+    "year": 2025,
     "type": "Research paper",
     "members": [
       "jacopo-farinato",
@@ -281,7 +281,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1051/0004-6361/202452832",
     "url": "https://doi.org/10.1051/0004-6361/202452832",
     "title": "A multi-technique detection of an eccentric giant planet around the accelerating star HD 57625",
-    "year": 0,
+    "year": 2025,
     "type": "Research paper",
     "members": [
       "jacopo-farinato",
@@ -304,7 +304,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1093/mnras/stae2706",
     "url": "https://doi.org/10.1093/mnras/stae2706",
     "title": "Deep imaging of three accelerating stars using SHARK-NIR and LMIRCam at LBT",
-    "year": 0,
+    "year": 2025,
     "type": "Research paper",
     "members": [
       "elena-carolo",
@@ -324,7 +324,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.3018606",
     "url": "https://doi.org/10.1117/12.3018606",
     "title": "MAVIS: imager and spectrograph",
-    "year": 0,
+    "year": 2024,
     "type": "Research paper",
     "members": [
       "davide-greggio"
@@ -336,7 +336,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.2561930",
     "url": "https://doi.org/10.1117/12.2561930",
     "title": "MAVIS: science case, imager, and spectrograph",
-    "year": 0,
+    "year": 2020,
     "type": "Research paper",
     "members": [
       "maria-bergomi",
@@ -356,7 +356,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1016/j.newast.2026.102559",
     "url": "https://doi.org/10.1016/j.newast.2026.102559",
     "title": "Adaptive optics for the extremely large telescope: Overcoming point spread function challenges with MORFEO",
-    "year": 0,
+    "year": 2026,
     "type": "Research paper",
     "members": [
       "carmelo-arcidiacono",
@@ -369,7 +369,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/1.jatis.10.4.044008",
     "url": "https://doi.org/10.1117/1.jatis.10.4.044008",
     "title": "Thermo-mechanical sizing and stress-induced birefringence analysis for the MezzoCielo assembly",
-    "year": 0,
+    "year": 2024,
     "type": "Research paper",
     "members": [
       "silvio-di-rosa",
@@ -386,7 +386,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.3019730",
     "url": "https://doi.org/10.1117/12.3019730",
     "title": "Engineering a whole sky one meter class telescope: MezzoCielo as a patrol of transients",
-    "year": 0,
+    "year": 2024,
     "type": "Research paper",
     "members": [
       "roberto-ragazzoni",
@@ -404,7 +404,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.3020439",
     "url": "https://doi.org/10.1117/12.3020439",
     "title": "MATTO: updates from the MAD multi-conjugate adaptive techniques test optics design",
-    "year": 0,
+    "year": 2024,
     "type": "Research paper",
     "members": [
       "simone-di-filippo",
@@ -434,7 +434,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.2313368",
     "url": "https://doi.org/10.1117/12.2313368",
     "title": "Installation and commissioning of the LINC-NIRVANA near-infrared MCAO imager on LBT",
-    "year": 0,
+    "year": 2018,
     "type": "Research paper",
     "members": [
       "maria-bergomi",
@@ -452,7 +452,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.2232707",
     "url": "https://doi.org/10.1117/12.2232707",
     "title": "LINC-NIRVANA at LBT: final preparations for first light",
-    "year": 0,
+    "year": 2016,
     "type": "Research paper",
     "members": [
       "roberto-ragazzoni"
@@ -464,7 +464,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1051/0004-6361/202659714",
     "url": "https://doi.org/10.1051/0004-6361/202659714",
     "title": "The PLATO field selection process",
-    "year": 0,
+    "year": 2026,
     "type": "Research paper",
     "members": [
       "roberto-ragazzoni"
@@ -476,7 +476,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.3018872",
     "url": "https://doi.org/10.1117/12.3018872",
     "title": "VSTPOL: the control electronics design for the new polarimetric mode of the VST",
-    "year": 0,
+    "year": 2024,
     "type": "Research paper",
     "members": [
       "demetrio-magrin",
@@ -489,7 +489,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.2561075",
     "url": "https://doi.org/10.1117/12.2561075",
     "title": "Aligning and testing the ingot wavefront sensor in the lab",
-    "year": 0,
+    "year": 2020,
     "type": "Research paper",
     "members": [
       "kalyan-kumar-radhakrishnan-santhakumari",
@@ -509,7 +509,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/1.jatis.12.2.024005",
     "url": "https://doi.org/10.1117/1.jatis.12.2.024005",
     "title": "SOXS spectrograph instrument control software",
-    "year": 0,
+    "year": 2026,
     "type": "Research paper",
     "members": [
       "federico-battaini",
@@ -523,7 +523,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.3102764",
     "url": "https://doi.org/10.1117/12.3102764",
     "title": "Verification of the SOXS Exposure Time Calculator from the instrument commissioning at the ESO-NTT",
-    "year": 0,
+    "year": 2026,
     "type": "Research paper",
     "members": [
       "federico-battaini",
@@ -536,7 +536,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.3019253",
     "url": "https://doi.org/10.1117/12.3019253",
     "title": "SOXS NIR: optomechanical integration and alignment, optical performance verification before full instrument assembly",
-    "year": 0,
+    "year": 2024,
     "type": "Research paper",
     "members": [
       "kalyan-kumar-radhakrishnan-santhakumari",
@@ -549,7 +549,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.2307349",
     "url": "https://doi.org/10.1117/12.2307349",
     "title": "SOXS: a wide band spectrograph to follow up transients",
-    "year": 0,
+    "year": 2018,
     "type": "Research paper",
     "members": [
       "luca-marafatto"
@@ -561,7 +561,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.2628329",
     "url": "https://doi.org/10.1117/12.2628329",
     "title": "Progress on the SOXS transients chaser for the ESO-NTT",
-    "year": 0,
+    "year": 2022,
     "type": "Research paper",
     "members": [
       "kalyan-kumar-radhakrishnan-santhakumari",
@@ -574,7 +574,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1093/mnras/stag1714",
     "url": "https://doi.org/10.1093/mnras/stag1714",
     "title": "The MICADO first light imager for the ELT: simulated observations of star forming clumps at cosmic noon",
-    "year": 0,
+    "year": 2026,
     "type": "Research paper",
     "members": [
       "matteo-simioni",
@@ -587,7 +587,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.3017752",
     "url": "https://doi.org/10.1117/12.3017752",
     "title": "The MICADO first light imager for the ELT: overview and current status",
-    "year": 0,
+    "year": 2024,
     "type": "Research paper",
     "members": [
       "carmelo-arcidiacono",
@@ -601,7 +601,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.2311483",
     "url": "https://doi.org/10.1117/12.2311483",
     "title": "The MICADO first light imager for the ELT: overview, operation, simulation",
-    "year": 0,
+    "year": 2018,
     "type": "Research paper",
     "members": [
       "roberto-ragazzoni"
@@ -613,7 +613,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.3100633",
     "url": "https://doi.org/10.1117/12.3100633",
     "title": "LBCmos: extending wide-field imaging and photometry capabilities at LBTO to the next decades",
-    "year": 0,
+    "year": 2026,
     "type": "Research paper",
     "members": [
       "federico-battaini",
@@ -626,7 +626,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1117/12.790132",
     "url": "https://doi.org/10.1117/12.790132",
     "title": "The Large Binocular Camera: description and performances of the first binocular imager",
-    "year": 0,
+    "year": 2008,
     "type": "Research paper",
     "members": [
       "roberto-ragazzoni",
@@ -639,7 +639,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1007/s10686-020-09679-4",
     "url": "https://doi.org/10.1007/s10686-020-09679-4",
     "title": "The CHEOPS mission",
-    "year": 0,
+    "year": 2021,
     "type": "Research paper",
     "members": [
       "maria-bergomi",
@@ -656,7 +656,7 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "doi": "10.1051/0004-6361/202659058",
     "url": "https://doi.org/10.1051/0004-6361/202659058",
     "title": "CHEOPS photometry from 2024 reveals a reversal in the transit-timing variations of AU Mic c",
-    "year": 0,
+    "year": 2026,
     "type": "Research paper",
     "members": [
       "demetrio-magrin",
@@ -687,5 +687,102 @@ window.ADOPT_MEMBER_PUBLICATIONS = [
     "authors": "Paolo Cerpelloni, Elena Carolo, Gabriele Umbriaco, et al.",
     "source": "https://api.crossref.org/works/10.1117/12.3017418",
     "project": "shark"
+  },
+  {
+    "title": "MezzoCielo: a new concept telescope capable of fisheye FOV at seeing limited resolution",
+    "authors": "Giovanni Boato, Davide Greggio, Oleksandra Rebrysh, et al.",
+    "year": 2026,
+    "type": "Conference paper",
+    "url": "https://ui.adsabs.harvard.edu/abs/2026SPIE14147E..0DB/abstract",
+    "project": "mezzocielo",
+    "members": [
+      "giovanni-boato",
+      "davide-greggio",
+      "oleksandra-rebrysh",
+      "mohamed-bournane",
+      "silvio-di-rosa",
+      "kalyan-kumar-radhakrishnan-santhakumari"
+    ],
+    "source": "https://www.oact.inaf.it/pubblicazioni-scientifiche/"
+  },
+  {
+    "title": "MezzoCielo: from the 40cm prototype toward a 1m class monocentric all-sky telescope",
+    "authors": "Silvio Di Rosa, Demetrio Magrin, Davide Greggio, et al.",
+    "year": 2026,
+    "type": "Conference paper",
+    "url": "https://ui.adsabs.harvard.edu/abs/2026SPIE14147E..4RD/abstract",
+    "project": "mezzocielo",
+    "members": [
+      "silvio-di-rosa",
+      "demetrio-magrin",
+      "davide-greggio",
+      "mohamed-bournane",
+      "giovanni-boato",
+      "kalyan-kumar-radhakrishnan-santhakumari"
+    ],
+    "source": "https://www.oact.inaf.it/pubblicazioni-scientifiche/"
+  },
+  {
+    "title": "Optical design and development of a multichannel corrector for the 80cm Mezzocielo wide-field demonstrator",
+    "authors": "Mohamed Yahia Bournane, Davide Greggio, Oleksandra Rebrysh, et al.",
+    "year": 2026,
+    "type": "Conference paper",
+    "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602283376911075",
+    "project": "mezzocielo",
+    "members": [
+      "mohamed-bournane",
+      "davide-greggio",
+      "oleksandra-rebrysh",
+      "silvio-di-rosa",
+      "giovanni-boato",
+      "demetrio-magrin",
+      "roberto-ragazzoni"
+    ],
+    "source": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602283376911075"
+  },
+  {
+    "title": "Polarimetric Signatures for GEO Satellite Characterization: Experimental Campaign and Modeling",
+    "authors": "Giuseppe Crescenzio, Richard Tozzi, Mirco Bartolomei, et al.",
+    "year": 2026,
+    "type": "Conference paper",
+    "doi": "10.64861/QQHJ3465",
+    "url": "https://doi.org/10.64861/QQHJ3465",
+    "project": "space-debris",
+    "members": [
+      "luca-cortese",
+      "carmelo-arcidiacono",
+      "matteo-simioni"
+    ],
+    "source": "https://amostech.space/year/2026/polarimetric-signatures-for-geo-satellite-characterization-experimental-campaign-and-modeling/"
+  },
+  {
+    "title": "NirvanaVIS, final design and path toward sky of the visible GLAO-assisted speckle holography upgrade of LINC-NIRVANA",
+    "authors": "Maria Bergomi, Remon Van Gaalen, Carmelo Arcidiacono, et al.",
+    "year": 2026,
+    "type": "Conference poster",
+    "doi": "10.5281/zenodo.21128548",
+    "url": "https://doi.org/10.5281/zenodo.21128548",
+    "project": "nirvana",
+    "members": [
+      "remon-vangaalen",
+      "maria-bergomi",
+      "carmelo-arcidiacono",
+      "marco-dima",
+      "silvio-di-rosa"
+    ],
+    "source": "https://zenodo.org/records/21128548"
+  },
+  {
+    "title": "Design and early implementation of the MCAO MATTO bench",
+    "authors": "Alessandro Ballone",
+    "year": 2026,
+    "type": "Proceedings contribution",
+    "doi": "10.36116/VIDEOMEM_4.2026.27",
+    "url": "https://doi.org/10.36116/VIDEOMEM_4.2026.27",
+    "project": "matto",
+    "members": [
+      "alessandro-ballone"
+    ],
+    "source": "https://www.memsait.it/videomemorie/Adoni-4-2026.php"
   }
 ];

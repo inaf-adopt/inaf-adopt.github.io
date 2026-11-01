@@ -54,4 +54,10 @@ Individual member pages and the People directory intentionally do not display a 
 The publication catalogue merges `orcid-publications.js` (public ORCID record associations), `member-publications.js` (checked bylines), and project literature through `publication-catalogue.js`. Identity and import scope are documented in `MEMBER_PUBLICATIONS_SOURCES.md`. The default view requires verified first/second-author order; all member publications stay in the central catalogue.
 
 
-Facilities are described in `facilities.html`, with sources linked on the page. Members can prepare profile edits in `member-login.html` and submit them through GitHub for administrator review. No external authentication/database service is required. See `MEMBER_EDITING.md`.
+Facilities are described in `facilities.html`, with sources linked on the page. Members can prepare profile edits in `member-login.html` (a publicly accessible proposal form, not a login) and submit them through GitHub for administrator review. No external authentication/database service is required. See `MEMBER_EDITING.md`.
+
+## Verified profile data and index maintenance (November 2026)
+
+`members/*.json` is the authority for editable member fields. Run `node scripts/sync-member-data.cjs` to mirror approved JSON changes to `people-data.js`, followed by `node scripts/build-people.cjs`, `node scripts/build-project-pages.cjs` and `python3 build_search_index.py`. The site directory and project-team views then agree with member pages; `node scripts/check-site.cjs` detects inconsistencies. A member submitting only their JSON profile must not be asked to edit unrelated aggregate files; a maintainer performs the reconciliation after approval.
+
+Every current and historical project has a standalone `project-<id>.html` page with unique meta description, canonical URL and indexed summary. The old `project.html?id=<id>` URLs still resolve, with canonical links inserted by the client. `scripts/build-project-pages.cjs --check` checks static page freshness. The search index contains only general static pages: person and project records are indexed from current data in the browser, avoiding duplicate results and old member snapshots. The website uses dated, editorially curated publications; missing author identifications are not guessed.

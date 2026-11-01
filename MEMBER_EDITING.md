@@ -1,6 +1,6 @@
 # Member profiles: GitHub editing and review
 
-This site uses GitHub accounts and GitHub Pages. There is no separate user database, password store, Supabase project or shared `admin/admin` account.
+This site uses GitHub accounts and GitHub Pages. The publicly accessible member editor is a draft helper, not a sign-in screen. There is no separate user database, password store, Supabase project or shared `admin/admin` account.
 
 ## Members
 
@@ -20,14 +20,17 @@ Verify first-time contributors through a known institutional channel. Confirm th
 
 ## Data and publication
 
-`members/<member-id>.json` is the editable source for role, research area, biography, ORCiD, links and project associations. Names, portraits and source references remain in `people-data.js`. Public pages load approved profile JSON from the same website; the People directory and site search use it too. They retain a static fallback for network failures or JavaScript-disabled visitors.
+`members/<member-id>.json` is authoritative for editable role, research area, biography, ORCiD, links and project associations. `people-data.js` is its maintained mirror and also stores names, portraits and source references. After merging a member profile, run `node scripts/sync-member-data.cjs` so directory and project-team lists agree. Public pages load approved profile JSON from the same website; the People directory and site search use it too. They retain a static fallback for network failures or JavaScript-disabled visitors.
 
 After changing data, maintainers should run:
 
 ```
 node scripts/validate-members.cjs --self-test
+node scripts/sync-member-data.cjs
 node scripts/build-people.cjs
-python build_search_index.py
+node scripts/build-project-pages.cjs
+python3 build_search_index.py
+node scripts/check-site.cjs
 ```
 
 Commit the regenerated HTML and search index to refresh static fallbacks and search-engine previews. Approved JSON changes appear for JavaScript-enabled visitors as soon as the normal Pages deployment finishes, even before these snapshots are regenerated. The validator checks data shape and safe links; administrator review is still responsible for identity and scientific accuracy.

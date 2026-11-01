@@ -18,8 +18,9 @@ class PageText(HTMLParser):
         if self.main and not self.ignore:self.parts.append(data)
 root=Path(__file__).parent
 records=[]
+member_ids={p.stem for p in (root/'members').glob('*.json')}
 for path in sorted(root.glob('*.html')):
-    if path.name in ('project.html','search.html','member-login.html'):continue
+    if path.name in ('project.html','search.html','member-login.html') or path.name.startswith('project-') or path.stem in member_ids:continue
     dom=PageText();dom.feed(path.read_text())
     title=' '.join(dom.title_parts).split(' — ADOPT')[0]
     text=re.sub(r'\s+',' ',' '.join(dom.parts)).strip()

@@ -7,3 +7,5 @@ Verified on 31 October 2026. `ADOPT_PUBLICATION_AUTHORSHIP` in project-papers.js
 The 2023 Ingot conference abstract byline was corrected to Di Filippo et al. from the linked conference document.
 
 Maintenance: verify the ordered author list, match the person to people-data.js, and add a source-backed metadata entry. Keep keys lowercase and use the DOI when present, otherwise the exact publication URL.
+
+For the 2026 Boato-led MezzoCielo conference entry, the INAF bibliographic author sequence places Boato first and Greggio second. For the 2026 Bournane-led optical corrector entry, the J-GLOBAL bibliographic record places Bournane first and Greggio second. This metadata is attributed only to the exact records, not to projects or unrelated records. Conference posters remain identified as such.

@@ -7,16 +7,24 @@
   "orcid": "0000-0003-2674-1504",
   "links": [
     {
+      "label": "ResearchGate",
+      "url": "https://www.researchgate.net/profile/Kalyan-Kumar-Radhakrishnan-Santhakumari"
+    },
+    {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=7T37ZJAAAAAJ&hl=en"
+    },
+    {
+      "label": "IAU profile",
+      "url": "https://www.iau.org/Shared_Content/Contacts/ContactLayouts/Profile.aspx?ID=39015&WebsiteKey=9e4eaea2-b0d6-4c4b-bd18-913a208b91be"
+    },
+    {
       "label": "SOXS AIV and career profile",
       "url": "https://www.aries.res.in/node/2255"
     },
     {
       "label": "PhD research (MPIA/Heidelberg)",
       "url": "https://www.imprs-hd.mpg.de/142337/2017"
-    },
-    {
-      "label": "IAU profile",
-      "url": "https://iauarchive.eso.org/administration/membership/individual/20113/"
     }
   ],
   "projects": [

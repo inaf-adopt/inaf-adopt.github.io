@@ -321,7 +321,8 @@ window.ADOPT_PEOPLE = [
     "projects": [
       "INGOT",
       "MATTO",
-      "SHARK-NIR"
+      "SHARK-NIR",
+      "SOXS"
     ],
     "links": [
       {
@@ -350,7 +351,8 @@ window.ADOPT_PEOPLE = [
     "tag": "Wide-field optics",
     "bio": "Studies the optomechanical design, optical materials and performance of the MezzoCielo telescope concept.",
     "projects": [
-      "Mezzocielo"
+      "Mezzocielo",
+      "SOXS"
     ],
     "links": [
       {

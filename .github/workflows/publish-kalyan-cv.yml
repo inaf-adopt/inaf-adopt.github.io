@@ -1,0 +1,53 @@
+name: Publish Kalyan's member CV
+on:
+  push:
+    paths:
+      - 'scripts/kalyan_minimal_cv.py.zlib.b64'
+      - '.github/workflows/publish-kalyan-cv.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Prepare typesetting dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-lato
+          python -m pip install 'reportlab==4.4.9'
+      - name: Build and verify two-page PDF
+        run: |
+          sudo mkdir -p /mnt/data
+          sudo chown "$USER" /mnt/data
+          mkdir -p assets/cv
+          python - <<'PY'
+          import base64, pathlib, zlib
+          source = pathlib.Path('scripts/kalyan_minimal_cv.py.zlib.b64').read_text().strip()
+          pathlib.Path('/tmp/build_kalyan_minimal_cv.py').write_bytes(zlib.decompress(base64.b64decode(source)))
+          PY
+          python /tmp/build_kalyan_minimal_cv.py
+          cp /mnt/data/Kalyan_Radhakrishnan_Minimal_CV.pdf assets/cv/Kalyan_Radhakrishnan_Minimal_CV.pdf
+          python - <<'PY'
+          import pathlib
+          pdf = pathlib.Path('assets/cv/Kalyan_Radhakrishnan_Minimal_CV.pdf').read_bytes()
+          assert pdf.startswith(b'%PDF-') and b'%%EOF' in pdf[-512:]
+          print('Verified PDF bytes:', len(pdf))
+          PY
+      - name: Publish PDF to GitHub Pages
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/cv/Kalyan_Radhakrishnan_Minimal_CV.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish Kalyan minimalist CV PDF"
+            git push
+          fi

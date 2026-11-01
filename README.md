@@ -28,6 +28,9 @@ English is the source language. Italian and other languages remain explicitly la
 
 ## Images and rights
 
+The SOXS artwork displayed on the project card and project page was supplied directly for this update as `SOXS-logo-MAP.jpeg`. It includes a hand-painted border and has been optimized for web display as `assets/logos/soxs-member-visual.webp`. It appears alongside the independently credited ESO instrument photograph. The INAF mark was supplied as `INAF-logo.png` and is displayed as `assets/logos/inaf-logo.webp` in the shared footer, linking to the institute. These additions are not a new licence grant or an institutional endorsement of ADOPT's separate graphic mark.
+
+
 The SOXS photograph in `assets/photos/soxs.jpg` is from https://www.eso.org/public/images/ann25011b/, credit **P. Schipani/INAF**, distributed under CC BY 4.0 according to ESO's image policy. It is displayed in its original proportions with a visible credit and licence link.
 
 Kalyan Radhakrishnan's portrait was supplied by the member. Other existing portraits remain external links to the MAVIS consortium with attribution and initials fallback. Original source notes retain the photo-review history. This update does not grant new rights to third-party material or imply institutional endorsement of the graphic mark. The repository's previous licensing history is unchanged.

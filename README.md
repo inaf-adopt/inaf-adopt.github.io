@@ -28,7 +28,7 @@ English is the source language. Italian and other languages remain explicitly la
 
 ## Images and rights
 
-The SOXS artwork displayed on the project card and project page was supplied directly for this update as `SOXS-logo-MAP.jpeg`. It includes a hand-painted border. The sharpened, higher-resolution version (`assets/logos/soxs-logo-enhanced.avif`, 1000 × 884 px) was produced from the original supplied JPEG with restrained contrast and sharpening adjustments, preserving the artwork. The earlier small image remains available as a fallback at `assets/logos/soxs-member-visual.webp`. It appears alongside the independently credited ESO instrument photograph. The INAF mark was supplied as `INAF-logo.png` and is displayed as `assets/logos/inaf-logo.webp` in the shared footer, linking to the institute. These additions are not a new licence grant or an institutional endorsement of ADOPT's separate graphic mark.
+The SOXS project cards and project page display the existing instrument photograph in `assets/photos/soxs.jpg` (credit and licence below). The previously supplied illustrated SOXS logo has been removed from the published site and its unused image files were removed from the active branch. The INAF mark was supplied as `INAF-logo.png` and appears as `assets/logos/inaf-logo.webp` in the shared footer, linking to the institute. This does not imply institutional endorsement of ADOPT's separate graphic mark.
 
 
 The SOXS photograph in `assets/photos/soxs.jpg` is from https://www.eso.org/public/images/ann25011b/, credit **P. Schipani/INAF**, distributed under CC BY 4.0 according to ESO's image policy. It is displayed in its original proportions with a visible credit and licence link.

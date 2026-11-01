@@ -520,3 +520,5 @@ p{line-height:1.7}.container{max-width:1200px}.section{padding:70px 0}
 @media(max-width:1000px){.opportunity-idea-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.opportunity-contact-inner{align-items:start}}
 @media(max-width:750px){.home-opportunities-inner,.opportunity-contact-inner,.opportunity-ideas-heading{flex-direction:column;align-items:flex-start;gap:20px}.opportunity-path{grid-template-columns:1fr;gap:16px;padding:31px 0}.opportunity-jumps a{font-size:14px}.opportunity-contact-band{padding:42px 0}}
 @media(max-width:550px){.opportunity-idea-grid{grid-template-columns:1fr}.opportunity-idea-grid a{min-height:0}.opportunity-jumps{gap:8px}.opportunity-jumps a{width:100%;border-radius:10px}.opportunity-notice{padding:16px}.home-opportunities .btn{width:100%}}
+
+.paper-record-source{font-size:.8rem;line-height:1.6;color:#52636b}.paper-record-source a{text-decoration:underline;text-underline-offset:2px}.publication-more{margin:1.5rem 0 2rem}.publication-more[hidden]{display:none}

@@ -737,21 +737,20 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
       "Domenico Barbato",
       "Jacopo Farinato"
     ],
-    "source": "https://api.crossref.org/works/10.1117%2F12.3020068",
     "members": [
       {
         "memberId": "jacopo-farinato",
         "name": "Jacopo Farinato",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.3020068"
   },
   "10.1117/12.2313659": {
     "firstTwo": [
       "Maria Bergomi",
       "Jacopo Farinato"
     ],
-    "source": "https://api.crossref.org/works/10.1117%2F12.2313659",
     "members": [
       {
         "memberId": "maria-bergomi",
@@ -763,28 +762,28 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
         "name": "Jacopo Farinato",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.2313659"
   },
   "10.1016/j.newast.2026.102559": {
     "firstTwo": [
       "Carmelo Arcidiacono",
       "Elisa Portaluri"
     ],
-    "source": "https://api.crossref.org/works/10.1016%2Fj.newast.2026.102559",
     "members": [
       {
         "memberId": "carmelo-arcidiacono",
         "name": "Carmelo Arcidiacono",
         "position": 1
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1016/j.newast.2026.102559"
   },
   "10.1117/1.jatis.10.4.044008": {
     "firstTwo": [
       "Silvio Di Rosa",
       "Roberto Ragazzoni"
     ],
-    "source": "https://api.crossref.org/works/10.1117%2F1.JATIS.10.4.044008",
     "members": [
       {
         "memberId": "silvio-di-rosa",
@@ -796,14 +795,14 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
         "name": "Roberto Ragazzoni",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1117/1.jatis.10.4.044008"
   },
   "10.1117/12.3019730": {
     "firstTwo": [
       "Roberto Ragazzoni",
       "Silvio Di Rosa"
     ],
-    "source": "https://api.crossref.org/works/10.1117%2F12.3019730",
     "members": [
       {
         "memberId": "roberto-ragazzoni",
@@ -815,14 +814,14 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
         "name": "Silvio Di Rosa",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.3019730"
   },
   "10.1117/12.3020439": {
     "firstTwo": [
       "Simone Di Filippo",
       "Davide Greggio"
     ],
-    "source": "https://api.crossref.org/works/10.1117%2F12.3020439",
     "members": [
       {
         "memberId": "simone-di-filippo",
@@ -834,42 +833,42 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
         "name": "Davide Greggio",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.3020439"
   },
   "10.1117/12.2313368": {
     "firstTwo": [
       "Thomas M. Herbst",
       "Maria Bergomi"
     ],
-    "source": "https://api.crossref.org/works/10.1117%2F12.2313368",
     "members": [
       {
         "memberId": "maria-bergomi",
         "name": "Maria Bergomi",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.2313368"
   },
   "10.1117/12.2232707": {
     "firstTwo": [
       "T. M. Herbst",
       "R. Ragazzoni"
     ],
-    "source": "https://api.crossref.org/works/10.1117%2F12.2232707",
     "members": [
       {
         "memberId": "roberto-ragazzoni",
         "name": "Roberto Ragazzoni",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.2232707"
   },
   "10.1117/12.3019332": {
     "firstTwo": [
       "Tania Sofia Gomes Machado",
       "Simone Di Filippo"
     ],
-    "source": "https://api.crossref.org/works/10.1117%2F12.3019332",
     "members": [
       {
         "memberId": "tania-sofia-gomes-machado",
@@ -881,14 +880,14 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
         "name": "Simone Di Filippo",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.3019332"
   },
   "10.1117/12.2561075": {
     "firstTwo": [
       "Kalyan Kumar Radhakrishnan Santhakumari",
       "Davide Greggio"
     ],
-    "source": "https://api.crossref.org/works/10.1117%2F12.2561075",
     "members": [
       {
         "memberId": "kalyan-kumar-radhakrishnan-santhakumari",
@@ -900,14 +899,14 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
         "name": "Davide Greggio",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.2561075"
   },
   "10.1093/mnras/stag1714": {
     "firstTwo": [
       "Matteo Simioni",
       "Carmelo Arcidiacono"
     ],
-    "source": "https://api.crossref.org/works/10.1093%2Fmnras%2Fstag1714",
     "members": [
       {
         "memberId": "matteo-simioni",
@@ -919,7 +918,8 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
         "name": "Carmelo Arcidiacono",
         "position": 2
       }
-    ]
+    ],
+    "source": "https://api.crossref.org/works/10.1093/mnras/stag1714"
   },
   "10.1117/12.2629388": {
     "firstTwo": [
@@ -1109,5 +1109,180 @@ window.ADOPT_PUBLICATION_AUTHORSHIP = {
         "position": 2
       }
     ]
+  },
+  "10.1117/12.3016306": {
+    "firstTwo": [
+      "Oleksandra Rebrysh",
+      "Davide Greggio"
+    ],
+    "members": [
+      {
+        "memberId": "oleksandra-rebrysh",
+        "name": "Oleksandra Rebrysh",
+        "position": 1
+      },
+      {
+        "memberId": "davide-greggio",
+        "name": "Davide Greggio",
+        "position": 2
+      }
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.3016306"
+  },
+  "10.1117/12.2561534": {
+    "firstTwo": [
+      "Davide Greggio",
+      "Demetrio Magrin"
+    ],
+    "members": [
+      {
+        "memberId": "davide-greggio",
+        "name": "Davide Greggio",
+        "position": 1
+      },
+      {
+        "memberId": "demetrio-magrin",
+        "name": "Demetrio Magrin",
+        "position": 2
+      }
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.2561534"
+  },
+  "10.1117/12.3020030": {
+    "firstTwo": [
+      "Riccardo U. Claudi",
+      "Kalyan Kumar Radhakrishnan Santhakumari"
+    ],
+    "members": [
+      {
+        "memberId": "kalyan-kumar-radhakrishnan-santhakumari",
+        "name": "Kalyan Kumar Radhakrishnan Santhakumari",
+        "position": 2
+      }
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.3020030"
+  },
+  "10.1117/12.3018479": {
+    "firstTwo": [
+      "Oleksandra Rebrysh",
+      "Davide Greggio"
+    ],
+    "members": [
+      {
+        "memberId": "oleksandra-rebrysh",
+        "name": "Oleksandra Rebrysh",
+        "position": 1
+      },
+      {
+        "memberId": "davide-greggio",
+        "name": "Davide Greggio",
+        "position": 2
+      }
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.3018479"
+  },
+  "10.1117/12.3017418": {
+    "firstTwo": [
+      "Paolo Cerpelloni",
+      "Elena Carolo"
+    ],
+    "members": [
+      {
+        "memberId": "paolo-cerpelloni",
+        "name": "Paolo Cerpelloni",
+        "position": 1
+      },
+      {
+        "memberId": "elena-carolo",
+        "name": "Elena Carolo",
+        "position": 2
+      }
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.3017418"
+  },
+  "10.1117/12.2629441": {
+    "firstTwo": [
+      "Valentina Viotto",
+      "Enrico Pinna"
+    ],
+    "members": [
+      {
+        "memberId": "valentina-viotto",
+        "name": "Valentina Viotto",
+        "position": 1
+      }
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.2629441"
+  },
+  "10.1364/ome.531842": {
+    "firstTwo": [
+      "Silvio Di Rosa",
+      "Roberto Ragazzoni"
+    ],
+    "members": [
+      {
+        "memberId": "silvio-di-rosa",
+        "name": "Silvio Di Rosa",
+        "position": 1
+      },
+      {
+        "memberId": "roberto-ragazzoni",
+        "name": "Roberto Ragazzoni",
+        "position": 2
+      }
+    ],
+    "source": "https://api.crossref.org/works/10.1364/ome.531842"
+  },
+  "10.1117/12.2629385": {
+    "firstTwo": [
+      "Gabriele Umbriaco",
+      "Daniele Vassallo"
+    ],
+    "members": [
+      {
+        "memberId": "daniele-vassallo",
+        "name": "Daniele Vassallo",
+        "position": 2
+      }
+    ],
+    "source": "https://api.crossref.org/works/10.1117/12.2629385"
+  },
+  "10.1117/1.jatis.11.1.018002": {
+    "firstTwo": [
+      "Oleksandra Rebrysh",
+      "Davide Greggio"
+    ],
+    "members": [
+      {
+        "memberId": "oleksandra-rebrysh",
+        "name": "Oleksandra Rebrysh",
+        "position": 1
+      },
+      {
+        "memberId": "davide-greggio",
+        "name": "Davide Greggio",
+        "position": 2
+      }
+    ],
+    "source": "https://orcid.org/0000-0003-1709-1458"
+  },
+  "10.13009/ao4elt7-2023-070": {
+    "firstTwo": [
+      "Jacopo Farinato",
+      "Simone Di Filippo"
+    ],
+    "members": [
+      {
+        "memberId": "jacopo-farinato",
+        "name": "Jacopo Farinato",
+        "position": 1
+      },
+      {
+        "memberId": "simone-di-filippo",
+        "name": "Simone Di Filippo",
+        "position": 2
+      }
+    ],
+    "source": "https://orcid.org/0000-0002-0666-3847"
   }
 };

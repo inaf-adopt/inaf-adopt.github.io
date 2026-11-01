@@ -154,6 +154,8 @@ Thirteen individual portraits remain linked from the official [MAVIS consortium 
 - Source: [MPIA / Heidelberg IMPRS alumni 2017](https://www.imprs-hd.mpg.de/142337/2017) (PhD and LINC-NIRVANA).
 - Source: [IAU member profile](https://iauarchive.eso.org/administration/membership/individual/20113/) (AO and instrumentation).
 
+- Source: [SPIE profile](https://spie.org/profile/Kalyan) (member-provided professional profile link).
+
 ### Demetrio Magrin
 - Display label: Senior technologist · INAF Padova
 - Focus: Designs and verifies astronomical optical systems, including the PLATO telescope optics, MORFEO and MezzoCielo.

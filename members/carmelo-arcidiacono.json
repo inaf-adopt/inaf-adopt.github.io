@@ -1,0 +1,26 @@
+{
+  "member_id": "carmelo-arcidiacono",
+  "role": "Researcher · INAF Padova",
+  "tag": "Adaptive optics",
+  "bio": "Works on adaptive-optics development, simulations and instrument science, including the MORFEO programme.",
+  "long_bio": "Carmelo works on multi-conjugate adaptive optics and the prediction and reconstruction of the point-spread function in corrected astronomical images. His research connects numerical modelling with the MORFEO system for the Extremely Large Telescope, including methods that help astronomers interpret images after atmospheric correction. He is also associated with Padova's adaptive-optics laboratory efforts.",
+  "orcid": "0000-0003-0142-8108",
+  "links": [
+    {
+      "label": "MORFEO PSF reconstruction research",
+      "url": "https://doi.org/10.1016/j.newast.2026.102559"
+    },
+    {
+      "label": "INAF research profile",
+      "url": "https://openaccess.inaf.it/entities/person/07a402f2-cb4f-4c10-9f81-f94fd786477e"
+    },
+    {
+      "label": "MICADO team profile",
+      "url": "https://sites.google.com/inaf.it/micado-italy/home/contacts"
+    }
+  ],
+  "projects": [
+    "MORFEO",
+    "MATTO"
+  ]
+}

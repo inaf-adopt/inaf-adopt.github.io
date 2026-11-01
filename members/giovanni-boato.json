@@ -1,0 +1,21 @@
+{
+  "member_id": "giovanni-boato",
+  "role": "Astrophysics graduate · University of Padova",
+  "tag": "Telescope optics",
+  "bio": "Studied dispersion, throughput and optical performance of the 80 cm MezzoCielo telescope prototype.",
+  "long_bio": "Giovanni studied the optical performance of the 80 cm MezzoCielo demonstrator in his University of Padova master's research. His work examines the beam emerging from the spherical optics, the dispersion and characterisation of the refractive liquid, and how these parameters affect optical throughput and image quality. His published thesis provides a direct research reference.",
+  "orcid": "0009-0004-0854-2354",
+  "links": [
+    {
+      "label": "University of Padova thesis",
+      "url": "https://thesis.unipd.it/handle/20.500.12608/101157"
+    },
+    {
+      "label": "MezzoCielo optics publication",
+      "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602283376911075"
+    }
+  ],
+  "projects": [
+    "Mezzocielo"
+  ]
+}

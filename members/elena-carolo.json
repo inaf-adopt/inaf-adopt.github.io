@@ -1,0 +1,23 @@
+{
+  "member_id": "elena-carolo",
+  "role": "Technologist · INAF Padova",
+  "tag": "Instrument development",
+  "bio": "Contributes to integration and development of astronomical instruments, including SHARK-NIR and the MAVIS/MORFEO programmes.",
+  "long_bio": "Elena contributes to the engineering and development of optical instruments at INAF Padova. Her work includes SHARK-NIR, MAVIS, MORFEO and related laboratory integration activities. Such efforts require optical and mechanical integration, verification and coordination between scientific and technical teams.",
+  "orcid": "0000-0002-4977-0378",
+  "links": [
+    {
+      "label": "SHARK-NIR team",
+      "url": "https://sites.google.com/inaf.it/shark-nir/home"
+    },
+    {
+      "label": "MAVIS consortium",
+      "url": "https://mavis-ao.org/consortium/"
+    }
+  ],
+  "projects": [
+    "SHARK-NIR",
+    "MAVIS",
+    "MORFEO"
+  ]
+}

@@ -1,0 +1,16 @@
+name: Check member profiles
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate profile data
+        run: node scripts/validate-members.cjs --self-test

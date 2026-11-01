@@ -1,0 +1,27 @@
+{
+  "member_id": "simone-di-filippo",
+  "role": "Research contributor · INAF Padova",
+  "tag": "Wavefront sensing",
+  "bio": "Works on wavefront sensors, adaptive-optics control and laboratory validation, including the Ingot WFS and MATTO.",
+  "long_bio": "Simone studies wavefront-sensing techniques for large telescopes, particularly the Ingot sensor for elongated sodium laser guide stars. His work includes optical design, automated prism alignment, laboratory tests and sensitivity to introduced low-order aberrations. These results support the evaluation of alternatives to conventional wavefront sensing on extremely large telescopes.",
+  "orcid": "0000-0003-1949-6010",
+  "links": [
+    {
+      "label": "Ingot WFS laboratory testing",
+      "url": "https://arxiv.org/abs/2209.12921"
+    },
+    {
+      "label": "Ingot WFS research",
+      "url": "https://openaccess.inaf.it/entities/publication/cc52f952-0351-457a-b2dc-adf916413a18"
+    },
+    {
+      "label": "MATTO research",
+      "url": "https://indico.ict.inaf.it/event/2870/contributions/20135/"
+    }
+  ],
+  "projects": [
+    "INGOT",
+    "MATTO",
+    "SHARK-NIR"
+  ]
+}

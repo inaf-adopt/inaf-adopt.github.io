@@ -1,0 +1,22 @@
+{
+  "member_id": "federico-battaini",
+  "role": "Doctoral researcher · INAF-associated",
+  "tag": "Instrumentation",
+  "bio": "Research contributor to adaptive-optics test benches and astronomical instrumentation, including MATTO and SOXS.",
+  "long_bio": "Federico contributes to optical-instrument assembly, integration and verification, including SOXS at the New Technology Telescope. He has co-authored work on integrating and verifying the SOXS Common Path and participates in the wider MATTO laboratory collaboration. His research connects practical optomechanical testing with the commissioning of astronomical instruments.",
+  "orcid": "0000-0002-6146-0364",
+  "links": [
+    {
+      "label": "INAF research profile",
+      "url": "https://openaccess.inaf.it/entities/person/f772d2cd-a4bf-4526-b238-8fb9162282be"
+    },
+    {
+      "label": "MATTO collaboration",
+      "url": "https://indico.ict.inaf.it/event/2870/contributions/20135/"
+    }
+  ],
+  "projects": [
+    "MATTO",
+    "SOXS"
+  ]
+}

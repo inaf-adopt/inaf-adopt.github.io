@@ -1,0 +1,23 @@
+{
+  "member_id": "maria-bergomi",
+  "role": "Technologist · INAF Padova",
+  "tag": "Astronomical instruments",
+  "bio": "Project manager for SHARK-NIR; also contributes to adaptive-optics instrument programmes such as MAVIS and MORFEO.",
+  "long_bio": "Maria is involved in developing and delivering high-contrast astronomical instrumentation. Her work includes project management for SHARK-NIR at the Large Binocular Telescope, alongside collaborations on advanced adaptive-optics instruments such as MAVIS and MORFEO. These programmes bring precision optics, instrument verification and coordinated engineering to the search for faint objects near bright stars.",
+  "orcid": "0000-0001-7564-2233",
+  "links": [
+    {
+      "label": "SHARK-NIR team",
+      "url": "https://sites.google.com/inaf.it/shark-nir/home"
+    },
+    {
+      "label": "MAVIS consortium",
+      "url": "https://mavis-ao.org/consortium/"
+    }
+  ],
+  "projects": [
+    "SHARK-NIR",
+    "MAVIS",
+    "MORFEO"
+  ]
+}

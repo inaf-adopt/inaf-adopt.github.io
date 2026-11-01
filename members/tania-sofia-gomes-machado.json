@@ -1,0 +1,26 @@
+{
+  "member_id": "tania-sofia-gomes-machado",
+  "role": "Research contributor · INAF / University of Padova",
+  "tag": "Wavefront sensing",
+  "bio": "Research on the Ingot laser-guide-star wavefront sensor, alongside SHARK-NIR instrumentation and science communication.",
+  "long_bio": "Tania works on astronomical instrumentation and wavefront-sensing research associated with INAF Padova. Public presentations include SHARK-NIR science and the Ingot wavefront sensor, and she contributes to technical communication about instrument development.",
+  "orcid": "0009-0007-7030-1609",
+  "links": [
+    {
+      "label": "SHARK-NIR presentation",
+      "url": "https://indico.ict.inaf.it/event/2923/contributions/"
+    },
+    {
+      "label": "Ingot sensor research",
+      "url": "https://arxiv.org/abs/2410.06260"
+    },
+    {
+      "label": "SHARK-NIR seminar",
+      "url": "https://indico.ict.inaf.it/event/2923/timetable/"
+    }
+  ],
+  "projects": [
+    "INGOT",
+    "SHARK-NIR"
+  ]
+}

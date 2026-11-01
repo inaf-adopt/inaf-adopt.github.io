@@ -1,0 +1,26 @@
+{
+  "member_id": "remon-vangaalen",
+  "role": "Doctoral researcher · INAF Padova collaboration",
+  "tag": "Optical alignment",
+  "bio": "Studies calibration and non-common-path aberration characterisation for NIRVANA-VIS, with wider adaptive-optics testing interests.",
+  "long_bio": "Remon undertakes doctoral research linked to advanced adaptive-optics instrumentation at INAF Padova. A public AO4ELT conference programme identifies his work on non-common-path aberration characterisation for NIRVANA-VIS. That topic connects calibration, optical modelling and test procedures to reliable performance of a complex telescope instrument.",
+  "orcid": "0000-0003-1556-0345",
+  "links": [
+    {
+      "label": "AO4ELT research programme",
+      "url": "https://ao4elt8.pucv.cl/wp-content/uploads/2025/10/AO4ELT8-Final-Program.pdf"
+    },
+    {
+      "label": "Doctoral research topic",
+      "url": "https://agenda.infn.it/event/43840/contributions/252087/attachments/131572/196147/DetLasOpt_LNGSRetreat2025.pdf"
+    },
+    {
+      "label": "2026 research presentation",
+      "url": "https://agenda.infn.it/event/53125/timetable/?view=standard_inline_minutes"
+    }
+  ],
+  "projects": [
+    "NIRVANA-VIS",
+    "MAVIS"
+  ]
+}

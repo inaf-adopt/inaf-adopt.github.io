@@ -1,0 +1,22 @@
+{
+  "member_id": "matteo-simioni",
+  "role": "Research fellow · INAF Padova",
+  "tag": "AO science & surveillance",
+  "bio": "Studies adaptive-optics point-spread-function reconstruction and optical surveillance of space objects.",
+  "long_bio": "Matteo is a research fellow associated with INAF Padova. His research includes adaptive-optics point-spread-function reconstruction and methods for interpreting images corrected by complex AO systems. He also works on optical observation and analysis of artificial objects in Earth orbit.",
+  "orcid": "0000-0002-8830-1259",
+  "links": [
+    {
+      "label": "INAF research profile",
+      "url": "https://openaccess.inaf.it/entities/person/81c61001-227a-47a1-93a5-c190757549d9"
+    },
+    {
+      "label": "Space surveillance programme",
+      "url": "https://indico.ict.inaf.it/event/2923/timetable/"
+    }
+  ],
+  "projects": [
+    "MICADO Science",
+    "Space Debris"
+  ]
+}

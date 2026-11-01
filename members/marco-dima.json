@@ -1,0 +1,23 @@
+{
+  "member_id": "marco-dima",
+  "role": "Technologist · INAF Padova",
+  "tag": "Instrumentation",
+  "bio": "Research and engineering interests include wavefront sensing, high-contrast instrumentation and wide-field/space-surveillance concepts.",
+  "long_bio": "Marco contributes to astronomical instrumentation and adaptive-optics research at INAF Padova. Co-authored projects include laser-guide-star wavefront sensing, the MATTO test bench and SOXS optomechanical integration. He also works on optical space surveillance and instrument performance studies.",
+  "orcid": "0000-0002-0671-8991",
+  "links": [
+    {
+      "label": "INAF technical project listing",
+      "url": "https://schede.inaf.it/consulta/mostra?archdb=2022&selezione=60892b7c6b4de3f9c7ab269b"
+    },
+    {
+      "label": "Space-surveillance presentation",
+      "url": "https://indico.ict.inaf.it/event/2923/timetable/"
+    }
+  ],
+  "projects": [
+    "INGOT",
+    "Mezzocielo",
+    "Space Debris"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "member_id": "paolo-cerpelloni",
+  "role": "Research contributor · INAF Padova",
+  "tag": "Adaptive optics",
+  "bio": "Works with the MAVIS adaptive-optics team and the MATTO multi-conjugate adaptive-optics test facility.",
+  "long_bio": "Paolo participates in adaptive-optics instrumentation and testing activities at INAF Padova. His work includes laboratory validation and large-telescope AO systems.",
+  "orcid": "0009-0003-9504-1648",
+  "links": [
+    {
+      "label": "MAVIS consortium",
+      "url": "https://mavis-ao.org/consortium/"
+    },
+    {
+      "label": "MAVIS group presentation",
+      "url": "https://indico.ict.inaf.it/event/2923/timetable/"
+    }
+  ],
+  "projects": [
+    "MAVIS",
+    "MATTO"
+  ]
+}

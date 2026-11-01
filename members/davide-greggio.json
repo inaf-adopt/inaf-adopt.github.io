@@ -1,0 +1,23 @@
+{
+  "member_id": "davide-greggio",
+  "role": "Researcher · INAF Padova",
+  "tag": "Adaptive optics",
+  "bio": "Works on optical systems, wavefront sensing and multi-conjugate adaptive-optics instrumentation and laboratory test facilities.",
+  "long_bio": "Davide works on the optical design, modelling and laboratory verification of advanced astronomical systems. His collaborations include the Ingot laser-guide-star wavefront sensor, the MATTO MCAO test bench and high-resolution optical instrumentation. This work connects optical design to practical alignment, test measurements and performance assessment.",
+  "orcid": "0000-0002-6727-2049",
+  "links": [
+    {
+      "label": "MATTO research",
+      "url": "https://indico.ict.inaf.it/event/2870/contributions/20135/"
+    },
+    {
+      "label": "MAVIS consortium",
+      "url": "https://mavis-ao.org/consortium/"
+    }
+  ],
+  "projects": [
+    "MAVIS",
+    "MATTO",
+    "SHARK-NIR"
+  ]
+}

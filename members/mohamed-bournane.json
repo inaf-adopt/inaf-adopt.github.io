@@ -1,0 +1,25 @@
+{
+  "member_id": "mohamed-bournane",
+  "role": "Doctoral researcher · University of Padova / INAF collaboration",
+  "tag": "Optical design",
+  "bio": "Research focuses on optical corrector design for the MezzoCielo wide-field telescope demonstrator.",
+  "long_bio": "Mohamed works on optical design studies for innovative wide-field astronomical telescopes, including the MezzoCielo demonstration concept. His University of Padova academic record also includes an earlier study of the optical configuration for the proposed HAYDN space mission.",
+  "orcid": "0009-0006-2981-0877",
+  "links": [
+    {
+      "label": "HAYDN optical configuration thesis",
+      "url": "https://thesis.unipd.it/browse?authority=do34919&type=contributorAdvisor"
+    },
+    {
+      "label": "Doctoral research report",
+      "url": "https://agenda.infn.it/event/48130/contributions/272474/attachments/139664/210663/Annual%20report.docx_signed%20Copy_signed_Bournane.pdf"
+    },
+    {
+      "label": "MezzoCielo publications",
+      "url": "https://www.oact.inaf.it/pubblicazioni-scientifiche/"
+    }
+  ],
+  "projects": [
+    "Mezzocielo"
+  ]
+}

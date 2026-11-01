@@ -1,0 +1,23 @@
+{
+  "member_id": "jacopo-farinato",
+  "role": "Technologist · INAF Padova",
+  "tag": "System engineering",
+  "bio": "Principal investigator of SHARK-NIR, with instrument engineering contributions to PLATO and MORFEO.",
+  "long_bio": "Jacopo is the principal investigator of SHARK-NIR, the near-infrared high-contrast camera at the Large Binocular Telescope. His work spans instrument design and development for high angular-resolution astronomy, together with collaborations involving optical systems for PLATO and MORFEO. These efforts support the observation of faint companions and circumstellar material close to bright stars.",
+  "orcid": "0000-0002-5840-8362",
+  "links": [
+    {
+      "label": "SHARK-NIR team",
+      "url": "https://sites.google.com/inaf.it/shark-nir/home"
+    },
+    {
+      "label": "PLATO integration work",
+      "url": "https://www.media.inaf.it/2022/12/12/plato-first-telescope-ready/"
+    }
+  ],
+  "projects": [
+    "SHARK-NIR",
+    "PLATO",
+    "MORFEO"
+  ]
+}

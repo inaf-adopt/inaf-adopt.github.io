@@ -1,0 +1,26 @@
+{
+  "member_id": "oleksandra-rebrysh",
+  "role": "Research contributor · INAF Padova",
+  "tag": "Optical design",
+  "bio": "Optical designer working on the final design and verification of the MAVIS adaptive-optics module.",
+  "long_bio": "Oleksandra works on optical design and performance verification for the MAVIS adaptive-optics module at the Very Large Telescope. Her research examines the post-focal relay and wavefront-sensor optical systems, including their design requirements and measured or simulated image quality. Public workshop materials present the final optical design and the supporting optical analyses.",
+  "orcid": "0009-0003-4546-8301",
+  "links": [
+    {
+      "label": "MAVIS AOM design presentation",
+      "url": "https://indico.ict.inaf.it/event/3479/attachments/11332/24569/ADONI_Abstract_Booklet%20final%20version.pdf"
+    },
+    {
+      "label": "MAVIS consortium",
+      "url": "https://mavis-ao.org/consortium/"
+    },
+    {
+      "label": "MAVIS research presentation",
+      "url": "https://indico.ict.inaf.it/event/2923/timetable/"
+    }
+  ],
+  "projects": [
+    "MAVIS",
+    "Mezzocielo"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "member_id": "roberto-ragazzoni",
+  "role": "Professor · University of Padova | President of INAF",
+  "tag": "Adaptive optics",
+  "bio": "Developed the pyramid wavefront sensor and works on adaptive optics and astronomical instrumentation.",
+  "long_bio": "Roberto’s research includes the pyramid wavefront sensor, adaptive optics and optical concepts for astronomical instruments, including MORFEO, MezzoCielo and PLATO.",
+  "orcid": "0000-0002-7697-5555",
+  "links": [
+    {
+      "label": "INAF Presidency",
+      "url": "https://presidenza.inaf.it/"
+    },
+    {
+      "label": "Accademia dei Lincei biography",
+      "url": "https://www.lincei.it/it/socio/ragazzoni-roberto"
+    },
+    {
+      "label": "INAF profile article",
+      "url": "https://www.media.inaf.it/2024/04/05/roberto-ragazzoni-presidente-inaf/"
+    }
+  ],
+  "projects": [
+    "MORFEO",
+    "Mezzocielo",
+    "PLATO"
+  ]
+}

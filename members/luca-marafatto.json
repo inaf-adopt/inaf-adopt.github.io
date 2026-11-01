@@ -1,0 +1,23 @@
+{
+  "member_id": "luca-marafatto",
+  "role": "Technologist · INAF Padova",
+  "tag": "Instrument integration",
+  "bio": "Assembly, integration and verification manager for SHARK-NIR; also works on adaptive-optics and telescope instrumentation.",
+  "long_bio": "Luca works on integrating and commissioning astronomical instrumentation, including leading assembly, integration and verification activities for SHARK-NIR. He also contributes to laboratory and adaptive-optics projects, including MATTO and next-generation instrument programmes. His focus is the passage from optical designs and individual subsystems to working, tested instruments.",
+  "orcid": "0000-0002-8822-6834",
+  "links": [
+    {
+      "label": "SHARK-NIR team",
+      "url": "https://sites.google.com/inaf.it/shark-nir/home"
+    },
+    {
+      "label": "MAVIS consortium",
+      "url": "https://mavis-ao.org/consortium/"
+    }
+  ],
+  "projects": [
+    "SHARK-NIR",
+    "MORFEO",
+    "MAVIS"
+  ]
+}

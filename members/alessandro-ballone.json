@@ -1,0 +1,22 @@
+{
+  "member_id": "alessandro-ballone",
+  "role": "Technologist · INAF Padova",
+  "tag": "Adaptive optics",
+  "bio": "Develops the MATTO multi-conjugate adaptive-optics test bench and its DAO4MATTO real-time control system.",
+  "long_bio": "Alessandro develops the MATTO multi-conjugate adaptive-optics laboratory at INAF Padova. His work includes the DAO4MATTO real-time control architecture, combining laboratory hardware, wavefront sensing and deformable-mirror control. The facility is designed to test several MCAO configurations and compare new control approaches before they are adopted by astronomical observatories.",
+  "orcid": "0000-0003-4893-2993",
+  "links": [
+    {
+      "label": "INAF research profile",
+      "url": "https://openaccess.inaf.it/entities/person/6da0b169-dc60-4f12-a4a7-83495cf2dd9f"
+    },
+    {
+      "label": "DAO4MATTO presentation",
+      "url": "https://indico.ict.inaf.it/event/2870/contributions/20135/"
+    }
+  ],
+  "projects": [
+    "MATTO",
+    "MORFEO"
+  ]
+}

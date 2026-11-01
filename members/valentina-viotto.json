@@ -1,0 +1,23 @@
+{
+  "member_id": "valentina-viotto",
+  "role": "Technologist · INAF Padova",
+  "tag": "Adaptive-optics engineering",
+  "bio": "Contributes to adaptive-optics instrument development, including MAVIS, and systems engineering and product development for PLATO.",
+  "long_bio": "Valentina works on astronomical instrumentation and adaptive-optics development at INAF Padova. Her collaborations include the design and verification of MAVIS systems, the MATTO multi-conjugate adaptive-optics laboratory and optical-engineering contributions to the PLATO mission. Her work supports the translation of technical requirements into tested optical systems.",
+  "orcid": "0000-0001-5700-9565",
+  "links": [
+    {
+      "label": "MAVIS consortium",
+      "url": "https://mavis-ao.org/consortium/"
+    },
+    {
+      "label": "PLATO team contributions",
+      "url": "https://www.media.inaf.it/2022/12/12/plato-first-telescope-ready/"
+    }
+  ],
+  "projects": [
+    "MAVIS",
+    "PLATO",
+    "INGOT"
+  ]
+}

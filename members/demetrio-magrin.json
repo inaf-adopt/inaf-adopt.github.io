@@ -1,0 +1,23 @@
+{
+  "member_id": "demetrio-magrin",
+  "role": "Senior technologist · INAF Padova",
+  "tag": "Optical engineering",
+  "bio": "Designs and verifies astronomical optical systems, including the PLATO telescope optics, MORFEO and MezzoCielo.",
+  "long_bio": "Demetrio develops and validates precision optical systems for astronomical facilities. His work includes optical-engineering contributions to PLATO and to advanced ground-based instrumentation such as MORFEO, plus studies of unconventional wide-field telescope designs including MezzoCielo. Optical tolerancing, performance verification and collaboration across instrument subsystems are central themes in this work.",
+  "orcid": "0000-0003-0312-313X",
+  "links": [
+    {
+      "label": "PLATO optical engineering",
+      "url": "https://www.media.inaf.it/2022/12/12/plato-first-telescope-ready/"
+    },
+    {
+      "label": "MORFEO design literature",
+      "url": "https://openaccess.inaf.it/entities/publication/c834b48f-b685-4c31-849a-ff76c12609c4"
+    }
+  ],
+  "projects": [
+    "PLATO",
+    "MORFEO",
+    "Mezzocielo"
+  ]
+}

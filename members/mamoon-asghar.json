@@ -1,0 +1,21 @@
+{
+  "member_id": "mamoon-asghar",
+  "role": "Doctoral researcher · University of Padova",
+  "tag": "Optics & instrumentation",
+  "bio": "Doctoral research in adaptive-optics systems and components, including the EKARUS experimental platform.",
+  "long_bio": "Mamoon undertakes doctoral research in astronomical optics and adaptive-optics instrumentation, including work on EKARUS.",
+  "orcid": "",
+  "links": [
+    {
+      "label": "Doctoral programme",
+      "url": "https://agenda.infn.it/event/53125/timetable/?view=standard_numbered"
+    },
+    {
+      "label": "Research topic",
+      "url": "https://agenda.infn.it/event/49802/contributions/282615/attachments/143882/222432/Introduction_Coordinator_LNS.pdf"
+    }
+  ],
+  "projects": [
+    "EKARUS"
+  ]
+}

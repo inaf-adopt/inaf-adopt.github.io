@@ -1,0 +1,23 @@
+{
+  "member_id": "daniele-vassallo",
+  "role": "Technologist · INAF Padova",
+  "tag": "Adaptive optics",
+  "bio": "Works on wavefront sensing, adaptive-optics systems and real-time control, including MATTO and high-contrast instrumentation.",
+  "long_bio": "Daniele works on wavefront sensing, adaptive optics and associated real-time instrument-control technologies. He contributes to the MATTO multi-conjugate adaptive-optics facility and its control architecture. His research also includes AO performance and experimental investigations for high-resolution astronomical observations.",
+  "orcid": "0000-0002-3286-6349",
+  "links": [
+    {
+      "label": "INAF research profile",
+      "url": "https://openaccess.inaf.it/entities/person/64e09b6c-3198-435a-be78-dad9959f613b"
+    },
+    {
+      "label": "MATTO collaboration",
+      "url": "https://indico.ict.inaf.it/event/2870/contributions/20135/"
+    }
+  ],
+  "projects": [
+    "MATTO",
+    "SHARK-NIR",
+    "MAVIS"
+  ]
+}

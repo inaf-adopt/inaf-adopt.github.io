@@ -1,0 +1,31 @@
+{
+  "member_id": "kalyan-kumar-radhakrishnan-santhakumari",
+  "role": "Technologist · INAF Padova | SOXS AIV Lead & Deputy System Engineer",
+  "tag": "Adaptive optics · Systems engineering",
+  "bio": "Adaptive-optics and astronomical-instrument engineer; leads SOXS AIV and serves as Deputy System Engineer, with contributions to MAVIS, MORFEO, LINC-NIRVANA and INGOT.",
+  "long_bio": "Kalyan is a technologist at the INAF Astronomical Observatory of Padova, specialising in adaptive optics, systems engineering and the assembly, integration and verification of ground-based astronomical instruments. He completed his PhD in Astronomy and Astrophysics at Heidelberg University in 2017, working at the Max Planck Institute for Astronomy on the LINC-NIRVANA multi-conjugate adaptive-optics system for the Large Binocular Telescope. He leads AIV activities and serves as Deputy System Engineer for SOXS, including its integration, installation and commissioning at ESO's La Silla Observatory. His work also spans MAVIS adaptive-optics calibration, MORFEO instrument integration planning, NIRVANA-VIS system engineering, and laboratory development of the Ingot wavefront sensor. His experience bridges optical alignment, system verification, observatory commissioning and science-enabling instrumentation.",
+  "orcid": "0000-0003-2674-1504",
+  "links": [
+    {
+      "label": "SOXS AIV and career profile",
+      "url": "https://www.aries.res.in/node/2255"
+    },
+    {
+      "label": "PhD research (MPIA/Heidelberg)",
+      "url": "https://www.imprs-hd.mpg.de/142337/2017"
+    },
+    {
+      "label": "IAU profile",
+      "url": "https://iauarchive.eso.org/administration/membership/individual/20113/"
+    }
+  ],
+  "projects": [
+    "SOXS",
+    "MAVIS",
+    "MORFEO",
+    "NIRVANA-VIS",
+    "INGOT",
+    "LINC-NIRVANA",
+    "SHARK-NIR"
+  ]
+}

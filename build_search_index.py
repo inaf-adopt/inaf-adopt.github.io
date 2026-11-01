@@ -19,7 +19,7 @@ class PageText(HTMLParser):
 root=Path(__file__).parent
 records=[]
 for path in sorted(root.glob('*.html')):
-    if path.name in ('project.html','search.html'):continue
+    if path.name in ('project.html','search.html','member-login.html'):continue
     dom=PageText();dom.feed(path.read_text())
     title=' '.join(dom.title_parts).split(' — ADOPT')[0]
     text=re.sub(r'\s+',' ',' '.join(dom.parts)).strip()

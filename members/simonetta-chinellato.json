@@ -1,0 +1,23 @@
+{
+  "member_id": "simonetta-chinellato",
+  "role": "Senior technologist · INAF Padova",
+  "tag": "Systems & assurance",
+  "bio": "Works in technical assurance and instrument development, with contributions to PLATO, SHARK-NIR and adaptive-optics projects.",
+  "long_bio": "Simonetta works on technical and programme aspects of complex astronomical instrumentation at INAF Padova. Her published project associations include PLATO telescope development, SHARK-NIR and adaptive-optics initiatives. Her experience brings together instrument-development processes and coordination across participating teams.",
+  "orcid": "0000-0003-2249-8703",
+  "links": [
+    {
+      "label": "INAF research profile",
+      "url": "https://openaccess.inaf.it/entities/person/726b699c-e96e-4fd4-862b-199ed1e750a1"
+    },
+    {
+      "label": "PLATO telescope team",
+      "url": "https://www.media.inaf.it/2022/12/12/plato-first-telescope-ready/"
+    }
+  ],
+  "projects": [
+    "PLATO",
+    "SHARK-NIR",
+    "MAVIS"
+  ]
+}

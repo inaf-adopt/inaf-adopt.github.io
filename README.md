@@ -49,3 +49,6 @@ Individual member pages and the People directory intentionally do not display a 
 `opportunities.html` describes possible Master's theses, PhD research, internships, research visits and formal employment routes. `script.js` links it from desktop/mobile navigation and the footer; `index.html` provides a prominent homepage entry. The text is a guide to pathways and research areas, **not an advertisement for active or funded openings**. Do not add specific positions or deadlines without an authoritative announcement and owner approval. Institutional details and link checks are documented in `OPPORTUNITIES_SOURCES.md`. Rebuild `search-index.js` when editing the page.
 
 The publication catalogue merges `orcid-publications.js` (public ORCID record associations), `member-publications.js` (checked bylines), and project literature through `publication-catalogue.js`. Identity and import scope are documented in `MEMBER_PUBLICATIONS_SOURCES.md`. The default view requires verified first/second-author order; all member publications stay in the central catalogue.
+
+
+Facilities are described in `facilities.html`, with sources linked on the page. Members can prepare profile edits in `member-login.html` and submit them through GitHub for administrator review. No external authentication/database service is required. See `MEMBER_EDITING.md`.

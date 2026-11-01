@@ -465,6 +465,10 @@ window.ADOPT_PEOPLE = [
     ],
     "links": [
       {
+        "label": "Curriculum vitae (PDF)",
+        "url": "https://inaf-adopt.github.io/assets/cv/Kalyan_Radhakrishnan_Minimal_CV.pdf"
+      },
+      {
         "label": "ResearchGate",
         "url": "https://www.researchgate.net/profile/Kalyan-Kumar-Radhakrishnan-Santhakumari"
       },

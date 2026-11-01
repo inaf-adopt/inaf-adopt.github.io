@@ -477,6 +477,10 @@ window.ADOPT_PEOPLE = [
         "url": "https://www.iau.org/Shared_Content/Contacts/ContactLayouts/Profile.aspx?ID=39015&WebsiteKey=9e4eaea2-b0d6-4c4b-bd18-913a208b91be"
       },
       {
+        "label": "SPIE profile",
+        "url": "https://spie.org/profile/Kalyan"
+      },
+      {
         "label": "SOXS AIV and career profile",
         "url": "https://www.aries.res.in/node/2255"
       },

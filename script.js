@@ -57,9 +57,21 @@
   const route=(name)=>(path===name||(name==='people.html'&&document.body.classList.contains('member-page'))) ? ' aria-current="page"' : '';
   const navLinks=[['index.html','Home'],['research.html','Research'],['projects.html','Projects'],['facilities.html','Facilities'],['opportunities.html','Opportunities'],['people.html','People'],['publications.html','Publications'],['contact.html','Contact'],['feedback.html','Feedback']];
   const header=document.querySelector('[data-header]');
-  if(header) header.innerHTML=`<div class="nav-shell container"><a class="identity" href="index.html" aria-label="Home"><span class="brand-icon"><img src="assets/adopt-mark.svg" alt="" /></span><span class="identity-type"><strong class="notranslate" translate="no">ADOPT<span class="brand-period">.</span></strong><small>INAF · PADOVA</small></span></a><nav class="desktop-nav" aria-label="Main navigation">${navLinks.map(([url,label])=>`<a href="${url}"${route(url)}>${label}</a>`).join('')}</nav><div class="nav-right"><div class="nav-tools"><a class="search-nav-link" href="search.html" aria-label="Search this website" title="Search this website"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><div class="language-nav" role="group" aria-label="Automatic translation"><span class="translation-label">Auto-translate</span><svg class="language-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3.5 12h17M12 3c-5 5-5 13 0 18m0-18c5 5 5 13 0 18" stroke="currentColor" stroke-width="1.3" fill="none"/></svg><div class="gtranslate_wrapper notranslate" translate="no"></div><span class="gtranslate-fallback" role="status" title="Automatic translation is temporarily unavailable">English</span></div></div><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div></div><nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation" hidden>${navLinks.map(([url,label])=>`<a href="${url}"${route(url)}>${label} <span aria-hidden="true">↗</span></a>`).join('')}<div class="mobile-tools"><a class="search-nav-link" href="search.html" aria-label="Search this website"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a></div></nav>`;
+  if(header) header.innerHTML=`<div class="nav-shell container"><a class="identity" href="index.html" aria-label="Home"><span class="brand-icon"><img src="assets/adopt-mark.svg" alt="" /></span><span class="identity-type"><strong class="notranslate" translate="no">ADOPT<span class="brand-period">.</span></strong><small>INAF · PADOVA</small></span></a><nav class="desktop-nav" aria-label="Main navigation">${navLinks.map(([url,label])=>`<a href="${url}"${route(url)}>${label}</a>`).join('')}</nav><div class="nav-right"><div class="nav-tools"><button type="button" class="search-nav-link header-search-toggle" aria-label="Search this website" title="Search this website" aria-expanded="false" aria-controls="header-search-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><div class="language-nav" role="group" aria-label="Automatic translation"><span class="translation-label">Auto-translate</span><svg class="language-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3.5 12h17M12 3c-5 5-5 13 0 18m0-18c5 5 5 13 0 18" stroke="currentColor" stroke-width="1.3" fill="none"/></svg><div class="gtranslate_wrapper notranslate" translate="no"></div><span class="gtranslate-fallback" role="status" title="Automatic translation is temporarily unavailable">English</span></div></div><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div></div><nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation" hidden>${navLinks.map(([url,label])=>`<a href="${url}"${route(url)}>${label} <span aria-hidden="true">↗</span></a>`).join('')}</nav>`;
+  // A single accessible search field shared by desktop and mobile.
+  if(header)header.insertAdjacentHTML('beforeend',
+    '<div class="header-search-panel" id="header-search-panel" aria-label="Search ADOPT" role="region" hidden>'+
+    '<form class="header-search-form" role="search" autocomplete="off">'+
+    '<label class="sr-only" for="header-search-input">Search the ADOPT website</label>'+
+    '<div class="header-search-input-wrap">'+
+    '<svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><circle cx="10.8" cy="10.8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>'+
+    '<input id="header-search-input" name="q" type="search" maxlength="120" enterkeyhint="search" placeholder="Search people, projects, papers…" aria-describedby="header-search-help">'+
+    '<button type="button" class="header-search-close" aria-label="Close search">&times;</button>'+
+    '</div></form>'+
+    '<p class="header-search-help" id="header-search-help">Search this website without leaving the page.</p>'+
+    '<div class="header-search-results" aria-live="polite" aria-label="Search results"></div></div>');
   const footer=document.querySelector('[data-footer]');
-  if(footer)footer.innerHTML=`<div class="container"><div class="footer-top"><div><div class="footer-brand"><img src="assets/adopt-mark.svg" alt=""/><span class="notranslate" translate="no">ADOPT<span class="brand-period">.</span></span></div><p>Adaptive Optics and Astronomical Instrumentation Group.<br/>INAF · Osservatorio Astronomico di Padova</p><a class="footer-inaf-mark" href="https://www.inaf.it/" target="_blank" rel="noopener noreferrer" aria-label="INAF — Istituto Nazionale di Astrofisica"><img src="assets/logos/inaf-logo.webp" alt="INAF logo" width="130" height="125" loading="lazy" decoding="async"></a></div><div class="footer-links"><div><h4>Explore</h4><a href="research.html">Research</a><a href="projects.html">Projects</a><a href="facilities.html">Facilities</a><a href="opportunities.html">Opportunities</a><a href="people.html">People</a></div><div><h4>Resources</h4><a href="search.html">Search</a><a href="publications.html">Publications</a><a href="contact.html">Contact</a><a href="feedback.html">Website feedback</a><a href="https://www.oapd.inaf.it/" target="_blank" rel="noopener noreferrer">INAF OAPd ↗</a></div></div></div><div class="footer-bottom"><span>ADOPT · INAF Osservatorio Astronomico di Padova</span><span><a href="member-login.html">Member profile updates</a> · <a href="credits.html">Credits &amp; sources</a></span></div></div>`;
+  if(footer)footer.innerHTML=`<div class="container"><div class="footer-top"><div><div class="footer-brand"><img src="assets/adopt-mark.svg" alt=""/><span class="notranslate" translate="no">ADOPT<span class="brand-period">.</span></span></div><p>Adaptive Optics and Astronomical Instrumentation Group.<br/>INAF · Osservatorio Astronomico di Padova</p><a class="footer-inaf-mark" href="https://www.inaf.it/" target="_blank" rel="noopener noreferrer" aria-label="INAF — Istituto Nazionale di Astrofisica"><img src="assets/logos/inaf-logo.webp" alt="INAF logo" width="130" height="125" loading="lazy" decoding="async"></a></div><div class="footer-links"><div><h4>Explore</h4><a href="research.html">Research</a><a href="projects.html">Projects</a><a href="facilities.html">Facilities</a><a href="opportunities.html">Opportunities</a><a href="people.html">People</a></div><div><h4>Resources</h4><a href="publications.html">Publications</a><a href="contact.html">Contact</a><a href="feedback.html">Website feedback</a><a href="https://www.oapd.inaf.it/" target="_blank" rel="noopener noreferrer">INAF OAPd ↗</a></div></div></div><div class="footer-bottom"><span>ADOPT · INAF Osservatorio Astronomico di Padova</span><span><a href="member-login.html">Member profile updates</a> · <a href="credits.html">Credits &amp; sources</a></span></div></div>`;
   protectProperNames(document.body);
   // Third-party translators insert their <select> asynchronously. Provide an
   // accessible name for screen-reader users whenever the control appears.
@@ -331,16 +343,136 @@
   function observeReveals(){const elements=document.querySelectorAll('.reveal:not(.visible)');if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){elements.forEach(e=>e.classList.add('visible'));return}if(!('IntersectionObserver' in window)){elements.forEach(e=>e.classList.add('visible'));return}const obs=new IntersectionObserver((items,o)=>{items.forEach(item=>{if(item.isIntersecting){item.target.classList.add('visible');o.unobserve(item.target)}})},{threshold:.07});elements.forEach(e=>obs.observe(e))}
   observeReveals();
   const aoSlider=document.getElementById('ao-range');if(aoSlider){const before=document.getElementById('ao-before');const score=document.getElementById('ao-score');aoSlider.addEventListener('input',()=>{const v=Number(aoSlider.value);before.style.clipPath=`inset(0 ${v}% 0 0)`;score.textContent=v>=75?'Adaptive correction dominant':v<=25?'Atmospheric blur dominant':'Compare the correction';});aoSlider.dispatchEvent(new Event('input'))}
-  // Keyboard shortcut for site search on every page (except when editing a field).
-  document.addEventListener('keydown',event=>{
-    const el=event.target;
-    const typing=el instanceof HTMLElement && (el.isContentEditable || ['INPUT','TEXTAREA','SELECT'].includes(el.tagName));
-    if((event.key==='/'&&!typing)||((event.metaKey||event.ctrlKey)&&event.key.toLowerCase()==='k')){
-      event.preventDefault();
-      if(path==='search.html')document.getElementById('site-search-input')?.focus();
-      else location.href='search.html';
+  // In-header site search stays on the current page until a result is selected.
+  const headerSearchToggle=header?.querySelector('.header-search-toggle');
+  const headerSearchPanel=header?.querySelector('#header-search-panel');
+  if(headerSearchToggle && headerSearchPanel){
+    const form=headerSearchPanel.querySelector('.header-search-form');
+    const input=headerSearchPanel.querySelector('#header-search-input');
+    const results=headerSearchPanel.querySelector('.header-search-results');
+    const closeButton=headerSearchPanel.querySelector('.header-search-close');
+    const normal=value=>String(value??'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+    const fallbackPapers=Object.entries(window.ADOPT_PROJECT_PAPERS||{}).flatMap(([id,entry])=>
+      ['recent','foundational','papers'].flatMap(key=>(entry[key]||[]).map(p=>({...p,projectId:id}))));
+    const papers=catalogue.length?catalogue:(window.ADOPT_MEMBER_PUBLICATIONS||[]).concat(fallbackPapers);
+    const rawRecords=[
+      ...(window.ADOPT_SEARCH_INDEX||[]),
+      ...proj.map(p=>({title:p.name,url:'project-'+encodeURIComponent(p.id)+'.html',
+        type:p.status==='past'?'Past project':'Project',
+        section:p.telescope||'',text:[p.blurb,p.description,p.contribution,p.category,p.telescope].join(' ')})),
+      ...people.map(p=>({title:p.name,url:encodeURIComponent(p.id)+'.html',
+        type:'Team member',section:p.tag||'',text:[p.role,p.bio,p.longBio,...(p.projects||[])].join(' ')})),
+      ...papers.filter(p=>p.title).map(p=>({title:p.title,
+        url:'publications.html?scope=all&q='+encodeURIComponent(p.doi||p.title),
+        type:'Publication',section:(p.projects||[]).map(x=>x.name).join(', ')||'Publications',
+        text:[p.authors,p.year,p.doi,p.note].join(' ')}))
+    ];
+    const seen=new Set();
+    const records=rawRecords.filter(r=>{
+      if(!r.title||!r.url||!/^[-a-z0-9_]+\.html(?:[?#].*)?$/i.test(r.url))return false;
+      const key=r.type==='Publication'?'paper:'+normal(r.title):r.url.split('#')[0];
+      if(seen.has(key))return false;
+      seen.add(key);
+      return true;
+    }).map(r=>({...r,heading:normal(r.title),sectionSearch:normal(r.section),
+      contentSearch:normal([r.title,r.section,r.text].join(' '))}));
+    let currentResults=[];
+    function renderInlineSearch(){
+      const query=input.value.trim().slice(0,120);
+      const terms=[...new Set(normal(query).split(/\s+/).filter(Boolean))].slice(0,10);
+      results.replaceChildren();
+      currentResults=[];
+      if(!terms.length){
+        const hint=document.createElement('p');
+        hint.className='header-search-message';
+        hint.textContent='Start typing to find people, projects or publications.';
+        results.append(hint);
+        return;
+      }
+      currentResults=records.filter(r=>terms.every(t=>r.contentSearch.includes(t)))
+        .map(r=>({record:r,score:terms.reduce((total,t)=>total+(r.heading.includes(t)?12:0)
+          +(r.sectionSearch.includes(t)?4:0),0)+(r.heading===normal(query)?30:0)}))
+        .sort((a,b)=>b.score-a.score||a.record.title.localeCompare(b.record.title))
+        .slice(0,8).map(x=>x.record);
+      if(!currentResults.length){
+        const empty=document.createElement('p');
+        empty.className='header-search-message';
+        empty.textContent='No matches. Try another name or keyword.';
+        results.append(empty);
+        return;
+      }
+      const group=document.createDocumentFragment();
+      currentResults.forEach(r=>{
+        const link=document.createElement('a');
+        link.href=r.url;
+        link.className='header-search-result';
+        const label=document.createElement('span');
+        label.className='header-search-type';
+        label.textContent=r.type||'Page';
+        const title=document.createElement('span');
+        title.className='header-search-title';
+        title.textContent=r.title;
+        link.append(label,title);
+        group.append(link);
+      });
+      results.append(group);
     }
-  });
+    function openInlineSearch(){
+      if(menu && !menu.hidden){
+        menu.hidden=true;
+        btn?.setAttribute('aria-expanded','false');
+        header?.classList.remove('is-open');
+      }
+      headerSearchPanel.hidden=false;
+      headerSearchToggle.setAttribute('aria-expanded','true');
+      renderInlineSearch();
+      input.focus();
+    }
+    function closeInlineSearch(returnFocus=false){
+      headerSearchPanel.hidden=true;
+      headerSearchToggle.setAttribute('aria-expanded','false');
+      if(returnFocus)headerSearchToggle.focus();
+    }
+    headerSearchToggle.addEventListener('click',()=>{
+      if(headerSearchPanel.hidden)openInlineSearch();
+      else closeInlineSearch(true);
+    });
+    closeButton.addEventListener('click',()=>closeInlineSearch(true));
+    input.addEventListener('input',renderInlineSearch);
+    form.addEventListener('submit',event=>{
+      event.preventDefault();
+      if(currentResults[0])location.assign(currentResults[0].url);
+    });
+    headerSearchPanel.addEventListener('keydown',event=>{
+      if(event.key==='Escape'){
+        event.preventDefault();
+        closeInlineSearch(true);
+      }else if(event.key==='ArrowDown' && event.target===input){
+        const first=results.querySelector('a');
+        if(first){event.preventDefault();first.focus();}
+      }else if(event.key==='ArrowUp' && event.target?.matches?.('.header-search-result')){
+        event.preventDefault();
+        input.focus();
+      }
+    });
+    document.addEventListener('pointerdown',event=>{
+      if(!headerSearchPanel.hidden && !headerSearchPanel.contains(event.target)
+        && !headerSearchToggle.contains(event.target))closeInlineSearch();
+    });
+    document.addEventListener('keydown',event=>{
+      const el=event.target;
+      const typing=el instanceof HTMLElement &&
+        (el.isContentEditable || ['INPUT','TEXTAREA','SELECT'].includes(el.tagName));
+      if((event.key==='/' && !typing)
+        ||((event.metaKey||event.ctrlKey)&&event.key.toLowerCase()==='k')){
+        event.preventDefault();
+        openInlineSearch();
+      }else if(event.key==='Escape' && !headerSearchPanel.hidden
+        && !headerSearchPanel.contains(event.target)){
+        closeInlineSearch(true);
+      }
+    });
+  }
   const searchPage=document.querySelector('[data-search-page]');
   if(searchPage){
     const form=searchPage.querySelector('.site-search-form');

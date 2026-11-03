@@ -576,3 +576,136 @@ p{line-height:1.7}.container{max-width:1200px}.section{padding:70px 0}
 .feedback-aside li{margin-bottom:12px}
 @media(max-width:900px){.feedback-layout{grid-template-columns:1fr}.feedback-aside{order:2}}
 @media(max-width:560px){.feedback-field-row{grid-template-columns:1fr;gap:0}.feedback-layout{padding-bottom:55px}}
+
+
+/* Compact site-wide page introductions, navigation and People search — 2026-11-03.
+   Apply after earlier responsive rules so all section pages share one rhythm. */
+.inner-hero {
+  padding-top: clamp(26px, 3.1vw, 42px);
+  padding-bottom: clamp(17px, 2.1vw, 26px);
+}
+.inner-hero h1 {
+  font-size: clamp(2.15rem, 3.6vw, 3.2rem);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+  margin: 0 0 12px;
+}
+.inner-hero .page-lede {
+  max-width: 880px;
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: 1.6;
+  margin: 0;
+}
+.inner-hero .eyebrow { margin-bottom: 10px; }
+.section { padding-top: clamp(36px, 4.5vw, 58px); padding-bottom: clamp(36px, 4.5vw, 58px); }
+.inner-hero .section-jumps { margin-top: 19px; }
+.inner-hero .opportunity-jumps { margin: 20px 0 18px; }
+.inner-hero .opportunity-notice { margin: 18px 0; }
+.inner-hero .back-link { margin-bottom: 16px; }
+.detail-hero { padding-bottom: 22px; }
+.search-hero { padding-bottom: 18px; }
+
+/* The language selector is part of the header, never an external Translate link. */
+.language-nav {
+  padding-top: 0;
+  gap: 8px;
+  min-height: 44px;
+}
+.language-nav .translation-label { display: none; }
+.language-nav .language-icon { display: block; width: 18px; height: 18px; }
+.language-nav .gtranslate_wrapper { min-width: 0; max-width: 152px; }
+.language-nav .gt_selector, .language-nav select {
+  width: 132px;
+  max-width: 100%;
+  height: 44px;
+  font-size: 14px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #9cb2bb;
+  color: var(--navy);
+}
+.language-nav .gtranslate-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  min-height: 44px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 650;
+  color: #526877;
+  text-decoration: none;
+  border: 1px solid #cad5d8;
+  border-radius: 10px;
+  background: #f2f5f4;
+  cursor: default;
+}
+.language-nav:has(select) .gtranslate-fallback,
+.language-nav:has(.gt_float_switcher) .gtranslate-fallback { display: none; }
+
+/* A simple, compact horizontal People directory filter in place of the large panel. */
+.team-directory { padding-bottom: 72px; }
+.team-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 790px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.team-toolbar label {
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+.team-search-wrap {
+  flex: 1 1 360px;
+  max-width: 520px;
+  min-width: 0;
+  padding: 0 13px;
+  border: 1px solid #8199a5;
+  border-radius: 10px;
+  background: #fff;
+}
+.team-search-wrap input {
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 3px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.team-search-wrap svg { width: 19px; height: 19px; flex-basis: 19px; }
+.team-toolbar .team-helper { display: none; }
+.team-results-count { margin: 15px 0 17px; }
+
+/* Site-wide search should also feel like an input, not a large banner. */
+.site-search-form {
+  max-width: 730px;
+  padding: 5px 6px 5px 14px;
+  border-radius: 12px;
+  box-shadow: none;
+}
+.site-search-form input { padding: 10px 0; font-size: 16px; }
+.site-search-form button { padding: 11px 17px; border-radius: 9px; }
+
+@media (max-width: 650px) {
+  .inner-hero { padding-top: 23px; padding-bottom: 17px; }
+  .inner-hero h1 { font-size: clamp(2rem, 8vw, 2.65rem); margin-bottom: 10px; }
+  .inner-hero .page-lede { font-size: 16px; line-height: 1.55; }
+  .section { padding-top: 36px; padding-bottom: 36px; }
+  .nav-shell { min-height: 0; padding-block: 9px; row-gap: 4px; }
+  .nav-tools { align-items: center; }
+  .nav-tools > .search-nav-link { margin-left: auto; }
+  .language-nav { padding-top: 0; min-height: 44px; }
+  .language-nav .gtranslate_wrapper { max-width: 132px; min-width: 0; }
+  .language-nav .gt_selector, .language-nav select { max-width: 132px; width: 132px; font-size: 14px; }
+  .language-nav .gtranslate-fallback { min-width: 92px; }
+  .team-toolbar { display: block; }
+  .team-toolbar label { display: block; margin-bottom: 8px; }
+  .team-search-wrap { max-width: 100%; }
+  .team-directory { padding-bottom: 52px; }
+}

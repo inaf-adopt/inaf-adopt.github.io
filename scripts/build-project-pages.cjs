@@ -19,8 +19,8 @@ const renderPage=function renderPage(p,template){
  const back=p.status==='past'?'projects.html#past-projects':'projects.html';
  const fallback=`<section class="container inner-hero detail-hero"><a class="back-link" href="${back}">← All projects</a><p class="eyebrow">${esc(p.overline||'Research project')}</p><h1>${name}</h1><p class="page-lede">${description}</p><p>${esc(p.description||'')}</p>${p.contribution?`<h2>${esc(p.contributionHeading||'Our contribution')}</h2><p>${esc(p.contribution)}</p>`:''}<p><a class="text-link" href="${back}">Browse projects →</a></p></section>`;
  html=replaceOne(html,'<div data-project-detail></div>',`<div data-project-detail data-project-id="${p.id}">${fallback}</div>`);
- // Consistent cache key for project-specific pages, even when the generic template has an older query.
- html=html.replace(/(<script src="(?:people-data|project-papers|member-publications|publication-catalogue|script|search-index|site-data|profile-live)\.js)(?:\?[^"]*)?"/g,'$1?v=20261101-audit"');
+ // Keep the shared script's layout-version key from the template; only normalize data-script keys.
+ html=html.replace(/(<script src="(?:people-data|project-papers|member-publications|publication-catalogue|search-index|site-data|profile-live)\.js)(?:\?[^"]*)?"/g,'$1?v=20261101-audit"');
  return html;
 };
 if (typeof require==='function' && require.main===module) {

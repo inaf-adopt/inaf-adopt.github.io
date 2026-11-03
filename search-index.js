@@ -40,7 +40,7 @@ window.ADOPT_SEARCH_INDEX = [
     "section": "People",
     "url": "people.html",
     "type": "Site page",
-    "text": "People Researchers, technologists, doctoral researchers and collaborators working on adaptive optics and astronomical instrumentation. Find a team member Search by name, research area or project. No matching member found. Try another name or research topic. Image sources and rights are documented on the Credits and sources page."
+    "text": "People Researchers, technologists, and doctoral researchers in the ADOPT group. Find a team member Search by name, research area or project. No matching member found. Try another name or research topic. Image sources and rights are documented on the Credits and sources page."
   },
   {
     "title": "Projects",

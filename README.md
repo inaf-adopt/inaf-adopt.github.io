@@ -61,3 +61,20 @@ Facilities are described in `facilities.html`, with sources linked on the page. 
 `members/*.json` is the authority for editable member fields. Run `node scripts/sync-member-data.cjs` to mirror approved JSON changes to `people-data.js`, followed by `node scripts/build-people.cjs`, `node scripts/build-project-pages.cjs` and `python3 build_search_index.py`. The site directory and project-team views then agree with member pages; `node scripts/check-site.cjs` detects inconsistencies. A member submitting only their JSON profile must not be asked to edit unrelated aggregate files; a maintainer performs the reconciliation after approval.
 
 Every current and historical project has a standalone `project-<id>.html` page with unique meta description, canonical URL and indexed summary. The old `project.html?id=<id>` URLs still resolve, with canonical links inserted by the client. `scripts/build-project-pages.cjs --check` checks static page freshness. The search index contains only general static pages: person and project records are indexed from current data in the browser, avoiding duplicate results and old member snapshots. The website uses dated, editorially curated publications; missing author identifications are not guessed.
+
+
+## Private website feedback (November 2026)
+
+The public `feedback.html` page is linked from the main navigation, footer and Contact page. It accepts an optional name and reply email, a category, an optional page/section and a required message. It uses Formspree to process submissions over HTTPS; it does not create public GitHub Issues.
+
+**One-time administrator activation (required):**
+
+1. Sign up at https://formspree.io/ and verify your account. Create a form named **ADOPT Website Feedback**.
+2. In Formspree's private dashboard, select and verify the admin inbox that should receive notification emails. Enable email notifications. **Never add the recipient email address to this public repository.**
+3. Set Formspree's **Restrict to Domain** option to `inaf-adopt.github.io` and enable spam filtering / reCAPTCHA as appropriate.
+4. Copy the form's public endpoint URL (`https://formspree.io/f/...`) into `feedback-config.js` as `window.ADOPT_FEEDBACK_ENDPOINT`. This is only a public form identifier, **not** an API key. Do not commit secrets.
+5. Load https://inaf-adopt.github.io/feedback.html, submit a test message and confirm its arrival in the administrator inbox (and Formspree dashboard). Check spam folders if needed.
+
+The form deliberately starts **disabled** until a valid endpoint is configured. It never claims to deliver a message before an HTTP successful response. A successful HTTP response means the service accepted the submission; actual inbox delivery must be separately tested.
+
+The page discloses third-party handling, provides accessible input labels and status messages, checks required inputs, avoids posting to the website itself, and preserves the visitor's message when submission fails. A `_gotcha` field adds basic spam protection. Formspree processes and may retain submitted content, so avoid asking for sensitive personal information.

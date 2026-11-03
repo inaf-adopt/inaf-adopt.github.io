@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10253b">
+<title>Website feedback — ADOPT | INAF Padova</title><meta name="description" content="Send private comments, corrections and suggestions to improve the ADOPT website at INAF Padova."><link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="styles.css?v=feedback-20261103">
+<meta property="og:type" content="website"><meta property="og:title" content="Website feedback — ADOPT"><meta property="og:description" content="Send comments and suggestions to improve the ADOPT website."><meta property="og:image" content="https://inaf-adopt.github.io/assets/photos/soxs.jpg"><link rel="canonical" href="https://inaf-adopt.github.io/feedback.html"></head>
+<body><a class="skip-link" href="#main">Skip to content</a><header class="site-header" data-header></header><main id="main">
+<section class="container inner-hero feedback-hero"><p class="eyebrow">HELP US IMPROVE</p><h1>Website feedback</h1><p class="page-lede">We welcome comments, corrections and suggestions about the ADOPT website. Your feedback helps us keep the information clear, useful and up to date.</p></section>
+<section class="container feedback-layout" aria-labelledby="feedback-form-heading">
+  <div class="feedback-panel">
+    <h2 id="feedback-form-heading">Share your comments</h2>
+    <p>Tell us what works, what could be improved or if you have noticed something that needs correcting. You can send feedback without creating a GitHub account.</p>
+    <p id="feedback-unavailable" class="feedback-availability" role="status">This form is not yet accepting submissions. Please check back soon.</p>
+    <form id="adopt-feedback-form" method="post">
+      <div class="feedback-field-row">
+        <div class="feedback-field"><label for="feedback-name">Name <span>(optional)</span></label><input id="feedback-name" name="name" type="text" autocomplete="name" maxlength="120"></div>
+        <div class="feedback-field"><label for="feedback-email">Email <span>(optional, for a reply)</span></label><input id="feedback-email" name="email" type="email" autocomplete="email" maxlength="254"></div>
+      </div>
+      <div class="feedback-field"><label for="feedback-category">Feedback type</label><select id="feedback-category" name="category" required><option value="" selected disabled>Choose a category</option><option value="General feedback">General feedback</option><option value="Correction or inaccurate information">Correction or inaccurate information</option><option value="Suggestion for improvement">Suggestion for improvement</option><option value="Missing information">Missing information</option><option value="Technical or accessibility problem">Technical or accessibility problem</option><option value="Other">Other</option></select></div>
+      <div class="feedback-field"><label for="feedback-section">Page or section <span>(optional)</span></label><input id="feedback-section" name="page_or_section" type="text" maxlength="200" placeholder="For example: People, Projects or Publications"></div>
+      <div class="feedback-field"><label for="feedback-message">Comments or suggestions</label><textarea id="feedback-message" name="message" rows="7" minlength="5" maxlength="5000" required placeholder="Please describe your feedback or suggestion."></textarea></div>
+      <div class="feedback-honeypot" aria-hidden="true"><label for="feedback-website">Leave this blank</label><input id="feedback-website" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+      <input type="hidden" name="_subject" value="ADOPT website feedback">
+      <button id="feedback-submit" class="btn btn-dark" type="submit" disabled>Send feedback <span aria-hidden="true">↗</span></button>
+      <p id="feedback-status" class="feedback-status" role="status" aria-live="polite"></p>
+    </form>
+    <p class="feedback-privacy">Feedback is sent privately to the website administrators through <a href="https://formspree.io/" target="_blank" rel="noopener noreferrer">Formspree</a>, a third-party form service. Submissions are not published on the website or as GitHub Issues. Please avoid including sensitive personal information. Your name and email are optional, and we only use a provided email address if a reply is appropriate.</p>
+  </div>
+  <aside class="feedback-aside"><h2>What can you tell us?</h2><p>We particularly appreciate reports of:</p><ul><li>Outdated names, project details or links</li><li>Missing or inaccurate publications</li><li>Navigation or display problems, including on mobile</li><li>Ideas for making the website clearer to visitors</li></ul><p>If you are a group member updating your own profile, please use the <a href="member-login.html">member profile update process</a>.</p></aside>
+</section></main><footer class="site-footer" data-footer></footer><script src="protected-names.js" defer></script><script src="site-data.js?v=20261101-audit" defer></script><script src="people-data.js?v=20261101-audit" defer></script><script src="project-papers.js?v=20261101-audit" defer></script><script src="instrument-science-papers.js" defer></script><script src="member-publications.js?v=20261101-audit" defer></script><script src="publication-catalogue.js?v=20261101-audit" defer></script><script src="search-index.js?v=20261101-audit" defer></script><script src="profile-live.js?v=20261101-audit" defer></script><script src="script.js?v=20261101-audit" defer></script><script src="feedback-config.js" defer></script><script src="feedback.js" defer></script><script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script></body></html>

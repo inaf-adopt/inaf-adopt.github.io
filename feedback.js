@@ -14,7 +14,11 @@
         !url.search && !url.hash && !url.username && !url.password) endpoint = url.href;
   } catch (_) { /* No endpoint configured yet. */ }
   // Fail closed. Never submit to the website itself or claim delivery without an endpoint.
-  if (!endpoint) return;
+  if (!endpoint) {
+    // Even if a disabled submit control is bypassed, never send a message to this static page.
+    form.addEventListener('submit', (event) => event.preventDefault());
+    return;
+  }
   form.action = endpoint;
   unavailable.hidden = true;
   button.disabled = false;

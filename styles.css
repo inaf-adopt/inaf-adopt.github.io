@@ -849,3 +849,21 @@ p{line-height:1.7}.container{max-width:1200px}.section{padding:70px 0}
     max-height: min(76vh, 540px);
   }
 }
+
+
+/* Kalyan's portrait: keep the original photograph, centre the subject in
+   the landscape directory card and the narrower individual profile. */
+#kalyan-kumar-radhakrishnan-santhakumari .team-photo {
+  object-position: center 10% !important;
+  transform: translateX(20%) scale(1.4);
+  transform-origin: center center;
+}
+.profile-portrait:has(img[src$="kalyan-radhakrishnan.jpg"]) {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.profile-portrait img[src$="kalyan-radhakrishnan.jpg"] {
+  object-position: left 20% !important;
+  transform: translateX(12%) scale(1.24);
+  transform-origin: center center;
+}

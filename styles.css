@@ -546,3 +546,33 @@ p{line-height:1.7}.container{max-width:1200px}.section{padding:70px 0}
 .footer-inaf-mark img{width:72px;height:auto;filter:none}
 .footer-inaf-mark:hover{border-color:#60ccd0}
 .footer-inaf-mark:focus-visible{outline:3px solid #ffd37c;outline-offset:4px}
+
+
+/* Website feedback — private form processing. */
+.feedback-hero h1{font-size:clamp(3rem,6vw,5.7rem)}
+.feedback-hero .page-lede{max-width:850px}
+.feedback-layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(275px,1fr);gap:34px;align-items:start;padding-bottom:90px}
+.feedback-panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3.5vw,44px)}
+.feedback-panel h2,.feedback-aside h2{font-size:clamp(1.65rem,2.5vw,2.2rem);letter-spacing:-.035em}
+.feedback-field-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.feedback-field{margin:22px 0}
+.feedback-field label{display:block;font-size:15px;font-weight:700;margin-bottom:9px;color:var(--ink)}
+.feedback-field label span{color:var(--muted);font-weight:450}
+.feedback-field input,.feedback-field select,.feedback-field textarea{display:block;width:100%;background:#fff;border:1px solid #8198a3;border-radius:10px;padding:13px 15px;color:var(--ink);font:inherit;font-size:16px;line-height:1.5}
+.feedback-field textarea{resize:vertical;min-height:170px}
+.feedback-field input:focus-visible,.feedback-field select:focus-visible,.feedback-field textarea:focus-visible{outline:3px solid var(--teal-deep);outline-offset:2px}
+.feedback-availability{background:#f4efe8;border-left:4px solid #986c32;border-radius:8px;padding:14px 18px;font-size:15px}
+.feedback-availability[hidden]{display:none}
+.feedback-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+#feedback-submit{margin-top:4px}
+#feedback-submit:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.feedback-status:empty{display:none}
+.feedback-status{padding:15px;margin-top:16px;font-size:15px;border-left:4px solid var(--teal-deep);background:#ecf6f4}
+.feedback-status[data-state="error"]{border-color:#9b3921;background:#fff0e9;color:#6d2718}
+.feedback-privacy{font-size:14px;margin-top:30px;line-height:1.7}
+.feedback-privacy a,.feedback-aside a{color:#145b64;text-decoration:underline;text-underline-offset:3px}
+.feedback-aside{background:#e5eeeb;border-radius:18px;padding:clamp(22px,3vw,32px)}
+.feedback-aside ul{padding-left:21px;line-height:1.7;color:var(--ink)}
+.feedback-aside li{margin-bottom:12px}
+@media(max-width:900px){.feedback-layout{grid-template-columns:1fr}.feedback-aside{order:2}}
+@media(max-width:560px){.feedback-field-row{grid-template-columns:1fr;gap:0}.feedback-layout{padding-bottom:55px}}

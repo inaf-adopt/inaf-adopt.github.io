@@ -88,53 +88,89 @@ window.ADOPT_PROJECTS = [
     "id": "mavis",
     "name": "MAVIS",
     "category": "Adaptive optics",
-    "telescope": "ESO VLT Unit Telescope 4",
+    "telescope": "ESO VLT Unit Telescope 4 (Yepun), Nasmyth A",
     "accent": "blue",
     "icon": "◉",
-    "overline": "VLT · Visible-light adaptive optics",
-    "blurb": "Adaptive-optics-assisted visible-light imaging and spatially resolved spectroscopy.",
-    "description": "MAVIS (MCAO-Assisted Visible Imager and Spectrograph) is being developed for the Very Large Telescope. It combines multi-conjugate adaptive optics with a visible imager and an integral-field spectrograph to overcome atmospheric image blur over a useful field of view.",
+    "overline": "VLT · Visible-light multi-conjugate adaptive optics",
+    "blurb": "Wide-field, high-resolution visible imaging and integral-field spectroscopy for ESO's Very Large Telescope.",
+    "description": "MAVIS combines multi-conjugate adaptive optics, a visible-light imager and an integral-field spectrograph on VLT UT4.",
+    "overview": {
+      "context": "MAVIS (MCAO-Assisted Visible Imager and Spectrograph) is a next-generation instrument being developed for ESO’s Very Large Telescope (VLT) at Paranal Observatory in Chile. Led by an Australian–European consortium, it will be mounted at the Nasmyth A focus of Unit Telescope 4 (Yepun). MAVIS is designed to bring high-angular-resolution adaptive-optics observations into the visible spectrum, complementing infrared instruments on the VLT and the Extremely Large Telescope.",
+      "science": "MAVIS aims to resolve crowded star fields, map individual stars and study stellar populations and their chemical evolution. Its imager and integral-field spectrograph will also probe star formation and dynamics in nearby and distant galaxies, the formation of early galaxies, and compact objects. Planned Solar System applications include atmospheric structure on planets and moons. These are future science capabilities, not results obtained with MAVIS.",
+      "concept": "The Adaptive Optics Module (AOM) combines the VLT Adaptive Optics Facility’s deformable secondary mirror with two post-focal deformable mirrors. Up to eight laser guide stars and three natural guide stars support tomographic reconstruction of atmospheric turbulence over a 30 × 30 arcsec corrected field. The optical relay also includes field de-rotation, atmospheric dispersion correction and calibration subsystems. A wide-field visible imager and an integral-field spectrograph receive the corrected light, targeting angular resolution down to approximately 18 milliarcseconds.",
+      "development": "MAVIS completed its Preliminary Design Review in March 2023 and held its Final Design Review at ESO in October 2025. Development continues through engineering, subsystem prototyping, manufacturing preparation, calibration planning and system verification. ESO currently lists first light in 2031. The published field, sensitivity and resolution specifications are design goals rather than demonstrated on-sky performance."
+    },
     "science": [
-      "Resolving crowded star clusters and studying stellar populations.",
-      "Tracing star formation and the assembly of distant galaxies.",
-      "Investigating stellar evolution, black holes and Solar System atmospheres."
+      "Resolved stellar populations, crowded fields and chemical abundances.",
+      "Star formation, galaxy assembly and compact-object environments.",
+      "Visible-light imaging and spatially resolved spectroscopy of Solar System targets."
     ],
-    "technical": "MAVIS combines wavefront sensing using laser and natural guide stars, adaptive correction, a wide-field visible imager and an integral-field spectrograph. Performance numbers are design/baseline specifications, not guaranteed observing results.",
+    "technical": "A visible multi-conjugate adaptive-optics relay uses VLT's deformable secondary mirror, two post-focal deformable mirrors, up to eight laser guide stars and three natural guide stars to feed a wide-field imager and an integral-field spectrograph. Specifications are ESO design targets, not measured on-sky performance.",
     "specs": [
       [
-        "Wavelength coverage",
-        "Approximately 380–935 nm"
+        "Wavelength",
+        "≈380–935 nm"
       ],
       [
-        "Imager field",
+        "Imager field of view",
         "30 × 30 arcsec"
       ],
       [
-        "Imager sampling",
-        "7.36 mas/pixel"
+        "Angular resolution",
+        "≈18 mas (design target)"
       ],
       [
-        "IFU spectral resolution",
-        "Modes up to R ≈ 14,700"
+        "Spectroscopy",
+        "IFU modes up to R ≈ 14,700"
+      ],
+      [
+        "First light",
+        "2031 (ESO plan)"
       ]
     ],
-    "contribution": "Our work includes optical design, the adaptive-optics calibration strategy, system engineering and verification of the adaptive-optics module, in collaboration with the international MAVIS team.",
+    "contribution": "ADOPT researchers contribute to the MAVIS Adaptive Optics Module through optical design and tolerance analysis, calibration and non-common-path-aberration strategies, opto-mechanical design and prototyping, system engineering, integration planning and verification, in collaboration with the international MAVIS consortium.",
     "refs": [
       [
         "ESO MAVIS instrument and baseline specifications",
-        "https://www.hq.eso.org/sci/facilities/develop/instruments/MAVIS.html"
+        "https://www.eso.org/sci/facilities/develop/instruments/MAVIS.html"
       ],
       [
-        "MAVIS instrument project",
+        "MAVIS project and consortium",
         "https://mavis-ao.org/"
+      ],
+      [
+        "MAVIS science case (McDermid et al. 2020)",
+        "https://arxiv.org/abs/2009.09242"
+      ],
+      [
+        "MAVIS design papers (INAF archive)",
+        "https://openaccess.inaf.it/entities/publication/74590f11-7d85-4ff1-ac6e-5d9ef8f942aa"
       ]
     ],
+    "figures": [
+      {
+        "src": "https://cdn.eso.org/images/publicationjpg/ann21007a.jpg",
+        "alt": "Computer rendering of the future MAVIS instrument on the VLT Unit Telescope 4 Nasmyth platform, showing submodules and a human figure for scale",
+        "caption": "ESO illustration of MAVIS at the VLT UT4 Nasmyth platform; a design rendering, not installed hardware.",
+        "credit": "ESO/MAVIS consortium/L. Calçada",
+        "shortCredit": "ESO / MAVIS consortium / L. Calçada",
+        "source": "https://www.eso.org/public/images/ann21007a/"
+      },
+      {
+        "src": "https://astralis.org.au/wp-content/uploads/2021/04/MAVIS-add-it-to-the-MAVIS-project-page-1024x681.png",
+        "alt": "Three-dimensional engineering model of the MAVIS adaptive optics module, visible imager and spectrograph showing instrument volumes and mechanical support",
+        "caption": "Engineering model showing the arrangement of MAVIS major instrument modules; design details may evolve.",
+        "credit": "Astralis, MAVIS project",
+        "shortCredit": "Astralis / MAVIS project",
+        "source": "https://astralis.org.au/projects/eso-mavis/"
+      }
+    ],
     "status": "current",
-    "source": "https://www.hq.eso.org/sci/facilities/develop/instruments/MAVIS.html",
+    "source": "https://www.eso.org/sci/facilities/develop/instruments/MAVIS.html",
     "pending": false,
     "contributionHeading": "Our contribution",
-    "phase": "Instrument development",
-    "reviewed": "31 October 2026",
+    "phase": "Development after the 2025 Final Design Review",
+    "reviewed": "4 November 2026",
     "partial": false
   },
   {

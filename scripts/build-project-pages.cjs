@@ -28,9 +28,27 @@ if (typeof require==='function' && require.main===module) {
  const root=path.resolve(__dirname,'..');global.window={};require(path.join(root,'site-data.js'));
  const template=fs.readFileSync(path.join(root,'project.html'),'utf8');
  const check=process.argv.includes('--check');
- for(const p of window.ADOPT_PROJECTS){const target=path.join(root,'project-'+p.id+'.html');const expected=renderPage(p,template);
- if(check){if(!fs.existsSync(target)||fs.readFileSync(target,'utf8')!==expected)throw Error('Project page stale: '+target);}
- else fs.writeFileSync(target,expected);}
+ // Two instrument pages have curated, structured four-section narratives rather
+ // than the brief shared fallback. Keep the generator from overwriting them.
+ const curated=new Set(['shark','nirvana']);
+ for(const p of window.ADOPT_PROJECTS){
+   const target=path.join(root,'project-'+p.id+'.html');
+   if(curated.has(p.id)){
+     if(check){
+       if(!fs.existsSync(target))throw Error('Curated project page missing: '+target);
+       const html=fs.readFileSync(target,'utf8');
+       if(!html.includes('<div data-project-detail data-project-id="'+p.id+'">')||
+          !html.includes('<title>'+p.name+' — ADOPT | INAF Padova</title>')||
+          !html.includes('id="project-publications"')||
+          (html.match(/class="shark-story-block"/g)||[]).length!==4)
+         throw Error('Curated project page incomplete: '+target);
+     }
+     continue;
+   }
+   const expected=renderPage(p,template);
+   if(check){if(!fs.existsSync(target)||fs.readFileSync(target,'utf8')!==expected)throw Error('Project page stale: '+target);}
+   else fs.writeFileSync(target,expected);
+ }
  console.log((check?'Verified ':'Generated ')+window.ADOPT_PROJECTS.length+' indexed project pages.');
 }
 module.exports={renderPage};

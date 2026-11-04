@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">VST standard imaging and VSTPol polarimetry</title><desc id="desc">Explanatory, not-to-scale schematic of two exchangeable field-corrector modes, one with a rotating linear polarizer, both feeding OmegaCAM.</desc>
+<defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#f2f8fb"/><stop offset="1" stop-color="#e7f0f6"/></linearGradient><linearGradient id="g"><stop stop-color="#93c6d9"/><stop offset=".5" stop-color="#e9faff"/><stop offset="1" stop-color="#93c6d9"/></linearGradient><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#3c7894"/></marker></defs>
+<rect width="1280" height="760" fill="url(#b)"/><g font-family="Arial,Helvetica,sans-serif" fill="#183c52">
+<text x="640" y="65" font-size="39" font-weight="bold" text-anchor="middle">VST optical observing modes</text>
+<text x="640" y="105" font-size="23" text-anchor="middle" fill="#4c6e80">Interchangeable assemblies retain the wide-field OmegaCAM camera</text></g>
+<rect x="42" y="153" width="574" height="468" rx="20" fill="#fff" stroke="#b6cdd9" stroke-width="3"/><rect x="663" y="153" width="574" height="468" rx="20" fill="#fff" stroke="#b6cdd9" stroke-width="3"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#1b4b62"><text x="330" y="207">Standard imaging</text><text x="950" y="207">VSTPol polarimetry</text></g>
+<g stroke="#9dc9da" stroke-width="4" fill="none"><path d="M82 314L240 347L472 359"/><path d="M82 409L240 377L472 367"/><path d="M703 314L861 347L1092 359"/><path d="M703 409L861 377L1092 367"/></g>
+<g stroke="#3c7894" stroke-width="4" marker-end="url(#arr)"><line x1="90" y1="363" x2="165" y2="363"/><line x1="711" y1="363" x2="780" y2="363"/></g>
+<g fill="url(#g)" stroke="#3f829e" stroke-width="3"><path d="M222 275Q190 363 222 447L244 439Q220 363 244 285Z"/><path d="M298 292Q277 363 298 432L321 424Q299 363 321 300Z"/><path d="M843 275Q811 363 843 447L865 439Q841 363 865 285Z"/><path d="M922 292Q901 363 922 432L945 424Q923 363 945 300Z"/></g>
+<g fill="#193e5a"><rect x="459" y="304" width="112" height="115" rx="13"/><rect x="1080" y="304" width="112" height="115" rx="13"/></g>
+<g fill="#b8e8ed" stroke="#5baabb" stroke-width="3"><rect x="480" y="323" width="70" height="76" rx="6"/><rect x="1101" y="323" width="70" height="76" rx="6"/></g>
+<g stroke="#5babbc" stroke-width="2"><path d="M503 323V399M526 323V399M480 347H550M480 373H550M1124 323V399M1147 323V399M1101 347H1171M1101 373H1171"/></g>
+<circle cx="894" cy="363" r="35" fill="#e5f6e9" stroke="#42876b" stroke-width="5"/><circle cx="894" cy="363" r="26" fill="none" stroke="#73a992" stroke-width="3" stroke-dasharray="5 5"/><path d="M875 383L913 343M881 390L918 352" stroke="#42876b" stroke-width="5"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="20" text-anchor="middle" fill="#385d70">
+<text x="272" y="493">Standard field corrector</text><text x="907" y="498">Rotating polarizer</text><text x="515" y="458">OmegaCAM</text><text x="1136" y="458">OmegaCAM</text></g>
+<g fill="none" stroke="#7195aa" stroke-width="4" stroke-dasharray="8 8"><path d="M600 248Q641 223 680 248"/></g><g font-family="Arial,Helvetica,sans-serif" fill="#58798c" font-size="17" text-anchor="middle"><text x="641" y="277">mode exchange</text></g>
+<text x="640" y="673" font-family="Arial,Helvetica,sans-serif" fill="#295368" text-anchor="middle" font-size="22">Both modes use the VST’s approximately 1° × 1° field of view</text>
+<text x="640" y="712" font-family="Arial,Helvetica,sans-serif" fill="#627d8c" text-anchor="middle" font-size="18">Original ADOPT explanatory illustration · schematic only, not to scale · after Schipani et al. (2024)</text>
+</svg>

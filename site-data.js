@@ -229,47 +229,91 @@ window.ADOPT_PROJECTS = [
     "telescope": "Copernico 1.82-m telescope, Asiago",
     "accent": "coral",
     "icon": "⌁",
-    "overline": "Asiago · Adaptive-optics experimentation",
-    "blurb": "A modular on-sky platform for testing new adaptive-optics technologies.",
-    "description": "EKARUS is an experimental adaptive-optics research platform under development for the 1.82-m Copernico Telescope at Asiago. Building on experience from the PAPYRUS demonstrator, it is conceived as an accessible, flexible optical bench for testing new ideas on the sky.",
+    "overline": "Asiago · On-sky adaptive-optics experimentation",
+    "blurb": "A modular adaptive-optics R&D platform at Asiago, advancing on-sky testing, new technologies and training.",
+    "description": "EKARUS is an on-sky adaptive-optics research platform operating at the Copernico 1.82-m telescope in Asiago. Built from the PAPYRUS heritage, it achieved first light in August 2026 and continues to develop as a modular testbed for advanced wavefront sensing and real-time control.",
     "science": [
-      "Validating new wavefront-sensing and adaptive-optics approaches in real observing conditions.",
-      "Testing advanced real-time control, including machine-learning methods.",
-      "Training students and enabling collaborations in astronomical instrumentation."
+      "Testing next-generation wavefront sensors and extreme adaptive-optics concepts on sky.",
+      "Validating deformable-mirror control and advanced real-time reconstruction, including future machine-learning tests.",
+      "Providing repeatable and remotely accessible on-sky experiments and hands-on training for students and researchers."
     ],
-    "technical": "The design emphasises modular opto-mechanics and reconfigurable AO subsystems rather than a fixed science-instrument specification. Published material describes the preliminary design and development roadmap.",
+    "technical": "EKARUS operates at the Copernico Coudé focus using a pyramid wavefront sensor, high-speed real-time controller and a deformable mirror with approximately 450 actuators. The first-stage system demonstrated closed-loop atmospheric correction in 2026; future developments include infrared capability, a second correction stage and visitor ports for experimental instruments.",
     "specs": [
       [
         "Host telescope",
-        "Copernico 1.82 m"
+        "Copernico 1.82 m, Asiago"
       ],
       [
-        "Location",
-        "Asiago, Mount Ekar"
+        "First light",
+        "31 August–1 September 2026"
       ],
       [
-        "Status",
-        "Research platform under development"
+        "Deformable mirror",
+        "Approximately 450 actuators"
+      ],
+      [
+        "AO correction",
+        "Up to about 1 kHz (first light)"
+      ],
+      [
+        "Reported first-light Strehl",
+        "40% at 650 nm (specific conditions)"
       ]
     ],
-    "contribution": "Doctoral research in the group contributes to the development of this adaptive-optics experimentation platform at Asiago.",
+    "contribution": "At INAF Padova, Davide Greggio is an EKARUS co-principal investigator and Alessandro Ballone leads work on the instrument-control software. Other ADOPT members contribute to AO modelling, opto-mechanical development, integration, calibration, commissioning and educational use in collaboration with LAM, ONERA and partner institutions.",
     "refs": [
       [
-        "INAF Padova EKARUS seminar and concept",
-        "https://indico.dfa.unipd.it/event/1719/?view=event"
+        "EKARUS official project website",
+        "https://sites.google.com/inaf.it/adoni-coude/ekarus"
       ],
       [
-        "Asiago facilities",
-        "https://www.oapd.inaf.it/sede-di-asiago/telescopes-and-instrumentations"
+        "INAF first-light report (17 September 2026)",
+        "https://www.media.inaf.it/2026/09/17/prima-luce-ekarus/"
+      ],
+      [
+        "EKARUS AO4ELT8 poster",
+        "https://doi.org/10.5281/zenodo.21107775"
+      ],
+      [
+        "Observing with Adaptive Optics 2026 school",
+        "https://indico.ict.inaf.it/event/3554/"
+      ],
+      [
+        "Asiago adaptive-optics facility",
+        "https://web.oapd.inaf.it/adoni/aaof/"
       ]
     ],
     "status": "current",
-    "source": "https://indico.dfa.unipd.it/event/1719/?view=event",
+    "source": "https://sites.google.com/inaf.it/adoni-coude/ekarus",
     "pending": false,
     "contributionHeading": "Our contribution",
-    "phase": "Experimental platform",
-    "reviewed": "31 October 2026",
-    "partial": false
+    "phase": "On-sky R&D platform; first light achieved, ongoing upgrades",
+    "reviewed": "4 November 2026",
+    "partial": false,
+    "overview": {
+      "context": "EKARUS is a modular adaptive-optics (AO) research and development platform at the 1.82-m Copernico Telescope on Cima Ekar, Asiago, Italy. Developed through a collaboration led by INAF, LAM and ONERA, with international partners, it builds on the PAPYRUS testbed formerly operated at Observatoire de Haute-Provence. Its location at the telescope’s Coudé focus provides a dedicated optical bench for practical experimentation under real atmospheric conditions.",
+      "objectives": "Access to large observatories for experimental AO tests is limited. EKARUS offers an accessible, remotely operable environment to mature new wavefront sensors, control strategies and optical components before their possible use on larger telescopes. The modular layout is intended to support visiting experiments and, eventually, visible and near-infrared science applications. It also supports teaching: students can plan observations, calibrate the AO system, close the loop and examine the resulting images.",
+      "methods": "EKARUS combines a pyramid wavefront sensor, high-speed detectors, a real-time controller and a deformable mirror with approximately 450 actuators. In closed loop, measurements of distorted stellar wavefronts drive mirror corrections at about 1,000 updates per second. The first stage reuses expertise and hardware from PAPYRUS, while the planned architecture includes a second-stage AO path and visitor ports. New sensing concepts, infrared capability and neural-network-based control remain development and testing goals rather than established routine operating modes.",
+      "results": "First light took place on 31 August and 1 September 2026, with stable closed-loop correction on bright stars including β Cassiopeiae. INAF reported a 10–20-fold improvement in image resolution under the observed conditions. The project team separately reported a Strehl ratio of about 40% at 650 nm in first-light testing, with seeing estimated at approximately 1.3 arcseconds at 500 nm. These are initial measurements, not guaranteed performance across all conditions. EKARUS is now a functioning AO test platform, with further calibration, new algorithms, an infrared channel and alternative wavefront sensors among its planned developments."
+    },
+    "figures": [
+      {
+        "src": "https://indico.ict.inaf.it/event/3554/attachments/11794/24460/blobid0.png",
+        "alt": "EKARUS adaptive-optics bench optical schematic showing the pyramid sensor, deformable mirror, steering mirrors and planned infrared path",
+        "caption": "Optical layout of the EKARUS testbench, including its wavefront-sensing branch, deformable mirror and infrared branch.",
+        "source": "https://indico.ict.inaf.it/event/3554/",
+        "credit": "Observing with Adaptive Optics 2026 / INAF Indico",
+        "shortCredit": "AO school / INAF"
+      },
+      {
+        "src": "https://web.oapd.inaf.it/adoni/aaof/files/copernico_2.jpg",
+        "alt": "The 1.82-m Copernico telescope in its dome at the Asiago Observatory",
+        "caption": "The 1.82-m Copernico telescope at Cima Ekar, host of the EKARUS adaptive-optics platform.",
+        "source": "https://web.oapd.inaf.it/adoni/aaof/",
+        "credit": "INAF Padova / Asiago Adaptive Optics Facility",
+        "shortCredit": "INAF Padova"
+      }
+    ]
   },
   {
     "id": "mezzocielo",

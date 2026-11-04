@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" role="img" aria-labelledby="t d">
+<title id="t">NIRVANA-VIS visible imaging concept</title>
+<desc id="d">Conceptual illustration of LINC-NIRVANA ground-layer adaptive optics feeding a planned visible imaging channel with fast short-exposure CMOS acquisition and speckle reconstruction. Not an engineering drawing.</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102b44"/><stop offset="1" stop-color="#183d50"/></linearGradient>
+  <linearGradient id="beam"><stop stop-color="#3cc9bd" stop-opacity=".16"/><stop offset=".5" stop-color="#3cc9bd" stop-opacity=".72"/><stop offset="1" stop-color="#81dce2" stop-opacity=".18"/></linearGradient>
+  <radialGradient id="psf"><stop offset="0" stop-color="#fff"/><stop offset=".13" stop-color="#ffeab2"/><stop offset=".32" stop-color="#b3eced" stop-opacity=".85"/><stop offset=".7" stop-color="#4b9cba" stop-opacity=".20"/><stop offset="1" stop-color="#4b9cba" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="660" rx="22" fill="url(#bg)"/>
+<path d="M0 105H1200" stroke="#bdd7dc" stroke-opacity=".15"/>
+<g fill="#e9f6f5" font-family="Arial,Helvetica,sans-serif">
+ <text x="54" y="62" font-size="25" font-weight="700" letter-spacing="1.5">NIRVANA-VIS</text>
+ <text x="54" y="90" font-size="16" fill="#b9d5da">Visible imaging upgrade · LINC-NIRVANA at the LBT</text>
+</g>
+<g stroke="#a5d7d5" stroke-width="2" fill="none" opacity=".3"><rect x="51" y="147" width="325" height="408" rx="18"/><rect x="412" y="147" width="329" height="408" rx="18"/><rect x="775" y="147" width="374" height="408" rx="18"/></g>
+<g font-family="Arial,Helvetica,sans-serif" fill="#eaf6f5"><text x="77" y="186" font-size="21" font-weight="700">1  Ground-layer AO</text><text x="438" y="186" font-size="21" font-weight="700">2  Visible channel</text><text x="800" y="186" font-size="21" font-weight="700">3  Image reconstruction</text></g>
+<g transform="translate(215 343)">
+ <circle r="113" fill="#0b2034" stroke="#8ebbc7" stroke-width="2"/>
+ <circle r="76" fill="#163d52" stroke="#4ab7bb" stroke-width="3"/>
+ <circle r="45" fill="#183040" stroke="#9ddacb" stroke-width="2"/>
+ <circle r="21" fill="#9fd9d7" opacity=".2"/>
+ <circle cx="0" cy="0" r="8" fill="#fff1b6"/>
+ <g fill="#ffe6a8"><circle cx="0" cy="-101" r="5"/><circle cx="87" cy="-56" r="4"/><circle cx="101" cy="18" r="5"/><circle cx="62" cy="83" r="4"/><circle cx="-65" cy="82" r="4"/><circle cx="-100" cy="-19" r="4"/><circle cx="-65" cy="-70" r="4"/></g>
+ <g stroke="#f2d391" stroke-dasharray="3 6" opacity=".5"><path d="M0 -101L0 0M87 -56L0 0M101 18L0 0M62 83L0 0M-65 82L0 0M-100 -19L0 0M-65 -70L0 0"/></g>
+</g>
+<g font-size="17" font-family="Arial,Helvetica,sans-serif" fill="#c0dcde" text-anchor="middle"><text x="215" y="502">Guide stars + pyramid WFS</text></g>
+<path d="M377 357L411 357" stroke="#65c8c3" stroke-width="5" stroke-linecap="round"/><path d="M400 346L413 357L400 369" fill="none" stroke="#65c8c3" stroke-width="5" stroke-linecap="round"/>
+<g transform="translate(445 244)">
+ <path d="M33 140L152 100L263 140L154 185Z" fill="#244b5b" stroke="#9ccacc" stroke-width="3"/>
+ <path d="M33 140L154 184L154 215L33 170Z" fill="#1a364b" stroke="#74afb5" stroke-width="2"/>
+ <path d="M154 184L263 140L263 171L154 215Z" fill="#244c60" stroke="#74afb5" stroke-width="2"/>
+ <g stroke="#75d7cc" stroke-width="3"><path d="M83 114V69L146 49V99"/><path d="M146 49L205 77V118"/><path d="M146 49L146 6"/></g>
+ <path d="M99 99L144 48L193 101" stroke="url(#beam)" stroke-width="15" fill="none"/>
+ <rect x="126" y="2" width="38" height="24" rx="5" fill="#72c4ba"/><rect x="75" y="99" width="29" height="27" rx="5" fill="#badcda"/><rect x="191" y="101" width="27" height="28" rx="4" fill="#82c6dc"/>
+ <path d="M90 120L145 66L203 121" stroke="#f8d995" stroke-width="4" fill="none"/>
+ </g>
+<g font-size="17" font-family="Arial,Helvetica,sans-serif" fill="#c0dcde" text-anchor="middle"><text x="577" y="502">600–1000 nm · 8K CMOS</text></g>
+<path d="M743 357L774 357" stroke="#65c8c3" stroke-width="5" stroke-linecap="round"/><path d="M760 346L774 357L760 369" fill="none" stroke="#65c8c3" stroke-width="5" stroke-linecap="round"/>
+<g transform="translate(824 260)">
+ <rect x="0" y="0" width="119" height="126" rx="10" fill="#0d2538" stroke="#6ba3b3" stroke-width="3"/>
+ <g fill="#b0d5d2" opacity=".5"><circle cx="24" cy="24" r="6"/><circle cx="42" cy="24" r="4"/><circle cx="68" cy="22" r="6"/><circle cx="90" cy="20" r="5"/><circle cx="24" cy="53" r="5"/><circle cx="42" cy="60" r="5"/><circle cx="66" cy="53" r="6"/><circle cx="99" cy="54" r="4"/><circle cx="28" cy="86" r="4"/><circle cx="49" cy="91" r="6"/><circle cx="76" cy="85" r="4"/><circle cx="99" cy="95" r="6"/></g>
+ <path d="M140 64H170" stroke="#85d0ce" stroke-width="4"/><path d="M159 52L172 64L159 75" fill="none" stroke="#85d0ce" stroke-width="4"/>
+ <circle cx="252" cy="63" r="63" fill="url(#psf)"/>
+ <circle cx="252" cy="63" r="11" fill="#fef5bf"/>
+ <circle cx="252" cy="63" r="30" fill="none" stroke="#d7efe7" stroke-width="4" opacity=".77"/>
+ <circle cx="252" cy="63" r="48" fill="none" stroke="#b2e4e4" stroke-width="3" opacity=".55"/>
+</g>
+<g font-size="17" font-family="Arial,Helvetica,sans-serif" fill="#c0dcde" text-anchor="middle"><text x="963" y="502">Short exposures → speckle holography</text></g>
+<path d="M53 585H1149" stroke="#a7cdd2" stroke-opacity=".3"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#a9cbd1">
+ <text x="53" y="611">Conceptual illustration · Not to scale · Design and expected performance, not observed NIRVANA-VIS data</text>
+</g>
+</svg>

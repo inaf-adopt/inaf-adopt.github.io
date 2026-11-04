@@ -657,8 +657,8 @@ window.ADOPT_PROJECTS = [
     "accent": "sand",
     "icon": "⌁",
     "overline": "NTT · Optical and near-infrared spectroscopy",
-    "blurb": "Spectroscopic follow-up of supernovae and other rapidly changing objects.",
-    "description": "SOXS (Son Of X-Shooter) is a spectrograph on the New Technology Telescope at La Silla, built to rapidly classify and study astronomical transients. It obtains ultraviolet/visible and near-infrared spectra over a broad wavelength range.",
+    "blurb": "Rapid, simultaneous optical and near-infrared spectroscopy of transient events at the ESO NTT.",
+    "description": "SOXS (Son Of X-Shooter) is an INAF-led, wide-band spectrograph installed at ESO’s 3.58-m New Technology Telescope at La Silla. It simultaneously records UV–visible and near-infrared spectra for time-domain astronomy.",
     "science": [
       "Classifying supernovae, tidal disruption events and other transient sources.",
       "Measuring properties of gamma-ray bursts and variable astronomical objects.",
@@ -683,6 +683,30 @@ window.ADOPT_PROJECTS = [
         "UV–VIS and near-infrared"
       ]
     ],
+    "overview": {
+      "context": "SOXS (Son Of X-Shooter) is a medium-resolution, wide-band spectrograph at ESO’s 3.58-m New Technology Telescope (NTT) at La Silla, Chile. Built by an international consortium led by INAF, it has two complementary spectrograph arms and an acquisition and guiding camera. SOXS covers 350–2000 nm simultaneously, connecting the visible and near-infrared views of rapidly changing sources.",
+      "objectives": "The instrument provides prompt spectroscopic follow-up of alerts from wide-field surveys, telescopes and space missions. Its science programme includes supernovae, gamma-ray bursts, kilonovae, tidal disruption events and other transient or variable sources. Rapid observations and broad spectral coverage help classify events, measure redshifts and study their physical conditions while they are observable.",
+      "methods": "A common-path optical system feeds the UV–VIS and cryogenic near-infrared spectrographs, with resolving power typically around R ≈ 4,500, depending on wavelength and slit. Acquisition and guiding, wavelength and flat-field calibration, instrument control software, flexible scheduling and a data-reduction pipeline support efficient observations. End-to-end assembly, integration, verification and commissioning establish the instrument’s on-sky performance.",
+      "results": "SOXS was installed at the NTT in March 2025, followed by commissioning observations. ESO announced successful first observations in December 2025, including a 350–2000 nm spectrum of the supernova SN 2025advo recorded on 14 December 2025. User documentation and observing tools are available as the project transitions through commissioning towards regular scientific use. The illustrated supernova spectrum is a first-light demonstration, not a claim of a refereed discovery."
+    },
+    "figures": [
+      {
+        "src": "assets/photos/soxs.jpg",
+        "alt": "SOXS spectrograph installed at the ESO New Technology Telescope at La Silla",
+        "caption": "The installed SOXS instrument at the New Technology Telescope, La Silla Observatory.",
+        "source": "https://www.eso.org/public/images/ann25011b/",
+        "credit": "P. Schipani / INAF · CC BY 4.0",
+        "shortCredit": "P. Schipani / INAF"
+      },
+      {
+        "src": "https://cdn.eso.org/images/screen/ann25011d.jpg",
+        "alt": "SOXS optical and near-infrared first-light spectrum of the supernova SN 2025advo, with host-galaxy inset",
+        "caption": "First-light spectrum of SN 2025advo, observed on 14 December 2025 across 350–2000 nm.",
+        "source": "https://www.eso.org/public/images/ann25011d/",
+        "credit": "ESO / S. Campana (INAF)",
+        "shortCredit": "ESO / S. Campana (INAF)"
+      }
+    ],
     "contribution": "Our contributions include leadership of assembly, integration and verification (AIV), deputy systems engineering, instrument installation and commissioning at La Silla, and preparation for operations within the SOXS consortium.",
     "refs": [
       [
@@ -699,7 +723,7 @@ window.ADOPT_PROJECTS = [
     "pending": false,
     "contributionHeading": "Our contribution",
     "phase": "Commissioning and operations preparation",
-    "reviewed": "31 October 2026",
+    "reviewed": "4 November 2026",
     "partial": false
   },
   {

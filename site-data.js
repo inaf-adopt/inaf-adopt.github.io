@@ -810,7 +810,7 @@ window.ADOPT_PROJECTS = [
     "pending": false,
     "contributionHeading": "Our contribution",
     "phase": "Simulations and laboratory characterization; on-sky validation proposed",
-    "reviewed": "4 November 2026",
+    "reviewed": "5 November 2026",
     "partial": false,
     "overview": {
       "context": "Laser guide stars (LGSs) make adaptive optics possible without a sufficiently bright natural star nearby. However, sodium beacons originate in an atmospheric layer roughly 90 km above the telescope and appear elongated when viewed from large apertures, especially with side-launched lasers. This creates difficulties for conventional wavefront sensors. Developed by researchers in Padova and collaborators, INGOT explores a pupil-plane approach whose optical geometry is matched to the beacon’s three-dimensional extent.",
@@ -820,20 +820,20 @@ window.ADOPT_PROJECTS = [
     },
     "figures": [
       {
-        "src": "assets/ingot-sensor-concept.svg",
-        "alt": "Original diagram illustrating a finite-distance elongated sodium laser guide star, a reflective ingot prism and three pupil images",
-        "caption": "Principle of ingot wavefront sensing: the optical geometry is matched to an elongated laser guide star, and the light is separated into pupil images. Conceptual diagram, not to scale. ",
+        "src": "assets/ingot-ragazzoni-2024.webp",
+        "alt": "Figure 10 of Ragazzoni et al. (2024): telescope pupil and side-launched sodium laser guide star, comparing elongated spot sampling by six-pupil ingot, three-pupil ingot, and Shack–Hartmann wavefront sensors.",
+        "caption": "Comparison of wavefront-sensor geometries for a side-launched sodium laser guide star. Elongation varies across the telescope pupil (left). The panels compare six-pupil ingot (a, g), three-pupil ingot (b, h), and Shack–Hartmann configurations (c–f, i–l) for strongly elongated (red) and mildly elongated (blue) guide-star images. Cropped from Fig. 10.",
         "source": "https://doi.org/10.1051/0004-6361/202449697",
-        "credit": "Original ADOPT explanatory illustration informed by Ragazzoni et al. (2024)",
-        "shortCredit": "ADOPT illustration · Ragazzoni et al. (2024)"
+        "credit": "Ragazzoni et al., Ingot-like class of wavefront sensors for laser guide stars, Astronomy & Astrophysics 688, A21 (2024), Fig. 10; cropped; CC BY 4.0",
+        "shortCredit": "Ragazzoni et al. (2024) · A&A · CC BY 4.0"
       },
       {
-        "src": "assets/ingot-laboratory-bench.svg",
-        "alt": "Original illustration of a simulated sodium guide star, relay optics, a deformable lens, an ingot prism on precision positioning and a three-pupil detector",
-        "caption": "Simplified Padova laboratory testing workflow: simulated beacon, adjustable optical elements, prism alignment and pupil measurements. Not a photograph or exact bench layout. ",
-        "source": "https://doi.org/10.1117/12.2629355",
-        "credit": "Original ADOPT explanatory illustration based on Di Filippo et al. (2022) and Gomes Machado et al. (2024)",
-        "shortCredit": "ADOPT illustration · Di Filippo et al. (2022)"
+        "src": "assets/ingot-gomes-machado-2026.webp",
+        "alt": "Figure 1 from Gomes Machado et al. (2026) showing the revised INGOT wavefront sensor optical test-bench layout at INAF Padova: Eosin-Y laser guide-star source, 532 nm laser, deformable mirror, relay lenses, beamsplitters, ingot prism, and Shack–Hartmann reference arm.",
+        "caption": "Updated optical-bench layout for INGOT testing at INAF–OAPd. The green path shows the 532 nm excitation laser, the red/orange path represents broadband light from the simulated beacon, and the yellow path follows the 589 nm light selected by the narrow-band filter. The layout includes the ingot prism, deformable mirror, pupil imaging and a Shack–Hartmann reference branch. Cropped from Fig. 1.",
+        "source": "",
+        "credit": "Tânia Sofia Gomes Machado et al., SPIE conference contribution (2026), Fig. 1; author-supplied figure, cropped",
+        "shortCredit": "Gomes Machado et al. · SPIE 2026 (author-supplied)"
       }
     ]
   },

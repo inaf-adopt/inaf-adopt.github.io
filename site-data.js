@@ -1106,49 +1106,63 @@ window.ADOPT_PROJECTS = [
     "accent": "teal",
     "icon": "◎",
     "overline": "Previous involvement · Multi-conjugate AO and interferometry",
-    "blurb": "A near-infrared interferometric camera combining the light from the LBT’s two mirrors.",
-    "description": "LINC-NIRVANA was developed to combine near-infrared light from the two 8.4-m LBT mirrors and achieve the resolution possible from their much larger interferometric baseline. It pioneered layer-oriented, multi-conjugate adaptive optics using natural guide stars and pyramid wavefront sensing.",
+    "blurb": "Layer-oriented multi-conjugate adaptive optics and near-infrared imaging at the Large Binocular Telescope.",
+    "description": "LINC-NIRVANA is a German–Italian near-infrared imager developed for the Large Binocular Telescope (LBT), whose two primary mirrors each measure 8.4 metres across. Installed at the telescope in 2016, it was conceived to combine multi-conjugate adaptive optics (MCAO) with eventual interferometric imaging. Its original Fizeau beam-combination concept aimed to exploit the LBT’s approximately 23-metre maximum baseline; this was a design objective rather than an established routine science mode. Each LBT arm has ground-layer and high-layer pyramid wavefront sensors. The ground-layer system can combine light from up to 12 natural guide stars in an annulus around the science field, driving the telescope’s 672-actuator adaptive secondary mirror. The high-layer sensor can use up to eight guide stars within the central two-arcminute field and drive a 349-actuator deformable mirror conjugated to about 7.1 km altitude. Commissioning demanded precise alignment of the large optical bench, multiple star probes, telescope interfaces and changing flexure.",
     "science": [
-      "Resolving the structure of star-forming environments and circumstellar discs.",
-      "Observing stellar populations, interacting galaxies and compact structures.",
-      "Studying interferometric imaging and the correction of atmospheric turbulence."
+      "High-resolution near-infrared studies of crowded stellar populations and star-forming environments.",
+      "Layer-oriented MCAO with natural guide stars sensed at ground and high atmospheric layers.",
+      "Testing wavefront-sensor calibration, alignment and commissioning methods for large telescope instrumentation."
     ],
-    "technical": "Its design combined beams in Fizeau mode, employed separate ground/high-layer adaptive optics and fringe/flexure tracking. Published design goals describe J/H/K imaging at roughly 1–2.4 µm with a maximum 23-m baseline.",
+    "technical": "Each LBT arm includes ground-layer and high-layer multi-pyramid wavefront sensing, using up to 12 and eight natural guide stars respectively. The original 23-m-baseline interferometric imaging goal is not a routinely achieved observing mode.",
     "specs": [
       [
-        "Telescope",
-        "2 × 8.4-m LBT primary mirrors"
+        "Near-infrared bands",
+        "J, H and K (design)"
       ],
       [
-        "Interferometric baseline",
-        "Up to 23 m"
+        "Science camera field",
+        "Approx. 10 × 10 arcsec (original)"
       ],
       [
-        "Design wavelength",
-        "Approximately 1–2.4 µm"
+        "AO guide stars",
+        "Up to 12 + 8 per arm"
       ],
       [
-        "Design field",
-        "Around 10 × 10 arcsec"
+        "MCAO first light",
+        "April 2018"
       ]
     ],
-    "contribution": "Group members contributed to optical alignment, wavefront sensing, integration and on-sky commissioning through the international LINC-NIRVANA collaboration.",
+    "contribution": "ADOPT group members contributed to the ground-layer pyramid wavefront sensors and star-probe systems, opto-mechanical alignment, integration, calibration and on-sky MCAO commissioning.",
     "refs": [
       [
-        "Max Planck LINC-NIRVANA instrument description",
+        "LINC-NIRVANA instrument overview (MPIfR)",
         "https://www.mpifr-bonn.mpg.de/393074/lincnirvana"
       ],
       [
-        "MPIA LINC-NIRVANA instrument example",
-        "https://www.mpia.de/en/institute/technical-depts/eng-design/examples/LINC-NIRVANA"
+        "LINC-NIRVANA installation gallery (LBTO)",
+        "https://www.lbto.org/linc-nirvana-settles-in-its-new-home-at-lbt/"
+      ],
+      [
+        "MCAO commissioning paper (SPIE)",
+        "https://doi.org/10.1117/12.2313421"
+      ],
+      [
+        "NIRVANA-VIS successor project",
+        "https://inaf-adopt.github.io/project-nirvana.html"
       ]
     ],
     "source": "https://www.mpifr-bonn.mpg.de/393074/lincnirvana",
     "pending": false,
     "contributionHeading": "Our contribution",
     "phase": "Previous group involvement",
-    "reviewed": "31 October 2026",
-    "partial": false
+    "reviewed": "4 November 2026",
+    "partial": false,
+    "overview": {
+      "context": "LINC-NIRVANA is a German–Italian near-infrared imager developed for the Large Binocular Telescope (LBT), whose two primary mirrors each measure 8.4 metres across. Installed at the telescope in 2016, it was conceived to combine multi-conjugate adaptive optics (MCAO) with eventual interferometric imaging. Its original Fizeau beam-combination concept aimed to exploit the LBT’s approximately 23-metre maximum baseline; this was a design objective rather than an established routine science mode.",
+      "objectives": "The project sought sharp near-infrared images for studies of crowded stellar populations, star-forming regions, circumstellar environments and compact structures. Its innovative approach uses natural guide stars in two fields to measure turbulence at different atmospheric heights. The MCAO sensing and correction concept spans a two-arcminute field, while the original infrared science-camera field is much smaller, approximately 10 × 10 arcseconds; these two fields should not be confused.",
+      "methods": "Each LBT arm has ground-layer and high-layer pyramid wavefront sensors. The ground-layer system can combine light from up to 12 natural guide stars in an annulus around the science field, driving the telescope’s 672-actuator adaptive secondary mirror. The high-layer sensor can use up to eight guide stars within the central two-arcminute field and drive a 349-actuator deformable mirror conjugated to about 7.1 km altitude. Commissioning demanded precise alignment of the large optical bench, multiple star probes, telescope interfaces and changing flexure.",
+      "results": "First technical light was recorded in November 2016 and MCAO first light was reported in April 2018. Later on-sky ground-layer adaptive-optics tests demonstrated point-spread-function width improvements of up to a factor of three under the reported conditions. The project produced important experience in multi-pyramid wavefront sensing, alignment, calibration and commissioning. Its envisioned interferometric capability should not be presented as a routinely achieved observing mode, and LINC-NIRVANA is no longer in regular scientific use. Its existing platform also motivates the separately developed NIRVANA-VIS visible-channel upgrade."
+    }
   },
   {
     "id": "waterfall",

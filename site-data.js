@@ -1257,49 +1257,85 @@ window.ADOPT_PROJECTS = [
     "accent": "sand",
     "icon": "◉",
     "overline": "Previous involvement · Exoplanet photometry",
-    "blurb": "Precise measurements of known exoplanets passing in front of bright stars.",
-    "description": "CHEOPS (CHaracterising ExOPlanet Satellite) is an ESA space telescope that observes bright stars already known to host exoplanets. By measuring small decreases in starlight during transits, CHEOPS determines planet radii with high precision, helping researchers infer densities and compositions when masses are known.",
+    "blurb": "High-precision exoplanet photometry with a space telescope whose optics were developed with INAF Padova.",
+    "description": "CHEOPS (CHaracterising ExOPlanet Satellite) is ESA’s first S-class space science mission, in partnership with Switzerland. It observes known exoplanets transiting bright stars, measuring their sizes to constrain bulk densities and interiors when masses are available. INAF Padova contributed to the telescope’s optical design and to its assembly, integration and verification.",
     "science": [
-      "Characterising super-Earth and Neptune-sized exoplanets.",
-      "Understanding planetary structures, formation and orbital properties.",
-      "Supporting follow-up studies of known planetary systems."
+      "Measuring accurate radii and densities of known exoplanets.",
+      "Studying planetary architectures, transit timing, occultations and phase curves.",
+      "Supporting comparative planetology and follow-up observations."
     ],
-    "technical": "The spacecraft carries a single stable, high-precision photometer with a 30-cm effective-aperture telescope and a CCD detector. Launched in 2019, CHEOPS orbits at an altitude around 700 km. Its status as an ADOPT past project refers to historical group involvement, not the operating status of the ESA mission.",
+    "technical": "CHEOPS uses a Ritchey–Chrétien telescope with a 320 mm entrance pupil (about 300 mm effective aperture), back-end optics and a visible/near-infrared CCD. Optics are configured for highly stable transit photometry. The INAF Padova demonstration model established optical alignment and test procedures subsequently used in the flight programme.",
     "specs": [
       [
-        "Telescope effective aperture",
-        "30 cm"
+        "Entrance pupil / effective aperture",
+        "320 mm / ≈300 mm"
       ],
       [
-        "Science field",
-        "About 19 × 19 arcmin"
+        "Spectral range",
+        "400–1100 nm"
+      ],
+      [
+        "Field of view",
+        "≈19 × 19 arcmin"
       ],
       [
         "Orbit",
-        "Sun-synchronous, ~700 km"
+        "Sun-synchronous, ≈700 km"
       ],
       [
         "Launch",
         "18 December 2019"
       ]
     ],
-    "contribution": "This archive provides context for earlier involvement in space-camera optical development. Mission operations and scientific results are documented by ESA and the CHEOPS collaboration.",
+    "contribution": "INAF Padova researchers worked on the telescope optical design, stray-light analysis, demonstration-model assembly and alignment, and ground-support equipment and verification procedures for the flight instrument, in collaboration with INAF Catania, the University of Bern and industrial partners.",
     "refs": [
       [
         "ESA CHEOPS mission",
         "https://www.esa.int/Science_Exploration/Space_Science/Cheops"
       ],
       [
-        "ESA CHEOPS technical overview",
-        "https://www.esa.int/Science_Exploration/Space_Science/Cheops/Cheops_overview2"
+        "Italian contribution — ASI",
+        "https://www.asi.it/en/planets-stars-universe/solar-system-and-beyond/cheops/"
+      ],
+      [
+        "INAF optical contribution",
+        "https://www.oact.inaf.it/en/project/cheops-en/"
+      ],
+      [
+        "CHEOPS mission consortium",
+        "https://cheops.space.unibe.ch/"
       ]
     ],
     "source": "https://www.esa.int/Science_Exploration/Space_Science/Cheops",
     "pending": false,
-    "contributionHeading": "Research context",
-    "phase": "Previous group involvement",
-    "reviewed": "31 October 2026",
-    "partial": false
+    "contributionHeading": "Our contribution",
+    "phase": "Previous ADOPT optical-development involvement; ESA mission operational",
+    "reviewed": "4 November 2026",
+    "partial": false,
+    "overview": {
+      "context": "CHEOPS (CHaracterising ExOPlanet Satellite) is an ESA–Swiss space mission launched on 18 December 2019. It studies bright stars already known to host planets, rather than surveying the sky for entirely new systems. When a planet crosses its star, the small decrease in brightness reveals its size. Combined with an independently determined mass, the radius constrains the planet’s bulk density and possible internal structure. The mission focuses particularly on super-Earths and sub-Neptunes.",
+      "objectives": "CHEOPS aims to establish precise planetary radii, investigate differences in composition and refine orbital properties. Repeated transits improve estimates of planetary periods and may reveal transit-timing variations in multiple-planet systems. The instrument can also observe occultations and phase variations of selected giant planets, providing information about reflected and emitted light. These measurements complement radial-velocity surveys and observations by other space and ground-based telescopes.",
+      "methods": "The high-precision photometer uses a Ritchey–Chrétien telescope with a 320 mm entrance pupil (about 300 mm effective aperture), back-end reimaging optics and a CCD covering roughly 400–1100 nm. Stellar images are deliberately spread over multiple pixels to support stable photometry. Optical design, stray-light rejection, thermal stability and accurate calibration are crucial. Researchers from INAF Padova and Catania developed the optical design and supported industrial manufacture. A demonstration telescope at Padova was assembled, aligned and verified to validate methods later applied to the flight hardware.",
+      "results": "The flight telescope was delivered to the Swiss-led CHEOPS consortium in 2017, and the spacecraft launched in December 2019. The mission remains operational. CHEOPS data have helped characterize the ultrahot planet WASP-189 b, reveal the resonant architecture of the six-planet TOI-178 system, and measure the striking reflectivity of LTT 9779 b. These are outcomes of the international mission collaboration. “Previous involvement” on the ADOPT website refers specifically to earlier group optical-development work, not the status of CHEOPS itself."
+    },
+    "figures": [
+      {
+        "src": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2018/08/artist_s_impression_of_cheops2/17657254-1-eng-GB/Artist_s_impression_of_Cheops.jpg",
+        "alt": "ESA illustration of CHEOPS in Earth orbit with the telescope aperture cover closed",
+        "caption": "CHEOPS spacecraft in Earth orbit, shown in an artist’s impression rather than an in-flight photograph.",
+        "credit": "ESA / ATG medialab · ESA Standard Licence",
+        "shortCredit": "ESA / ATG medialab",
+        "source": "https://www.esa.int/ESA_Multimedia/Images/2018/08/Artist_s_impression_of_Cheops2"
+      },
+      {
+        "src": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2018/08/cheops_telescope/17661445-1-eng-GB/Cheops_telescope.jpg",
+        "alt": "CHEOPS telescope in a cleanroom with technical staff working on the instrument at the University of Bern",
+        "caption": "CHEOPS telescope assembly and testing in the University of Bern cleanroom, not the earlier INAF Padova demonstration model.",
+        "credit": "University of Bern – T. Beck · ESA Standard Licence",
+        "shortCredit": "University of Bern – T. Beck",
+        "source": "https://www.esa.int/ESA_Multimedia/Images/2018/08/Cheops_telescope"
+      }
+    ]
   },
   {
     "id": "plato-2-0",

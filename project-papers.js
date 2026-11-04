@@ -186,51 +186,68 @@ window.ADOPT_PROJECT_PAPERS = {
   "ekarus": {
     "recent": [
       {
-        "title": "Cassiopee: Defining the next-generation deformable mirror and high-speed SWIR camera for adaptive optics applications",
-        "authors": "Neichel et al.",
+        "title": "EKARUS: The future of PAPYRUS at the Cima Ekar Telescope",
+        "authors": "Héritier, Greggio, Rebrysh et al.",
         "year": 2026,
-        "type": "Preprint",
-        "url": "https://arxiv.org/abs/2608.24526",
-        "note": "Related AO technology; EKARUS is a planned validation platform."
+        "type": "AO4ELT8 poster",
+        "journal": "AO4ELT8, Zenodo archive",
+        "url": "https://doi.org/10.5281/zenodo.21107775",
+        "doi": "10.5281/zenodo.21107775",
+        "note": "Direct EKARUS concept and architecture. Conference poster, not a refereed journal article."
+      },
+      {
+        "title": "EKARUS: A new Adaptive Optics R&D Platform at the Asiago Observatory",
+        "authors": "Greggio and Héritier",
+        "year": 2026,
+        "type": "ADONI 2026 conference abstract",
+        "url": "https://indico.ict.inaf.it/event/3479/attachments/11332/24569/ADONI_Abstract_Booklet%20final%20version.pdf",
+        "note": "Direct EKARUS project description, modular AO architecture and development plan. Workshop abstract."
+      }
+    ],
+    "foundational": [
+      {
+        "title": "PAPYRUS: from an adaptive optics system to an instrumental platform",
+        "authors": "Fétick et al.",
+        "year": 2024,
+        "type": "SPIE proceedings — predecessor",
+        "url": "https://doi.org/10.1117/12.3019758",
+        "doi": "10.1117/12.3019758",
+        "note": "PAPYRUS design heritage; not an EKARUS results paper."
       },
       {
         "title": "Optical gains measurement with a gain scheduling camera: On-sky demonstration with PAPYRUS and perspectives",
         "authors": "Striffling et al.",
         "year": 2025,
-        "type": "Journal paper",
+        "type": "Journal paper — predecessor",
         "url": "https://doi.org/10.1051/0004-6361/202555909",
         "doi": "10.1051/0004-6361/202555909",
-        "note": "PAPYRUS predecessor / related technology."
-      },
-      {
-        "title": "PAPYRUS: from an adaptive optics system to an instrumental platform",
-        "authors": "Fétick et al.",
-        "year": 2024,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.3019758",
-        "doi": "10.1117/12.3019758",
-        "note": "Predecessor platform, not an EKARUS results paper."
-      }
-    ],
-    "foundational": [
-      {
-        "title": "Simulation of LQG control with Pyramid Wavefront Sensor: preparation of PAPYRUS implementation",
-        "authors": "Levraud et al.",
-        "year": 2024,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1364/AOPT.2024.OF1F.4",
-        "doi": "10.1364/AOPT.2024.OF1F.4",
-        "note": "Related predecessor work."
+        "note": "On-sky methodology tested on PAPYRUS, not EKARUS."
       }
     ],
     "resources": [
       {
-        "title": "EKARUS: The future of PAPYRUS at the Cima Ekar Telescope",
-        "authors": "Héritier et al.",
+        "title": "Le stelle di Cassiopea nella prima luce di Ekarus",
+        "authors": "Valentina Guglielmo / Media INAF",
         "year": 2026,
-        "type": "Conference poster",
-        "url": "https://doi.org/10.5281/zenodo.21107775",
-        "note": "Direct EKARUS project reference; a poster, not a journal paper."
+        "type": "Official first-light report",
+        "url": "https://www.media.inaf.it/2026/09/17/prima-luce-ekarus/",
+        "note": "First-light observation and reported image-resolution improvement; not a refereed paper."
+      },
+      {
+        "title": "EKARUS — project website and first-light results",
+        "authors": "EKARUS collaboration",
+        "year": 2026,
+        "type": "Project website",
+        "url": "https://sites.google.com/inaf.it/adoni-coude/ekarus",
+        "note": "Official project first-light update reporting 40% Strehl at 650 nm under specific conditions."
+      },
+      {
+        "title": "Cassiopee: Defining the next-generation deformable mirror and high-speed SWIR camera for adaptive optics applications",
+        "authors": "Neichel et al.",
+        "year": 2026,
+        "type": "Related AO technology preprint",
+        "url": "https://arxiv.org/abs/2608.24526",
+        "note": "Proposed component validation on EKARUS; not an EKARUS observing result."
       }
     ]
   },

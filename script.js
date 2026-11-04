@@ -262,36 +262,41 @@
       const hasBibliography=[...(bibliography.recent||[]),...(bibliography.foundational||[]),...extras].length>0;
       const publications=hasBibliography?`<section class="container project-publications" aria-label="Selected project publications" id="project-publications">
         <h2>Selected publications</h2>
-        <p class="project-publications-intro">${p.id==='shark'?'Featured papers first-authored by Luca Marafatto, Jacopo Farinato, Domenico Barbato and Davide Ricci, with earlier related proceedings listed separately. Observational science papers using SHARK-NIR data appear below.':'Up to three recent research papers and two defining or foundational papers, selected for relevance and linked to their publisher or research archive. The bibliography was checked in October 2026 and is not an automatically updated feed.'}</p>
+        <p class="project-publications-intro">${p.id==='shark'?'Featured papers first-authored by Luca Marafatto, Jacopo Farinato, Domenico Barbato and Davide Ricci, with earlier related proceedings listed separately. Observational science papers using SHARK-NIR data appear below.':p.id==='nirvana'?'Selected instrument design and development papers from 2023–2026, followed by a related conference poster. The project is still preparing for first light.':'Up to three recent research papers and two defining or foundational papers, selected for relevance and linked to their publisher or research archive. The bibliography was checked in October 2026 and is not an automatically updated feed.'}</p>
         <div class="paper-columns">
-          ${papersSection('recent',p.id==='shark'?'Instrumentation and commissioning':'Recent papers','No recent project-specific research papers could be confirmed from public sources.')}
-          ${papersSection('foundational',p.id==='shark'?'Additional proceedings':'Defining papers','No defining papers have been verified for this listing yet.')}
+          ${papersSection('recent',p.id==='shark'?'Instrumentation and commissioning':p.id==='nirvana'?'Instrument development':'Recent papers','No recent project-specific research papers could be confirmed from public sources.')}
+          ${papersSection('foundational',p.id==='shark'?'Additional proceedings':p.id==='nirvana'?'Original concept':'Defining papers','No defining papers have been verified for this listing yet.')}
         </div>${extraSection}${bibNote}
         <p class="project-source-note">Conference papers and preprints are identified by type. Related instruments or predecessor studies are marked explicitly; references are not automatically attributed to ADOPT authors.</p>
       </section>`:'';
 
 
-      // SHARK-NIR has a concise, four-section project narrative and two credited figures.
-      const sharkOverview = (p.id==='shark' && p.overview) ? [
-        '<section class="container shark-overview" aria-label="SHARK-NIR: context, objectives, methods and results">',
+      // SHARK-NIR and NIRVANA-VIS share a concise four-section instrument story.
+      const isFeaturedProject=p.id==='shark'||p.id==='nirvana';
+      const storySections=p.id==='shark'
+        ? [['context','Context'],['objectives','Objectives'],['methods','Methods'],['results','Results']]
+        : [['overview','Overview'],['concept','Adaptive optics and imaging'],['science','Scientific objectives'],['development','Development and status']];
+      const featuredOverview = (isFeaturedProject && p.overview) ? [
+        '<section class="container shark-overview" aria-label="'+escapeText(p.name)+' project summary">',
         '<div class="shark-story">',
-        [['context','Context'],['objectives','Objectives'],['methods','Methods'],['results','Results']]
-          .map(([key,title])=>'<section class="shark-story-block"><h2>'+title+'</h2><p>'+escapeText(p.overview[key])+'</p></section>').join(''),
+        storySections.map(([key,title])=>'<section class="shark-story-block"><h2>'+title+'</h2><p>'+escapeText(p.overview[key])+'</p></section>').join(''),
         '</div><aside class="shark-at-a-glance"><h2>At a glance</h2>'+specs+facility+'</aside></section>',
-        '<section class="container shark-figures" aria-labelledby="shark-figures-heading"><h2 id="shark-figures-heading">Figures</h2><div class="shark-figure-grid">',
-        (p.figures||[]).map((f,i)=>'<figure class="shark-figure"><img loading="lazy" decoding="async" src="'+escapeText(f.src)+'" alt="'+escapeText(f.alt)+'"><figcaption><strong>Figure '+(i+1)+'.</strong> '+escapeText(f.caption)+'<span class="shark-figure-credit">Credit: <a href="'+escapeText(f.source)+'" target="_blank" rel="noopener noreferrer" title="'+escapeText(f.credit)+'">'+escapeText(f.shortCredit||f.credit)+' ↗</a></span></figcaption></figure>').join(''),
-        '</div><p class="shark-source-caption">A SHARK-NIR image showing the four known planets around HR 8799 is published in the <a href="https://www.lbto.org/wp-content/uploads/2024/05/LBT-annual-report-2023-final-web.pdf#page=25" target="_blank" rel="noopener noreferrer">LBTO 2023 annual report ↗</a>.</p></section>',
+        ...(p.id==='shark'?[
+          '<section class="container shark-figures" aria-labelledby="shark-figures-heading"><h2 id="shark-figures-heading">Figures</h2><div class="shark-figure-grid">',
+          (p.figures||[]).map((f,i)=>'<figure class="shark-figure"><img loading="lazy" decoding="async" src="'+escapeText(f.src)+'" alt="'+escapeText(f.alt)+'"><figcaption><strong>Figure '+(i+1)+'.</strong> '+escapeText(f.caption)+'<span class="shark-figure-credit">Credit: <a href="'+escapeText(f.source)+'" target="_blank" rel="noopener noreferrer" title="'+escapeText(f.credit)+'">'+escapeText(f.shortCredit||f.credit)+' ↗</a></span></figcaption></figure>').join(''),
+          '</div><p class="shark-source-caption">A SHARK-NIR image showing the four known planets around HR 8799 is published in the <a href="https://www.lbto.org/wp-content/uploads/2024/05/LBT-annual-report-2023-final-web.pdf#page=25" target="_blank" rel="noopener noreferrer">LBTO 2023 annual report ↗</a>.</p></section>'
+        ]:[]),
         '<section class="container project-knowledge shark-contribution" aria-label="ADOPT contribution and project sources"><div class="project-knowledge-main"><h2>Our contribution</h2><p>'+escapeText(p.contribution)+'</p>'+teamLinks+'</div><aside class="project-knowledge-aside"><h2>Learn more</h2>'+links+'</aside></section>'
       ].join('') : '';
       detail.innerHTML=`
         <section class="container inner-hero detail-hero">
           <a class="back-link" href="${back}">← ${p.status==='past'?'Previous involvement':'All projects'}</a>
-          ${p.id==='shark'?'':`<div class="eyebrow"><span class="small-line"></span> ${escapeText(p.overline)}</div>`}
+          ${isFeaturedProject?'':`<div class="eyebrow"><span class="small-line"></span> ${escapeText(p.overline)}</div>`}
           <h1>${escapeText(p.name)}</h1>
           <p class="page-lede">${escapeText(p.blurb)}</p>${note}
         </section>
-        ${sharkOverview}
-        <section class="container detail-grid${p.id==='shark'?' shark-superseded':''}" aria-label="Project background">
+        ${featuredOverview}
+        <section class="container detail-grid${isFeaturedProject?' shark-superseded':''}" aria-label="Project background">
           ${p.id==='soxs'?`<figure class="detail-photo"><img src="assets/photos/soxs.jpg" alt="SOXS on the New Technology Telescope at La Silla" width="1280" height="964"><figcaption>Credit: <a href="https://www.eso.org/public/images/ann25011b/">P. Schipani/INAF</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></figcaption></figure>`:`<div class="detail-visual art-${escapeText(p.accent)}"><span class="detail-ring ring-a"></span><span class="detail-ring ring-b"></span><span class="detail-symbol">${escapeText(p.icon)}</span><span class="detail-label">${p.status==='past'?'PREVIOUS INVOLVEMENT':'RESEARCH PROJECT'}</span></div>`}
           <div class="detail-copy">
             <h2>About the project</h2><p>${escapeText(p.description)}</p>
@@ -299,7 +304,7 @@
             ${facility}
           </div>
         </section>
-        <section class="container project-knowledge${p.id==='shark'?' shark-superseded':''}" aria-label="Technical details and references">
+        <section class="container project-knowledge${isFeaturedProject?' shark-superseded':''}" aria-label="Technical details and references">
           <div class="project-knowledge-main">
             <h2>Technical details</h2>
             <p>${escapeText(p.technical||'A verified public technical description is not yet available.')}</p>${specs}

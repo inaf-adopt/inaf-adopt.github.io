@@ -926,47 +926,55 @@ window.ADOPT_PROJECT_PAPERS = {
   "cheops": {
     "recent": [
       {
-        "title": "Space-based surveillance of Resident Space Objects with the CHEOPS space telescope",
-        "authors": "Gonçalves et al.",
-        "year": 2026,
-        "type": "Journal paper",
-        "url": "https://doi.org/10.1016/j.actaastro.2025.10.064",
-        "doi": "10.1016/j.actaastro.2025.10.064",
-        "note": "Application of the CHEOPS telescope outside its core exoplanet programme."
+        "title": "From a demonstration model to the flight model: AIV procedures and results for CHEOPS telescope",
+        "authors": "Bergomi et al.",
+        "year": 2018,
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 10698, 1069854",
+        "url": "https://doi.org/10.1117/12.2313992",
+        "doi": "10.1117/12.2313992",
+        "note": "INAF Padova-led optical alignment, verification and transfer of demonstration-model methods to flight hardware."
       },
       {
-        "title": "CHEOPS ground segment: Systems and automation for mission and science operations",
-        "authors": "Heitzmann et al.",
-        "year": 2026,
-        "type": "Journal paper",
-        "url": "https://doi.org/10.1016/j.ascom.2025.101016",
-        "doi": "10.1016/j.ascom.2025.101016"
+        "title": "Aligning the demonstration model of CHEOPS",
+        "authors": "Bergomi et al.",
+        "year": 2016,
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 9904, 990439",
+        "url": "https://doi.org/10.1117/12.2232136",
+        "doi": "10.1117/12.2232136",
+        "note": "Demonstration-model assembly, opto-mechanical alignment and tests at INAF Padova."
       },
       {
-        "title": "CHEOPS in-flight performance: A comprehensive look at the first 3.5 yr of operations",
-        "authors": "Fortier et al.",
-        "year": 2024,
-        "type": "Journal paper",
-        "url": "https://doi.org/10.1051/0004-6361/202348576",
-        "doi": "10.1051/0004-6361/202348576"
+        "title": "AIV procedure for a CHEOPS demonstration model",
+        "authors": "Bergomi et al.",
+        "year": 2014,
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 9143, 91435B",
+        "url": "https://doi.org/10.1117/12.2056635",
+        "doi": "10.1117/12.2056635",
+        "note": "Assembly, integration and verification strategy and ground-support equipment."
       }
     ],
     "foundational": [
       {
+        "title": "CHEOPS: a space telescope for ultra-high precision photometry of exoplanet transits",
+        "authors": "Cessa et al.",
+        "year": 2017,
+        "type": "SPIE proceedings",
+        "url": "https://doi.org/10.1117/12.2304164",
+        "doi": "10.1117/12.2304164",
+        "note": "Mission instrument architecture and photometric requirements with INAF Padova co-authors."
+      },
+      {
         "title": "The CHEOPS mission",
         "authors": "Benz et al.",
         "year": 2021,
-        "type": "Journal paper",
+        "type": "Journal mission paper",
+        "journal": "Experimental Astronomy 51",
         "url": "https://doi.org/10.1007/s10686-020-09679-4",
-        "doi": "10.1007/s10686-020-09679-4"
-      },
-      {
-        "title": "CHEOPS data reduction pipeline",
-        "authors": "Hoyer et al.",
-        "year": 2020,
-        "type": "Journal paper",
-        "url": "https://doi.org/10.1051/0004-6361/201936325",
-        "doi": "10.1051/0004-6361/201936325"
+        "doi": "10.1007/s10686-020-09679-4",
+        "note": "Foundational description of the spacecraft, operations and scientific programme."
       }
     ]
   },

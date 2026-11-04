@@ -291,7 +291,7 @@
         '</div><aside class="shark-at-a-glance"><h2>At a glance</h2>'+specs+facility+'</aside></section>',
         ...(p.id==='shark'||p.id==='mezzocielo'||p.id==='nirvana'||p.id==='mavis'||p.id==='soxs'||p.id==='matto'||p.id==='ekarus'||p.id==='ingot'||p.id==='vstpol'||p.id==='plato'||p.id==='lbcmos'||p.id==='cheops'?[
           '<section class="container shark-figures" aria-labelledby="shark-figures-heading"><h2 id="shark-figures-heading">Figures</h2><div class="shark-figure-grid">',
-          (p.figures||[]).map((f,i)=>'<figure class="shark-figure"><img loading="lazy" decoding="async" src="'+escapeText(f.src)+'" alt="'+escapeText(f.alt)+'"><figcaption><strong>Figure '+(i+1)+'.</strong> '+escapeText(f.caption)+'<span class="shark-figure-credit">Credit: <a href="'+escapeText(f.source)+'" target="_blank" rel="noopener noreferrer" title="'+escapeText(f.credit)+'">'+escapeText(f.shortCredit||f.credit)+' ↗</a></span></figcaption></figure>').join(''),
+          (p.figures||[]).map((f,i)=>'<figure class="shark-figure"><img loading="lazy" decoding="async" src="'+escapeText(f.src)+'" alt="'+escapeText(f.alt)+'"><figcaption><strong>Figure '+(i+1)+'.</strong> '+escapeText(f.caption)+'<span class="shark-figure-credit">Credit: '+(f.source?'<a href="'+escapeText(f.source)+'" target="_blank" rel="noopener noreferrer" title="'+escapeText(f.credit)+'">'+escapeText(f.shortCredit||f.credit)+' ↗</a>':'<span title="'+escapeText(f.credit)+'">'+escapeText(f.shortCredit||f.credit)+'</span>')+'</span></figcaption></figure>').join(''),
           '</div>',
           p.id==='shark'
             ? '<p class="shark-source-caption">A SHARK-NIR image showing the four known planets around HR 8799 is published in the <a href="https://www.lbto.org/wp-content/uploads/2024/05/LBT-annual-report-2023-final-web.pdf#page=25" target="_blank" rel="noopener noreferrer">LBTO 2023 annual report ↗</a>.</p></section>'
@@ -301,6 +301,8 @@
               ? '<p class="shark-source-caption">Both illustrations show design concepts, not photographs of an installed or operational MAVIS instrument.</p></section>'
               : p.id==='ekarus'
               ? '<p class="shark-source-caption">The optical schematic shows EKARUS; the telescope photograph shows its host facility, not the instrument bench.</p></section>'
+              : p.id==='ingot'
+              ? '<p class="shark-source-caption">These are cropped figures from the cited research works. The revised 2026 optical bench is a design layout, not a demonstration of achieved on-sky performance.</p></section>'
               : p.id==='soxs'
               ? '<p class="shark-source-caption">The supernova spectrum is from SOXS first-light observations, not a peer-reviewed astrophysical science paper.</p></section>'
               : p.id==='lbcmos' ? '<p class="shark-source-caption">The instrument photo shows the existing CCD-based LBC cameras. The CMOS figure is an explanatory concept, not a verified detector arrangement or finished upgrade.</p></section>'

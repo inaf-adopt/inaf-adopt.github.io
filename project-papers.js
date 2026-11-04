@@ -443,28 +443,34 @@ window.ADOPT_PROJECT_PAPERS = {
   "plato": {
     "recent": [
       {
-        "title": "The PLATO field selection process: III. Selection of the Prime Sample for the LOPS2 field",
+        "title": "The PLATO field selection process – III. Selection of the Prime Sample for the LOPS2 field",
         "authors": "Nascimbeni et al.",
         "year": 2026,
-        "type": "Journal paper",
+        "type": "Refereed journal paper",
+        "journal": "Astronomy & Astrophysics 710, A300",
         "url": "https://doi.org/10.1051/0004-6361/202659714",
-        "doi": "10.1051/0004-6361/202659714"
+        "doi": "10.1051/0004-6361/202659714",
+        "note": "Defines the 15,000-star Prime Sample and follow-up priorities; includes Padova contributors."
       },
       {
-        "title": "Following up the Kepler field with PLATO: transit timing performance",
-        "authors": "Mitchell et al.",
-        "year": 2026,
-        "type": "Journal paper",
-        "url": "https://doi.org/10.1093/mnras/stag1174",
-        "doi": "10.1093/mnras/stag1174"
+        "title": "PLATO: verification of in-orbit performances through STOP analysis",
+        "authors": "Greggio et al.",
+        "year": 2024,
+        "type": "SPIE conference paper",
+        "journal": "Proceedings of SPIE 13092, 130924E",
+        "url": "https://doi.org/10.1117/12.3020466",
+        "doi": "10.1117/12.3020466",
+        "note": "Padova-led structural, thermal, optical and performance modelling of the flight cameras."
       },
       {
-        "title": "Impact of charge transfer inefficiency on transit light curves: A correction strategy for PLATO",
-        "authors": "Mishra et al.",
-        "year": 2026,
-        "type": "Journal paper",
-        "url": "https://doi.org/10.1051/0004-6361/202557037",
-        "doi": "10.1051/0004-6361/202557037"
+        "title": "PLATO telescope optical units: an update on working status",
+        "authors": "Magrin et al.",
+        "year": 2020,
+        "type": "SPIE conference paper",
+        "journal": "Proceedings of SPIE 11443",
+        "url": "https://doi.org/10.1117/12.2562370",
+        "doi": "10.1117/12.2562370",
+        "note": "Optical-unit development, alignment and engineering status with extensive INAF Padova participation."
       }
     ],
     "foundational": [
@@ -472,19 +478,24 @@ window.ADOPT_PROJECT_PAPERS = {
         "title": "The PLATO mission",
         "authors": "Rauer et al.",
         "year": 2025,
-        "type": "Journal paper",
+        "type": "Refereed journal paper",
+        "journal": "Experimental Astronomy 59, article 26",
         "url": "https://doi.org/10.1007/s10686-025-09985-9",
-        "doi": "10.1007/s10686-025-09985-9"
+        "doi": "10.1007/s10686-025-09985-9",
+        "note": "Current mission and instrument overview; its historical launch estimate should be superseded by the latest ESA schedule."
       },
       {
-        "title": "The PLATO 2.0 mission",
-        "authors": "Rauer et al.",
-        "year": 2014,
-        "type": "Journal paper",
-        "url": "https://doi.org/10.1007/s10686-014-9383-4",
-        "doi": "10.1007/s10686-014-9383-4"
+        "title": "PLATO: detailed design of the telescope optical units",
+        "authors": "Magrin et al.",
+        "year": 2010,
+        "type": "SPIE conference paper",
+        "journal": "Proceedings of SPIE 7731, 773124",
+        "url": "https://doi.org/10.1117/12.857237",
+        "doi": "10.1117/12.857237",
+        "note": "Foundational Padova optical study. Earlier camera counts reflect a historical design, not the final 26-camera baseline."
       }
-    ]
+    ],
+    "note": "PLATO is still pre-launch. These are instrument-development and mission-preparation publications, not discoveries made using PLATO flight data."
   },
   "vstpol": {
     "recent": [

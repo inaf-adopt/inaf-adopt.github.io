@@ -39,8 +39,15 @@ if (typeof require==='function' && require.main===module) {
      const html=fs.readFileSync(target,'utf8');
      const expectedTitle='<title>'+esc(p.name)+' — ADOPT | INAF Padova</title>';
      const expectedCanonical='<link rel="canonical" href="https://inaf-adopt.github.io/project-'+p.id+'.html">';
-     const expectedContainer='<div data-project-detail data-project-id="'+p.id+'">';
-     if(!html.includes(expectedTitle)||!html.includes(expectedCanonical)||!html.includes(expectedContainer))
+     // Both the shared dynamic layout and a complete, manually curated static
+     // layout are supported. Preserve the latter instead of regenerating it.
+     const hasContainer=[...html.matchAll(/<div\b[^>]*>/g)].some(match=>{
+       const tag=match[0];
+       return tag.includes('data-project-id="'+p.id+'"') &&
+         (/\bdata-project-detail(?:\s|=|>)/.test(tag) ||
+          /\bclass="[^"]*\bproject-detail-static\b[^"]*"/.test(tag));
+     });
+     if(!html.includes(expectedTitle)||!html.includes(expectedCanonical)||!hasContainer)
        throw Error('Project page metadata or container mismatch: '+target);
      if(curated.has(p.id)&&(!html.includes('id="project-publications"')||(html.match(/class="shark-story-block"/g)||[]).length!==4))
        throw Error('Curated project page incomplete: '+target);

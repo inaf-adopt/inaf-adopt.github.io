@@ -114,7 +114,8 @@ window.ADOPT_PEOPLE = [
     "projects": [
       "SHARK-NIR",
       "MAVIS",
-      "MORFEO"
+      "MORFEO",
+      "CHEOPS"
     ],
     "links": [
       {
@@ -294,7 +295,8 @@ window.ADOPT_PEOPLE = [
     "projects": [
       "INGOT",
       "MezzoCielo",
-      "Space Debris"
+      "Space Debris",
+      "CHEOPS"
     ],
     "links": [
       {
@@ -375,7 +377,8 @@ window.ADOPT_PEOPLE = [
     "projects": [
       "SHARK-NIR",
       "PLATO",
-      "MORFEO"
+      "MORFEO",
+      "CHEOPS"
     ],
     "links": [
       {
@@ -432,7 +435,8 @@ window.ADOPT_PEOPLE = [
     "projects": [
       "MAVIS",
       "MATTO",
-      "SHARK-NIR"
+      "SHARK-NIR",
+      "CHEOPS"
     ],
     "links": [
       {
@@ -509,7 +513,8 @@ window.ADOPT_PEOPLE = [
     "projects": [
       "PLATO",
       "MORFEO",
-      "MezzoCielo"
+      "MezzoCielo",
+      "CHEOPS"
     ],
     "links": [
       {
@@ -536,7 +541,8 @@ window.ADOPT_PEOPLE = [
     "projects": [
       "SHARK-NIR",
       "MORFEO",
-      "MAVIS"
+      "MAVIS",
+      "CHEOPS"
     ],
     "links": [
       {
@@ -697,7 +703,8 @@ window.ADOPT_PEOPLE = [
     "projects": [
       "MAVIS",
       "PLATO",
-      "INGOT"
+      "INGOT",
+      "CHEOPS"
     ],
     "links": [
       {
@@ -724,7 +731,8 @@ window.ADOPT_PEOPLE = [
     "projects": [
       "MORFEO",
       "MezzoCielo",
-      "PLATO"
+      "PLATO",
+      "CHEOPS"
     ],
     "links": [
       {

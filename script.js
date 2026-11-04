@@ -259,7 +259,6 @@
           <ol class="paper-list science-results-list">${observationalPapers.map(paperItem).join('')}</ol>
           <p class="project-source-note">Selected refereed science studies, not an exhaustive or automatically updated bibliography. Papers based on multiple observatories identify the role of this instrument; inclusion does not imply authorship by ADOPT.</p>
         </section>`:'';
-      const scienceResultsJump=observationalPapers.length?'<a class="project-papers-jump" href="#instrument-science-papers">Science results from the instrument <span aria-hidden="true">↓</span></a>':'';
       const hasBibliography=[...(bibliography.recent||[]),...(bibliography.foundational||[]),...extras].length>0;
       const publications=hasBibliography?`<section class="container project-publications" aria-label="Selected project publications" id="project-publications">
         <h2>Selected publications</h2>
@@ -289,7 +288,7 @@
           <a class="back-link" href="${back}">← ${p.status==='past'?'Previous involvement':'All projects'}</a>
           ${p.id==='shark'?'':`<div class="eyebrow"><span class="small-line"></span> ${escapeText(p.overline)}</div>`}
           <h1>${escapeText(p.name)}</h1>
-          <p class="page-lede">${escapeText(p.blurb)}</p>${note}<div class="project-jump-links">${hasBibliography?'<a class="project-papers-jump" href="#project-publications">Selected publications ↓</a>':''}${scienceResultsJump}</div>
+          <p class="page-lede">${escapeText(p.blurb)}</p>${note}
         </section>
         ${sharkOverview}
         <section class="container detail-grid${p.id==='shark'?' shark-superseded':''}" aria-label="Project background">

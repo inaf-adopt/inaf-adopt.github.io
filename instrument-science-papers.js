@@ -50,7 +50,7 @@ window.ADOPT_INSTRUMENT_SCIENCE_PAPERS = {
   },
   "cheops": {
     "instrument": "CHEOPS",
-    "intro": "Peer-reviewed exoplanet science based on photometric observations from the operational CHEOPS space telescope. Several studies also use complementary TESS or ground-based observations.",
+    "intro": "Selected peer-reviewed science using CHEOPS photometry, sometimes combined with TESS or ground-based observations. Not all papers are led by ADOPT.",
     "papers": [
       {
         "title": "CHEOPS photometry from 2024 reveals a reversal in the transit-timing variations of AU Mic c",
@@ -81,6 +81,36 @@ window.ADOPT_INSTRUMENT_SCIENCE_PAPERS = {
         "doi": "10.1093/mnras/stag158",
         "url": "https://doi.org/10.1093/mnras/stag158",
         "note": "A dedicated CHEOPS observing programme, combined with TESS photometry and HARPS-N radial velocities, measures properties of two planets on opposite sides of the planetary radius gap."
+      },
+      {
+        "title": "The extremely high albedo of LTT 9779 b revealed by CHEOPS: An ultrahot Neptune with a highly metallic atmosphere",
+        "authors": "Hoyer et al.",
+        "year": 2023,
+        "type": "Journal science paper",
+        "journal": "Astronomy & Astrophysics 675, A81",
+        "url": "https://doi.org/10.1051/0004-6361/202346117",
+        "doi": "10.1051/0004-6361/202346117",
+        "note": "CHEOPS observations reveal a highly reflective ultrahot Neptune."
+      },
+      {
+        "title": "Six transiting planets and a chain of Laplace resonances in TOI-178",
+        "authors": "Leleu et al.",
+        "year": 2021,
+        "type": "Journal science paper",
+        "journal": "Astronomy & Astrophysics 649, A26",
+        "url": "https://doi.org/10.1051/0004-6361/202039767",
+        "doi": "10.1051/0004-6361/202039767",
+        "note": "CHEOPS and other facilities reveal six planets, five linked in a chain of resonances."
+      },
+      {
+        "title": "The hot dayside and asymmetric transit of WASP-189 b seen by CHEOPS",
+        "authors": "Lendl et al.",
+        "year": 2020,
+        "type": "Journal science paper",
+        "journal": "Astronomy & Astrophysics 643, A94",
+        "url": "https://doi.org/10.1051/0004-6361/202038677",
+        "doi": "10.1051/0004-6361/202038677",
+        "note": "CHEOPS photometry characterizes this extremely hot planet and its transit geometry."
       }
     ]
   }

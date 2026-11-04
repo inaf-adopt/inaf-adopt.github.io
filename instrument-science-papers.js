@@ -4,8 +4,18 @@
 window.ADOPT_INSTRUMENT_SCIENCE_PAPERS = {
   "shark": {
     "instrument": "SHARK-NIR",
-    "intro": "Peer-reviewed astrophysical research based on observations obtained with the commissioned SHARK-NIR instrument at the Large Binocular Telescope. Some studies combine its near-infrared data with observations from other facilities.",
+    "intro": "Selected refereed astrophysical studies using SHARK-NIR observations at the LBT, often combined with other instruments or techniques. Imaging non-detections can constrain unseen companions.",
     "papers": [
+      {
+        "title": "The GAPS programme at TNG – LXX. HD128717 B/Gaia-6 B: A long-period eccentric low-mass brown dwarf from astrometry and radial velocities",
+        "authors": "Pinamonti et al.",
+        "year": 2026,
+        "type": "Journal science paper",
+        "journal": "Astronomy & Astrophysics 707, A67",
+        "doi": "10.1051/0004-6361/202557414",
+        "url": "https://doi.org/10.1051/0004-6361/202557414",
+        "note": "SHARK-NIR H-band data constrain possible distant companions. The known brown dwarf was characterized using astrometry and radial velocities, not directly detected by SHARK-NIR."
+      },
       {
         "title": "The HOSTS survey: Suspected variable dust emission and constraints on companions around θ Boo",
         "authors": "Garreau et al.",

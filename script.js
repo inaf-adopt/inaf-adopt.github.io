@@ -262,19 +262,20 @@
       const hasBibliography=[...(bibliography.recent||[]),...(bibliography.foundational||[]),...extras].length>0;
       const publications=hasBibliography?`<section class="container project-publications" aria-label="Selected project publications" id="project-publications">
         <h2>Selected publications</h2>
-        <p class="project-publications-intro">${p.id==='shark'?'Featured papers first-authored by Luca Marafatto, Jacopo Farinato, Domenico Barbato and Davide Ricci, with earlier related proceedings listed separately. Observational science papers using SHARK-NIR data appear below.':p.id==='nirvana'?'Selected instrument design and development papers from 2023–2026, followed by a related conference poster. The project is still preparing for first light.':'Up to three recent research papers and two defining or foundational papers, selected for relevance and linked to their publisher or research archive. The bibliography was checked in October 2026 and is not an automatically updated feed.'}</p>
+        <p class="project-publications-intro">${p.id==='shark'?'Featured papers first-authored by Luca Marafatto, Jacopo Farinato, Domenico Barbato and Davide Ricci, with earlier related proceedings listed separately. Observational science papers using SHARK-NIR data appear below.':p.id==='nirvana'?'Selected instrument design and development papers from 2023–2026, followed by a related conference poster. The project is still preparing for first light.':p.id==='mezzocielo'?'Selected optical-design, materials and engineering publications, with the ESO scientific white paper listed separately. Design goals should not be read as achieved on-sky performance.':'Up to three recent research papers and two defining or foundational papers, selected for relevance and linked to their publisher or research archive. The bibliography was checked in October 2026 and is not an automatically updated feed.'}</p>
         <div class="paper-columns">
-          ${papersSection('recent',p.id==='shark'?'Instrumentation and commissioning':p.id==='nirvana'?'Instrument development':'Recent papers','No recent project-specific research papers could be confirmed from public sources.')}
-          ${papersSection('foundational',p.id==='shark'?'Additional proceedings':p.id==='nirvana'?'Original concept':'Defining papers','No defining papers have been verified for this listing yet.')}
+          ${papersSection('recent',p.id==='shark'?'Instrumentation and commissioning':p.id==='nirvana'?'Instrument development':p.id==='mezzocielo'?'Design, prototyping and materials':'Recent papers','No recent project-specific research papers could be confirmed from public sources.')}
+          ${papersSection('foundational',p.id==='shark'?'Additional proceedings':p.id==='nirvana'?'Original concept':p.id==='mezzocielo'?'Concept and engineering foundations':'Defining papers','No defining papers have been verified for this listing yet.')}
         </div>${extraSection}${bibNote}
         <p class="project-source-note">Conference papers and preprints are identified by type. Related instruments or predecessor studies are marked explicitly; references are not automatically attributed to ADOPT authors.</p>
       </section>`:'';
 
 
-      // SHARK-NIR and NIRVANA-VIS share a concise four-section instrument story.
-      const isFeaturedProject=p.id==='shark'||p.id==='nirvana';
+      // SHARK-NIR, NIRVANA-VIS and MezzoCielo share a concise four-section project story.
+      const isFeaturedProject=p.id==='shark'||p.id==='nirvana'||p.id==='mezzocielo';
       const storySections=p.id==='shark'
         ? [['context','Context'],['objectives','Objectives'],['methods','Methods'],['results','Results']]
+        : p.id==='mezzocielo' ? [['overview','Overview'],['science','Scientific objectives'],['optics','Optical concept and engineering'],['development','Development and status']]
         : [['overview','Overview'],['concept','Adaptive optics and imaging'],['science','Scientific objectives'],['development','Development and status']];
       const featuredOverview = (isFeaturedProject && p.overview) ? [
         '<section class="container shark-overview" aria-label="'+escapeText(p.name)+' project summary">',

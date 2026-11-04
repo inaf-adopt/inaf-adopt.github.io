@@ -119,7 +119,7 @@ These references describe the projects or related technology. They do not establ
 
 **Recent papers**
 
-- Schipani et al. (2025), [VSTPOL: making the VST a large survey telescope for optical polarimetry](https://arxiv.org/abs/2505.07113) — Preprint.
+- Schipani et al. (2024), [VSTPOL: making the VST a large survey telescope for optical polarimetry](https://doi.org/10.1117/12.3019695) — SPIE 13096, 130967L conference paper; [arXiv preprint posted in 2025](https://arxiv.org/abs/2505.07113).
 - Savarese et al. (2024), [VSTPOL: project management and system engineering activities for the new wide-field polarimetric mode of the VST](https://doi.org/10.1117/12.3020098) — Conference paper.
 - Colapietro et al. (2024), [VSTPOL: the control electronics design for the new polarimetric mode of the VST](https://doi.org/10.1117/12.3018872) — Conference paper.
 

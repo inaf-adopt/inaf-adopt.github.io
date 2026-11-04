@@ -851,38 +851,59 @@ window.ADOPT_PROJECT_PAPERS = {
   "linc-nirvana": {
     "recent": [
       {
+        "title": "LINC-NIRVANA commissioning at the Large Binocular Telescope – lessons learned",
+        "authors": "Radhakrishnan Santhakumari et al.",
+        "year": 2019,
+        "type": "AO4ELT6 proceedings (preprint posted in 2021)",
+        "url": "https://arxiv.org/abs/2112.01262",
+        "note": "On-sky MCAO commissioning experience, calibration, acquisition and instrument behaviour."
+      },
+      {
+        "title": "Commissioning multi-conjugate adaptive optics with LINC-NIRVANA on LBT",
+        "authors": "Herbst et al.",
+        "year": 2018,
+        "type": "SPIE 10703 proceedings",
+        "url": "https://doi.org/10.1117/12.2313421",
+        "doi": "10.1117/12.2313421",
+        "note": "Layer-oriented MCAO concept, first light and early commissioning."
+      },
+      {
+        "title": "Alignment and preliminary outcomes of an ELT-size instrument to a very large telescope: LINC-NIRVANA at LBT",
+        "authors": "Bergomi et al.",
+        "year": 2018,
+        "type": "AO4ELT5 proceedings",
+        "url": "https://doi.org/10.26698/AO4ELT5.0053",
+        "doi": "10.26698/AO4ELT5.0053",
+        "note": "Large-scale alignment of the instrument to the telescope and first technical outcomes."
+      },
+      {
         "title": "Installation and commissioning of the LINC-NIRVANA near-infrared MCAO imager on LBT",
         "authors": "Herbst et al.",
         "year": 2018,
-        "type": "Conference paper",
+        "type": "SPIE 10702 proceedings",
         "url": "https://doi.org/10.1117/12.2313368",
-        "doi": "10.1117/12.2313368"
-      },
+        "doi": "10.1117/12.2313368",
+        "note": "Mountaintop installation and initial commissioning activities."
+      }
+    ],
+    "foundational": [
       {
-        "title": "LINC-NIRVANA at LBT: final preparations for first light",
-        "authors": "Herbst et al.",
-        "year": 2016,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.2232707",
-        "doi": "10.1117/12.2232707"
+        "title": "Ground layer correction: the heart of LINC-NIRVANA",
+        "authors": "Radhakrishnan Santhakumari et al.",
+        "year": 2014,
+        "type": "SPIE 9148 proceedings",
+        "url": "https://doi.org/10.1117/12.2054988",
+        "doi": "10.1117/12.2054988",
+        "note": "Ground-layer sensing, star-probe architecture and multi-pyramid correction strategy."
       },
       {
         "title": "Final integration and alignment of LINC-NIRVANA",
         "authors": "Moreno-Ventas et al.",
         "year": 2016,
-        "type": "Conference paper",
+        "type": "SPIE 9908 proceedings",
         "url": "https://doi.org/10.1117/12.2231690",
-        "doi": "10.1117/12.2231690"
-      }
-    ],
-    "foundational": [
-      {
-        "title": "MCAO with LINC-NIRVANA at LBT: preparing for first light",
-        "authors": "Herbst et al.",
-        "year": 2016,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.2232596",
-        "doi": "10.1117/12.2232596"
+        "doi": "10.1117/12.2231690",
+        "note": "Hierarchical integration, optical alignment and verification."
       }
     ]
   },

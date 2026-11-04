@@ -292,41 +292,57 @@ window.ADOPT_PROJECT_PAPERS = {
   "nirvana": {
     "recent": [
       {
-        "title": "NirvanaVIS, an AO-assisted speckle holography add-on for visible wavelengths",
+        "title": "NirvanaVIS: the visible GLAO-assisted speckle holography imager for LBT approaching first light",
+        "authors": "Bergomi, van Gaalen et al.",
+        "year": 2026,
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 14149, Ground-based and Airborne Instrumentation for Astronomy XI",
+        "url": "https://doi.org/10.1117/12.3105002",
+        "doi": "10.1117/12.3105002",
+        "note": "Updated design, detector characterisation and progress towards first light."
+      },
+      {
+        "title": "NirvanaVIS at LBT: AO-assisted speckle holography for wide-field visible imaging",
+        "authors": "Umbriaco et al.",
+        "year": 2026,
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 14150",
+        "url": "https://doi.org/10.1117/12.3102986",
+        "doi": "10.1117/12.3102986",
+        "note": "Wide-field visible imaging concept and AO-assisted speckle reconstruction."
+      },
+      {
+        "title": "NirvanaVIS, exploiting ground-layer AO correction for speckle holography at visible wavelengths",
         "authors": "Bergomi et al.",
-        "year": 2023,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.13009/ao4elt7-2023-067",
-        "doi": "10.13009/ao4elt7-2023-067"
+        "year": 2024,
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 13096, Ground-based and Airborne Instrumentation for Astronomy X",
+        "url": "https://doi.org/10.1117/12.3018324",
+        "doi": "10.1117/12.3018324",
+        "note": "Ground-layer AO concept and visible-channel upgrade design."
       }
     ],
     "foundational": [
       {
-        "title": "Installation and commissioning of the LINC-NIRVANA near-infrared MCAO imager on LBT",
-        "authors": "Herbst et al.",
-        "year": 2018,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.2313368",
-        "doi": "10.1117/12.2313368",
-        "note": "Parent instrument, not the visible-channel upgrade."
-      },
-      {
-        "title": "LINC-NIRVANA at LBT: final preparations for first light",
-        "authors": "Herbst et al.",
-        "year": 2016,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.2232707",
-        "doi": "10.1117/12.2232707",
-        "note": "Parent instrument background."
+        "title": "NirvanaVIS, an AO-assisted speckle holography add-on for visible wavelengths",
+        "authors": "Bergomi et al.",
+        "year": 2023,
+        "type": "AO4ELT7 conference paper",
+        "journal": "Adaptive Optics for Extremely Large Telescopes VII",
+        "url": "https://doi.org/10.13009/ao4elt7-2023-067",
+        "doi": "10.13009/ao4elt7-2023-067",
+        "note": "Original visible-channel concept and proposed speckle-holography observing mode."
       }
     ],
     "resources": [
       {
         "title": "NirvanaVIS, final design and path toward sky of the visible GLAO-assisted speckle holography upgrade of LINC-NIRVANA",
-        "authors": "Bergomi et al.",
+        "authors": "Bergomi, van Gaalen et al.",
         "year": 2026,
-        "type": "Conference poster",
-        "url": "https://doi.org/10.5281/zenodo.21128548"
+        "type": "AO4ELT8 conference poster",
+        "url": "https://doi.org/10.5281/zenodo.21128548",
+        "doi": "10.5281/zenodo.21128548",
+        "note": "Project status, wide-field GLAO performance of LINC-NIRVANA and final proposed optical design."
       }
     ]
   },

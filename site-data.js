@@ -237,56 +237,70 @@ window.ADOPT_PROJECTS = [
   },
   {
     "id": "mezzocielo",
-    "name": "Mezzocielo",
+    "name": "MezzoCielo",
     "category": "Instrumentation",
-    "telescope": "Proposed wide-field survey telescope",
+    "telescope": "Proposed ground-based wide-field telescope",
     "accent": "violet",
     "icon": "✧",
-    "overline": "Instrumentation · Very wide field",
-    "blurb": "A telescope concept designed to observe a very wide area of the sky.",
-    "description": "MezzoCielo is a proposed wide-field optical system built around a spherical, monocentric design. An envelope of meniscus lenses surrounds a transparent, low-index liquid; multiple corrected cameras and detectors sample different viewing directions.",
+    "overline": "Instrumentation · Extremely wide field",
+    "blurb": "A proposed monocentric telescope for continuous monitoring of a large fraction of the visible sky.",
+    "description": "MezzoCielo explores a spherical, liquid-filled refractive optical collector and an array of correcting cameras for extremely wide-field observations. Optical, mechanical and laboratory development is progressing toward metre-class demonstrators.",
     "science": [
-      "Searching large sky areas for time-variable sources and fast transients.",
-      "Wide-area surveillance for space objects and space-traffic management.",
-      "Supporting rapid follow-up and multi-messenger astronomy."
+      "Early optical observations of supernovae, kilonovae and other rapidly evolving transients.",
+      "Finding counterparts of gravitational-wave and neutrino sources through continuous sky monitoring.",
+      "Surveillance of space objects, stellar variability and exoplanet transits."
     ],
-    "technical": "The research explores a spherical common-centre optical system rather than a conventional narrow-field reflector. Published engineering studies consider a 0.2–2 m aperture family with many cameras and fields extending to many thousands of square degrees; these are concepts and design targets, not established instrument performance.",
+    "technical": "A segmented spherical envelope of meniscus lenses encloses a transparent, low-index optical fluid. Correcting cameras are placed around the focal surface. Published work addresses optical-fluid properties, lens mechanics, thermal stability and birefringence. All quoted fields and apertures are design targets or studied configurations.",
     "specs": [
       [
-        "Design approach",
-        "Monocentric refractive telescope"
+        "Field of view",
+        "≈10,000 deg² (design target)"
       ],
       [
-        "Explored aperture class",
-        "About 0.2–2 m"
+        "Optical system",
+        "Monocentric; glass and optical fluid"
       ],
       [
-        "Studied wide-field range",
-        "About 5,000–20,000 deg²"
+        "Prototype pathway",
+        "40 cm → 1 m class"
       ],
       [
         "Project stage",
-        "Concept and demonstrator development"
+        "Prototype and demonstrator development"
       ]
     ],
-    "contribution": "Group members study the optical configuration, corrector design, optomechanics and performance of the wide-field telescope demonstrator.",
+    "contribution": "ADOPT researchers contribute to the optical architecture, corrector design, optical-fluid characterization, opto-mechanical engineering, prototyping, assembly, integration and verification, and the scientific case for time-domain observations.",
     "refs": [
       [
-        "INAF project description",
-        "https://schede.inaf.it/consulta/mostra?archdb=2022&selezione=608808d8a699e4108c87121a"
+        "ESO continuous-monitoring white paper (2025)",
+        "https://arxiv.org/abs/2512.18157"
       ],
       [
-        "ASTRASud / MezzoCielo work programme",
+        "MezzoCielo telescope engineering (SPIE 2024)",
+        "https://doi.org/10.1117/12.3019730"
+      ],
+      [
+        "Optical-fluid characterization (2024)",
+        "https://doi.org/10.1364/OME.531842"
+      ],
+      [
+        "ASTRASud / MezzoCielo development programme",
         "https://info.ira.inaf.it/en/research/projects/astrasud-en/"
       ]
     ],
     "status": "current",
-    "source": "https://schede.inaf.it/consulta/mostra?archdb=2022&selezione=608808d8a699e4108c87121a",
+    "source": "https://doi.org/10.1117/12.3019730",
     "pending": false,
     "contributionHeading": "Our contribution",
-    "phase": "Telescope demonstrator",
-    "reviewed": "31 October 2026",
-    "partial": false
+    "phase": "Optical design, prototyping and demonstrator development",
+    "reviewed": "4 November 2026",
+    "partial": false,
+    "overview": {
+      "overview": "MezzoCielo (“half the sky”) is a proposed class of extremely wide-field, ground-based telescope designed to monitor a large fraction of the sky observable from one site simultaneously. Its spherical, monocentric optical system is intended to combine a comparatively large collecting aperture with unprecedented sky coverage. Published designs explore fields of roughly 5,000–20,000 square degrees, with around 10,000 square degrees often used as a reference goal. These figures describe proposed configurations, not measured on-sky performance.",
+      "science": "The central scientific motivation is to observe the beginnings of short-lived astronomical events rather than discovering them hours or days later. Continuous, minute-cadence monitoring could reveal the early evolution of supernovae, kilonovae and gamma-ray bursts, and help identify electromagnetic counterparts to gravitational-wave or neutrino events. The ESO science white paper emphasises how this missing temporal coverage could complement classical sky surveys, including in the era of the Einstein Telescope. Further potential uses include space-debris and near-Earth-object tracking, stellar variability and exoplanet-transit monitoring.",
+      "optics": "The collector is conceived as a spherical envelope built from meniscus glass lenses arranged around a common optical centre, with a transparent, low-refractive-index optical liquid inside. Multiple correcting cameras and detectors sample different viewing directions and compensate for aberrations from the spherical primary optic. Research by Silvio Di Rosa, Roberto Ragazzoni, Demetrio Magrin and collaborators has investigated optical-fluid transmission and refractive-index variation, lens and frame loads, thermal effects, stress-induced birefringence, corrector optics and manufacturability. These studies test the feasibility of a segmented metre-class collector.",
+      "development": "MezzoCielo remains a development and prototyping programme, not an operational survey telescope. Papers published in 2026 describe progress from a 40 cm prototype towards a 1 m-class monocentric demonstrator and present further studies of the extremely wide-field optical design. The next challenges include validating collector and camera performance together, assembly and integration, thermal and mechanical stability, and high-cadence data handling. The longer-term goal is a continuously monitoring observatory able to identify transient phenomena very near their onset; its final capabilities and deployment remain to be demonstrated."
+    }
   },
   {
     "id": "matto",

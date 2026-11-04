@@ -72,40 +72,79 @@ window.ADOPT_PROJECT_PAPERS = {
   "mavis": {
     "recent": [
       {
+        "title": "MAVIS: mechanical design and prototyping of the adaptive optics module toward the FDR",
+        "authors": "Aliverti et al.",
+        "year": 2024,
+        "type": "SPIE proceedings",
+        "url": "https://doi.org/10.1117/12.3020276",
+        "doi": "10.1117/12.3020276",
+        "journal": "Proceedings of SPIE 13096",
+        "note": "AOM mechanical design, K-mirror development and prototype verification, including contributions from Padova."
+      },
+      {
         "title": "MAVIS: Imager and Spectrograph",
         "authors": "Ellis et al.",
         "year": 2024,
-        "type": "Conference paper",
+        "type": "SPIE proceedings",
         "url": "https://doi.org/10.1117/12.3018606",
-        "doi": "10.1117/12.3018606"
+        "doi": "10.1117/12.3018606",
+        "journal": "Proceedings of SPIE 13096",
+        "note": "Design and capabilities of the visible-light scientific instrumentation."
       },
       {
-        "title": "MAVIS: designing the interface between instrument control software and SRTC",
-        "authors": "Costa et al.",
+        "title": "MAVIS: control electronics design of the Adaptive Optics Module",
+        "authors": "Colapietro et al.",
         "year": 2024,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.3018360",
-        "doi": "10.1117/12.3018360"
-      },
-      {
-        "title": "MAVIS: System design, delivery, Reliability, Availability Maintainability and Safety - integrated framework and tools",
-        "authors": "Haynes et al.",
-        "year": 2024,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.3019838",
-        "doi": "10.1117/12.3019838"
+        "type": "SPIE proceedings",
+        "url": "https://doi.org/10.1117/12.3018905",
+        "doi": "10.1117/12.3018905",
+        "journal": "Proceedings of SPIE 13096",
+        "note": "Control-system architecture, electronics and cabling for the adaptive-optics subsystems."
       }
     ],
     "foundational": [
       {
-        "title": "MAVIS: science case, imager, and spectrograph",
-        "authors": "Ellis et al.",
+        "title": "MAVIS: preliminary design of the adaptive optics module",
+        "authors": "Viotto et al.",
+        "year": 2022,
+        "type": "SPIE proceedings",
+        "url": "https://doi.org/10.1117/12.2629441",
+        "doi": "10.1117/12.2629441",
+        "journal": "Proceedings of SPIE 12185",
+        "note": "MCAO wavefront sensing, calibration strategy, performance and stability design."
+      },
+      {
+        "title": "MAVIS Adaptive Optics Module: optical configuration and expected performance",
+        "authors": "Greggio et al.",
+        "year": 2022,
+        "type": "SPIE proceedings",
+        "url": "https://doi.org/10.1117/12.2630017",
+        "doi": "10.1117/12.2630017",
+        "journal": "Proceedings of SPIE 12185",
+        "note": "Optical architecture, alignment tolerances, distortion and expected performance."
+      },
+      {
+        "title": "MAVIS conceptual design",
+        "authors": "Rigaut et al.",
         "year": 2020,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.2561930",
-        "doi": "10.1117/12.2561930"
+        "type": "SPIE proceedings",
+        "url": "https://doi.org/10.1117/12.2561886",
+        "doi": "10.1117/12.2561886",
+        "journal": "Proceedings of SPIE",
+        "note": "Consortium's initial system concept and observing capabilities."
       }
-    ]
+    ],
+    "resources": [
+      {
+        "title": "The MAVIS science case",
+        "authors": "McDermid et al.",
+        "year": 2020,
+        "type": "Science case / preprint",
+        "url": "https://arxiv.org/abs/2009.09242",
+        "note": "Proposed scientific programmes for MAVIS; not observations with the completed instrument."
+      }
+    ],
+    "note": "All listed MAVIS papers describe design, development or science planning. MAVIS has not yet produced observational science results."
   },
   "morfeo": {
     "recent": [

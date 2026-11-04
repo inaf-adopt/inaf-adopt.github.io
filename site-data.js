@@ -635,53 +635,85 @@ window.ADOPT_PROJECTS = [
     "id": "vstpol",
     "name": "VSTPol",
     "category": "Instrumentation",
-    "telescope": "VLT Survey Telescope (VST), Paranal",
+    "telescope": "VLT Survey Telescope (VST), ESO Paranal Observatory",
     "accent": "sand",
     "icon": "◉",
     "overline": "VST · Wide-field optical polarimetry",
-    "blurb": "Mapping the polarisation of optical light across a wide sky field.",
-    "description": "VSTPol is a new polarimetric capability being developed for the INAF-operated VLT Survey Telescope. It adds measurements of the orientation and degree of light polarisation to wide-field imaging, providing information that ordinary brightness images cannot reveal.",
+    "blurb": "Wide-field linear optical polarimetry for the 2.6-m VLT Survey Telescope.",
+    "description": "VSTPol is an INAF-led upgrade to the VLT Survey Telescope, designed to add imaging linear polarimetry to the existing OmegaCAM visible-light survey system.",
     "science": [
-      "Investigating magnetic fields, scattering and emission processes.",
-      "Surveying large areas and following variable objects.",
-      "Studying optical polarisation associated with energetic Galactic and extragalactic sources."
+      "Magnetic fields, scattering media and dust throughout the Galaxy and beyond.",
+      "Polarimetric monitoring of blazars, active galactic nuclei and gamma-ray bursts alongside high-energy observatories.",
+      "Wide-field polarimetric surveys, extended sources and Solar System minor bodies."
     ],
-    "technical": "The project introduces a polarimetric mode into the wide-field VST/OmegaCAM system and requires coordinated optical, mechanical, detector, software and telescope-interface work.",
+    "technical": "A rotatable linear polarizer in an exchangeable field-corrector assembly provides a polarimetric mode without replacing OmegaCAM. The upgrade also requires motorised mechanisms, control electronics, software, interfaces and calibration.",
     "specs": [
       [
-        "Primary mirror",
-        "2.6 m"
+        "Telescope",
+        "2.6-m VLT Survey Telescope"
       ],
       [
-        "Survey field",
-        "Approximately 1 square degree"
+        "Field of view",
+        "1° × 1° (OmegaCAM)"
       ],
       [
-        "Science mode",
-        "Optical polarimetry"
+        "Polarimetry",
+        "Rotating linear polarizer"
       ],
       [
-        "Deployment",
-        "Installation/testing programme in 2026"
+        "Status",
+        "Installation and testing planned; dates being rescheduled"
       ]
     ],
-    "contribution": "The polarimetric mode brings together optical and mechanical interfaces, calibration and instrument validation. The linked project references describe the wider collaboration.",
+    "overview": {
+      "context": "VSTPol is an INAF-led upgrade for the 2.6-m VLT Survey Telescope (VST) at ESO’s Paranal Observatory in Chile. Its OmegaCAM visible-light camera images about one square degree of sky per pointing. VSTPol adds a complementary measurement: the direction and degree of linear polarization of incoming light, revealing physical information that ordinary brightness images cannot provide.",
+      "objectives": "Polarization probes magnetic fields, dust scattering and the geometry of emitting regions. VSTPol’s wide field is attractive for extended targets, surveys and simultaneous measurements of many sources. Its science goals include optical follow-up of blazars, active galactic nuclei, gamma-ray bursts and other energetic transients in synergy with the Cherenkov Telescope Array Observatory (CTAO), as well as interstellar dust, extragalactic systems and minor bodies in the Solar System.",
+      "design": "VSTPol introduces a large rotatable linear polarizer into a new field-corrector assembly. A mechanism exchanges this assembly with the standard imaging corrector, keeping OmegaCAM and the telescope’s wide-field capabilities. The development requires optical and opto-mechanical interfaces, motorized positioning, PLC-based control electronics, software, calibration and verification. The published design envisages systematic polarization calibration at approximately the 10⁻³ level using reference stars in each field; this is a target, not a verified commissioning result.",
+      "status": "Development is progressing toward telescope installation, integration, testing and commissioning. INAF’s VST observing notice anticipates installation and testing by the end of 2026, while the telescope shutdown interval is currently marked for rescheduling. VSTPol is therefore presented as a planned capability rather than an instrument with published on-sky science results. The upgrade is supported by the CTA+ programme under Italy’s PNRR."
+    },
+    "figures": [
+      {
+        "src": "https://www.eso.org/public/archives/images/screen/mg_0777.jpg",
+        "alt": "The 2.6-m VLT Survey Telescope and OmegaCAM inside the telescope enclosure at Paranal",
+        "caption": "The VST and OmegaCAM inside the Paranal enclosure. This archival image predates the VSTPol upgrade.",
+        "source": "https://www.eso.org/public/ireland/images/mg_0777/",
+        "credit": "ESO (2013), Inside of the VST enclosure",
+        "shortCredit": "ESO"
+      },
+      {
+        "src": "assets/vstpol-optical-mode.svg",
+        "alt": "Schematic of interchangeable standard imaging and polarimetry optical modes feeding the same OmegaCAM camera",
+        "caption": "Simplified optical-mode concept: the normal corrector can be exchanged for an assembly containing a rotating linear polarizer. Not to scale.",
+        "source": "https://doi.org/10.1117/12.3019695",
+        "credit": "Original ADOPT explanatory illustration based on Schipani et al. (2024)",
+        "shortCredit": "ADOPT schematic · Schipani et al."
+      }
+    ],
+    "contribution": "Group members Demetrio Magrin and Jacopo Farinato are co-authors of the published VSTPol instrumentation and system-engineering studies. Their involvement forms part of the wider multi-institute project and connects ADOPT expertise with the upgrade’s optical, mechanical and technical development.",
     "refs": [
       [
-        "INAF VSTPol observing and installation notice",
+        "INAF VST installation and observing status",
         "https://vst.inaf.it/observingvst"
       ],
       [
-        "VSTPol technical and engineering overview",
-        "https://cris.unibo.it/handle/11585/995761"
+        "VSTPol design and science cases (SPIE 2024)",
+        "https://doi.org/10.1117/12.3019695"
+      ],
+      [
+        "VSTPol system engineering (SPIE 2024)",
+        "https://doi.org/10.1117/12.3020098"
+      ],
+      [
+        "Control electronics (SPIE 2024)",
+        "https://doi.org/10.1117/12.3018872"
       ]
     ],
     "status": "current",
     "source": "https://vst.inaf.it/observingvst",
     "pending": false,
-    "contributionHeading": "Research context",
-    "phase": "Polarimetric instrument development",
-    "reviewed": "31 October 2026",
+    "contributionHeading": "Our contribution",
+    "phase": "Development and planned commissioning",
+    "reviewed": "4 November 2026",
     "partial": false
   },
   {

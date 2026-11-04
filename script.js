@@ -262,18 +262,18 @@
       const hasBibliography=[...(bibliography.recent||[]),...(bibliography.foundational||[]),...extras].length>0;
       const publications=hasBibliography?`<section class="container project-publications" aria-label="Selected project publications" id="project-publications">
         <h2>Selected publications</h2>
-        <p class="project-publications-intro">${p.id==='shark'?'Featured papers first-authored by Luca Marafatto, Jacopo Farinato, Domenico Barbato and Davide Ricci, with earlier related proceedings listed separately. Observational science papers using SHARK-NIR data appear below.':p.id==='nirvana'?'Selected instrument design and development papers from 2023–2026, followed by a related conference poster. The project is still preparing for first light.':p.id==='mavis'?'Selected adaptive-optics, instrument and system-design papers, with the proposed science case listed separately. MAVIS has not yet acquired observational science data.':p.id==='mezzocielo'?'Selected optical-design, materials and engineering publications, with the ESO scientific white paper listed separately. Design goals should not be read as achieved on-sky performance.':'Up to three recent research papers and two defining or foundational papers, selected for relevance and linked to their publisher or research archive. The bibliography was checked in October 2026 and is not an automatically updated feed.'}</p>
+        <p class="project-publications-intro">${p.id==='shark'?'Featured papers first-authored by Luca Marafatto, Jacopo Farinato, Domenico Barbato and Davide Ricci, with earlier related proceedings listed separately. Observational science papers using SHARK-NIR data appear below.':p.id==='nirvana'?'Selected instrument design and development papers from 2023–2026, followed by a related conference poster. The project is still preparing for first light.':p.id==='mavis'?'Selected adaptive-optics, instrument and system-design papers, with the proposed science case listed separately. MAVIS has not yet acquired observational science data.':p.id==='mezzocielo'?'Selected optical-design, materials and engineering publications, with the ESO scientific white paper listed separately. Design goals should not be read as achieved on-sky performance.':p.id==='soxs'?'Selected refereed instrumentation papers and proceedings documenting SOXS design, integration, control software and verification. The first-light spectrum above is a commissioning observation, not a refereed science paper.':'Up to three recent research papers and two defining or foundational papers, selected for relevance and linked to their publisher or research archive. The bibliography was checked in October 2026 and is not an automatically updated feed.'}</p>
         <div class="paper-columns">
-          ${papersSection('recent',p.id==='shark'?'Instrumentation and commissioning':p.id==='nirvana'?'Instrument development':p.id==='mezzocielo'?'Design, prototyping and materials':p.id==='mavis'?'Engineering and instrumentation':'Recent papers','No recent project-specific research papers could be confirmed from public sources.')}
-          ${papersSection('foundational',p.id==='shark'?'Additional proceedings':p.id==='nirvana'?'Original concept':p.id==='mezzocielo'?'Concept and engineering foundations':p.id==='mavis'?'Adaptive-optics architecture':'Defining papers','No defining papers have been verified for this listing yet.')}
+          ${papersSection('recent',p.id==='shark'?'Instrumentation and commissioning':p.id==='nirvana'?'Instrument development':p.id==='mezzocielo'?'Design, prototyping and materials':p.id==='mavis'?'Engineering and instrumentation':p.id==='soxs'?'Instrumentation and verification':'Recent papers','No recent project-specific research papers could be confirmed from public sources.')}
+          ${papersSection('foundational',p.id==='shark'?'Additional proceedings':p.id==='nirvana'?'Original concept':p.id==='mezzocielo'?'Concept and engineering foundations':p.id==='mavis'?'Adaptive-optics architecture':p.id==='soxs'?'Instrument concept and development':'Defining papers','No defining papers have been verified for this listing yet.')}
         </div>${extraSection}${bibNote}
         <p class="project-source-note">Conference papers and preprints are identified by type. Related instruments or predecessor studies are marked explicitly; references are not automatically attributed to ADOPT authors.</p>
       </section>`:'';
 
 
       // SHARK-NIR, NIRVANA-VIS and MezzoCielo share a concise four-section project story.
-      const isFeaturedProject=p.id==='shark'||p.id==='nirvana'||p.id==='mezzocielo'||p.id==='mavis';
-      const storySections=p.id==='shark'
+      const isFeaturedProject=p.id==='shark'||p.id==='nirvana'||p.id==='mezzocielo'||p.id==='mavis'||p.id==='soxs';
+      const storySections=(p.id==='shark'||p.id==='soxs')
         ? [['context','Context'],['objectives','Objectives'],['methods','Methods'],['results','Results']]
         : p.id==='mezzocielo' ? [['overview','Overview'],['science','Scientific objectives'],['optics','Optical concept and engineering'],['development','Development and status']]
         : p.id==='mavis' ? [['context','Context'],['science','Scientific objectives'],['concept','Adaptive-optics system'],['development','Development and status']]
@@ -283,7 +283,7 @@
         '<div class="shark-story">',
         storySections.map(([key,title])=>'<section class="shark-story-block"><h2>'+title+'</h2><p>'+escapeText(p.overview[key])+'</p></section>').join(''),
         '</div><aside class="shark-at-a-glance"><h2>At a glance</h2>'+specs+facility+'</aside></section>',
-        ...(p.id==='shark'||p.id==='mezzocielo'||p.id==='nirvana'||p.id==='mavis'?[
+        ...(p.id==='shark'||p.id==='mezzocielo'||p.id==='nirvana'||p.id==='mavis'||p.id==='soxs'?[
           '<section class="container shark-figures" aria-labelledby="shark-figures-heading"><h2 id="shark-figures-heading">Figures</h2><div class="shark-figure-grid">',
           (p.figures||[]).map((f,i)=>'<figure class="shark-figure"><img loading="lazy" decoding="async" src="'+escapeText(f.src)+'" alt="'+escapeText(f.alt)+'"><figcaption><strong>Figure '+(i+1)+'.</strong> '+escapeText(f.caption)+'<span class="shark-figure-credit">Credit: <a href="'+escapeText(f.source)+'" target="_blank" rel="noopener noreferrer" title="'+escapeText(f.credit)+'">'+escapeText(f.shortCredit||f.credit)+' ↗</a></span></figcaption></figure>').join(''),
           '</div>',
@@ -293,6 +293,8 @@
               ? '<p class="shark-source-caption">The first image is an explanatory concept diagram; the second shows hardware from the earlier LINC-NIRVANA instrument, not the NIRVANA-VIS camera.</p></section>'
               : p.id==='mavis'
               ? '<p class="shark-source-caption">Both illustrations show design concepts, not photographs of an installed or operational MAVIS instrument.</p></section>'
+              : p.id==='soxs'
+              ? '<p class="shark-source-caption">The supernova spectrum is from SOXS first-light observations, not a peer-reviewed astrophysical science paper.</p></section>'
               : '<p class="shark-source-caption">These are original explanatory illustrations based on the cited project studies, not photographs, optical simulations or drawings of a completed instrument.</p></section>'
         ]:[]),
         '<section class="container project-knowledge shark-contribution" aria-label="ADOPT contribution and project sources"><div class="project-knowledge-main"><h2>Our contribution</h2><p>'+escapeText(p.contribution)+'</p>'+teamLinks+'</div><aside class="project-knowledge-aside"><h2>Learn more</h2>'+links+'</aside></section>'

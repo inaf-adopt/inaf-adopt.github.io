@@ -8,7 +8,7 @@ window.ADOPT_PROJECTS = [
     "accent": "green",
     "icon": "✧",
     "overline": "LBT · Near-infrared high-contrast imaging",
-    "blurb": "Direct imaging and spectroscopy close to bright stars in the near-infrared.",
+    "blurb": "High-contrast near-infrared imaging and spectroscopy of exoplanets and circumstellar systems at the LBT.",
     "description": "SHARK-NIR is a high-contrast near-infrared camera and spectrograph at the Large Binocular Telescope. It works with adaptive optics to separate faint structures and companions from the glare of a bright object, using coronagraphs to suppress starlight.",
     "science": [
       "Discovering and studying giant exoplanets and faint companions.",
@@ -43,6 +43,14 @@ window.ADOPT_PROJECTS = [
       [
         "LBT instruments and observing modes",
         "https://www.lbt.inaf.it/instruments.html"
+      ],
+      [
+        "SHARK-NIR commissioning and HR 8799 images",
+        "https://sites.google.com/inaf.it/shark-nir/home/commissioning"
+      ],
+      [
+        "SHARK-NIR HR 8799 observation (LBTO 2023 report, p. 21)",
+        "https://www.lbto.org/wp-content/uploads/2024/05/LBT-annual-report-2023-final-web.pdf#page=25"
       ]
     ],
     "status": "current",
@@ -50,8 +58,30 @@ window.ADOPT_PROJECTS = [
     "pending": false,
     "contributionHeading": "Our contribution",
     "phase": "Instrument in operation",
-    "reviewed": "31 October 2026",
-    "partial": false
+    "reviewed": "4 November 2026",
+    "partial": false,
+    "overview": {
+      "context": "SHARK-NIR (System for coronagraphy with High-order Adaptive optics from R to K band – Near Infrared) is a high-contrast camera and spectrograph at the Large Binocular Telescope (LBT) in Arizona. Led by INAF–Osservatorio Astronomico di Padova, the instrument observes between 0.96 and 1.70 µm and benefits from the LBT’s SOUL adaptive-optics system.",
+      "objectives": "SHARK-NIR aims to detect and characterize exoplanets and other faint companions close to bright stars. Its science programme also addresses circumstellar discs, jets and young stellar systems, alongside selected studies of Solar System objects, evolved stars and active galactic nuclei.",
+      "methods": "It combines classical and coronagraphic imaging, dual-band imaging and long-slit spectroscopy (R ≈ 100 or 700). Its coronagraphs include Gaussian Lyot, shaped-pupil and four-quadrant phase masks. Internal tip–tilt and deformable-mirror corrections reduce residual image motion and non-common-path aberrations. The instrument was assembled, aligned and verified at INAF Padova before installation at the LBT. High-contrast data can be analysed using angular differential imaging and principal-component analysis.",
+      "results": "SHARK-NIR obtained first light in January 2023. In initial commissioning observations, a contrast of about 5.9 × 10⁻⁶ at 1 arcsecond was measured for HD 49197 under the reported conditions. Later commissioning observations recovered all four known planets around HR 8799; the outer two were detected at signal-to-noise ratios above 20, and the inner two at about 6. Early-science studies have subsequently used SHARK-NIR images to constrain companions and investigate planetary systems. Imaging non-detections provide important limits but should not be mistaken for direct planet detections."
+    },
+    "figures": [
+      {
+        "src": "https://lbt.inaf.it/images/sharknir.png",
+        "alt": "Annotated three-dimensional SHARK-NIR optical-bench layout with optical mirrors, coronagraphic wheels and detector",
+        "caption": "SHARK-NIR optical layout and principal opto-mechanical subsystems.",
+        "credit": "LBT Italia / INAF",
+        "source": "https://lbt.inaf.it/instruments.html"
+      },
+      {
+        "src": "https://www.mdpi.com/instruments/instruments-09-00024/article_deploy/html/images/instruments-09-00024-g001.png",
+        "alt": "The Large Binocular Telescope structure with labelled instrument locations including SHARK-NIR",
+        "caption": "Location of SHARK-NIR among the instruments of the Large Binocular Telescope.",
+        "credit": "LBT Italia: Current Achievements and Future Directions (2025), CC BY 4.0",
+        "source": "https://www.mdpi.com/2410-390X/9/4/24"
+      }
+    ]
   },
   {
     "id": "mavis",

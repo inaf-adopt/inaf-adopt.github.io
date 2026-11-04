@@ -201,25 +201,39 @@ window.ADOPT_PROJECT_PAPERS = {
         "title": "MezzoCielo: from the 40cm prototype toward a 1m class monocentric all-sky telescope",
         "authors": "Di Rosa et al.",
         "year": 2026,
-        "type": "Conference paper",
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 14147, 141474R",
         "url": "https://ui.adsabs.harvard.edu/abs/2026SPIE14147E..4RD/abstract",
-        "note": "SPIE 141474R; linked via ADS bibliographic record."
+        "note": "Development from the 40 cm prototype towards a metre-class collector; ADS bibliographic record."
       },
       {
         "title": "MezzoCielo: a new concept telescope capable of fisheye FOV at seeing limited resolution",
         "authors": "Boato et al.",
         "year": 2026,
-        "type": "Conference paper",
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 14147, 141470D",
         "url": "https://ui.adsabs.harvard.edu/abs/2026SPIE14147E..0DB/abstract",
-        "note": "SPIE 141470D; linked via ADS bibliographic record."
+        "note": "Optical configuration and wide-field imaging design; ADS bibliographic record."
+      },
+      {
+        "title": "Fluorine fluid experimental determination of the refractive index, spectral and thermal variation, and transparency quantification of the MezzoCielo telescope",
+        "authors": "Di Rosa et al.",
+        "year": 2024,
+        "type": "Journal paper",
+        "journal": "Optical Materials Express 14(11), 2542–2561",
+        "url": "https://doi.org/10.1364/OME.531842",
+        "doi": "10.1364/OME.531842",
+        "note": "Laboratory measurements of optical-fluid transparency and the dependence of refractive index on wavelength and temperature."
       },
       {
         "title": "Thermo-mechanical sizing and stress-induced birefringence analysis for the MezzoCielo assembly",
         "authors": "Di Rosa et al.",
         "year": 2024,
         "type": "Journal paper",
+        "journal": "Journal of Astronomical Telescopes, Instruments, and Systems 10(4), 044008",
         "url": "https://doi.org/10.1117/1.JATIS.10.4.044008",
-        "doi": "10.1117/1.JATIS.10.4.044008"
+        "doi": "10.1117/1.JATIS.10.4.044008",
+        "note": "Glass-lens mechanical loads, thermal sizing and stress-induced birefringence."
       }
     ],
     "foundational": [
@@ -227,27 +241,51 @@ window.ADOPT_PROJECT_PAPERS = {
         "title": "Engineering a whole sky one meter class telescope: MezzoCielo as a patrol of transients",
         "authors": "Ragazzoni et al.",
         "year": 2024,
-        "type": "Conference paper",
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 13094, 1309433",
         "url": "https://doi.org/10.1117/12.3019730",
-        "doi": "10.1117/12.3019730"
+        "doi": "10.1117/12.3019730",
+        "note": "Engineering concept and possible use for multimessenger transient monitoring."
+      },
+      {
+        "title": "Finite element analysis of the MezzoCielo monocentric optical system and other mechanical issues",
+        "authors": "Di Rosa et al.",
+        "year": 2022,
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 12182, 121823S",
+        "url": "https://doi.org/10.1117/12.2629947",
+        "doi": "10.1117/12.2629947",
+        "note": "Structural feasibility analysis of the glass collector and support."
+      },
+      {
+        "title": "Current status of MezzoCielo: a design aiming to a large aperture, extremely wide field of view telescope",
+        "authors": "Ragazzoni et al.",
+        "year": 2022,
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 12182, 121820H",
+        "url": "https://doi.org/10.1117/12.2629877",
+        "doi": "10.1117/12.2629877",
+        "note": "Design status and metre-class prototyping concept."
       },
       {
         "title": "Mezzocielo: an attempt to redesign the concept of wide field telescopes",
         "authors": "Ragazzoni et al.",
         "year": 2020,
-        "type": "Conference paper",
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE 11445, 1144534",
         "url": "https://doi.org/10.1117/12.2560524",
-        "doi": "10.1117/12.2560524"
+        "doi": "10.1117/12.2560524",
+        "note": "Foundational monocentric liquid-optics concept."
       }
     ],
     "resources": [
       {
-        "title": "Optical design and development of a multichannel corrector for the 80cm Mezzocielo wide-field demonstrator",
-        "authors": "Bournane et al.",
-        "year": 2026,
-        "type": "Conference paper",
-        "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602283376911075",
-        "note": "Author-verified conference proceedings; a complementary optical-design reference."
+        "title": "Continuous Wide-Field Optical Monitoring for Very Early-Phase Transient Discovery",
+        "authors": "Della Valle, Botticella, Cappellaro, Ragazzoni et al.",
+        "year": 2025,
+        "type": "ESO science white paper / arXiv preprint",
+        "url": "https://arxiv.org/abs/2512.18157",
+        "note": "Scientific motivation for uninterrupted, minute-cadence monitoring; a white paper, not an observational result."
       }
     ]
   },

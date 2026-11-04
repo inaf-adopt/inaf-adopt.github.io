@@ -408,40 +408,52 @@ window.ADOPT_PROJECTS = [
     "accent": "green",
     "icon": "⊙",
     "overline": "Laboratory · Multi-conjugate AO testbed",
-    "blurb": "A configurable laboratory bench for developing and comparing MCAO technologies.",
-    "description": "MATTO (Multi-conjugate Adaptive Techniques Test Optics) is a laboratory facility developed at INAF Padova under the STILES programme. It reproduces important optical and control aspects of multi-conjugate adaptive optics for large telescopes, allowing repeatable experiments before taking ideas on sky.",
+    "blurb": "A configurable laboratory test bench for developing and comparing multi-conjugate adaptive optics.",
+    "description": "MATTO (Multi-conjugate Adaptive Techniques Test Optics) is a modular adaptive-optics facility under development at INAF Padova, supported by the PNRR STILES programme. It is designed to emulate guide-star, atmospheric, telescope and wavefront-control configurations for laboratory tests relevant to current and future large telescopes.",
     "science": [
-      "Validating wavefront-sensor concepts and control algorithms.",
-      "Comparing different corrections for turbulence distributed in altitude.",
-      "Testing optical alignment, reconstruction, calibration and real-time computation."
+      "Compare multi-conjugate adaptive-optics reconstruction and control approaches under repeatable turbulence conditions.",
+      "Evaluate guide-star patterns, wavefront-sensor designs and atmospheric layer configurations.",
+      "Test system integration, alignment, real-time control and closed-loop performance before on-sky applications."
     ],
-    "technical": "The modular bench includes natural and elongated laser-like reference sources, atmospheric perturbation simulators, multiple wavefront-sensor configurations, and deformable mirrors. A Durham Adaptive Optics toolkit contributes to the real-time control architecture.",
+    "technical": "The design combines configurable natural and laser-guide-star sources, a telescope and atmospheric simulator, three deformable mirrors conjugated to different turbulence layers, and alternative pupil- and focal-plane wavefront sensors. DAO4MATTO uses the Durham Adaptive Optics real-time control toolkit; the complete bench is a developing facility, not an operational telescope instrument.",
     "specs": [
       [
-        "Correction optics",
-        "3 deformable mirrors (~1,500 actuators total)"
-      ],
-      [
-        "Wavefront sensing",
-        "Up to 6 WFS channels"
+        "Facility",
+        "INAF Padova · laboratory test bench"
       ],
       [
         "Source simulation",
-        "Up to 3 natural- and 3 laser-guide-star channels"
+        "Up to 3 natural + 3 laser guide-star channels (design)"
+      ],
+      [
+        "Correction",
+        "3 deformable mirrors: ~800 / 450 / 200 actuators (design)"
+      ],
+      [
+        "Wavefront sensing",
+        "Configurable NGS and LGS sensing channels"
       ],
       [
         "Programme",
-        "PNRR / STILES"
+        "INAF PNRR · STILES"
       ]
     ],
-    "contribution": "Our laboratory work includes the multi-conjugate adaptive-optics test bench, wavefront sensing, real-time control and experimental validation.",
+    "contribution": "ADOPT group members contribute to the optical and opto-mechanical design, bench integration, wavefront-sensor configurations, calibration and real-time control development for MATTO, with the goal of validating new MCAO concepts in the laboratory.",
     "refs": [
       [
-        "MATTO design poster (INAF STILES)",
+        "MATTO design and early implementation (ADONI 2026)",
+        "https://doi.org/10.36116/VIDEOMEM_4.2026.27"
+      ],
+      [
+        "MATTO optical design (SPIE 2024)",
+        "https://doi.org/10.1117/12.3020439"
+      ],
+      [
+        "INAF STILES MATTO architecture poster (2026)",
         "https://indico.ict.inaf.it/event/3498/attachments/11754/24322/Poster_STILES.pdf"
       ],
       [
-        "DAO4MATTO real-time control presentation",
+        "DAO4MATTO real-time control (2024)",
         "https://indico.ict.inaf.it/event/2870/contributions/20135/"
       ]
     ],
@@ -449,9 +461,33 @@ window.ADOPT_PROJECTS = [
     "source": "https://indico.ict.inaf.it/event/3498/attachments/11754/24322/Poster_STILES.pdf",
     "pending": false,
     "contributionHeading": "Our contribution",
-    "phase": "Laboratory research",
-    "reviewed": "31 October 2026",
-    "partial": false
+    "phase": "Design and early implementation",
+    "reviewed": "4 November 2026",
+    "partial": false,
+    "overview": {
+      "overview": "MATTO (Multi-conjugate Adaptive Techniques Test Optics) is a modular, wide-field adaptive-optics test bench being developed at INAF–Osservatorio Astronomico di Padova through the STILES programme. Rather than being a telescope instrument, it is intended as a controlled laboratory environment for assessing concepts relevant to multi-conjugate adaptive optics (MCAO) on large and extremely large telescopes.",
+      "objectives": "The facility is designed to compare wavefront-sensing, tomographic reconstruction and control approaches while varying the distribution of atmospheric turbulence and the geometry of guide stars. Its reconfigurable architecture is intended to support repeatable experiments, feasibility studies and validation of future MCAO techniques before they are considered for telescope deployment.",
+      "architecture": "The published design separates MATTO into four configurable modules: sources, telescope/atmosphere simulation, MCAO correction and wavefront sensing. Up to three natural- and three laser-guide-star-like sources feed a simulator of telescope beam geometry and atmospheric perturbations. Three deformable mirrors, designed with approximately 800, 450 and 200 actuators, emulate correction at different turbulence heights. Pupil- and focal-plane sensor arrangements can be explored; DAO4MATTO provides the real-time control development framework based on Durham's DAO toolkit.",
+      "status": "Presentations in 2024 described the detailed design, while an April 2026 ADONI workshop contribution reported design and early implementation. Integration, alignment, calibration and real-time control are development activities, and the different simulated configurations still require experimental validation. The published material does not establish routine operation or verified on-sky performance; MATTO should therefore be described as a facility in development."
+    },
+    "figures": [
+      {
+        "src": "assets/matto-modules.svg",
+        "alt": "Original schematic showing four modules of the MATTO laboratory bench: guide-star sources, telescope and atmosphere simulation, three-deformable-mirror correction and configurable wavefront sensing",
+        "caption": "The four-module MATTO architecture, simplified from the published design. This illustration is not a photograph of completed hardware.",
+        "credit": "Original ADOPT explanatory diagram based on Di Filippo et al. (2024)",
+        "shortCredit": "ADOPT diagram · Di Filippo et al. (2024)",
+        "source": "https://doi.org/10.1117/12.3020439"
+      },
+      {
+        "src": "assets/matto-mcao.svg",
+        "alt": "Conceptual diagram linking three atmospheric turbulence layers to the high-, middle- and ground-layer deformable mirrors planned for MATTO",
+        "caption": "Three-layer MCAO principle with the planned correction mirrors; geometry and beam paths are illustrative, not optical ray tracing.",
+        "credit": "Original ADOPT explanatory diagram based on the INAF STILES MATTO design poster",
+        "shortCredit": "ADOPT diagram · INAF STILES",
+        "source": "https://indico.ict.inaf.it/event/3498/attachments/11754/24322/Poster_STILES.pdf"
+      }
+    ]
   },
   {
     "id": "nirvana",

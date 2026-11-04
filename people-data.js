@@ -139,7 +139,7 @@ window.ADOPT_PEOPLE = [
     "tag": "Telescope optics",
     "bio": "Studied dispersion, throughput and optical performance of the 80 cm MezzoCielo telescope prototype.",
     "projects": [
-      "Mezzocielo"
+      "MezzoCielo"
     ],
     "links": [
       {
@@ -164,7 +164,7 @@ window.ADOPT_PEOPLE = [
     "tag": "Optical design",
     "bio": "Research focuses on optical corrector design for the MezzoCielo wide-field telescope demonstrator.",
     "projects": [
-      "Mezzocielo"
+      "MezzoCielo"
     ],
     "links": [
       {
@@ -293,7 +293,7 @@ window.ADOPT_PEOPLE = [
     "bio": "Research and engineering interests include wavefront sensing, high-contrast instrumentation and wide-field/space-surveillance concepts.",
     "projects": [
       "INGOT",
-      "Mezzocielo",
+      "MezzoCielo",
       "Space Debris"
     ],
     "links": [
@@ -351,7 +351,7 @@ window.ADOPT_PEOPLE = [
     "tag": "Wide-field optics",
     "bio": "Studies the optomechanical design, optical materials and performance of the MezzoCielo telescope concept.",
     "projects": [
-      "Mezzocielo",
+      "MezzoCielo",
       "SOXS"
     ],
     "links": [
@@ -460,7 +460,7 @@ window.ADOPT_PEOPLE = [
       "SHARK-NIR",
       "MAVIS",
       "MORFEO",
-      "Mezzocielo",
+      "MezzoCielo",
       "MATTO",
       "NIRVANA-VIS",
       "INGOT",
@@ -509,7 +509,7 @@ window.ADOPT_PEOPLE = [
     "projects": [
       "PLATO",
       "MORFEO",
-      "Mezzocielo"
+      "MezzoCielo"
     ],
     "links": [
       {
@@ -583,7 +583,7 @@ window.ADOPT_PEOPLE = [
     "bio": "Optical designer working on the final design and verification of the MAVIS adaptive-optics module.",
     "projects": [
       "MAVIS",
-      "Mezzocielo"
+      "MezzoCielo"
     ],
     "links": [
       {
@@ -723,7 +723,7 @@ window.ADOPT_PEOPLE = [
     "bio": "Developed the pyramid wavefront sensor and works on adaptive optics and astronomical instrumentation.",
     "projects": [
       "MORFEO",
-      "Mezzocielo",
+      "MezzoCielo",
       "PLATO"
     ],
     "links": [

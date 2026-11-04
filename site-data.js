@@ -295,6 +295,24 @@ window.ADOPT_PROJECTS = [
     "phase": "Optical design, prototyping and demonstrator development",
     "reviewed": "4 November 2026",
     "partial": false,
+    "figures": [
+      {
+        "src": "assets/mezzocielo-concept.svg",
+        "alt": "Original conceptual drawing of the MezzoCielo segmented spherical optical collector filled with transparent fluid and surrounded by a correcting-camera array",
+        "caption": "Conceptual segmented collector with optical fluid and the correcting-camera array. Original illustration; not a photograph or a finalized telescope design.",
+        "source": "https://doi.org/10.1117/12.3019730",
+        "credit": "Original ADOPT diagram, after Ragazzoni et al. (2024)",
+        "shortCredit": "ADOPT illustration · Ragazzoni et al. (2024)"
+      },
+      {
+        "src": "assets/mezzocielo-optics.svg",
+        "alt": "Simplified labelled section through the MezzoCielo monocentric optical collector showing glass menisci, central optical fluid, incoming light and correcting cameras",
+        "caption": "Simplified optical principle of the monocentric collector. The geometry and rays are illustrative rather than an engineering optical simulation.",
+        "source": "https://arxiv.org/abs/2302.00367",
+        "credit": "Original ADOPT diagram, based on Ragazzoni et al. (2023)",
+        "shortCredit": "ADOPT illustration · Ragazzoni et al. (2023)"
+      }
+    ],
     "overview": {
       "overview": "MezzoCielo (“half the sky”) is a proposed class of extremely wide-field, ground-based telescope designed to monitor a large fraction of the sky observable from one site simultaneously. Its spherical, monocentric optical system is intended to combine a comparatively large collecting aperture with unprecedented sky coverage. Published designs explore fields of roughly 5,000–20,000 square degrees, with around 10,000 square degrees often used as a reference goal. These figures describe proposed configurations, not measured on-sky performance.",
       "science": "The central scientific motivation is to observe the beginnings of short-lived astronomical events rather than discovering them hours or days later. Continuous, minute-cadence monitoring could reveal the early evolution of supernovae, kilonovae and gamma-ray bursts, and help identify electromagnetic counterparts to gravitational-wave or neutrino events. The ESO science white paper emphasises how this missing temporal coverage could complement classical sky surveys, including in the era of the Einstein Telescope. Further potential uses include space-debris and near-Earth-object tracking, stellar variability and exoplanet-transit monitoring.",

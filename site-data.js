@@ -586,50 +586,82 @@ window.ADOPT_PROJECTS = [
     "accent": "blue",
     "icon": "◇",
     "overline": "ESA · Exoplanet space photometry",
-    "blurb": "Finding and characterising Earth-sized planets around bright stars.",
-    "description": "PLATO (PLAnetary Transits and Oscillations of stars) is an ESA space mission designed to monitor the brightness of many stars with high precision. Periodic dimmings can reveal transiting planets, while stellar oscillations help determine the host stars’ ages and other properties.",
+    "blurb": "Searching for terrestrial exoplanets and measuring the properties of their host stars with precision space photometry.",
+    "description": "PLATO (PLAnetary Transits and Oscillations of stars) is an ESA mission designed to discover and characterise terrestrial exoplanets around bright stars, and to study stellar interiors through asteroseismology.",
     "science": [
       "Finding terrestrial exoplanets, including candidates near habitable zones.",
       "Measuring planet radii and characterising host stars by asteroseismology.",
       "Combining space photometry with ground-based follow-up to infer planetary densities."
     ],
-    "technical": "PLATO uses an array of 26 small telescopic cameras, including two high-cadence cameras, to monitor a very large sky area. It is designed to observe from the Sun–Earth L2 region; launch is planned for 2027 as of the cited ESA overview.",
+    "technical": "The payload comprises 24 normal and two fast wide-field refractive camera telescopes. Camera optical design, thermal stability, alignment and performance verification are central to its precision-photometry requirements. The planned orbit is around the Sun–Earth L2 point.",
     "specs": [
       [
         "Cameras",
-        "24 normal + 2 fast cameras"
+        "24 normal + 2 fast"
       ],
       [
-        "Normal / fast cadence",
+        "Photometric cadence",
         "25 s / 2.5 s"
       ],
       [
-        "Combined field",
-        "About 2,232 deg²"
+        "Survey field",
+        ">2,000 deg²"
       ],
       [
         "Launch",
-        "Planned 2027 (check ESA for updates)"
+        "April 2027 (planned)"
       ]
     ],
-    "contribution": "Group members contribute to telescope optical design, systems engineering, technical assurance and integration within the wider PLATO collaboration.",
+    "contribution": "ADOPT researchers at INAF Padova, including Demetrio Magrin and Roberto Ragazzoni, contributed to the optical design of the PLATO telescope units. Related work by Davide Greggio and collaborators addresses structural, thermal, optical and performance analysis, while other Padova contributors have worked on alignment, verification and the mission’s scientific preparation. These activities form part of the wider international PLATO Mission Consortium.",
     "refs": [
       [
         "ESA PLATO mission",
         "https://www.esa.int/Science_Exploration/Space_Science/Plato"
       ],
       [
-        "ESA camera design",
-        "https://www.esa.int/Science_Exploration/Space_Science/Plato/Plato_s_cameras"
+        "ESA PLATO factsheet",
+        "https://www.esa.int/Science_Exploration/Space_Science/Plato_factsheet"
+      ],
+      [
+        "ESA: PLATO’s 2026 environmental tests",
+        "https://www.esa.int/Science_Exploration/Space_Science/Plato/Plato_aces_space-like_tests"
+      ],
+      [
+        "Padova optical-design background (INAF)",
+        "https://www.media.inaf.it/2018/10/05/alla-ricerca-di-esopianeti-con-learth-factor/"
       ]
     ],
     "status": "current",
     "source": "https://www.esa.int/Science_Exploration/Space_Science/Plato",
     "pending": false,
     "contributionHeading": "Our contribution",
-    "phase": "Space instrumentation",
-    "reviewed": "31 October 2026",
-    "partial": false
+    "phase": "Pre-launch verification / space photometry",
+    "reviewed": "4 November 2026",
+    "partial": false,
+    "overview": {
+      "context": "PLATO (PLAnetary Transits and Oscillations of stars) is the European Space Agency’s exoplanet-hunting mission. It will monitor the light from more than 200,000 stars, looking for the slight, periodic dimming produced when a planet crosses in front of its star. The same precise measurements will reveal stellar oscillations, allowing astronomers to investigate the structure and age of the stars that host planetary systems.",
+      "objectives": "PLATO aims to find and characterise rocky planets, including Earth-sized worlds in orbits extending into the habitable zones of Sun-like stars. Transit light curves provide planetary radii; complementary ground-based radial-velocity observations can provide masses and hence densities. Asteroseismology helps establish the ages and other fundamental properties of host stars. Combining these measurements will clarify how planetary systems form and evolve.",
+      "optics": "PLATO carries 26 wide-field, refractive telescope cameras on a common optical bench: 24 normal cameras arranged in four groups and two fast cameras. Normal cameras collect measurements every 25 seconds, while fast cameras operate at 2.5-second cadence. The array covers more than 2,000 square degrees simultaneously. Achieving precise, stable photometry requires careful optical design, alignment, focus control and verification of structural, thermal and optical behaviour.",
+      "development": "PLATO’s spacecraft assembly was completed in October 2025. It passed an extensive thermal-vacuum test campaign in ESA’s Large Space Simulator in April 2026, with analysis and further verification continuing before launch. ESA currently plans launch aboard Ariane 6 in April 2027, followed by operations near the Sun–Earth L2 point. PLATO has not yet begun astronomical observations; the scientific capabilities described here are mission goals, not on-orbit results."
+    },
+    "figures": [
+      {
+        "src": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2025/05/plato_s_artist_impression_front_view/26715024-1-eng-GB/Plato_s_artist_impression_front_view.png",
+        "alt": "ESA artist's impression of PLATO showing the 26-camera array and spacecraft sunshield",
+        "caption": "Artist’s impression of PLATO’s camera array and spacecraft architecture; not an on-orbit photograph.",
+        "source": "https://www.esa.int/ESA_Multimedia/Images/2025/05/Plato_s_artist_impression_front_view",
+        "credit": "ESA / ATG Europe · CC BY-SA 3.0 IGO",
+        "shortCredit": "ESA / ATG Europe"
+      },
+      {
+        "src": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/04/close-up_of_plato_s_cameras/27212574-1-eng-GB/Close-up_of_Plato_s_cameras_pillars.jpg",
+        "alt": "Photograph of PLATO's 26 cameras inside the ESA Large Space Simulator following environmental tests in April 2026",
+        "caption": "The 26 cameras during pre-launch environmental verification at ESA’s Large Space Simulator, April 2026.",
+        "source": "https://www.esa.int/ESA_Multimedia/Images/2026/04/Close-up_of_Plato_s_cameras",
+        "credit": "ESA · ESA Standard Licence",
+        "shortCredit": "ESA"
+      }
+    ]
   },
   {
     "id": "vstpol",

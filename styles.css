@@ -890,3 +890,8 @@ p{line-height:1.7}.container{max-width:1200px}.section{padding:70px 0}
 .shark-source-caption{margin:12px 0 0;font-size:.97rem;line-height:1.6;color:#355364}
 .shark-contribution{border-top:1px solid #c7d7d8;padding-top:clamp(16px,2.6vw,28px);padding-bottom:clamp(20px,3vw,38px)}
 @media(max-width:800px){.shark-overview{grid-template-columns:1fr}.shark-at-a-glance{max-width:none}.shark-figure-grid{grid-template-columns:1fr}.shark-figure img{height:auto;max-height:300px}}
+
+
+/* MATTO diagrams need full-width panels so module labels remain legible. */
+[data-project-detail][data-project-id="matto"] .shark-figure-grid{grid-template-columns:minmax(0,1fr);max-width:940px;margin-inline:auto}
+[data-project-detail][data-project-id="matto"] .shark-figure img{height:auto;max-height:none}

@@ -282,13 +282,15 @@
         '<div class="shark-story">',
         storySections.map(([key,title])=>'<section class="shark-story-block"><h2>'+title+'</h2><p>'+escapeText(p.overview[key])+'</p></section>').join(''),
         '</div><aside class="shark-at-a-glance"><h2>At a glance</h2>'+specs+facility+'</aside></section>',
-        ...(p.id==='shark'||p.id==='mezzocielo'?[
+        ...(p.id==='shark'||p.id==='mezzocielo'||p.id==='nirvana'?[
           '<section class="container shark-figures" aria-labelledby="shark-figures-heading"><h2 id="shark-figures-heading">Figures</h2><div class="shark-figure-grid">',
           (p.figures||[]).map((f,i)=>'<figure class="shark-figure"><img loading="lazy" decoding="async" src="'+escapeText(f.src)+'" alt="'+escapeText(f.alt)+'"><figcaption><strong>Figure '+(i+1)+'.</strong> '+escapeText(f.caption)+'<span class="shark-figure-credit">Credit: <a href="'+escapeText(f.source)+'" target="_blank" rel="noopener noreferrer" title="'+escapeText(f.credit)+'">'+escapeText(f.shortCredit||f.credit)+' ↗</a></span></figcaption></figure>').join(''),
           '</div>',
           p.id==='shark'
             ? '<p class="shark-source-caption">A SHARK-NIR image showing the four known planets around HR 8799 is published in the <a href="https://www.lbto.org/wp-content/uploads/2024/05/LBT-annual-report-2023-final-web.pdf#page=25" target="_blank" rel="noopener noreferrer">LBTO 2023 annual report ↗</a>.</p></section>'
-            : '<p class="shark-source-caption">These are original explanatory illustrations based on the cited project studies, not photographs, optical simulations or drawings of a completed instrument.</p></section>'
+            : p.id==='nirvana'
+              ? '<p class="shark-source-caption">The first image is an explanatory concept diagram; the second shows hardware from the earlier LINC-NIRVANA instrument, not the NIRVANA-VIS camera.</p></section>'
+              : '<p class="shark-source-caption">These are original explanatory illustrations based on the cited project studies, not photographs, optical simulations or drawings of a completed instrument.</p></section>'
         ]:[]),
         '<section class="container project-knowledge shark-contribution" aria-label="ADOPT contribution and project sources"><div class="project-knowledge-main"><h2>Our contribution</h2><p>'+escapeText(p.contribution)+'</p>'+teamLinks+'</div><aside class="project-knowledge-aside"><h2>Learn more</h2>'+links+'</aside></section>'
       ].join('') : '';

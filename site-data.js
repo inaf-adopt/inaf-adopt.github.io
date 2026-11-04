@@ -688,46 +688,90 @@ window.ADOPT_PROJECTS = [
     "id": "ingot",
     "name": "INGOT",
     "category": "Wavefront sensing",
-    "telescope": "INAF Padova laboratory / on-sky demonstrator",
+    "telescope": "INAF Padova optical laboratory; ELT-class telescope applications",
     "accent": "coral",
     "icon": "◇",
     "overline": "Technology · Sodium laser-guide-star wavefront sensing",
-    "blurb": "Wavefront sensing tailored to elongated artificial guide stars.",
-    "description": "The Ingot wavefront sensor is a novel concept from the adaptive-optics group in Padova for measuring wavefront distortions using elongated sodium laser-guide-star images. Its prism-like sensing geometry is shaped to match the three-dimensional appearance of the beacon.",
+    "blurb": "A wavefront-sensor concept designed for the elongated sodium laser guide stars of extremely large telescopes.",
+    "description": "INGOT is a pupil-plane wavefront-sensor concept developed to address elongated sodium laser guide stars, particularly on extremely large telescopes. Reflective optical surfaces tailored to the beacon’s three-dimensional focal volume split the light into multiple pupil images, allowing gradients of the incoming wavefront to be estimated.",
     "science": [
-      "Improving the quality and sky coverage of adaptive-optics correction.",
-      "Reducing sensing limitations introduced by laser-guide-star elongation on giant telescopes.",
-      "Validating new measurement techniques by simulation, laboratory tests and on-sky experiments."
+      "Study ways to sense atmospheric wavefront errors from three-dimensional sodium laser beacons.",
+      "Investigate sensitivity, alignment and the influence of changing sodium-layer brightness distributions.",
+      "Evaluate whether the concept can complement conventional laser-guide-star sensing on ELT-class facilities."
     ],
-    "technical": "Unlike a conventional wavefront sensor optimized for a point source, the ingot-prism geometry is designed around the extended laser beacon. Research includes optical design, alignment sensitivity, detector signals and reconstruction algorithms.",
+    "technical": "The three-pupil prototype uses a reflective, roof-shaped ingot prism near the focus of the elongated laser beacon. Laboratory work employs a simulated sodium source, precision prism positioning, a deformable lens and automated alignment procedures. Numerical studies also examine three- and six-pupil configurations.",
     "specs": [
       [
-        "Guide-star type",
-        "Sodium-layer laser guide stars"
+        "Reference source",
+        "Elongated sodium laser guide star"
       ],
       [
-        "Sensor principle",
-        "Ingot/prism-shaped optical sensing"
+        "Optical concept",
+        "Reflective ingot / pupil-plane sensing"
       ],
       [
-        "Development",
-        "Simulation, laboratory prototype, on-sky tests"
+        "Pupil configurations",
+        "Three-pupil prototype; six-pupil concept"
+      ],
+      [
+        "Project stage",
+        "Simulation and laboratory validation"
       ]
     ],
-    "contribution": "Our work includes wavefront-sensor development, simulations, laboratory assembly, integration and testing, and preparation for on-sky experiments.",
+    "contribution": "Researchers at INAF Padova and collaborators have worked on the concept, optical design, numerical simulations, laboratory bench, opto-mechanical alignment, pupil-signal calibration and sensitivity tests. Recent work also studies sodium-layer profile variability and preparations for further validation.",
     "refs": [
       [
-        "INAF Padova INGOT description",
+        "INAF Padova INGOT project",
         "https://www.oapd.inaf.it/attivit%C3%A0-di-ricerca/ricerca-tecnologica/ingot-wavefront-sensor"
+      ],
+      [
+        "Ingot-like wavefront-sensor class — A&A (2024)",
+        "https://doi.org/10.1051/0004-6361/202449697"
+      ],
+      [
+        "New laboratory developments — SPIE (2024)",
+        "https://doi.org/10.1117/12.3019332"
+      ],
+      [
+        "Laboratory testing — SPIE (2022)",
+        "https://doi.org/10.1117/12.2629355"
+      ],
+      [
+        "Alignment and testing — SPIE (2020)",
+        "https://doi.org/10.1117/12.2561075"
       ]
     ],
     "status": "current",
     "source": "https://www.oapd.inaf.it/attivit%C3%A0-di-ricerca/ricerca-tecnologica/ingot-wavefront-sensor",
     "pending": false,
     "contributionHeading": "Our contribution",
-    "phase": "Laboratory research and on-sky preparation",
-    "reviewed": "31 October 2026",
-    "partial": false
+    "phase": "Simulations and laboratory characterization; on-sky validation proposed",
+    "reviewed": "4 November 2026",
+    "partial": false,
+    "overview": {
+      "context": "Laser guide stars (LGSs) make adaptive optics possible without a sufficiently bright natural star nearby. However, sodium beacons originate in an atmospheric layer roughly 90 km above the telescope and appear elongated when viewed from large apertures, especially with side-launched lasers. This creates difficulties for conventional wavefront sensors. Developed by researchers in Padova and collaborators, INGOT explores a pupil-plane approach whose optical geometry is matched to the beacon’s three-dimensional extent.",
+      "objectives": "The project investigates whether a sensor designed specifically for elongated LGSs can recover useful wavefront information more effectively and robustly than approaches adapted from point-source sensing. Key questions include sensitivity to atmospheric aberrations, the effects of varying sodium-layer brightness profiles, the accuracy of prism alignment and the suitability of different pupil configurations for ELT-class adaptive-optics systems. These are research objectives, not yet proven gains in on-sky telescope performance.",
+      "methods": "In the baseline three-pupil design, a reflective roof-shaped prism is placed near the focal volume of the elongated LGS. It separates light into three re-imaged telescope pupils, whose intensity distributions encode wavefront gradients; broader ingot concepts also consider six pupils. At INAF Padova, a laboratory bench simulates the beacon, uses precision positioning to align the prism and introduces known low-order aberrations with a deformable lens. Ray-tracing, end-to-end simulations, automatic optical-feedback alignment and variable sodium profiles support the measurements.",
+      "results": "Published studies established the optical concept and three- and six-pupil layouts and reported laboratory alignment and sensitivity tests. Work in 2020–2022 demonstrated methods to align the prototype and characterize its response to imposed low-order aberrations. The 2024 laboratory study examined improved alignment searches and time-varying sodium profiles; a separate 2024 journal article compared the possible sensing characteristics of ingot variants. Further closed-loop and on-sky validation is a development goal. INGOT is not an operational telescope wavefront sensor, and future performance advantages remain to be established."
+    },
+    "figures": [
+      {
+        "src": "assets/ingot-sensor-concept.svg",
+        "alt": "Original diagram illustrating a finite-distance elongated sodium laser guide star, a reflective ingot prism and three pupil images",
+        "caption": "Principle of ingot wavefront sensing: the optical geometry is matched to an elongated laser guide star, and the light is separated into pupil images. Conceptual diagram, not to scale. ",
+        "source": "https://doi.org/10.1051/0004-6361/202449697",
+        "credit": "Original ADOPT explanatory illustration informed by Ragazzoni et al. (2024)",
+        "shortCredit": "ADOPT illustration · Ragazzoni et al. (2024)"
+      },
+      {
+        "src": "assets/ingot-laboratory-bench.svg",
+        "alt": "Original illustration of a simulated sodium guide star, relay optics, a deformable lens, an ingot prism on precision positioning and a three-pupil detector",
+        "caption": "Simplified Padova laboratory testing workflow: simulated beacon, adjustable optical elements, prism alignment and pupil measurements. Not a photograph or exact bench layout. ",
+        "source": "https://doi.org/10.1117/12.2629355",
+        "credit": "Original ADOPT explanatory illustration based on Di Filippo et al. (2022) and Gomes Machado et al. (2024)",
+        "shortCredit": "ADOPT illustration · Di Filippo et al. (2022)"
+      }
+    ]
   },
   {
     "id": "soxs",

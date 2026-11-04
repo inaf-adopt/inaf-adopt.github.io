@@ -219,15 +219,19 @@ These references describe the projects or related technology. They do not establ
 
 ## linc-nirvana
 
-**Recent papers**
+**Adaptive optics and commissioning**
 
-- Herbst et al. (2018), [Installation and commissioning of the LINC-NIRVANA near-infrared MCAO imager on LBT](https://doi.org/10.1117/12.2313368) — Conference paper.
-- Herbst et al. (2016), [LINC-NIRVANA at LBT: final preparations for first light](https://doi.org/10.1117/12.2232707) — Conference paper.
-- Moreno-Ventas et al. (2016), [Final integration and alignment of LINC-NIRVANA](https://doi.org/10.1117/12.2231690) — Conference paper.
+- Radhakrishnan Santhakumari et al. (2014), [Ground layer correction: the heart of LINC-NIRVANA](https://doi.org/10.1117/12.2054988) — SPIE 9148.
+- Radhakrishnan Santhakumari et al. (2019), [LINC-NIRVANA Commissioning at the Large Binocular Telescope — Lessons Learned](https://arxiv.org/abs/2112.01262) — AO4ELT6 proceedings; preprint deposited in 2021.
+- Herbst et al. (2018), [Commissioning multi-conjugate adaptive optics with LINC-NIRVANA on LBT](https://doi.org/10.1117/12.2313421) — SPIE 10703.
 
-**Defining papers**
+**Alignment and integration**
 
-- Herbst et al. (2016), [MCAO with LINC-NIRVANA at LBT: preparing for first light](https://doi.org/10.1117/12.2232596) — Conference paper.
+- Bergomi et al. (2018), [Alignment and preliminary outcomes of an ELT-size instrument to a very large telescope: LINC-NIRVANA at LBT](https://doi.org/10.26698/AO4ELT5.0053) — AO4ELT5.
+- Herbst et al. (2018), [Installation and commissioning of the LINC-NIRVANA near-infrared MCAO imager on LBT](https://doi.org/10.1117/12.2313368) — SPIE 10702.
+- Moreno-Ventas et al. (2016), [Final integration and alignment of LINC-NIRVANA](https://doi.org/10.1117/12.2231690) — SPIE 9908.
+
+*LINC-NIRVANA is a past group project. The original Fizeau interferometric capability was a design goal and is not presented here as a routinely operational instrument mode.*
 
 ## waterfall
 

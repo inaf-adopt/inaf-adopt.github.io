@@ -895,3 +895,30 @@ p{line-height:1.7}.container{max-width:1200px}.section{padding:70px 0}
 /* MATTO diagrams need full-width panels so module labels remain legible. */
 [data-project-detail][data-project-id="matto"] .shark-figure-grid{grid-template-columns:minmax(0,1fr);max-width:940px;margin-inline:auto}
 [data-project-detail][data-project-id="matto"] .shark-figure img{height:auto;max-height:none}
+
+/* INGOT paper figures: keep the detailed sensor comparison and bench optics legible. */
+[data-project-detail][data-project-id="ingot"] .shark-figure-grid{
+  grid-template-columns:minmax(0,1fr);
+  max-width:1160px;
+  margin-inline:auto;
+}
+[data-project-detail][data-project-id="ingot"] .shark-figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  background:#fff;
+}
+[data-project-detail][data-project-id="ingot"] .shark-figure figcaption{
+  padding:14px 18px;
+}
+[data-project-detail][data-project-id="ingot"] .shark-figure-credit{
+  white-space:normal;
+  flex-wrap:wrap;
+}
+[data-project-detail][data-project-id="ingot"] .shark-figure-credit a{
+  white-space:normal;
+  overflow:visible;
+  text-overflow:clip;
+}

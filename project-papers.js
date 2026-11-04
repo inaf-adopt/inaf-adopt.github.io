@@ -557,8 +557,10 @@ window.ADOPT_PROJECT_PAPERS = {
         "authors": "Ricci et al.",
         "year": 2026,
         "type": "Journal paper",
+        "journal": "Journal of Astronomical Telescopes, Instruments, and Systems 12(2), 024005",
         "url": "https://doi.org/10.1117/1.JATIS.12.2.024005",
-        "doi": "10.1117/1.JATIS.12.2.024005"
+        "doi": "10.1117/1.JATIS.12.2.024005",
+        "note": "SOXS instrument-control architecture, observing workflows and subsystem interfaces."
       },
       {
         "title": "Verification of the SOXS Exposure Time Calculator from the instrument commissioning at the ESO-NTT",
@@ -566,7 +568,18 @@ window.ADOPT_PROJECT_PAPERS = {
         "year": 2026,
         "type": "Conference paper",
         "url": "https://doi.org/10.1117/12.3102764",
-        "doi": "10.1117/12.3102764"
+        "doi": "10.1117/12.3102764",
+        "note": "Commissioning-based evaluation of exposure-time predictions."
+      },
+      {
+        "title": "What is your favorite transient event? SOXS is almost ready to observe!",
+        "authors": "Radhakrishnan Santhakumari et al.",
+        "year": 2024,
+        "type": "Conference paper",
+        "journal": "SPIE Proceedings 13096",
+        "url": "https://doi.org/10.1117/12.3019020",
+        "doi": "10.1117/12.3019020",
+        "note": "Instrument AIV, integrated-system verification and preparations for on-sky commissioning."
       },
       {
         "title": "SOXS NIR: optomechanical integration and alignment, optical performance verification before full instrument assembly",
@@ -574,17 +587,19 @@ window.ADOPT_PROJECT_PAPERS = {
         "year": 2024,
         "type": "Conference paper",
         "url": "https://doi.org/10.1117/12.3019253",
-        "doi": "10.1117/12.3019253"
+        "doi": "10.1117/12.3019253",
+        "note": "Alignment and verification of the cryogenic near-infrared spectrograph."
       }
     ],
     "foundational": [
       {
-        "title": "SOXS: a wide band spectrograph to follow up transients",
+        "title": "Walking with SOXS towards the transient sky",
         "authors": "Schipani et al.",
-        "year": 2018,
+        "year": 2024,
         "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.2307349",
-        "doi": "10.1117/12.2307349"
+        "journal": "SPIE Proceedings 13096",
+        "url": "https://doi.org/10.1117/12.3019809",
+        "doi": "10.1117/12.3019809"
       },
       {
         "title": "Progress on the SOXS transients chaser for the ESO-NTT",
@@ -593,8 +608,17 @@ window.ADOPT_PROJECT_PAPERS = {
         "type": "Conference paper",
         "url": "https://doi.org/10.1117/12.2628329",
         "doi": "10.1117/12.2628329"
+      },
+      {
+        "title": "SOXS: a wide band spectrograph to follow up transients",
+        "authors": "Schipani et al.",
+        "year": 2018,
+        "type": "Conference paper",
+        "url": "https://doi.org/10.1117/12.2307349",
+        "doi": "10.1117/12.2307349"
       }
-    ]
+    ],
+    "note": "The SN 2025advo spectrum is shown as an ESO first-light result, not classified as a refereed SOXS science publication. Manuscripts described by the official SOXS site as 'in preparation' are not listed as published papers."
   },
   "space-debris": {
     "recent": [

@@ -442,7 +442,25 @@ window.ADOPT_PROJECTS = [
       "concept": "LINC-NIRVANA uses pyramid wavefront sensors and natural guide stars to correct atmospheric turbulence with the LBT adaptive secondary mirror. Its GLAO mode has demonstrated on-sky point-spread-function improvements of up to a factor of three. NIRVANA-VIS is designed to exploit that correction through short-exposure imaging and speckle holographic reconstruction. The proposed visible channel uses a fast-frame 8K CMOS detector and includes Hα observations. Its design field of view is 52 × 52 arcseconds, sampled at 6.5 milliarcseconds per pixel; near-diffraction-limited reconstructed images are a project objective, not an achieved NIRVANA-VIS performance result.",
       "science": "The intended science includes resolving close stellar companions and crowded stellar populations; tracing jets and outflows from young stellar objects through Hα emission; studying dense globular clusters; and investigating stellar environments in nearby galaxies such as M31 and M33. Combining AO-assisted image sharpening with reconstruction should make high-resolution visible imaging possible across a field larger than that of many conventional diffraction-limited modes.",
       "development": "The project involves INAF, the Max Planck Institute for Astronomy and the wider LBT collaboration. Work includes opto-mechanical design, detector characterisation, laboratory assembly, integration and verification, optical alignment, non-common-path aberration calibration, control-software integration and data-reduction preparation. The 2026 design work targets possible on-sky operation in 2027, subject to installation approval and successful integration and commissioning. NIRVANA-VIS should therefore be described as under development, not as an instrument already producing routine science results."
-    }
+    },
+    "figures": [
+      {
+        "src": "assets/nirvanavis-concept.svg",
+        "alt": "Concept diagram of LINC-NIRVANA ground-layer adaptive optics, the proposed NIRVANA-VIS camera and speckle holography reconstruction",
+        "caption": "NIRVANA-VIS imaging concept: GLAO-assisted, short-exposure visible imaging followed by speckle reconstruction. Illustrative only; not a hardware drawing or achieved instrument result.",
+        "credit": "ADOPT diagram based on Bergomi et al. (2024, 2026)",
+        "shortCredit": "ADOPT · Based on Bergomi et al.",
+        "source": "https://doi.org/10.1117/12.3105002"
+      },
+      {
+        "src": "https://www.mpia.de/4486605/original-1673529251.jpg?t=ZXlKM2FXUjBhQ0k2TVRNM09Dd2liMkpxWDJsa0lqbzBORGcyTmpBMWZRPT0tLWVjNzIzOGI0MDE3ODllMjYyODExYjY3OGUyYzhiOTRkNTZiZDUyNWU",
+        "alt": "Exploded CAD rendering of the LINC-NIRVANA detector unit, the established parent instrument of NIRVANA-VIS",
+        "caption": "The original LINC-NIRVANA detector-unit design. Shown as parent-instrument context; it is not the NIRVANA-VIS visible CMOS camera.",
+        "credit": "Max Planck Institute for Astronomy (MPIA)",
+        "shortCredit": "MPIA",
+        "source": "https://www.mpia.de/en/institute/technical-depts/eng-design/examples/LINC-NIRVANA"
+      }
+    ]
   },
   {
     "id": "plato",

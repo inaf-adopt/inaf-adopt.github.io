@@ -345,32 +345,53 @@ window.ADOPT_PROJECTS = [
     "id": "nirvana",
     "name": "NIRVANA-VIS",
     "category": "Instrumentation",
-    "telescope": "Large Binocular Telescope / development laboratory",
+    "telescope": "Large Binocular Telescope (LBT)",
     "accent": "violet",
     "icon": "⊙",
     "overline": "LBT · Optical-instrument development",
-    "blurb": "A visible-light upgrade of LINC-NIRVANA, combining adaptive optics and speckle holography.",
-    "description": "NIRVANA-VIS develops a visible-light channel for LINC-NIRVANA at the Large Binocular Telescope. It combines ground-layer adaptive optics with speckle holography, a method for reconstructing images from short exposures.",
+    "blurb": "Visible-light GLAO-assisted speckle holography upgrade for LINC-NIRVANA at the LBT.",
+    "description": "NIRVANA-VIS develops a visible-wavelength imaging channel for LINC-NIRVANA at the Large Binocular Telescope. The design combines ground-layer adaptive optics with speckle holography to reconstruct sharp images from short exposures over a wide field.",
     "science": [
-      "Studying astronomical targets at visible wavelengths with improved angular resolution.",
-      "Combining adaptive-optics correction with short-exposure image reconstruction."
+      "Resolving close stellar companions and crowded stellar populations.",
+      "Studying jets and outflows around young stars, including Hα emission.",
+      "Investigating dense star clusters and stellar environments in nearby galaxies."
     ],
-    "technical": "The development combines optical integration, calibration and characterisation of non-common-path aberrations: optical errors that affect the science camera differently from the wavefront sensor.",
+    "technical": "The planned 600–1000 nm channel uses ground-layer adaptive optics and short-exposure speckle holography. An 8K fast-frame CMOS detector is part of the proposed design; the quoted field and sampling are design values, not demonstrated NIRVANA-VIS on-sky performance.",
     "specs": [
       [
-        "Facility",
-        "Large Binocular Telescope"
+        "Wavelength",
+        "600–1000 nm (design)"
       ],
       [
-        "Approach",
-        "Visible-light imaging with adaptive optics and speckle holography"
+        "Field of view",
+        "52 × 52 arcsec (design)"
+      ],
+      [
+        "Pixel scale",
+        "6.5 mas/pixel (design)"
+      ],
+      [
+        "Imaging",
+        "GLAO + speckle holography"
       ]
     ],
     "contribution": "Our contributions include systems engineering, calibration and optical-aberration characterisation, laboratory integration and commissioning planning, including doctoral research.",
     "refs": [
       [
-        "NIRVANA-VIS instrument concept (AO4ELT7)",
+        "NIRVANA-VIS design and status (SPIE 2026)",
+        "https://doi.org/10.1117/12.3105002"
+      ],
+      [
+        "NIRVANA-VIS optical concept (SPIE 2024)",
+        "https://doi.org/10.1117/12.3018324"
+      ],
+      [
+        "NIRVANA-VIS original concept (AO4ELT7)",
         "https://doi.org/10.13009/ao4elt7-2023-067"
+      ],
+      [
+        "NIRVANA-VIS design poster (AO4ELT8)",
+        "https://doi.org/10.5281/zenodo.21128548"
       ],
       [
         "LINC-NIRVANA parent instrument (MPIA)",
@@ -379,11 +400,17 @@ window.ADOPT_PROJECTS = [
     ],
     "partial": false,
     "status": "current",
-    "source": "https://www.mpia.de/en/institute/technical-depts/eng-design/examples/LINC-NIRVANA",
+    "source": "https://doi.org/10.1117/12.3105002",
     "pending": false,
     "contributionHeading": "Our contribution",
-    "phase": "Integration and commissioning preparation",
-    "reviewed": "31 October 2026"
+    "phase": "Design finalisation, laboratory AIV and installation planning",
+    "reviewed": "4 November 2026",
+    "overview": {
+      "overview": "NIRVANA-VIS is a planned visible-wavelength imaging upgrade of LINC-NIRVANA, the adaptive-optics-assisted near-infrared imager at the Large Binocular Telescope (LBT) in Arizona. It aims to extend LINC-NIRVANA’s capabilities into the 600–1000 nm range, combining ground-layer adaptive optics (GLAO) with speckle holography. The upgrade is developed within the Italian PNRR STILES programme and is intended to make use of existing LINC-NIRVANA infrastructure while preserving its near-infrared capabilities.",
+      "concept": "LINC-NIRVANA uses pyramid wavefront sensors and natural guide stars to correct atmospheric turbulence with the LBT adaptive secondary mirror. Its GLAO mode has demonstrated on-sky point-spread-function improvements of up to a factor of three. NIRVANA-VIS is designed to exploit that correction through short-exposure imaging and speckle holographic reconstruction. The proposed visible channel uses a fast-frame 8K CMOS detector and includes Hα observations. Its design field of view is 52 × 52 arcseconds, sampled at 6.5 milliarcseconds per pixel; near-diffraction-limited reconstructed images are a project objective, not an achieved NIRVANA-VIS performance result.",
+      "science": "The intended science includes resolving close stellar companions and crowded stellar populations; tracing jets and outflows from young stellar objects through Hα emission; studying dense globular clusters; and investigating stellar environments in nearby galaxies such as M31 and M33. Combining AO-assisted image sharpening with reconstruction should make high-resolution visible imaging possible across a field larger than that of many conventional diffraction-limited modes.",
+      "development": "The project involves INAF, the Max Planck Institute for Astronomy and the wider LBT collaboration. Work includes opto-mechanical design, detector characterisation, laboratory assembly, integration and verification, optical alignment, non-common-path aberration calibration, control-software integration and data-reduction preparation. The 2026 design work targets possible on-sky operation in 2027, subject to installation approval and successful integration and commissioning. NIRVANA-VIS should therefore be described as under development, not as an instrument already producing routine science results."
+    }
   },
   {
     "id": "plato",

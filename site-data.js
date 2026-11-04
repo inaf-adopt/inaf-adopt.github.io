@@ -1057,45 +1057,84 @@ window.ADOPT_PROJECTS = [
     "accent": "teal",
     "icon": "◎",
     "overline": "LBT · Wide-field camera detector upgrade",
-    "blurb": "Modernising wide-field imaging and photometry using CMOS detector technology.",
-    "description": "LBCmos is an instrumentation upgrade study for the Large Binocular Cameras at the Large Binocular Telescope. The aim is to extend the cameras’ scientific utility by considering modern CMOS detectors and associated camera/electronics upgrades.",
+    "blurb": "Exploring a CMOS detector upgrade for the LBT's established wide-field optical cameras.",
+    "description": "LBCmos is a proposed CMOS detector and readout modernization of the Large Binocular Cameras at the Large Binocular Telescope. It aims to extend wide-field imaging and photometry capabilities, but remains in development.",
     "science": [
-      "Wide-field deep imaging and precise photometry.",
-      "Improving detector capabilities for future LBT surveys and transient follow-up."
+      "Wide-field deep imaging and precise optical photometry.",
+      "Future surveys, source monitoring and transient follow-up, subject to the upgrade's achieved capabilities.",
+      "Maintaining the LBCs' scientific utility as detector and readout technology evolves."
     ],
-    "technical": "The upgrade study considers modern CMOS detectors and associated electronics for the Large Binocular Cameras. The linked instrumentation paper describes the proposed detector and readout approach.",
+    "technical": "The project studies CMOS-based modernization of LBC detector and readout technology, including system integration and calibration. Reported field size and pixel scale are those of the existing CCD cameras; new CMOS performance remains to be verified.",
     "specs": [
       [
-        "Telescope",
-        "LBT, two 8.4-m apertures"
+        "Host facility",
+        "Large Binocular Telescope · 2 × 8.4 m"
       ],
       [
-        "Instrument",
-        "Large Binocular Cameras (LBC)"
+        "Current LBC field",
+        "≈23 × 25 arcmin per camera"
       ],
       [
-        "Technology",
-        "CMOS focal-plane upgrade under study"
+        "Current image scale",
+        "≈0.225 arcsec/pixel"
+      ],
+      [
+        "Proposed technology",
+        "CMOS detector / readout modernization"
+      ],
+      [
+        "Project stage",
+        "2026 instrumentation concept; no verified CMOS first light"
       ]
     ],
-    "contribution": "The upgrade study concerns detector technology, camera electronics and imaging performance. The linked conference paper describes the instrument concept.",
+    "contribution": "Federico Battaini and Jacopo Farinato, members of ADOPT, are named co-authors of the 2026 LBCmos instrumentation paper. Their co-authorship connects the group with the wider multi-institute upgrade study; specific engineering work packages are not inferred here.",
     "refs": [
       [
-        "LBCmos instrumentation conference paper",
+        "LBCmos concept · Lombini et al. (SPIE 2026)",
         "https://doi.org/10.1117/12.3100633"
       ],
       [
-        "LBT camera overview",
-        "https://www.lbt.inaf.it/instruments.html"
+        "Current LBC instrument · LBT Italia",
+        "https://lbt.inaf.it/instruments.html"
+      ],
+      [
+        "LBC observational facility · LBTO",
+        "https://www.lbto.org/instruments-overview/"
+      ],
+      [
+        "Original LBC imager · Speziali et al. (2008)",
+        "https://doi.org/10.1117/12.790132"
       ]
     ],
     "status": "current",
     "source": "https://doi.org/10.1117/12.3100633",
     "pending": false,
-    "contributionHeading": "Research context",
-    "phase": "Detector upgrade study",
-    "reviewed": "31 October 2026",
-    "partial": false
+    "contributionHeading": "Our contribution",
+    "phase": "Upgrade concept and development",
+    "reviewed": "4 November 2026",
+    "partial": false,
+    "overview": {
+      "context": "LBCmos is a proposed modernization of the Large Binocular Cameras (LBC) at the Large Binocular Telescope (LBT) on Mount Graham, Arizona. The existing instrument comprises two wide-field prime-focus cameras, LBC-Blue and LBC-Red, which operate together to image different optical wavelength ranges. Their current focal planes use CCD arrays. LBCmos investigates how CMOS detector technology could help sustain and extend this established imaging facility.",
+      "objectives": "Wide-field imaging and photometry support studies ranging from stellar populations and distant galaxies to time-variable and transient astronomical sources. LBCmos is intended to preserve the scientific value of the LBT's wide optical field while exploring detector and readout improvements for future observing programmes. Faster or more flexible observations are potential motivations, rather than demonstrated new observing modes.",
+      "design": "The concept focuses on replacing or upgrading the existing CCD-based focal-plane and readout technology with modern CMOS-based detectors and the electronics and interfaces required to use them. Detector selection, camera integration, calibration, data acquisition and image quality must be assessed together: a change of sensor affects more than the pixel array. The present LBC cameras cover approximately 23 × 25 arcmin at 0.225 arcsec per pixel; these are existing-camera characteristics, not verified specifications for a completed CMOS upgrade.",
+      "status": "Lombini and collaborators presented the LBCmos development concept in a 2026 SPIE instrumentation paper. Publicly verified sources document the proposal and the existing LBC facility, but do not establish completed deployment, commissioning or on-sky CMOS performance. LBCmos is therefore described here as an upgrade in study and development; any eventual hardware configuration and observing capabilities require further confirmation."
+    },
+    "figures": [
+      {
+        "src": "https://lbt.inaf.it/images/lbc.jpg",
+        "alt": "LBC-Red and LBC-Blue wide-field camera assemblies mounted at the Large Binocular Telescope prime-focus locations",
+        "caption": "The existing Large Binocular Cameras at the LBT. The photograph shows the CCD-era instrument, not an installed LBCmos upgrade.",
+        "credit": "LBT Italia / INAF",
+        "source": "https://lbt.inaf.it/instruments.html"
+      },
+      {
+        "src": "assets/lbcmos-detector-upgrade.svg",
+        "alt": "Original schematic comparing the current four-CCD Large Binocular Camera focal-plane arrangement with a conceptual modern CMOS detector and readout upgrade",
+        "caption": "Explanatory comparison of existing LBC CCD technology with the proposed CMOS modernization; schematic only, not a detector design or as-built configuration.",
+        "credit": "ADOPT schematic · Lombini et al. (2026)",
+        "source": "https://doi.org/10.1117/12.3100633"
+      }
+    ]
   },
   {
     "id": "linc-nirvana",

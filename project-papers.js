@@ -523,47 +523,77 @@ window.ADOPT_PROJECT_PAPERS = {
       }
     ]
   },
-  "ingot": {
+  {
     "recent": [
       {
         "title": "New developments on the Ingot WFS laboratory testing",
         "authors": "Gomes Machado et al.",
         "year": 2024,
-        "type": "Conference paper",
+        "type": "SPIE conference paper",
+        "journal": "Proceedings of SPIE, Adaptive Optics Systems IX",
         "url": "https://doi.org/10.1117/12.3019332",
-        "doi": "10.1117/12.3019332"
+        "doi": "10.1117/12.3019332",
+        "note": "Laboratory alignment search procedures and the impact of time-varying sodium layer profiles on the pupil signals."
       },
       {
         "title": "Ingot-like class of wavefront sensors for laser guide stars",
         "authors": "Ragazzoni et al.",
         "year": 2024,
-        "type": "Journal paper",
+        "type": "Refereed journal paper",
+        "journal": "Astronomy & Astrophysics 688, A21",
         "url": "https://doi.org/10.1051/0004-6361/202449697",
-        "doi": "10.1051/0004-6361/202449697"
+        "doi": "10.1051/0004-6361/202449697",
+        "note": "Theory and geometry of ingot sensors, including three- and six-pupil designs and qualitative comparisons with conventional sensors."
       },
       {
-        "title": "The Ingot Wavefront Sensor: Updates from the laboratory test bench",
+        "title": "Laboratory testing of the Ingot WFS",
         "authors": "Di Filippo et al.",
-        "year": 2023,
-        "type": "Conference paper",
-        "url": "https://ao4elt7.sciencesconf.org/455082/document"
+        "year": 2022,
+        "type": "SPIE conference paper",
+        "journal": "Proceedings of SPIE 12185, 121854V",
+        "url": "https://doi.org/10.1117/12.2629355",
+        "doi": "10.1117/12.2629355",
+        "note": "Automated six-degree-of-freedom alignment on the Padova bench and response to low-order aberrations introduced with a deformable lens."
       }
     ],
     "foundational": [
       {
-        "title": "Ingot Laser Guide Stars Wavefront Sensing",
-        "authors": "Ragazzoni et al.",
-        "year": 2018,
-        "type": "Preprint",
-        "url": "https://arxiv.org/abs/1808.03685"
+        "title": "INGOT Wavefront Sensor: from the optical design to a preliminary laboratory test",
+        "authors": "Di Filippo et al.",
+        "year": 2021,
+        "type": "Conference proceeding / preprint",
+        "journal": "AO4ELT6; arXiv:2101.07742",
+        "url": "https://arxiv.org/abs/2101.07742",
+        "note": "Optical design and proposed automatic alignment for a reflective three-pupil ingot prism."
       },
       {
         "title": "Aligning and testing the ingot wavefront sensor in the lab",
         "authors": "Radhakrishnan Santhakumari et al.",
         "year": 2020,
-        "type": "Conference paper",
+        "type": "SPIE conference paper",
+        "journal": "Proceedings of SPIE 11448, 1144860",
         "url": "https://doi.org/10.1117/12.2561075",
-        "doi": "10.1117/12.2561075"
+        "doi": "10.1117/12.2561075",
+        "note": "Initial laboratory alignment and wavefront-aberration sensitivity work."
+      },
+      {
+        "title": "Ingot Laser Guide Stars Wavefront Sensing",
+        "authors": "Ragazzoni et al.",
+        "year": 2018,
+        "type": "Preprint",
+        "journal": "arXiv:1808.03685",
+        "url": "https://arxiv.org/abs/1808.03685",
+        "note": "Early formulation of reflective ingot sensing for elongated, side-launched sodium laser guide stars."
+      }
+    ],
+    "resources": [
+      {
+        "title": "The Ingot Wavefront Sensor: Updates from the laboratory test bench",
+        "authors": "Di Filippo et al.",
+        "year": 2023,
+        "type": "AO4ELT7 conference abstract",
+        "url": "https://ao4elt7.sciencesconf.org/455082/document",
+        "note": "Laboratory alignment feedback and sensitivity results; conference abstract, not a refereed journal paper."
       }
     ]
   },

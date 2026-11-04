@@ -491,25 +491,32 @@ window.ADOPT_PROJECT_PAPERS = {
       {
         "title": "VSTPOL: making the VST a large survey telescope for optical polarimetry",
         "authors": "Schipani et al.",
-        "year": 2025,
-        "type": "Preprint",
-        "url": "https://arxiv.org/abs/2505.07113"
+        "year": 2024,
+        "type": "Conference paper",
+        "journal": "Proceedings of SPIE 13096, 130967L",
+        "url": "https://doi.org/10.1117/12.3019695",
+        "doi": "10.1117/12.3019695",
+        "note": "Instrument concept and science cases; the open-access arXiv version was posted in 2025."
       },
       {
         "title": "VSTPOL: project management and system engineering activities for the new wide-field polarimetric mode of the VST",
         "authors": "Savarese et al.",
         "year": 2024,
         "type": "Conference paper",
+        "journal": "Proceedings of SPIE",
         "url": "https://doi.org/10.1117/12.3020098",
-        "doi": "10.1117/12.3020098"
+        "doi": "10.1117/12.3020098",
+        "note": "Requirements, project management and the instrument's mechanical and electronic interfaces."
       },
       {
         "title": "VSTPOL: the control electronics design for the new polarimetric mode of the VST",
         "authors": "Colapietro et al.",
         "year": 2024,
         "type": "Conference paper",
+        "journal": "Proceedings of SPIE",
         "url": "https://doi.org/10.1117/12.3018872",
-        "doi": "10.1117/12.3018872"
+        "doi": "10.1117/12.3018872",
+        "note": "Control electronics based on PLC and EtherCAT industrial technology."
       }
     ],
     "foundational": [],
@@ -519,11 +526,13 @@ window.ADOPT_PROJECT_PAPERS = {
         "authors": "Verdoes Kleijn and Bagnulo",
         "year": 2026,
         "type": "Conference abstract",
-        "url": "https://doi.org/10.5194/epsc2026-902"
+        "url": "https://doi.org/10.5194/epsc2026-902",
+        "note": "Proposed observing science, not a VSTPol observational result."
       }
-    ]
+    ],
+    "note": "Published project design studies only: no on-sky VSTPol science paper is asserted as of November 2026."
   },
-  {
+  "ingot": {
     "recent": [
       {
         "title": "New developments on the Ingot WFS laboratory testing",

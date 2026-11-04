@@ -3,47 +3,69 @@ window.ADOPT_PROJECT_PAPERS = {
   "shark": {
     "recent": [
       {
-        "title": "SHINS, the SHARK-NIR Instrument Control Software",
+        "title": "SHINS: the SHARK-NIR instrument control software",
         "authors": "Ricci et al.",
         "year": 2025,
-        "type": "Journal paper",
+        "type": "Journal instrumentation paper",
+        "journal": "Journal of Astronomical Telescopes, Instruments, and Systems 11(2), 025005",
         "url": "https://doi.org/10.1117/1.JATIS.11.2.025005",
-        "doi": "10.1117/1.JATIS.11.2.025005"
+        "doi": "10.1117/1.JATIS.11.2.025005",
+        "note": "Instrument control software, subsystem interfaces, observing templates, automation and safety functions."
       },
       {
         "title": "SHARK-NIR commissioning and early science runs",
         "authors": "Barbato et al.",
         "year": 2024,
-        "type": "Conference paper",
+        "type": "SPIE proceedings",
+        "journal": "SPIE Proceedings 13096, Ground-based and Airborne Instrumentation for Astronomy X",
         "url": "https://doi.org/10.1117/12.3020068",
         "doi": "10.1117/12.3020068",
-        "note": "Commissioning and early-science validation; peer-reviewed astrophysical data papers are presented separately below."
+        "note": "On-sky commissioning, coronagraphic tests and early-science observations."
       },
       {
-        "title": "SHARK-NIR: from design to installation, ready to dive into first light",
-        "authors": "Bergomi et al.",
-        "year": 2022,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.2629388",
-        "doi": "10.1117/12.2629388"
+        "title": "SHARK-NIR, first results of the commissioning at LBT",
+        "authors": "Farinato et al.",
+        "year": 2023,
+        "type": "Conference proceedings",
+        "journal": "Adaptive Optics for Extremely Large Telescopes VII (AO4ELT7)",
+        "url": "https://hdl.handle.net/11585/958645",
+        "note": "First light and initial on-sky performance following installation at LBT."
+      },
+      {
+        "title": "SHARK-NIR: Challenges and solutions of a high contrast imager alignment",
+        "authors": "Marafatto et al.",
+        "year": 2020,
+        "type": "SPIE proceedings",
+        "journal": "Proceedings of SPIE",
+        "url": "https://doi.org/10.1117/12.2562329",
+        "doi": "10.1117/12.2562329",
+        "note": "Opto-mechanical alignment, verification strategy and AIV lessons learned."
       }
     ],
     "foundational": [
       {
-        "title": "SHARK-NIR: The coronagraphic camera for LBT in the AIV phase at INAF-Padova",
-        "authors": "Farinato et al.",
-        "year": 2018,
-        "type": "Conference paper",
-        "url": "https://doi.org/10.1117/12.2313659",
-        "doi": "10.1117/12.2313659"
+        "title": "SHARK-NIR: from design to installation, ready to dive into first light",
+        "authors": "Bergomi et al.",
+        "year": 2022,
+        "type": "SPIE proceedings",
+        "url": "https://doi.org/10.1117/12.2629388",
+        "doi": "10.1117/12.2629388"
       },
       {
         "title": "The optical alignment of the coronagraphic masks of SHARK-NIR",
         "authors": "Umbriaco et al.",
         "year": 2020,
-        "type": "Conference paper",
+        "type": "SPIE proceedings",
         "url": "https://doi.org/10.1117/12.2561409",
         "doi": "10.1117/12.2561409"
+      },
+      {
+        "title": "SHARK-NIR: The coronagraphic camera for LBT in the AIV phase at INAF-Padova",
+        "authors": "Farinato et al.",
+        "year": 2018,
+        "type": "SPIE proceedings",
+        "url": "https://doi.org/10.1117/12.2313659",
+        "doi": "10.1117/12.2313659"
       }
     ]
   },

@@ -7,7 +7,7 @@ window.ADOPT_PROJECTS = [
     "telescope": "Large Binocular Telescope (LBT)",
     "accent": "green",
     "icon": "✧",
-    "overline": "LBT · Near-infrared high-contrast imaging",
+    "overline": "Large Binocular Telescope",
     "blurb": "High-contrast near-infrared imaging and spectroscopy of exoplanets and circumstellar systems at the LBT.",
     "description": "SHARK-NIR is a high-contrast near-infrared camera and spectrograph at the Large Binocular Telescope. It works with adaptive optics to separate faint structures and companions from the glare of a bright object, using coronagraphs to suppress starlight.",
     "science": [
@@ -79,6 +79,7 @@ window.ADOPT_PROJECTS = [
         "alt": "The Large Binocular Telescope structure with labelled instrument locations including SHARK-NIR",
         "caption": "Location of SHARK-NIR among the instruments of the Large Binocular Telescope.",
         "credit": "LBT Italia: Current Achievements and Future Directions (2025), CC BY 4.0",
+        "shortCredit": "LBT Italia (2025) · CC BY 4.0",
         "source": "https://www.mdpi.com/2410-390X/9/4/24"
       }
     ]

@@ -820,7 +820,7 @@ window.ADOPT_PROJECTS = [
     },
     "figures": [
       {
-        "src": "assets/ingot-ragazzoni-2024.webp",
+        "src": "assets/ingot-ragazzoni-2024-replacement.webp",
         "alt": "Figure 10 of Ragazzoni et al. (2024): telescope pupil and side-launched sodium laser guide star, comparing elongated spot sampling by six-pupil ingot, three-pupil ingot, and Shack–Hartmann wavefront sensors.",
         "caption": "Comparison of wavefront-sensor geometries for a side-launched sodium laser guide star. Elongation varies across the telescope pupil (left). The panels compare six-pupil ingot (a, g), three-pupil ingot (b, h), and Shack–Hartmann configurations (c–f, i–l) for strongly elongated (red) and mildly elongated (blue) guide-star images. Cropped from Fig. 10.",
         "source": "https://doi.org/10.1051/0004-6361/202449697",
@@ -828,7 +828,7 @@ window.ADOPT_PROJECTS = [
         "shortCredit": "Ragazzoni et al. (2024) · A&A · CC BY 4.0"
       },
       {
-        "src": "assets/ingot-gomes-machado-2026.webp",
+        "src": "assets/ingot-gomes-machado-2026-replacement.webp",
         "alt": "Figure 1 from Gomes Machado et al. (2026) showing the revised INGOT wavefront sensor optical test-bench layout at INAF Padova: Eosin-Y laser guide-star source, 532 nm laser, deformable mirror, relay lenses, beamsplitters, ingot prism, and Shack–Hartmann reference arm.",
         "caption": "Updated optical-bench layout for INGOT testing at INAF–OAPd. The green path shows the 532 nm excitation laser, the red/orange path represents broadband light from the simulated beacon, and the yellow path follows the 589 nm light selected by the narrow-band filter. The layout includes the ingot prism, deformable mirror, pupil imaging and a Shack–Hartmann reference branch. Cropped from Fig. 1.",
         "source": "",
